@@ -2,7 +2,7 @@
 
 Objeto Virtual de Aprendizaje para ciencias de la salud. Seis módulos temáticos con
 actividades interactivas obligatorias, mentor de IA, gamificación y certificado.
-100 % móvil. Vue 3 + TresJS, Laravel, FastAPI + Claude.
+100 % móvil. Vue 3 + TresJS en el frontend; un único backend FastAPI + Claude.
 
 ## Documentos de contexto (leer en este orden)
 
@@ -26,10 +26,11 @@ actividades interactivas obligatorias, mentor de IA, gamificación y certificado
 ## Stack fijo
 
 - `apps/web`: Vue 3, Vite, TypeScript, Pinia, Vue Router, Tailwind, shadcn-vue, `@tresjs/core`, `@tresjs/cientos`, GSAP, `@vueuse/motion`, `@formkit/drag-and-drop`, `@ai-sdk/vue`.
-- `services/api`: Laravel 11, Sanctum (tokens), SQLite en dev / MySQL 8 en prod, dompdf para certificados.
-- `services/ai`: Python 3.12, FastAPI, SDK `anthropic`, ChromaDB. Modelo `claude-opus-5`, thinking adaptativo, streaming. Solo este servicio tiene la clave de Anthropic.
+- `services/api`: Python 3.12, FastAPI, SQLModel + Alembic, JWT con `python-jose`, WeasyPrint, SDK `anthropic`, ChromaDB en dev / pgvector en prod. SQLite en dev / PostgreSQL 16 en prod. Gestión de dependencias con `uv`. Modelo `claude-opus-5`, thinking adaptativo, streaming.
+- Registro de usuario: nombre, apellido, tipo de identificación, número de identificación. Sin contraseña hasta F6-08. No añadir campos sin acordarlo.
+- No introducir Laravel, PHP ni un segundo backend. Todo lo de servidor va en `services/api`.
 
 ## Comandos
 
 Pendientes hasta que exista el monorepo (F1-01). Al crearlo, documentar aquí:
-`pnpm dev`, `php artisan serve`, `uvicorn app.main:app --reload`, `ingest.py`.
+`pnpm dev`, `uv run uvicorn app.main:app --reload`, `uv run alembic upgrade head`, `uv run python -m app.rag.ingest`.

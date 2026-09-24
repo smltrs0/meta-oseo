@@ -34,17 +34,20 @@ Revisado el 2026-09-23. Cada entrada dice qué se toma y qué no. Revisar licenc
 
 **Decisión:** Mol* por defecto; NGL si el bundle pesa demasiado.
 
-## Backend Laravel + Vue
+## Backend FastAPI (único)
 
-| Repo | Qué reutilizar |
+| Repo / doc | Qué reutilizar |
 |---|---|
-| [laravel/vue-starter-kit](https://github.com/laravel/vue-starter-kit) | Oficial. Vue 3 + TS + Tailwind + shadcn-vue. Usa Inertia, que no queremos en una SPA separada; sirve como referencia de componentes shadcn-vue. |
-| [muradyanvano/laravel-vue-spa-starter-kit](https://github.com/muradyanvano/laravel-vue-spa-starter-kit) | **Candidato principal.** SPA sin Inertia: Vue Router + Fortify + Sanctum + Vite + TS. Es exactamente la separación frontend/backend del plan. |
-| [gdarko/laravel-vue-starter](https://github.com/gdarko/laravel-vue-starter) | Sanctum cookie-based, Pinia, Tailwind 4, roles/permisos, y trae skills para Claude Code. Alternativa si se quiere panel docente listo. |
+| [fastapi/full-stack-fastapi-template](https://github.com/fastapi/full-stack-fastapi-template) | Plantilla oficial: FastAPI + SQLModel + Alembic + JWT + PostgreSQL + Docker Compose + tests. **Base de `services/api`.** Quitar el frontend React que trae y el flujo de recuperación de contraseña. |
+| [SQLModel docs](https://sqlmodel.tiangolo.com/) | Modelos que sirven de tabla y de schema Pydantic a la vez. |
+| [WeasyPrint](https://github.com/Kozea/WeasyPrint) | HTML + CSS → PDF para el certificado. |
+| [pgvector/pgvector-python](https://github.com/pgvector/pgvector-python) | Integración de pgvector con SQLAlchemy para el RAG en producción. |
 
-**Decisión:** partir de `muradyanvano/laravel-vue-spa-starter-kit` y mover el frontend a `apps/web` en el monorepo.
+**Decisión:** partir de `full-stack-fastapi-template`, simplificar el auth a registro con identificación (sin contraseña por ahora) y añadir los routers de mentor, quiz y RAG dentro del mismo servicio.
 
-## Microservicio IA (FastAPI + Claude + RAG)
+**Descartado:** Laravel y sus starter kits (`laravel/vue-starter-kit`, `muradyanvano/laravel-vue-spa-starter-kit`, `gdarko/laravel-vue-starter`). Demasiado pesados para el alcance; el equipo prefiere Python.
+
+## IA y RAG dentro del backend (Claude + ChromaDB/pgvector)
 
 | Repo | Qué reutilizar |
 |---|---|
@@ -53,7 +56,7 @@ Revisado el 2026-09-23. Cada entrada dice qué se toma y qué no. Revisar licenc
 | [Harishbabu7047/RAG-Langgraph](https://github.com/Harishbabu7047/RAG-Langgraph) | Ingesta multi-formato (PDF, DOCX). Referencia si el syllabus llega en varios formatos. |
 | [chihebnabil/claude-ui](https://github.com/chihebnabil/claude-ui) | Chat UI con Claude en Nuxt. Referencia de UX de chat en Vue. |
 
-**Decisión:** escribir el servicio propio tomando el SSE del primero y la ingesta del segundo. Usar `@ai-sdk/vue` en el frontend; el backend FastAPI debe emitir el protocolo de stream del AI SDK o un SSE simple que consuma un composable propio.
+**Decisión:** tomar el SSE del primero y la ingesta del segundo, e integrarlos como routers `mentor.py` y módulo `rag/` dentro de `services/api`. Usar `@ai-sdk/vue` en el frontend; el backend debe emitir el protocolo de stream del AI SDK o un SSE simple que consuma un composable propio.
 
 ## Frontend de chat
 

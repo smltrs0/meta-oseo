@@ -13,7 +13,7 @@ Estado de avance: [TODO.md](TODO.md). Repos a reutilizar: [docs/referencias.md](
 
 | Capa | Elección | Por qué |
 |---|---|---|
-| Frontend | **Vue 3 + Vite + TypeScript** | Composition API, integración natural con TresJS y con Laravel. |
+| Frontend | **Vue 3 + Vite + TypeScript** | Composition API, integración natural con TresJS. SPA separada que consume la API. |
 | Estado | **Pinia** | Store del `ContextoPedagogico` y del progreso/puntaje. |
 | UI | **Tailwind CSS + shadcn-vue** | Componentes accesibles; el menú circular se hace a medida con SVG. |
 | 3D | **TresJS (`@tresjs/core`) + cientos** | Mandíbula y células rotables con `useGLTF` + Draco, eventos por mesh, `Html` para etiquetas. Solo donde el 3D aporta; el resto es 2D. |
@@ -70,14 +70,25 @@ ova-metabolismo-oseo/
 │           ├── images/           # SVG multicapa por módulo
 │           └── videos/
 ├── services/
-│   ├── api/                      # Laravel
-│   └── ai/                       # FastAPI
+│   └── api/                      # FastAPI (único backend)
 │       ├── app/
-│       │   ├── routers/          # /chat, /quiz, /explain, /progress-hint
-│       │   ├── rag/              # ingesta, chunking, retrieval
-│       │   ├── prompts/          # system prompts versionados
-│       │   └── auth.py           # validación de token Sanctum
-│       └── corpus/               # documentos del curso (gitignored)
+│       │   ├── main.py
+│       │   ├── core/             # settings, seguridad JWT, db
+│       │   ├── models/           # SQLModel: user, progress, activity_result, achievement, certificate, chat
+│       │   ├── routers/
+│       │   │   ├── auth.py       # /auth/register, /auth/login
+│       │   │   ├── progress.py   # /progress, /activities/{id}/result
+│       │   │   ├── gamification.py  # /achievements, /leaderboard
+│       │   │   ├── certificates.py  # /certificates, /verify/{codigo}
+│       │   │   ├── mentor.py     # /chat, /explain, /progress-hint (streaming)
+│       │   │   ├── quiz.py       # /quiz
+│       │   │   └── teacher.py    # estadísticas para el docente
+│       │   ├── ai/               # cliente Anthropic, tools, prompts versionados
+│       │   └── rag/              # ingesta, chunking, retrieval
+│       ├── alembic/              # migraciones
+│       ├── corpus/               # documentos del curso (gitignored)
+│       ├── tests/
+│       └── pyproject.toml        # gestionado con uv
 ├── docs/
 │   ├── briefing-pedagogico.md    # Fuente del docente
 │   ├── guion-por-modulo/         # m1.md ... m6.md: textos, imágenes, actividades
@@ -146,7 +157,7 @@ Cada actividad emite `completada(puntaje)`; la store de gamificación acumula y 
 
 - **Puntos** por actividad, con penalización por intentos fallidos.
 - **Logros** (insignias internas): "Primer hueso", "Célula por célula", "Constructor", "Mineralizador", "Remodelador", "Cronista", más logros transversales ("Sin errores en un módulo", "Preguntó al mentor 10 veces").
-- **Certificado PDF** al completar los seis módulos con puntaje mínimo. Código de verificación público en Laravel (`/verify/{codigo}`).
+- **Certificado PDF** al completar los seis módulos con puntaje mínimo. Código de verificación público (`/verify/{codigo}`).
 - **HUD** persistente con puntaje, módulo actual y siguiente logro.
 
 ---
@@ -164,9 +175,9 @@ Cada actividad emite `completada(puntaje)`; la store de gamificación acumula y 
 - [ ] Definir la tabla de puntajes y logros con el docente.
 
 ### Fase 1 — Esqueleto técnico (semanas 1–3)
-- [ ] Monorepo, Docker Compose con los tres servicios.
-- [ ] Laravel: registro/login con Sanctum, migraciones (`users`, `progress`, `activity_results`, `achievements`, `certificates`, `chat_sessions`, `chat_messages`, `usage_events`).
-- [ ] FastAPI: `/health`, validación de token contra Laravel, cliente Anthropic con streaming.
+- [ ] Monorepo, Docker Compose con web, api y postgres.
+- [ ] FastAPI: modelos SQLModel (`users`, `progress`, `activity_results`, `achievements`, `certificates`, `chat_sessions`, `chat_messages`, `usage_events`), Alembic, registro/login mínimo con JWT.
+- [ ] FastAPI: `/health`, cliente Anthropic con streaming en `/chat`.
 - [ ] Vue: layout móvil primero, Vue Router con una ruta por módulo, Pinia con `ContextoPedagogico`, menú circular lateral, HUD de puntaje.
 - [ ] Escena TresJS "hola mandíbula" con Draco, probada en un teléfono real.
 - [ ] CI básica.
@@ -175,7 +186,7 @@ Cada actividad emite `completada(puntaje)`; la store de gamificación acumula y 
 
 ### Fase 2 — Motor de actividades + Módulo 1 piloto (semanas 4–6)
 - [ ] `ActivityLayers`, `ActivityMatch`, `ActivityMedia`, `ActivityScene3D` genéricos.
-- [ ] Store de gamificación: puntos, logros, persistencia en Laravel.
+- [ ] Store de gamificación: puntos, logros, persistencia en la API.
 - [ ] Módulo 1 "Conociendo el hueso" completo con `content.json`.
 - [ ] Primer ciclo de revisión con el docente (`docs/revisiones.md`).
 
@@ -187,7 +198,7 @@ Cada actividad emite `completada(puntaje)`; la store de gamificación acumula y 
 - [ ] "Explícame esto" desde cualquier capa/nodo/molécula seleccionada, analogía según `nivel`.
 - [ ] Monitoreo: el mentor lee `progreso` y sugiere qué reforzar (`/progress-hint`).
 - [ ] Tool use: `enfocar_estructura`, `ir_a_seccion`, `abrir_actividad`.
-- [ ] Guardar sesiones y tokens en Laravel; límites por estudiante.
+- [ ] Guardar sesiones y tokens en la base; límites por estudiante.
 
 **Entregable:** el mentor responde sobre lo que el estudiante está viendo y cita el material del curso.
 
@@ -209,7 +220,8 @@ Cada actividad emite `completada(puntaje)`; la store de gamificación acumula y 
 - [ ] Accesibilidad (teclado, contraste, aria) y rendimiento móvil (lazy load, Draco, `<Suspense>`).
 - [ ] Panel docente: progreso por cohorte, actividades más falladas, uso del mentor.
 - [ ] Prueba con 5–10 estudiantes; ajustes.
-- [ ] Despliegue: frontend en Vercel/Netlify, Laravel + MySQL y FastAPI en VPS con Docker.
+- [ ] Despliegue: frontend en Vercel/Netlify, FastAPI + PostgreSQL en VPS con Docker (o Railway/Fly.io).
+- [ ] Revisar el acceso sin contraseña antes de abrir al público (OTP por correo o contraseña).
 - [ ] Aprobación final del docente antes de publicar.
 
 ---
@@ -250,6 +262,7 @@ Cada actividad emite `completada(puntaje)`; la store de gamificación acumula y 
 | Alucinaciones en contenido médico | RAG obligatorio con citas, revisión docente de prompts, disclaimer. |
 | Costo de tokens | Caching, límites, logging desde el día uno. |
 | Ciclos de revisión sin cierre | `docs/revisiones.md` con fecha, versión revisada, cambios pedidos y aprobación explícita. |
+| Acceso solo con número de identificación | Aceptado para la etapa piloto en entorno controlado. Antes del despliegue público se añade OTP por correo o contraseña. |
 | TresJS tiene menos ejemplos que R3F | Portar patrones de `human-anatomy-viewer`; la lógica Three.js es idéntica. |
 
 ---

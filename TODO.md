@@ -29,7 +29,7 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 | F0-03 | [ ] | Guiones de Módulos 2 y 3 | F0-01 | M3 es de alta densidad |
 | F0-04 | [ ] | Guiones de Módulos 4, 5 y 6 | F0-01 | M4 y M5 alta densidad |
 | F0-05 | [ ] | Inventario de imágenes y videos existentes del docente; lista de lo que falta producir | F0-02 | |
-| F0-06 | [ ] | Recolectar documentos del curso en `services/ai/corpus/` con permiso de uso | — | gitignored |
+| F0-06 | [ ] | Recolectar documentos del curso en `services/api/corpus/` con permiso de uso | — | gitignored |
 | F0-07 | [ ] | Descargar mandíbula BodyParts3D (FJ6399) y huesos adyacentes | — | Ver referencias.md |
 | F0-08 | [ ] | Blender: separar cóndilo, rama, ángulo, cuerpo, sínfisis, coronoides, foramen mentoniano como nodos con nombre | F0-07 | snake_case en español |
 | F0-09 | [ ] | Exportar GLB con Draco vía `gltf-transform`, < 3 MB por pensar en móvil | F0-08 | |
@@ -44,21 +44,21 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 
 | ID | Estado | Tarea | Depende de | Notas |
 |---|---|---|---|---|
-| F1-01 | [ ] | Crear monorepo: `apps/web`, `services/api`, `services/ai`, pnpm workspace, `.gitignore`, `README.md` | — | |
-| F1-02 | [ ] | `docker-compose.yml` con web, api, ai, mysql (perfil prod) | F1-01 | SQLite en dev |
-| F1-03 | [ ] | Laravel 11 en `services/api` desde `muradyanvano/laravel-vue-spa-starter-kit`; Sanctum con tokens; registro con datos mínimos del estudiante | F1-01 | Quitar el frontend que trae |
-| F1-04 | [ ] | Migraciones: `users`, `progress`, `activity_results`, `achievements`, `user_achievements`, `certificates`, `chat_sessions`, `chat_messages` (tokens), `usage_events` | F1-03 | |
-| F1-05 | [ ] | Endpoints: auth, `/me`, `/progress`, `/activities/{id}/result`, `/achievements`, `/internal/validate-token` | F1-04 | |
-| F1-06 | [ ] | FastAPI en `services/ai`: `/health`, settings, `auth.py` valida token contra Laravel | F1-01 | |
-| F1-07 | [ ] | Cliente Anthropic: `claude-opus-5`, thinking adaptativo, streaming SSE en `/chat` sin contexto aún | F1-06 | Base: fastapi-claude-ai-streaming-api |
+| F1-01 | [ ] | Crear monorepo: `apps/web`, `services/api`, pnpm workspace, `.gitignore`, `README.md` | — | |
+| F1-02 | [ ] | `docker-compose.yml` con web, api, postgres (perfil prod) | F1-01 | SQLite en dev sin Docker |
+| F1-03 | [ ] | FastAPI en `services/api` con `uv`: `main.py`, `core/settings.py`, `core/db.py` (SQLModel, SQLite/PostgreSQL por env), `/health`, CORS | F1-01 | Base: fastapi-claude-ai-streaming-api |
+| F1-04 | [ ] | Modelos SQLModel + Alembic: `users` (nombre, apellido, tipo_identificacion, numero_identificacion único, nivel, rol), `progress`, `activity_results`, `achievements`, `user_achievements`, `certificates`, `chat_sessions`, `chat_messages` (tokens), `usage_events` | F1-03 | |
+| F1-05 | [ ] | Auth mínima: `POST /auth/register` (nombre, apellido, tipo y número de identificación) y `POST /auth/login` (tipo + número) → JWT; dependencia `get_current_user`; `GET /me` | F1-04 | Sin contraseña en esta etapa (PLAN §1) |
+| F1-06 | [ ] | Endpoints de progreso: `GET/PUT /progress`, `POST /activities/{id}/result`, `GET /achievements` | F1-05 | |
+| F1-07 | [ ] | Cliente Anthropic en `app/ai/`: `claude-opus-5`, thinking adaptativo, streaming SSE en `POST /chat` sin contexto aún, protegido con JWT | F1-05 | |
 | F1-08 | [ ] | Vue 3 + Vite + TS en `apps/web`: Tailwind, shadcn-vue, Vue Router (ruta por módulo), Pinia; layout móvil primero | F1-01 | |
 | F1-09 | [ ] | Store Pinia `contextoPedagogico` con el tipo del PLAN §3, congelado | F1-08 | Cambios exigen actualizar PLAN, store y schema FastAPI |
 | F1-10 | [ ] | Componente `MenuCircular` lateral: 6 módulos, estado bloqueado/activo/completado, touch | F1-08 | SVG a medida |
 | F1-11 | [ ] | `HudPuntaje`: puntaje, módulo actual, siguiente logro | F1-09 | |
 | F1-12 | [ ] | Escena TresJS "hola mandíbula": `useGLTF` + Draco, `OrbitControls`, probada en teléfono real | F1-08 | STL crudo si F0-09 no está |
-| F1-13 | [ ] | Composable `useMentor` con `@ai-sdk/vue` `useChat` → FastAPI `/chat`; panel de chat deslizable en móvil | F1-08, F1-07 | Decidir protocolo de stream |
-| F1-14 | [ ] | Registro/login en la SPA con Sanctum, token, interceptor | F1-08, F1-05 | |
-| F1-15 | [ ] | CI: lint + test en los tres paquetes | F1-03, F1-06, F1-08 | |
+| F1-13 | [ ] | Composable `useMentor` con `@ai-sdk/vue` `useChat` → `/chat`; panel de chat deslizable en móvil | F1-08, F1-07 | Decidir protocolo de stream |
+| F1-14 | [ ] | Pantalla de registro/login en la SPA: nombre, apellido, tipo de identificación (select), número; guardar JWT; interceptor fetch | F1-08, F1-05 | Una sola pantalla: si el número existe, entra; si no, pide nombre y apellido |
+| F1-15 | [ ] | CI: lint + test en ambos paquetes (ruff + pytest, eslint + vitest) | F1-03, F1-08 | |
 
 **Entregable F1:** registro, menú circular, mandíbula rotando en móvil, chat con streaming.
 
@@ -72,10 +72,10 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 | F2-04 | [ ] | `ActivityMedia`: video + texto sincronizado, completa al terminar | F2-01 | |
 | F2-05 | [ ] | `ActivityScene3D`: GLB con nodos, tap por nodo → ficha, completa al visitar nodos | F2-01, F1-12, F0-09 | Usar `gltfvue` |
 | F2-06 | [ ] | Tween de cámara GSAP `enfocarEstructura(nodo)` | F2-05 | La usará la IA en F3 |
-| F2-07 | [ ] | Store `gamificacion`: puntos por actividad, penalización por intentos, logros, persistencia en Laravel | F1-05, F0-13 | |
+| F2-07 | [ ] | Store `gamificacion`: puntos por actividad, penalización por intentos, logros, persistencia vía `/activities/{id}/result` | F1-06, F0-13 | |
 | F2-08 | [ ] | Página de módulo genérica que renderiza `content.json` y bloquea avance hasta completar actividades | F2-02, F2-03, F2-04, F2-05 | |
 | F2-09 | [ ] | Módulo 1 completo: `content.json`, SVGs, textos, actividades, puntajes | F2-08, F0-02 | |
-| F2-10 | [ ] | Registrar interacciones y tiempo por sección en `ContextoPedagogico` y en `usage_events` | F1-09, F1-05 | |
+| F2-10 | [ ] | Registrar interacciones y tiempo por sección en `ContextoPedagogico` y en `usage_events` | F1-09, F1-06 | |
 | F2-11 | [ ] | Ciclo de revisión 1 con el docente sobre Módulo 1 | F2-09, F0-15 | Anotar en revisiones.md |
 
 **Entregable F2:** Módulo 1 jugable de principio a fin, con puntaje, en móvil y desktop.
@@ -84,7 +84,7 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 
 | ID | Estado | Tarea | Depende de | Notas |
 |---|---|---|---|---|
-| F3-01 | [ ] | `ingest.py`: documentos → chunks → embeddings → ChromaDB, con metadato `modulo` | F0-06, F1-06 | Base: RaG-CHBT |
+| F3-01 | [ ] | `ingest.py`: documentos → chunks → embeddings → ChromaDB (dev) / pgvector (prod), con metadato `modulo` | F0-06, F1-03 | Base: RaG-CHBT |
 | F3-02 | [ ] | `rag/retrieve.py`: top-k con filtro por módulo | F3-01 | |
 | F3-03 | [ ] | System prompt v1 `prompts/mentor.md`: rol, tono simple y directo, reglas, no resolver actividades | F0-02 | Versionar |
 | F3-04 | [ ] | `/chat` completo: system + contexto + chunks + historial; prompt caching del bloque estable | F3-02, F3-03, F1-07 | Verificar `cache_read_input_tokens` > 0 |
@@ -119,7 +119,7 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 | F5-02 | [ ] | Módulo 5 "Renovando el hueso": remodelado sobre mandíbula 3D con etapas | F2-05, F2-06, F0-04 | Alta densidad |
 | F5-03 | [ ] | Módulo 6 "El paso del tiempo" | F2-08, F0-04 | |
 | F5-04 | [ ] | Logros transversales y pantalla de logros | F2-07 | |
-| F5-05 | [ ] | Certificado PDF (dompdf) con código de verificación y ruta pública `/verify/{codigo}` | F5-01, F5-02, F5-03, F1-04 | |
+| F5-05 | [ ] | Certificado PDF (WeasyPrint) con nombre, apellido, identificación, código de verificación y ruta pública `/verify/{codigo}` | F5-01, F5-02, F5-03, F1-04 | |
 | F5-06 | [ ] | Ciclo de revisión 3 (M4–M6, certificado) | F5-05 | |
 
 ## F6 — Pulido, pruebas y despliegue
@@ -131,9 +131,10 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 | F6-03 | [ ] | Panel docente: progreso por cohorte, actividades más falladas, uso del mentor, rol `docente` | F2-10, F3-09 | |
 | F6-04 | [ ] | Prueba con 5–10 estudiantes; hallazgos en `docs/pruebas.md` | F5-06 | |
 | F6-05 | [ ] | Frontend en Vercel/Netlify | F1-15 | |
-| F6-06 | [ ] | Laravel + MySQL y FastAPI en VPS con Docker; HTTPS, CORS, secretos | F1-02 | |
+| F6-06 | [ ] | FastAPI + PostgreSQL en VPS con Docker (o Railway/Fly.io); HTTPS, CORS, secretos | F1-02 | |
 | F6-07 | [ ] | Alerta de costo de tokens por día | F3-09 | |
-| F6-08 | [ ] | Aprobación final del docente y publicación | F6-04, F6-05, F6-06 | |
+| F6-08 | [ ] | Endurecer acceso antes del público: OTP por correo o contraseña sobre el registro mínimo | F1-05 | Decisión con el docente |
+| F6-09 | [ ] | Aprobación final del docente y publicación | F6-04, F6-05, F6-06, F6-08 | |
 
 ---
 
@@ -142,7 +143,9 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 | Fecha | Decisión | Motivo |
 |---|---|---|
 | 2026-09-23 | Vue 3 + TresJS en lugar de React + R3F | Preferencia del equipo; TresJS cubre GLTF, Draco, eventos por mesh y Html. |
-| 2026-09-23 | Solo FastAPI habla con Anthropic | Una sola clave, un solo punto de logging de tokens. |
+| 2026-09-23 | Un solo backend en FastAPI; se descarta Laravel | Laravel es pesado para el alcance; todo el equipo en Python. Elimina la validación cruzada de tokens. |
+| 2026-09-23 | SQLModel + Alembic; SQLite en dev, PostgreSQL con pgvector en prod | Reemplaza MySQL; pgvector permite RAG en la misma base. |
+| 2026-09-23 | Registro mínimo: nombre, apellido, tipo y número de identificación, sin contraseña | Pedido del equipo para arrancar. Riesgo de suplantación aceptado en piloto; se endurece en F6-08. |
 | 2026-09-23 | Mandíbula base de BodyParts3D | Única fuente abierta con licencia clara; refinar en Blender. |
 | 2026-09-23 | Alcance según briefing: 6 módulos, gamificación, certificado, móvil 100 % | Reemplaza el alcance inicial centrado en osteogénesis. |
 | 2026-09-23 | 3D solo en mandíbula y células; resto en SVG/2D | Requisito de móvil al 100 %. |
@@ -155,3 +158,4 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 |---|---|---|
 | — | React Three Fiber | Reemplazado por TresJS (2026-09-23) |
 | — | Estructura por tipo de osificación (intramembranosa/endocondral) | El briefing organiza por módulos temáticos (2026-09-23) |
+| — | Laravel + Sanctum + MySQL | Reemplazado por FastAPI + SQLModel + PostgreSQL (2026-09-23) |
