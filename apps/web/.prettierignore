@@ -1,0 +1,7 @@
+dist
+.verify
+coverage
+node_modules
+pnpm-lock.yaml
+# Código generado por la CLI de shadcn-vue: se conserva su estilo original.
+src/components/ui

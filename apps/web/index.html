@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport-fit=cover permite usar env(safe-area-inset-*) en móviles con notch.
+         No se bloquea el zoom del usuario (accesibilidad). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f7f5fb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#131025" media="(prefers-color-scheme: dark)" />
+    <meta
+      name="description"
+      content="Metabolismo óseo: un viaje interactivo desde la célula hasta el hueso."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Metabolismo óseo · OVA</title>
+    <!-- Aplica el tema oscuro antes del primer pintado para evitar un destello claro.
+         La lógica completa (y los cambios en vivo) está en src/lib/tema.ts. -->
+    <script>
+      try {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

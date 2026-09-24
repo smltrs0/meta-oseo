@@ -13,8 +13,10 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 
 ## Estado actual
 
-**Fase activa:** F0 y F1 en paralelo.
-**Siguiente tarea:** F1-01 (crear monorepo).
+**Fase activa:** F1 (esqueleto técnico). F0 espera el material del docente.
+**Hecho y verificado de forma independiente:** F1-01; F1-03 a F1-06 (backend núcleo: 289 pruebas en SQLite y en PostgreSQL 18, 47 comprobaciones en vivo); F1-08 y F1-09 (base Vue: typecheck, lint, 142 pruebas y build correctos).
+**En curso (agentes):** F1-07 (mentor SSE), F1-10 y F1-11 (menú y HUD), F1-12 (escena 3D), F1-13 (chat del frontend).
+**Siguiente tarea:** al terminar esos agentes: F1-02 (Docker con pgvector), F1-15 (CI), F1-14 de extremo a extremo con el backend real, revisión adversarial y verificación en navegador móvil.
 **Bloqueos:** ninguno técnico. Falta material del docente para el Módulo 1 (F0-02).
 **Última actualización:** 2026-09-23.
 
@@ -44,20 +46,20 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 
 | ID | Estado | Tarea | Depende de | Notas |
 |---|---|---|---|---|
-| F1-01 | [ ] | Crear monorepo: `apps/web`, `services/api`, pnpm workspace, `.gitignore`, `README.md` | — | |
+| F1-01 | [x] | Crear monorepo: `apps/web`, `services/api`, pnpm workspace, `.gitignore`, `README.md` | — | |
 | F1-02 | [ ] | `docker-compose.yml` con web, api, postgres (perfil prod) | F1-01 | SQLite en dev sin Docker |
-| F1-03 | [ ] | FastAPI en `services/api` con `uv`: `main.py`, `core/settings.py`, `core/db.py` (SQLModel, SQLite/PostgreSQL por env), `/health`, CORS | F1-01 | Base: fastapi-claude-ai-streaming-api |
-| F1-04 | [ ] | Modelos SQLModel + Alembic: `users` (nombre, apellido, tipo_identificacion, numero_identificacion único, nivel, rol), `progress`, `activity_results`, `achievements`, `user_achievements`, `certificates`, `chat_sessions`, `chat_messages` (tokens), `usage_events` | F1-03 | |
-| F1-05 | [ ] | Auth mínima: `POST /auth/register` (nombre, apellido, tipo y número de identificación) y `POST /auth/login` (tipo + número) → JWT; dependencia `get_current_user`; `GET /me` | F1-04 | Sin contraseña en esta etapa (PLAN §1) |
-| F1-06 | [ ] | Endpoints de progreso: `GET/PUT /progress`, `POST /activities/{id}/result`, `GET /achievements` | F1-05 | |
+| F1-03 | [x] | FastAPI en `services/api` con `uv`: `main.py`, `core/settings.py`, `core/db.py` (SQLModel, SQLite/PostgreSQL por env), `/health`, CORS | F1-01 | Base: fastapi-claude-ai-streaming-api |
+| F1-04 | [x] | Modelos SQLModel + Alembic: `users` (nombre, apellido, tipo_identificacion, numero_identificacion, nivel, rol; único sobre el par tipo+número), `progress_modulos`, `activity_results`, `achievements`, `user_achievements`, `certificates`, `chat_sessions`, `chat_messages` (tokens), `usage_events` | F1-03 | |
+| F1-05 | [x] | Auth mínima: `POST /auth/register` (nombre, apellido, tipo y número de identificación) y `POST /auth/login` (tipo + número) → JWT; dependencia `get_current_user`; `GET /me` | F1-04 | Sin contraseña en esta etapa (PLAN §1) |
+| F1-06 | [x] | Endpoints de progreso: `GET/PUT /progress`, `POST /activities/{id}/result`, `GET /achievements` | F1-05 | |
 | F1-07 | [ ] | Cliente Anthropic en `app/ai/`: `claude-opus-5`, thinking adaptativo, streaming SSE en `POST /chat` sin contexto aún, protegido con JWT | F1-05 | |
-| F1-08 | [ ] | Vue 3 + Vite + TS en `apps/web`: Tailwind, shadcn-vue, Vue Router (ruta por módulo), Pinia; layout móvil primero | F1-01 | |
-| F1-09 | [ ] | Store Pinia `contextoPedagogico` con el tipo del PLAN §3, congelado | F1-08 | Cambios exigen actualizar PLAN, store y schema FastAPI |
+| F1-08 | [x] | Vue 3 + Vite + TS en `apps/web`: Tailwind, shadcn-vue, Vue Router (ruta por módulo), Pinia; layout móvil primero | F1-01 | 2026-09-23. Typecheck, lint, 142 pruebas, build y arranque de Vite verificados. Falta la revisión visual en móvil real (llega con F1-12). `AppShell` monta los stubs de `MenuCircular`, `HudPuntaje` y `MentorPanel` |
+| F1-09 | [x] | Store Pinia `contextoPedagogico` con el tipo del PLAN §3, congelado | F1-08 | Cambios exigen actualizar PLAN, store y schema FastAPI. 2026-09-23: `apps/web/src/stores/contextoPedagogico.ts`, con `toPayload()` validado contra el contrato en pruebas |
 | F1-10 | [ ] | Componente `MenuCircular` lateral: 6 módulos, estado bloqueado/activo/completado, touch | F1-08 | SVG a medida |
 | F1-11 | [ ] | `HudPuntaje`: puntaje, módulo actual, siguiente logro | F1-09 | |
 | F1-12 | [ ] | Escena TresJS "hola mandíbula": `useGLTF` + Draco, `OrbitControls`, probada en teléfono real | F1-08 | STL crudo si F0-09 no está |
-| F1-13 | [ ] | Composable `useMentor` con `@ai-sdk/vue` `useChat` → `/chat`; panel de chat deslizable en móvil | F1-08, F1-07 | Decidir protocolo de stream |
-| F1-14 | [ ] | Pantalla de registro/login en la SPA: nombre, apellido, tipo de identificación (select), número; guardar JWT; interceptor fetch | F1-08, F1-05 | Una sola pantalla: si el número existe, entra; si no, pide nombre y apellido |
+| F1-13 | [ ] | Composable `useMentor` con `fetch` + `ReadableStream` sobre el SSE de `/api/chat`; panel de chat deslizable en móvil | F1-08, F1-07 | Protocolo decidido: SSE propio (ver api-contract.md) |
+| F1-14 | [~] | Pantalla de registro/login en la SPA: nombre, apellido, tipo de identificación (select), número; guardar JWT; interceptor fetch | F1-08, F1-05 | Una sola pantalla: si el número existe, entra; si no, pide nombre y apellido. 2026-09-23: SPA lista y probada con fetch simulado (vista, store, guard, cliente). Falta la prueba de extremo a extremo contra el backend real |
 | F1-15 | [ ] | CI: lint + test en ambos paquetes (ruff + pytest, eslint + vitest) | F1-03, F1-08 | |
 
 **Entregable F1:** registro, menú circular, mandíbula rotando en móvil, chat con streaming.
@@ -134,6 +136,7 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 | F6-06 | [ ] | FastAPI + PostgreSQL en VPS con Docker (o Railway/Fly.io); HTTPS, CORS, secretos | F1-02 | |
 | F6-07 | [ ] | Alerta de costo de tokens por día | F3-09 | |
 | F6-08 | [ ] | Endurecer acceso antes del público: OTP por correo o contraseña sobre el registro mínimo | F1-05 | Decisión con el docente |
+| F6-10 | [ ] | **Recordar al usuario** (pedido explícito): montar todo en Docker con la imagen `pgvector/pgvector:pg16`, ejecutar `CREATE EXTENSION vector;`, migrar el RAG de ChromaDB a pgvector | F1-02, F3-01 | Recordarlo al llegar a F6-04 o al declarar el proyecto terminado. Laragon no trae pgvector |
 | F6-09 | [ ] | Aprobación final del docente y publicación | F6-04, F6-05, F6-06, F6-08 | |
 
 ---
@@ -145,6 +148,11 @@ Detalle de fases en [PLAN.md](PLAN.md). Pedagogía en [docs/briefing-pedagogico.
 | 2026-09-23 | Vue 3 + TresJS en lugar de React + R3F | Preferencia del equipo; TresJS cubre GLTF, Draco, eventos por mesh y Html. |
 | 2026-09-23 | Un solo backend en FastAPI; se descarta Laravel | Laravel es pesado para el alcance; todo el equipo en Python. Elimina la validación cruzada de tokens. |
 | 2026-09-23 | SQLModel + Alembic; SQLite en dev, PostgreSQL con pgvector en prod | Reemplaza MySQL; pgvector permite RAG en la misma base. |
+| 2026-09-23 | Python 3.14 (el instalado en la máquina) en lugar de 3.12 | Indicado por el equipo. `uv` usa el intérprete del sistema sin descargar otro. |
+| 2026-09-23 | Chat por SSE propio con `fetch`, sin `@ai-sdk/vue` | Emular el protocolo de stream del AI SDK en FastAPI es frágil y los eventos `tool_use` de cámara 3D (F3-08) necesitan control propio. |
+| 2026-09-23 | Unicidad de usuario sobre el par tipo+número de identificación | Un mismo número puede repetirse entre tipos distintos (CC vs. PA). |
+| 2026-09-23 | PyJWT en lugar de `python-jose` | `python-jose` no tiene mantenimiento activo. |
+| 2026-09-23 | Contrato de API en `docs/api-contract.md` | Permite construir frontend y backend en paralelo sin desincronizarse. |
 | 2026-09-23 | Registro mínimo: nombre, apellido, tipo y número de identificación, sin contraseña | Pedido del equipo para arrancar. Riesgo de suplantación aceptado en piloto; se endurece en F6-08. |
 | 2026-09-23 | Mandíbula base de BodyParts3D | Única fuente abierta con licencia clara; refinar en Blender. |
 | 2026-09-23 | Alcance según briefing: 6 módulos, gamificación, certificado, móvil 100 % | Reemplaza el alcance inicial centrado en osteogénesis. |

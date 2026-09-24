@@ -1,0 +1,55 @@
+import { fileURLToPath, URL } from 'node:url';
+import templateCompilerOptions from '@tresjs/core/template-compiler-options';
+import tailwindcss from '@tailwindcss/vite';
+import vue from '@vitejs/plugin-vue';
+import { defineConfig } from 'vitest/config';
+
+// El backend FastAPI escucha en :8000 (ver docs/api-contract.md). Se puede cambiar
+// con API_PROXY_TARGET, por ejemplo para apuntar a un servidor de pruebas.
+const API_TARGET = process.env.API_PROXY_TARGET ?? 'http://localhost:8000';
+
+export default defineConfig({
+  plugins: [
+    // templateCompilerOptions declara las etiquetas <TresMesh>, <TresAmbientLight>, etc.
+    // como elementos personalizados: sin esto Vue avisa "Failed to resolve component".
+    // Lo exige el renderizador propio de TresJS (ver README de @tresjs/core).
+    vue({ ...templateCompilerOptions }),
+    tailwindcss(),
+  ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+  server: {
+    proxy: {
+      // Sin reescribir el prefijo: /api/... llega igual a FastAPI.
+      '/api': {
+        target: API_TARGET,
+        changeOrigin: false,
+        configure(proxy) {
+          // El chat usa SSE (POST /api/chat). Se marca la respuesta para que ningún
+          // intermediario la acumule: sin transformaciones y sin buffer.
+          proxy.on('proxyRes', (proxyRes) => {
+            const tipo = String(proxyRes.headers['content-type'] ?? '');
+            if (tipo.includes('text/event-stream')) {
+              proxyRes.headers['cache-control'] = 'no-cache, no-transform';
+              proxyRes.headers['x-accel-buffering'] = 'no';
+            }
+          });
+        },
+      },
+    },
+  },
+  build: {
+    // Three.js pesa bastante; solo se carga en la ruta /demo-mandibula (carga perezosa).
+    chunkSizeWarningLimit: 1200,
+  },
+  test: {
+    environment: 'happy-dom',
+    include: ['src/**/*.{test,spec}.ts'],
+    restoreMocks: true,
+    unstubEnvs: true,
+    unstubGlobals: true,
+  },
+});

@@ -1,0 +1,17 @@
+{
+  "name": "ova-metabolismo-oseo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "OVA Metabolismo óseo: un viaje interactivo desde la célula hasta el hueso",
+  "packageManager": "pnpm@12.6.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev:web": "pnpm --filter @ova/web dev",
+    "build:web": "pnpm --filter @ova/web build",
+    "lint:web": "pnpm --filter @ova/web lint",
+    "typecheck:web": "pnpm --filter @ova/web typecheck",
+    "test:web": "pnpm --filter @ova/web test"
+  }
+}

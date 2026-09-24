@@ -4,6 +4,13 @@ Objeto Virtual de Aprendizaje para ciencias de la salud. Seis módulos temático
 actividades interactivas obligatorias, mentor de IA, gamificación y certificado.
 100 % móvil. Vue 3 + TresJS en el frontend; un único backend FastAPI + Claude.
 
+## Entorno de desarrollo
+
+- Windows, Git Bash. `pnpm` instalado global con npm.
+- `uv` está en `C:\Users\Samuel\AppData\Roaming\Python\Python314\Scripts` y **no** está en el PATH. Anteponerlo en cada comando: `export PATH="/c/Users/Samuel/AppData/Roaming/Python/Python314/Scripts:$PATH"`, o usar `python -m uv`.
+- Base de datos local (Laragon): PostgreSQL 18 en `localhost:5432`, usuario `postgres`, sin contraseña. `psql` en `/c/laragon/bin/postgresql/pgsql-18/bin/psql.exe`. Sirve para verificar migraciones contra PostgreSQL real. **Esa instancia tiene bases de otros proyectos del usuario: usar solo bases con prefijo `ova_` (`ova_dev`, `ova_test`) y nunca tocar las demás.** No trae la extensión `pgvector`: el RAG en desarrollo usa ChromaDB y en producción la imagen `pgvector/pgvector`. MySQL 8.4 también corre en Laragon pero el proyecto no lo usa.
+- Contrato entre frontend y backend: [docs/api-contract.md](docs/api-contract.md). Es la fuente de verdad; cambiarlo exige tocar ambos lados.
+
 ## Documentos de contexto (leer en este orden)
 
 1. [TODO.md](TODO.md) — sección "Estado actual" y "Siguiente tarea". Es la fuente de verdad del avance.
@@ -25,12 +32,34 @@ actividades interactivas obligatorias, mentor de IA, gamificación y certificado
 
 ## Stack fijo
 
-- `apps/web`: Vue 3, Vite, TypeScript, Pinia, Vue Router, Tailwind, shadcn-vue, `@tresjs/core`, `@tresjs/cientos`, GSAP, `@vueuse/motion`, `@formkit/drag-and-drop`, `@ai-sdk/vue`.
-- `services/api`: Python 3.12, FastAPI, SQLModel + Alembic, JWT con `python-jose`, WeasyPrint, SDK `anthropic`, ChromaDB en dev / pgvector en prod. SQLite en dev / PostgreSQL 16 en prod. Gestión de dependencias con `uv`. Modelo `claude-opus-5`, thinking adaptativo, streaming.
+- `apps/web`: Vue 3, Vite, TypeScript, Pinia, Vue Router, Tailwind, shadcn-vue, `@tresjs/core`, `@tresjs/cientos`, GSAP, `@vueuse/motion`, `@formkit/drag-and-drop`. Chat por SSE propio con `fetch` (sin AI SDK).
+- `services/api`: Python 3.14 (el instalado en la máquina del equipo), FastAPI, SQLModel + Alembic, JWT con `PyJWT`, WeasyPrint, SDK `anthropic`, ChromaDB en dev / pgvector en prod. SQLite en dev / PostgreSQL 16 en prod. Gestión de dependencias con `uv`. Modelo `claude-opus-5`, thinking adaptativo, streaming.
 - Registro de usuario: nombre, apellido, tipo de identificación, número de identificación. Sin contraseña hasta F6-08. No añadir campos sin acordarlo.
 - No introducir Laravel, PHP ni un segundo backend. Todo lo de servidor va en `services/api`.
 
 ## Comandos
 
-Pendientes hasta que exista el monorepo (F1-01). Al crearlo, documentar aquí:
-`pnpm dev`, `uv run uvicorn app.main:app --reload`, `uv run alembic upgrade head`, `uv run python -m app.rag.ingest`.
+Backend, desde `services/api` (con `uv` en el PATH, ver "Entorno de desarrollo"):
+
+```bash
+uv run alembic upgrade head                 # crea el esquema; la API exige que exista
+uv run uvicorn app.main:app --reload        # http://localhost:8000, docs en /api/docs (solo ENV=dev)
+uv run pytest                               # 289+ pruebas sobre SQLite temporal
+uv run ruff check . && uv run ruff format --check .
+# Contra PostgreSQL real (crear antes ova_test y borrarla después; solo bases ova_*):
+TEST_DATABASE_URL=postgresql://postgres@localhost:5432/ova_test uv run pytest
+```
+
+Frontend, desde la raíz del repo:
+
+```bash
+pnpm install
+pnpm dev:web                                # http://localhost:5173, proxifica /api a :8000
+pnpm --filter @ova/web typecheck
+pnpm --filter @ova/web lint
+pnpm --filter @ova/web test
+# Sin backend, con sesión ficticia (solo en desarrollo; no entra al build):
+VITE_DEV_BYPASS_AUTH=true pnpm --filter @ova/web exec vite --port 5180 --strictPort
+```
+
+Pendiente de documentar cuando exista: la ingesta del RAG (F3-01).

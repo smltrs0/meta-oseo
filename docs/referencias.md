@@ -62,8 +62,8 @@ Revisado el 2026-09-23. Cada entrada dice qué se toma y qué no. Revisar licenc
 
 | Repo / doc | Qué reutilizar |
 |---|---|
-| [vercel/ai](https://github.com/vercel/ai) | `@ai-sdk/vue` con `useChat`. Ver `examples/` para Vue/Nuxt. |
-| [AI SDK – Getting started Nuxt](https://ai-sdk.dev/docs/getting-started/nuxt) | Guía oficial de `useChat` en Vue. |
+| [vercel/ai](https://github.com/vercel/ai) | Solo como referencia de UX de chat. **No se usa `@ai-sdk/vue`**: el proyecto emite un SSE propio (ver `docs/api-contract.md`). |
+| [MDN – Using readable streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams) | Base del composable `useMentor` (`fetch` + `ReadableStream` + `AbortController`). |
 
 ## Lo que NO existe hecho y hay que construir
 

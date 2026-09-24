@@ -1,0 +1,8 @@
+packages:
+  - "apps/*"
+
+# pnpm 11+ bloquea los scripts de instalación hasta que se decida por paquete.
+# vue-demi (dependencia transitiva de reka-ui) solo usa su postinstall para cambiar a la
+# variante de Vue 2; su build por defecto ya apunta a Vue 3, así que se deniega.
+allowBuilds:
+  vue-demi: false

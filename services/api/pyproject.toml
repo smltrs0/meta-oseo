@@ -1,0 +1,54 @@
+[project]
+name = "ova-api"
+version = "0.1.0"
+description = "API del OVA Metabolismo óseo (FastAPI)"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.20.0",
+    "anthropic>=1.8.0",
+    "fastapi>=0.141.1",
+    "httpx>=0.28.1",
+    "psycopg[binary]>=3.3.6",
+    "pydantic-settings>=2.15.0",
+    "pyjwt>=2.15.0",
+    "sqlmodel>=0.0.47",
+    "uvicorn[standard]>=0.53.0",
+]
+
+[tool.uv]
+# Aplicación, no librería: no se construye ni se instala como paquete.
+package = false
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.13.1",
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# `app` no se instala como paquete (package = false): se importa desde la raíz de services/api.
+pythonpath = ["."]
+addopts = "-ra"
+filterwarnings = ["error"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".venv", "data", "corpus"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "C4", "RUF"]
+ignore = [
+    # Texto en español con letras como "é": no confundir con caracteres ambiguos.
+    "RUF001", "RUF002", "RUF003",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app"]
+# El directorio `alembic/` de la raíz haría que ruff lo tomara por código propio.
+known-third-party = ["alembic"]
+
+[tool.ruff.format]
+line-ending = "lf"

@@ -1,0 +1,36 @@
+# Node
+node_modules/
+dist/
+.vite/
+coverage/
+*.log
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Datos locales
+*.db
+*.sqlite3
+services/api/data/
+services/api/corpus/*
+!services/api/corpus/.gitkeep
+
+# Editor / SO
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Artefactos de verificación
+.verify/

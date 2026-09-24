@@ -21,11 +21,11 @@ Estado de avance: [TODO.md](TODO.md). Repos a reutilizar: [docs/referencias.md](
 | Animación | **@vueuse/motion + GSAP** | Transiciones de paneles; GSAP para tweens de cámara y para el "efecto biológico" al acoplar una molécula. |
 | Moléculas | **Mol\* o NGL embebido** | Proteínas reales desde PDB cuando el módulo lo pida. |
 | Video | **`<video>` nativo + HLS si hay hosting** | Contenido mixto video + texto. |
-| Chat IA en UI | **Vercel AI SDK (`ai` + `@ai-sdk/vue`)** | Streaming token a token con `useChat`. |
-| Backend único | **Python 3.12 + FastAPI** | Un solo servicio: registro, progreso, puntajes, logros, certificados, estadísticas, mentor de IA y RAG. Liviano y todo en Python. |
+| Chat IA en UI | **`fetch` + `ReadableStream` sobre SSE propio** (composable `useMentor`) | Streaming token a token. Se descartó `@ai-sdk/vue`: exigiría emular su protocolo de stream en FastAPI y las acciones de cámara 3D del mentor (F3-08) necesitan eventos propios. Ver `docs/api-contract.md`. |
+| Backend único | **Python 3.14 + FastAPI** | Un solo servicio: registro, progreso, puntajes, logros, certificados, estadísticas, mentor de IA y RAG. Liviano y todo en Python. |
 | ORM y migraciones | **SQLModel (SQLAlchemy 2 + Pydantic) + Alembic** | Modelos tipados que sirven también como schemas de la API. |
 | Base de datos | **SQLite en desarrollo, PostgreSQL 16 en producción** | PostgreSQL trae `pgvector`, así el RAG vive en la misma base. |
-| Auth | **JWT (`python-jose`) con `Authorization: Bearer`** | Sin contraseña al inicio: el estudiante entra con tipo y número de identificación. |
+| Auth | **JWT (`PyJWT`) con `Authorization: Bearer`** | Sin contraseña al inicio: el estudiante entra con tipo y número de identificación. |
 | Certificados | **WeasyPrint** | HTML + CSS → PDF con código de verificación. |
 | LLM | **Claude Opus 5 (`claude-opus-5`) vía SDK oficial `anthropic`** | Razonamiento científico. Thinking adaptativo, streaming. |
 | Vector store RAG | **ChromaDB en desarrollo → `pgvector` en producción** | Misma interfaz de retrieval detrás. |
