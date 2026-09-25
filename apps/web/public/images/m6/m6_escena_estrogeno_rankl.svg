@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none" stroke-linejoin="round" stroke-linecap="round" font-family="ui-sans-serif, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<!-- m6_escena_estrogeno_rankl. Fondo de la actividad de arrastre molecular (se muestra como imagen: lámina propia y tinta fija). Conceptual y sin escala. Los receptores coinciden con las posiciones de la actividad: ERα (16.7 %, 25 %), RANKL (50 %, 25 %), RANK (83.3 %, 25 %), c-Fms (25 %, 75 %) y TNFR1 (75 %, 75 %). Se dibujan tres precursores del mismo tipo para mostrar el grupo de precursores. Las capas de efecto, el osteoclasto, la laguna y la OPG empiezan ocultas. -->
+<title>Control hormonal de la formación de osteoclastos</title>
+<desc>Escena conceptual sin escala. Arriba a la izquierda, una célula osteoblástica o estromal con el receptor de estrógeno ERα dentro y moléculas de RANKL ancladas en su membrana. Arriba, un linfocito T inactivo. A la derecha y abajo, tres precursores de osteoclasto con los receptores RANK, c-Fms y TNFR1 en su superficie, sobre la superficie del hueso. Ocultos al inicio están la OPG, un osteoclasto multinucleado con su laguna de reabsorción y las flechas de cada efecto.</desc>
+<g id="superficie_osea">
+<rect x="4" y="4" width="792" height="592" rx="14" fill="#f1edfa" stroke="#2b2350" stroke-width="4"/>
+<path d="M4 530Q100 522 200 530T400 530T600 530T796 530V582Q796 596 782 596H18Q4 596 4 582Z" fill="#d98aa2" stroke="#2b2350" stroke-width="4"/>
+<path d="M14 552H786M14 574H786" stroke="#b0607d" stroke-width="2" opacity="0.5"/>
+<ellipse cx="640" cy="562" rx="20" ry="9" fill="#f8e3ea" stroke="#2b2350" stroke-width="2.5"/>
+<path d="M620 562L594 552M620 566L596 578M660 562L686 552M660 566L684 578" stroke="#2b2350" stroke-width="2" opacity="0.7"/>
+<text x="26" y="578" font-size="30" font-weight="600" fill="#2b2350" stroke="none">Hueso</text>
+</g>
+<g id="laguna_resorcion" style="opacity:0;visibility:hidden">
+<path d="M280 528C296 552 340 568 400 570C460 568 504 552 520 528Z" fill="#f1edfa" stroke="#2b2350" stroke-width="4"/>
+<path d="M296 540Q300 552 312 556M504 540Q500 552 488 556" stroke="#2b2350" stroke-width="2.5" opacity="0.7"/>
+</g>
+<g id="celula_osteoblastica">
+<path d="M48 150C48 84 110 38 226 38C336 38 402 78 402 150C402 222 340 266 226 266C110 266 48 222 48 150Z" fill="#b8adf0" stroke="#2b2350" stroke-width="5"/>
+<ellipse cx="282" cy="150" rx="60" ry="50" fill="#3b2f86" stroke="#2b2350" stroke-width="4"/>
+<circle cx="268" cy="140" r="9" fill="#8b7bdc"/>
+<circle cx="300" cy="166" r="6" fill="#8b7bdc"/>
+<ellipse cx="170" cy="82" rx="18" ry="8" fill="#8b7bdc" stroke="#2b2350" stroke-width="2.5"/>
+<ellipse cx="186" cy="222" rx="20" ry="9" fill="#8b7bdc" stroke="#2b2350" stroke-width="2.5"/>
+<ellipse cx="342" cy="232" rx="16" ry="8" fill="#8b7bdc" stroke="#2b2350" stroke-width="2.5"/>
+<text x="226" y="304" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Célula osteoblástica</text>
+</g>
+<g id="receptor_er_alfa">
+<ellipse cx="133" cy="150" rx="32" ry="25" fill="#efe4f6" stroke="#2b2350" stroke-width="4"/>
+<circle cx="133" cy="150" r="11" fill="#b8adf0" stroke="#2b2350" stroke-width="3" stroke-dasharray="4 4"/>
+<text x="133" y="206" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">ERα</text>
+</g>
+<g id="rankl_membrana">
+<path d="M402 112H426M402 150H426M402 188H426" stroke="#2b2350" stroke-width="5"/>
+<path d="M462 112L453 127.6L435 127.6L426 112L435 96.4L453 96.4Z" fill="#e2a12e" stroke="#2b2350" stroke-width="4"/>
+<path d="M462 150L453 165.6L435 165.6L426 150L435 134.4L453 134.4Z" fill="#e2a12e" stroke="#2b2350" stroke-width="4"/>
+<path d="M462 188L453 203.6L435 203.6L426 188L435 172.4L453 172.4Z" fill="#e2a12e" stroke="#2b2350" stroke-width="4"/>
+<text x="404" y="238" font-size="30" font-weight="600" fill="#2b2350" stroke="none">RANKL</text>
+</g>
+<g id="opg_soluble" style="opacity:0;visibility:hidden">
+<path d="M512 250L534 288L490 288Z" fill="#2fa88c" stroke="#2b2350" stroke-width="4"/>
+<path d="M462 268L480 300L444 300Z" fill="#2fa88c" stroke="#2b2350" stroke-width="4"/>
+<text x="492" y="330" font-size="30" font-weight="600" text-anchor="middle" fill="#2b2350" stroke="none">OPG</text>
+</g>
+<g id="linfocito_t">
+<circle cx="570" cy="100" r="44" fill="#cfe2f8" stroke="#2b2350" stroke-width="5"/>
+<circle cx="570" cy="100" r="31" fill="#3b2f86" stroke="#2b2350" stroke-width="3"/>
+<circle cx="562" cy="93" r="7" fill="#8b7bdc"/>
+<text x="570" y="46" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Linfocito T</text>
+</g>
+<g id="precursor_osteoclasto">
+<ellipse cx="690" cy="228" rx="78" ry="66" fill="#e3d3f0" stroke="#2b2350" stroke-width="5"/>
+<ellipse cx="704" cy="238" rx="40" ry="34" fill="#3b2f86" stroke="#2b2350" stroke-width="3"/>
+<circle cx="696" cy="230" r="7" fill="#8b7bdc"/>
+<text x="690" y="322" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Precursor</text>
+<ellipse cx="200" cy="486" rx="66" ry="40" fill="#e3d3f0" stroke="#2b2350" stroke-width="5"/>
+<ellipse cx="206" cy="490" rx="30" ry="22" fill="#3b2f86" stroke="#2b2350" stroke-width="3"/>
+<circle cx="199" cy="484" r="6" fill="#8b7bdc"/>
+<text x="200" y="382" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Precursor</text>
+<ellipse cx="600" cy="486" rx="66" ry="40" fill="#e3d3f0" stroke="#2b2350" stroke-width="5"/>
+<ellipse cx="594" cy="490" rx="30" ry="22" fill="#3b2f86" stroke="#2b2350" stroke-width="3"/>
+<circle cx="588" cy="484" r="6" fill="#8b7bdc"/>
+<text x="600" y="382" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Precursor</text>
+</g>
+<g id="receptor_rank">
+<path d="M667 166V142M667 142L648 114M667 142L686 114" stroke="#2b2350" stroke-width="13"/>
+<path d="M667 166V142M667 142L648 114M667 142L686 114" stroke="#5d8fbf" stroke-width="6"/>
+<path d="M655 104L648 98L638 100L634 110L640 118L650 118Z" fill="#f1edfa" stroke="#2b2350" stroke-width="3"/>
+<path d="M694 104L688 98L678 100L674 110L680 118L690 118Z" fill="#f1edfa" stroke="#2b2350" stroke-width="3"/>
+<text x="700" y="82" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">RANK</text>
+</g>
+<g id="receptor_cfms">
+<path d="M190 446V426M210 446V426" stroke="#2b2350" stroke-width="12"/>
+<path d="M190 446V426M210 446V426" stroke="#86b3da" stroke-width="5"/>
+<rect x="174" y="402" width="52" height="24" rx="5" fill="#86b3da" stroke="#2b2350" stroke-width="4"/>
+<path d="M200 407L208 414L200 421L192 414Z" fill="#f1edfa" stroke="#2b2350" stroke-width="2.5"/>
+<text x="166" y="434" font-size="30" text-anchor="end" font-weight="600" fill="#2b2350" stroke="none">c-Fms</text>
+</g>
+<g id="receptor_tnf">
+<path d="M580 446V424M600 446V424M620 446V424" stroke="#2b2350" stroke-width="12"/>
+<path d="M580 446V424M600 446V424M620 446V424" stroke="#e58c3c" stroke-width="5"/>
+<circle cx="580" cy="414" r="11" fill="#e58c3c" stroke="#2b2350" stroke-width="4"/>
+<circle cx="600" cy="414" r="11" fill="#e58c3c" stroke="#2b2350" stroke-width="4"/>
+<circle cx="620" cy="414" r="11" fill="#e58c3c" stroke="#2b2350" stroke-width="4"/>
+<text x="642" y="434" font-size="30" font-weight="600" fill="#2b2350" stroke="none">TNFR1</text>
+</g>
+<g id="osteoclasto_multinucleado" style="opacity:0;visibility:hidden">
+<path d="M296 522C296 440 340 402 400 402C460 402 504 440 504 522A8 12 0 0 0 488 522A8 12 0 0 0 472 522A8 12 0 0 0 456 522A8 12 0 0 0 440 522A8 12 0 0 0 424 522A8 12 0 0 0 408 522A8 12 0 0 0 392 522A8 12 0 0 0 376 522A8 12 0 0 0 360 522A8 12 0 0 0 344 522A8 12 0 0 0 328 522A8 12 0 0 0 312 522A8 12 0 0 0 296 522Z" fill="#c9a0dc" stroke="#2b2350" stroke-width="5"/>
+<path d="M298 500Q298 484 312 484Q326 486 328 500V516H298Z" fill="#efe4f6" stroke="#2b2350" stroke-width="2.5"/>
+<path d="M502 500Q502 484 488 484Q474 486 472 500V516H502Z" fill="#efe4f6" stroke="#2b2350" stroke-width="2.5"/>
+<ellipse cx="350" cy="452" rx="17" ry="14" fill="#3b2f86" stroke="#2b2350" stroke-width="3"/>
+<ellipse cx="392" cy="436" rx="17" ry="14" fill="#3b2f86" stroke="#2b2350" stroke-width="3"/>
+<ellipse cx="434" cy="440" rx="17" ry="14" fill="#3b2f86" stroke="#2b2350" stroke-width="3"/>
+<ellipse cx="462" cy="470" rx="17" ry="14" fill="#3b2f86" stroke="#2b2350" stroke-width="3"/>
+<ellipse cx="380" cy="478" rx="17" ry="14" fill="#3b2f86" stroke="#2b2350" stroke-width="3"/>
+<text x="400" y="386" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Osteoclasto</text>
+</g>
+<g id="efecto_estrogeno_rankl" style="opacity:0;visibility:hidden">
+<circle cx="62" cy="52" r="15" fill="#c2417c" stroke="#2b2350" stroke-width="4"/>
+<circle cx="112" cy="28" r="14" fill="#c2417c" stroke="#2b2350" stroke-width="4"/>
+<path d="M76 66Q100 94 118 122" stroke="#2b2350" stroke-width="5"/>
+<path d="M126 132L108 126L120 114Z" fill="#2b2350" stroke="#2b2350" stroke-width="2"/>
+<path d="M120 42Q152 74 146 118" stroke="#2b2350" stroke-width="5"/>
+<path d="M146 130L138 112L154 112Z" fill="#2b2350" stroke="#2b2350" stroke-width="2"/>
+<path d="M480 100V172" stroke="#2b2350" stroke-width="5"/>
+<path d="M480 194L464 168H496Z" fill="#b8302f" stroke="#2b2350" stroke-width="4"/>
+<path d="M506 194V122" stroke="#2b2350" stroke-width="5" stroke-dasharray="9 8"/>
+<path d="M506 100L490 126H522Z" fill="#f1edfa" stroke="#2b2350" stroke-width="4"/>
+</g>
+<g id="efecto_opg_bloquea" style="opacity:0;visibility:hidden">
+<path d="M474 92Q506 150 474 208" stroke="#2fa88c" stroke-width="12"/>
+<path d="M474 92Q506 150 474 208" stroke="#2b2350" stroke-width="3"/>
+<circle cx="514" cy="150" r="20" fill="#f1edfa" stroke="#b8302f" stroke-width="6"/>
+<path d="M500 164L528 136" stroke="#b8302f" stroke-width="6"/>
+</g>
+<g id="efecto_diferenciacion" style="opacity:0;visibility:hidden">
+<path d="M254 448Q282 414 322 420" stroke="#2b2350" stroke-width="6"/>
+<path d="M334 424L314 434L312 410Z" fill="#2b2350" stroke="#2b2350" stroke-width="2"/>
+<path d="M546 448Q518 414 478 420" stroke="#2b2350" stroke-width="6"/>
+<path d="M466 424L486 434L488 410Z" fill="#2b2350" stroke="#2b2350" stroke-width="2"/>
+<circle cx="400" cy="504" r="9" fill="#f1edfa" stroke="#2b2350" stroke-width="3"/>
+<path d="M394 504H406M400 498V510" stroke="#2b2350" stroke-width="3"/>
+</g>
+<g id="efecto_proliferacion" style="opacity:0;visibility:hidden">
+<ellipse cx="82" cy="486" rx="24" ry="20" fill="#e3d3f0" stroke="#2b2350" stroke-width="4"/>
+<circle cx="84" cy="488" r="9" fill="#3b2f86"/>
+<ellipse cx="712" cy="486" rx="24" ry="20" fill="#e3d3f0" stroke="#2b2350" stroke-width="4"/>
+<circle cx="710" cy="488" r="9" fill="#3b2f86"/>
+<path d="M134 470H112" stroke="#2b2350" stroke-width="5"/>
+<path d="M104 470L118 460V480Z" fill="#2b2350" stroke="#2b2350" stroke-width="2"/>
+<path d="M666 470H688" stroke="#2b2350" stroke-width="5"/>
+<path d="M696 470L682 460V480Z" fill="#2b2350" stroke="#2b2350" stroke-width="2"/>
+</g>
+<g id="efecto_amplificacion_tnf" style="opacity:0;visibility:hidden">
+<circle cx="570" cy="100" r="56" stroke="#e58c3c" stroke-width="7" stroke-dasharray="10 8"/>
+<path d="M586 158Q612 280 604 396" stroke="#2b2350" stroke-width="5"/>
+<path d="M602 408L590 388L614 388Z" fill="#2b2350" stroke="#2b2350" stroke-width="2"/>
+<rect x="587" y="196" width="18" height="18" fill="#d9574a" stroke="#2b2350" stroke-width="3"/>
+<rect x="598" y="266" width="18" height="18" fill="#d9574a" stroke="#2b2350" stroke-width="3"/>
+<rect x="602" y="334" width="18" height="18" fill="#d9574a" stroke="#2b2350" stroke-width="3"/>
+<path d="M526 92Q500 80 478 104" stroke="#2b2350" stroke-width="5"/>
+<path d="M468 112L482 94L490 112Z" fill="#2b2350" stroke="#2b2350" stroke-width="2"/>
+</g>
+</svg>

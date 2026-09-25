@@ -18,6 +18,9 @@ from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 API_DIR = Path(__file__).resolve().parents[2]
 REPO_ROOT = API_DIR.parents[1]
 
+# Manifiesto de actividades por defecto (lo genera `python -m app.scripts.build_manifest`).
+DEFAULT_MANIFEST_PATH = API_DIR / "app" / "data" / "actividades_manifest.json"
+
 # Valor por defecto de SECRET_KEY: solo sirve en desarrollo. Mide más de 32 bytes para que
 # PyJWT no avise de clave HMAC corta (RFC 7518 §3.2).
 DEFAULT_SECRET_KEY = "cambiar-en-produccion-clave-solo-para-desarrollo"
@@ -53,6 +56,49 @@ class Settings(BaseSettings):
     anthropic_model: str = "claude-opus-5"
     mentor_effort: Literal["low", "medium", "high", "xhigh", "max"] = "medium"
     mentor_max_tokens: int = Field(default=16000, gt=0)
+    # Fallback del lado del servidor (beta de Anthropic): reintenta en otro modelo si un
+    # clasificador de seguridad rechaza la consulta. Activo por defecto con `claude-opus-5`. Si la
+    # organización no tiene habilitada esa beta, cada consulta da error: ponerlo en `false`.
+    mentor_server_fallback: bool = True
+
+    # Precios para ESTIMAR el costo del mentor en el panel docente (F6-03), en USD por millón de
+    # tokens. Por defecto, las tarifas de `claude-opus-5` (5 USD entrada, 25 USD salida). Son una
+    # estimación: la factura real la emite Anthropic. Si cambia el modelo o la tarifa, se ajustan
+    # aquí sin tocar código.
+    precio_entrada_usd_por_mtok: float = Field(default=5.0, ge=0)
+    precio_salida_usd_por_mtok: float = Field(default=25.0, ge=0)
+
+    # Validación de resultados contra el contenido (F5-05 / F2). Ruta del manifiesto de
+    # actividades. Por defecto `app/data/actividades_manifest.json`: si existe se valida, si no,
+    # la API se comporta como en Fase 1. Una ruta explícita que no existe es un error de arranque;
+    # `ACTIVITIES_MANIFEST_PATH=` (vacía) desactiva la validación.
+    activities_manifest_path: Path | None = DEFAULT_MANIFEST_PATH
+
+    # Certificado (F5-05): porcentaje mínimo del puntaje máximo de las actividades obligatorias
+    # (solo se exige si hay manifiesto) y URL pública del sitio para el enlace de verificación
+    # impreso en el PDF (`{PUBLIC_BASE_URL}/verify/{codigo}`).
+    cert_min_porcentaje: int = Field(default=70, ge=0, le=100)
+    public_base_url: str = "http://localhost:5173"
+
+    @field_validator("activities_manifest_path", mode="before")
+    @classmethod
+    def _empty_manifest_path_disables(cls, value: object) -> object:
+        if isinstance(value, str) and not value.strip():
+            return None
+        return value
+
+    @field_validator("public_base_url")
+    @classmethod
+    def _clean_public_base_url(cls, value: str) -> str:
+        return value.strip().rstrip("/")
+
+    @property
+    def manifest_is_explicit(self) -> bool:
+        """`True` si la ruta del manifiesto no es la de por defecto (entonces debe existir)."""
+        return (
+            self.activities_manifest_path is not None
+            and self.activities_manifest_path != DEFAULT_MANIFEST_PATH
+        )
 
     @field_validator("database_url")
     @classmethod

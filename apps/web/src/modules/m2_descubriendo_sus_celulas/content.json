@@ -1,0 +1,2590 @@
+{
+  "id": "m2",
+  "numero": 2,
+  "slug": "descubriendo_sus_celulas",
+  "titulo": "Descubriendo sus células",
+  "subtitulo": "Origen y procesos de diferenciación celular. De la cresta neural y la médula ósea a las células que forman, mantienen y reabsorben el hueso mandibular",
+  "resumen": "Origen y procesos de diferenciación celular. De la cresta neural y la médula ósea a las células que forman, mantienen y reabsorben el hueso mandibular.",
+  "objetivos": [
+    "Describir el origen embrionario craneofacial de la mandíbula (cresta neural, ectomesénquima y cartílago de Meckel) y diferenciar la osificación intramembranosa de la osificación endocondral secundaria del cóndilo.",
+    "Ordenar las etapas del linaje osteoblástico (de célula madre mesenquimal a osteocito) y del osteoclástico (de célula madre hematopoyética a osteoclasto), indicando el factor o la señal que impulsa cada paso.",
+    "Identificar las estructuras del osteoblasto, del osteocito y del osteoclasto y relacionar cada una con su función.",
+    "Explicar cómo actúan M-CSF, RANKL y OPG sobre el linaje del osteoclasto, y por qué RUNX2 y osterix, en ese orden, son necesarios para el osteoblasto.",
+    "Relacionar cada célula ósea (progenitora, osteoblasto, revestimiento, osteocito, osteoclasto) con su función y con su marcador o señal principal.",
+    "Describir las células del ligamento periodontal y su relación con el hueso alveolar, y aplicarlo a la respuesta ósea ante una fuerza ortodóncica (lado de presión y lado de tensión)."
+  ],
+  "duracion_estimada_min": 45,
+  "glosario": [
+    {
+      "id": "anhidrasa_carbonica_ii",
+      "termino": "Anhidrasa carbónica II",
+      "definicion": "Enzima del citoplasma del osteoclasto que convierte CO2 y agua en ácido carbónico, fuente de los protones que se bombean para acidificar el espacio de resorción."
+    },
+    {
+      "id": "apoptosis",
+      "termino": "Apoptosis",
+      "definicion": "Muerte celular programada; es el destino de una gran parte de los osteoblastos al terminar de formar hueso."
+    },
+    {
+      "id": "borde_festoneado",
+      "termino": "Borde festoneado",
+      "definicion": "Repliegues profundos de la membrana del osteoclasto activo, orientados hacia el hueso; por ellos salen protones y enzimas y se recogen los productos de degradación. También se llama borde rugoso."
+    },
+    {
+      "id": "canaliculo",
+      "termino": "Canalículo",
+      "definicion": "Conducto fino que atraviesa la matriz mineralizada y conecta las lagunas; aloja una dendrita y líquido."
+    },
+    {
+      "id": "cartilago_de_meckel",
+      "termino": "Cartílago de Meckel",
+      "definicion": "Barra de cartílago primario del arco mandibular; guía la formación de la mandíbula, pero no se convierte en ella. Su extremo posterior forma el martillo y el yunque."
+    },
+    {
+      "id": "cartilago_secundario",
+      "termino": "Cartílago secundario",
+      "definicion": "Cartílago que aparece después de que existe hueso membranoso, sin derivar del cartílago primario; el cartílago condilar es el principal ejemplo mandibular."
+    },
+    {
+      "id": "catepsina_k",
+      "termino": "Catepsina K",
+      "definicion": "Proteasa de cisteína que el osteoclasto secreta al espacio ácido para digerir el colágeno tipo I."
+    },
+    {
+      "id": "celula_de_revestimiento_oseo",
+      "termino": "Célula de revestimiento óseo",
+      "definicion": "Osteoblasto en reposo, aplanado, que cubre superficies óseas sin formación ni resorción y puede reactivarse."
+    },
+    {
+      "id": "celula_madre_mesenquimal",
+      "termino": "Célula madre mesenquimal",
+      "definicion": "Célula multipotente que se autorrenueva y puede originar osteoblastos, condrocitos y adipocitos."
+    },
+    {
+      "id": "celula_osteoprogenitora",
+      "termino": "Célula osteoprogenitora",
+      "definicion": "Célula fusiforme comprometida con el linaje óseo, que todavía se divide; se localiza en el periostio y el endostio."
+    },
+    {
+      "id": "cemento",
+      "termino": "Cemento",
+      "definicion": "Tejido mineralizado que cubre la dentina de la raíz y recibe las fibras del ligamento periodontal."
+    },
+    {
+      "id": "cresta_neural_craneal",
+      "termino": "Cresta neural craneal",
+      "definicion": "Población de células embrionarias multipotentes que migra desde el borde del tubo neural hacia la cara y el cuello y forma el ectomesénquima."
+    },
+    {
+      "id": "dendrita",
+      "termino": "Dendrita",
+      "definicion": "Prolongación larga y delgada del osteocito que viaja por un canalículo y contacta con otras células."
+    },
+    {
+      "id": "ectomesenquima",
+      "termino": "Ectomesénquima",
+      "definicion": "Tejido embrionario de origen neural, propio de la cabeza, que se comporta como mesénquima y origina hueso, cartílago, dentina, pulpa, cemento y ligamento periodontal."
+    },
+    {
+      "id": "esclerostina",
+      "termino": "Esclerostina",
+      "definicion": "Proteína secretada por los osteocitos que se une a LRP5 y LRP6 y frena la vía Wnt/β-catenina en los osteoblastos, con lo que reduce la formación de hueso."
+    },
+    {
+      "id": "fibras_de_sharpey",
+      "termino": "Fibras de Sharpey",
+      "definicion": "Extremos de las fibras principales de colágeno del ligamento periodontal incluidos en el cemento y el hueso alveolar."
+    },
+    {
+      "id": "fosfatasa_alcalina",
+      "termino": "Fosfatasa alcalina",
+      "definicion": "Enzima del osteoblasto, anclada a su membrana y a las vesículas de la matriz, que favorece la mineralización; su forma ósea en sangre es un marcador de formación."
+    },
+    {
+      "id": "hueso_alveolar_propio",
+      "termino": "Hueso alveolar propio",
+      "definicion": "Lámina delgada de hueso compacto que reviste el alvéolo y recibe las fibras de Sharpey; se ve como lámina dura en la radiografía."
+    },
+    {
+      "id": "laguna",
+      "termino": "Laguna",
+      "definicion": "Cavidad de la matriz mineralizada donde vive el cuerpo del osteocito."
+    },
+    {
+      "id": "laguna_de_howship",
+      "termino": "Laguna de Howship",
+      "definicion": "Depresión excavada en la superficie ósea por un osteoclasto activo."
+    },
+    {
+      "id": "ligamento_periodontal",
+      "termino": "Ligamento periodontal",
+      "definicion": "Tejido conectivo fibroso entre el cemento y el hueso alveolar, que ancla el diente y contiene células formadoras y reabsorbentes."
+    },
+    {
+      "id": "m_csf",
+      "termino": "M-CSF",
+      "definicion": "Factor estimulante de colonias de macrófagos; se une a c-Fms y mantiene la supervivencia y la proliferación del precursor del osteoclasto, además de inducirle RANK."
+    },
+    {
+      "id": "osificacion_endocondral",
+      "termino": "Osificación endocondral",
+      "definicion": "Formación de hueso que reemplaza a un molde de cartílago; en la mandíbula ocurre en el cóndilo."
+    },
+    {
+      "id": "osificacion_intramembranosa",
+      "termino": "Osificación intramembranosa",
+      "definicion": "Formación de hueso directamente a partir de mesénquima condensado, sin cartílago; forma el cuerpo, la rama y el proceso alveolar de la mandíbula."
+    },
+    {
+      "id": "osteoblasto",
+      "termino": "Osteoblasto",
+      "definicion": "Célula formadora de hueso; sintetiza el osteoide, regula la mineralización y produce M-CSF, RANKL y OPG."
+    },
+    {
+      "id": "osteocalcina",
+      "termino": "Osteocalcina",
+      "definicion": "Proteína no colágena de la matriz que secreta el osteoblasto maduro; se une a la hidroxiapatita y sirve como marcador de actividad osteoblástica."
+    },
+    {
+      "id": "osteoclasto",
+      "termino": "Osteoclasto",
+      "definicion": "Célula gigante multinucleada del linaje monocito-macrófago que reabsorbe hueso."
+    },
+    {
+      "id": "osteocito",
+      "termino": "Osteocito",
+      "definicion": "Osteoblasto atrapado en la matriz; forma una red conectada que percibe la carga y regula la formación y la resorción."
+    },
+    {
+      "id": "osteoide",
+      "termino": "Osteoide",
+      "definicion": "Matriz orgánica recién secretada por el osteoblasto, aún sin mineralizar, formada sobre todo por colágeno tipo I."
+    },
+    {
+      "id": "opg_osteoprotegerina",
+      "termino": "OPG (osteoprotegerina)",
+      "definicion": "Receptor señuelo soluble que se une a RANKL y le impide activar RANK."
+    },
+    {
+      "id": "osterix_sp7",
+      "termino": "Osterix (Sp7)",
+      "definicion": "Factor de transcripción que actúa después de RUNX2 y depende de él; necesario para que el preosteoblasto se convierta en osteoblasto."
+    },
+    {
+      "id": "rank_y_rankl",
+      "termino": "RANK y RANKL",
+      "definicion": "RANK es el receptor de membrana del preosteoclasto; RANKL es su ligando, producido por osteoblastos, células del estroma y osteocitos. Su unión promueve la formación y la activación del osteoclasto."
+    },
+    {
+      "id": "restos_epiteliales_de_malassez",
+      "termino": "Restos epiteliales de Malassez",
+      "definicion": "Cúmulos de células epiteliales del ligamento periodontal, cerca del cemento; remanentes de la vaina epitelial radicular de Hertwig."
+    },
+    {
+      "id": "runx2",
+      "termino": "RUNX2",
+      "definicion": "Factor de transcripción (también llamado Cbfa1) que compromete a la célula mesenquimal con el linaje osteoblástico."
+    },
+    {
+      "id": "trap",
+      "termino": "TRAP",
+      "definicion": "Fosfatasa ácida resistente al tartrato; marcador histoquímico del osteoclasto."
+    },
+    {
+      "id": "union_comunicante",
+      "termino": "Unión comunicante",
+      "definicion": "Canal entre células vecinas, formado sobre todo por conexina 43 en los osteocitos, que deja pasar iones y moléculas pequeñas."
+    },
+    {
+      "id": "v_atpasa_bomba_de_protones",
+      "termino": "V-ATPasa (bomba de protones)",
+      "definicion": "Complejo de membrana del borde festoneado que gasta ATP para bombear protones al espacio de resorción."
+    },
+    {
+      "id": "zona_clara",
+      "termino": "Zona clara",
+      "definicion": "Anillo de citoplasma del osteoclasto, rico en actina, que se adhiere a la matriz y sella el espacio de resorción. También se llama zona de sellado."
+    }
+  ],
+  "referencias": [
+    {
+      "id": "ref_1",
+      "cita": "Ross MH, Pawlina W. Histología: Texto y Atlas (Histology: A Text and Atlas). Capítulos de tejido óseo, tejido cartilaginoso y de tejido conectivo.",
+      "verificada": false
+    },
+    {
+      "id": "ref_2",
+      "cita": "Mescher AL. Junqueira. Histología básica: Texto y Atlas (Junqueira's Basic Histology: Text and Atlas). Capítulo de tejido óseo.",
+      "verificada": false
+    },
+    {
+      "id": "ref_3",
+      "cita": "Nanci A. Ten Cate's Oral Histology: Development, Structure, and Function, 9.ª edición. Capítulos de desarrollo de la cara, ligamento periodontal, hueso alveolar y cemento.",
+      "verificada": false
+    },
+    {
+      "id": "ref_4",
+      "cita": "Sperber GH, Sperber SM, Guttmann GD. Craniofacial Embryogenetics and Development, 2.ª edición.",
+      "verificada": false
+    },
+    {
+      "id": "ref_5",
+      "cita": "Moore KL, Persaud TVN, Torchia MG. The Developing Human: Clinically Oriented Embryology. Capítulos del aparato faríngeo y de la cabeza y el cuello.",
+      "verificada": false
+    },
+    {
+      "id": "ref_6",
+      "cita": "Standring S (ed.). Gray's Anatomy: The Anatomical Basis of Clinical Practice. Capítulos de la mandíbula y de la articulación temporomandibular.",
+      "verificada": false
+    },
+    {
+      "id": "ref_7",
+      "cita": "Bilezikian JP, Martin TJ, Clemens TL, Rosen CJ (eds.). Principles of Bone Biology. Capítulos de osteoblastos, osteocitos y osteoclastos.",
+      "verificada": false
+    },
+    {
+      "id": "ref_8",
+      "cita": "Hall BK. Bones and Cartilage: Developmental and Evolutionary Skeletal Biology, 2.ª edición.",
+      "verificada": false
+    },
+    {
+      "id": "ref_9",
+      "cita": "Hall JE, Hall ME. Guyton y Hall: Tratado de fisiología médica. Capítulo de fisiología del hueso, el calcio y el fosfato.",
+      "verificada": false
+    },
+    {
+      "id": "ref_10",
+      "cita": "Florencio-Silva R, Sasso GRS, Sasso-Cerri E, Simões MJ, Cerri PS. Biology of Bone Tissue: Structure, Function, and Factors That Influence Bone Cells. BioMed Research International, 2015.",
+      "verificada": false
+    },
+    {
+      "id": "ref_11",
+      "cita": "Komori T, et al. Targeted disruption of Cbfa1 results in a complete lack of bone formation owing to maturation arrest of osteoblasts. Cell, 1997.",
+      "verificada": false
+    },
+    {
+      "id": "ref_12",
+      "cita": "Nakashima K, et al. The novel zinc finger-containing transcription factor osterix is required for osteoblast differentiation and bone formation. Cell, 2002.",
+      "verificada": false
+    },
+    {
+      "id": "ref_13",
+      "cita": "Jilka RL, et al. Osteoblast programmed cell death (apoptosis): modulation by growth factors and cytokines. Journal of Bone and Mineral Research, 1998.",
+      "verificada": false
+    },
+    {
+      "id": "ref_14",
+      "cita": "Teitelbaum SL. Bone resorption by osteoclasts. Science, 2000.",
+      "verificada": false
+    },
+    {
+      "id": "ref_15",
+      "cita": "Bonewald LF. The amazing osteocyte. Journal of Bone and Mineral Research, 2011.",
+      "verificada": false
+    },
+    {
+      "id": "ref_16",
+      "cita": "Dominici M, et al. Minimal criteria for defining multipotent mesenchymal stromal cells. The International Society for Cellular Therapy position statement. Cytotherapy, 2006.",
+      "verificada": false
+    },
+    {
+      "id": "ref_17",
+      "cita": "Chai Y, et al. Fate of the mammalian cranial neural crest during tooth and mandibular morphogenesis. Development, 2000.",
+      "verificada": false
+    }
+  ],
+  "estado_revision": {
+    "estado": "borrador",
+    "notas": "Borrador generado desde m2_descubriendo_sus_celulas.md (pendiente de validación del docente). Las 22 marcas de cifras dudosas del guion se quitaron del texto y están en «pendientes»; el detalle está en la sección 12 del guion. No se transcribieron el banco de preguntas ni los ganchos del mentor (RAG). A mano tras el convertidor (regenerar lo borra): 34 de los 38 términos del glosario enlazados (los otros 4 solo están en tablas o actividades) y receptores del arrastre alineados con las zonas de acople del SVG.",
+    "pendientes": [
+      {
+        "id": "m2",
+        "nota": "Confirmar: «40 a 50 minutos siguiendo solo las actividades obligatorias»"
+      },
+      {
+        "id": "tb_dos_maneras_de_formar_hueso_en_una_misma",
+        "nota": "Confirmar: «| Cuándo empieza | Hacia la sexta o séptima semana»"
+      },
+      {
+        "id": "tb_dos_maneras_de_formar_hueso_en_una_misma",
+        "nota": "Confirmar: «| Cuándo empieza | Hacia la sexta o séptima semana | Entre las semanas 10 y 14 aproximadamente»"
+      },
+      {
+        "id": "t_el_cartilago_de_meckel_es_una_guia_no_el",
+        "nota": "Confirmar: «El hueso aparece junto a él, por osificación intramembranosa, hacia la región del futuro foramen mentoniano, donde el nervio alveolar inferior se divide en sus ramas mentoniana e incisiva»"
+      },
+      {
+        "id": "t_el_cartilago_de_meckel_es_una_guia_no_el",
+        "nota": "Confirmar: «Su porción media desaparece o se transforma en tejido fibroso, y una parte contribuye a ligamentos como el esfenomandibular»"
+      },
+      {
+        "id": "t_el_condilo_crece_por_osificacion",
+        "nota": "Confirmar: «Entre las semanas 10 y 14 aproximadamente»"
+      },
+      {
+        "id": "t_el_condilo_crece_por_osificacion",
+        "nota": "Confirmar: «También se describen cartílagos secundarios más pequeños, en la apófisis coronoides y en la sínfisis»"
+      },
+      {
+        "id": "m2_video_origen_mandibula",
+        "nota": "Confirmar: «Entre las semanas 10 y 14 aproximadamente»"
+      },
+      {
+        "id": "m2_3d_origen_mandibula",
+        "nota": "Confirmar: «Hacia esta región apareció el primer centro de osificación, donde el nervio alveolar inferior se divide en sus ramas mentoniana e incisiva»"
+      },
+      {
+        "id": "m2_3d_origen_mandibula",
+        "nota": "Confirmar: «Se osifica y las dos mitades se fusionan durante el primer año de vida»"
+      },
+      {
+        "id": "m2_3d_origen_mandibula",
+        "nota": "Confirmar: «También tuvo un cartílago secundario, más pequeño y transitorio que el condilar»"
+      },
+      {
+        "id": "t_el_osteoblasto_la_celula_que_forma_hueso",
+        "nota": "Confirmar: «Aproximadamente 90 % es colágeno tipo I»"
+      },
+      {
+        "id": "t_destinos_del_osteoblasto_y_celula_de",
+        "nota": "Confirmar: «Apoptosis: se estima que entre 50 y 70 % de los osteoblastos mueren de esta forma»"
+      },
+      {
+        "id": "m2_video_linaje_osteoblastico",
+        "nota": "Confirmar: «Se estima que entre 50 y 70 % mueren»"
+      },
+      {
+        "id": "osteoide",
+        "nota": "Confirmar: «Aproximadamente 90 % de su parte orgánica es colágeno tipo I»"
+      },
+      {
+        "id": "t_osteocito",
+        "nota": "Confirmar: «Son las células más abundantes del hueso adulto: aproximadamente 90 a 95 %»"
+      },
+      {
+        "id": "t_que_hace_el_osteocito",
+        "nota": "Confirmar: «- Regula la resorción. Produce RANKL, y en ratones adultos es una fuente importante de RANKL en el remodelado»"
+      },
+      {
+        "id": "t_un_gigante_multinucleado_y_polarizado",
+        "nota": "Confirmar: «El osteoclasto se forma por la fusión de varios preosteoclastos, por eso tiene varios núcleos»"
+      },
+      {
+        "id": "tb_tabla_componente_donde_esta_que_hace",
+        "nota": "Confirmar: «| Bomba de protones (V-ATPasa) | Borde festoneado | Bombea H+ al espacio sellado; el pH baja a aproximadamente 4,5»"
+      },
+      {
+        "id": "bomba_protones",
+        "nota": "Confirmar: «Acidifica el espacio hasta un pH aproximado de 4,5»"
+      },
+      {
+        "id": "t_ligamento_periodontal",
+        "nota": "Confirmar: «Entre la raíz y el hueso alveolar hay un tejido conectivo fibroso, el ligamento periodontal, de aproximadamente 0,15 a 0,4 mm de ancho»"
+      },
+      {
+        "id": "ligamento_periodontal",
+        "nota": "Confirmar: «Mide aproximadamente entre 0,15 y 0,4 mm de ancho»"
+      }
+    ]
+  },
+  "secciones": [
+    {
+      "id": "m2_1_origen_craneofacial",
+      "titulo": "Del ectomesénquima a la mandíbula",
+      "bloques": [
+        {
+          "id": "t_origen_craneofacial",
+          "tipo": "texto",
+          "markdown": "Ningún hueso aparece de la nada: sus células vienen de otras células. Antes de conocer al [osteoblasto](glosario:osteoblasto), al [osteocito](glosario:osteocito) y al [osteoclasto](glosario:osteoclasto), conviene saber de dónde salen y por qué la mandíbula tiene una historia propia."
+        },
+        {
+          "id": "t_un_origen_distinto_al_de_los_huesos_de",
+          "tipo": "texto",
+          "titulo": "Un origen distinto al de los huesos de los miembros",
+          "markdown": "Mientras se cierra el tubo neural, un grupo de células de la [cresta neural craneal](glosario:cresta_neural_craneal) se desprende y migra hacia el futuro rostro y cuello. Se detienen en los arcos faríngeos. El primero, el arco mandibular, aparece hacia la cuarta semana de desarrollo.\n\nEn la cabeza, estas células forman el **[ectomesénquima](glosario:ectomesenquima)**: un tejido embrionario de origen neural que se comporta como mesénquima. De él salen el hueso de la mandíbula, la dentina, la pulpa, el [cemento](glosario:cemento) y el [ligamento periodontal](glosario:ligamento_periodontal). En el tronco y en los miembros, el hueso y el cartílago derivan del mesodermo."
+        },
+        {
+          "id": "c_dato_las_celulas_de_la_cresta",
+          "tipo": "callout",
+          "variante": "dato",
+          "markdown": "Las células de la cresta neural que colonizan el primer arco no expresan genes Hox, una característica que forma parte de su identidad mandibular.",
+          "nivel": "posgrado"
+        },
+        {
+          "id": "tb_dos_maneras_de_formar_hueso_en_una_misma",
+          "tipo": "tabla",
+          "titulo": "Dos maneras de formar hueso en una misma mandíbula",
+          "columnas": ["Osificación intramembranosa", "Osificación endocondral secundaria"],
+          "filas": [
+            {
+              "criterio": "Molde",
+              "celdas": [
+                "El ectomesénquima se condensa; no hay cartílago",
+                "Un cartílago secundario, el condilar"
+              ]
+            },
+            {
+              "criterio": "Células",
+              "celdas": [
+                "El ectomesénquima se diferencia directamente en osteoblastos",
+                "Progenitores, condroblastos y condrocitos hipertróficos; después el hueso reemplaza al cartílago"
+              ]
+            },
+            {
+              "criterio": "Dónde",
+              "celdas": ["Cuerpo, rama y proceso alveolar", "Cóndilo"]
+            },
+            {
+              "criterio": "Cuándo empieza",
+              "celdas": [
+                "Hacia la sexta o séptima semana",
+                "Entre las semanas 10 y 14 aproximadamente"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t_el_cartilago_de_meckel_es_una_guia_no_el",
+          "tipo": "texto",
+          "titulo": "El cartílago de Meckel es una guía, no el molde de la mandíbula",
+          "markdown": "Hacia la sexta semana, el ectomesénquima del arco mandibular se condensa y forma, a cada lado, una barra de cartílago: el [cartílago de Meckel](glosario:cartilago_de_meckel). La mandíbula no se forma osificándolo. El hueso aparece junto a él, por [osificación intramembranosa](glosario:osificacion_intramembranosa), hacia la región del futuro foramen mentoniano, donde el nervio alveolar inferior se divide en sus ramas mentoniana e incisiva.\n\nDespués, el extremo posterior del cartílago de Meckel forma el martillo y el yunque del oído medio. Su porción media desaparece o se transforma en tejido fibroso, y una parte contribuye a ligamentos como el esfenomandibular."
+        },
+        {
+          "id": "c_recuerda_el_cartilago_de_meckel_es",
+          "tipo": "callout",
+          "variante": "recuerda",
+          "markdown": "El cartílago de Meckel es primario y actúa como guía. El cartílago condilar es secundario: aparece después, cuando ya existe hueso intramembranoso."
+        },
+        {
+          "id": "t_el_condilo_crece_por_osificacion",
+          "tipo": "texto",
+          "titulo": "El cóndilo crece por osificación endocondral secundaria",
+          "markdown": "Entre las semanas 10 y 14 aproximadamente aparecen [cartílagos secundarios](glosario:cartilago_secundario), sobre todo el condilar. Se llaman secundarios porque no derivan del cartílago de Meckel y surgen cuando ya hay hueso membranoso. El cartílago condilar crece, sus condrocitos se hipertrofian y el hueso lo reemplaza por [osificación endocondral](glosario:osificacion_endocondral). Por eso el cóndilo es un centro de crecimiento de la mandíbula.\n\nTambién se describen cartílagos secundarios más pequeños, en la apófisis coronoides y en la sínfisis."
+        },
+        {
+          "id": "c_clinico_cuando_falla_el_desarrollo",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "Cuando falla el desarrollo de la cresta neural craneal, la mandíbula suele estar afectada. Un ejemplo es el síndrome de Treacher Collins (mutaciones en TCOF1), con hipoplasia mandibular."
+        },
+        {
+          "id": "t_dos_familias_de_celulas_mantienen_el",
+          "tipo": "texto",
+          "titulo": "Dos familias de células mantienen el hueso",
+          "markdown": "Con la mandíbula formada, dos familias de células con orígenes distintos la mantienen toda la vida:"
+        },
+        {
+          "id": "tb_tabla_linaje_celula_de_partida_celulas",
+          "tipo": "tabla",
+          "titulo": "Tabla: Linaje, Célula de partida, Células que origina, Papel",
+          "encabezado_criterio": "Linaje",
+          "columnas": ["Célula de partida", "Células que origina", "Papel"],
+          "filas": [
+            {
+              "criterio": "Mesenquimal (osteoblástico)",
+              "celdas": [
+                "Célula madre mesenquimal; en la mandíbula, de origen ectomesenquimal",
+                "Osteoprogenitora, osteoblasto, célula de revestimiento, osteocito",
+                "Formar y mantener la matriz"
+              ]
+            },
+            {
+              "criterio": "Hematopoyético (monocito-macrófago)",
+              "celdas": [
+                "Célula madre hematopoyética de la médula ósea",
+                "Precursor monocito-macrófago, preosteoclasto, osteoclasto",
+                "Reabsorber hueso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c_atencion_los_osteoclastos_no",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "Los osteoclastos no derivan de los osteoblastos. Vienen de la médula ósea, como las células de la sangre. Aun así, los osteoblastos les envían las señales que los forman y los regulan ([M-CSF](glosario:m_csf), [RANKL](glosario:rank_y_rankl) y [OPG](glosario:opg_osteoprotegerina))."
+        },
+        {
+          "id": "t_origen_craneofacial_2",
+          "tipo": "texto",
+          "markdown": "En las secciones siguientes recorrerás cada linaje, célula por célula."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_video_origen_mandibula",
+            "tipo": "video-texto",
+            "titulo": "Del embrión a la mandíbula en seis pasos",
+            "instrucciones": "Toca Siguiente para avanzar por los seis pasos y observa cómo cambia el dibujo; con Anterior vuelves. Con teclado: Tab hasta el botón y Enter, o las flechas. Nada avanza solo ni depende de pasar el mouse por encima.",
+            "obligatoria": true,
+            "puntaje_max": 10,
+            "retroalimentacion": {
+              "correcta": "Recorriste los seis pasos. Recuerda la secuencia: cresta neural, arco mandibular, cartílago de Meckel, hueso intramembranoso, destino de Meckel y cartílago condilar con osificación endocondral.",
+              "incorrecta": "Todavía faltan pasos por ver. Toca Siguiente hasta llegar al último paso para completar la actividad."
+            },
+            "concepto": "Osificación mandibular",
+            "config": {
+              "medio": "animacion",
+              "svg": "/images/m2/m2_origen_mandibula.svg",
+              "viewBox": "0 0 1000 1000",
+              "alt": "Panel A: cabeza de un embrión hacia la cuarta o quinta semana, con el tubo neural, la cresta neural, la migración hacia el primer arco faríngeo y el ectomesénquima.",
+              "pasos": [
+                {
+                  "id": "paso_cresta_neural",
+                  "titulo": "La cresta neural craneal",
+                  "texto": "Mientras se cierra el tubo neural, células de la cresta neural craneal se desprenden de su borde superior. Son multipotentes y migran hacia la región que será la cara y el cuello. En la cabeza formarán tejidos, como el hueso y el cartílago, que en el tronco y los miembros derivan del mesodermo.",
+                  "visibles": ["tubo_neural", "cresta_neural"],
+                  "resaltadas": ["cresta_neural"]
+                },
+                {
+                  "id": "paso_primer_arco",
+                  "titulo": "Migración al primer arco faríngeo",
+                  "texto": "Las células migran en corrientes hacia los arcos faríngeos. Hacia la cuarta semana, el primer arco o arco mandibular se llena de un tejido llamado ectomesénquima. De él saldrán el hueso de la mandíbula, la dentina, la pulpa y el ligamento periodontal.",
+                  "visibles": [
+                    "tubo_neural",
+                    "cresta_neural",
+                    "corriente_migratoria",
+                    "primer_arco_faringeo",
+                    "ectomesenquima"
+                  ],
+                  "resaltadas": ["ectomesenquima"]
+                },
+                {
+                  "id": "paso_meckel",
+                  "titulo": "El cartílago de Meckel",
+                  "texto": "Hacia la sexta semana, el ectomesénquima se condensa y forma una barra de cartílago a cada lado: el cartílago de Meckel. No se convierte en la mandíbula. Funciona como guía del hueso que se forma junto a él.",
+                  "visibles": ["ectomesenquima", "cartilago_meckel"],
+                  "resaltadas": ["cartilago_meckel"]
+                },
+                {
+                  "id": "paso_intramembranosa",
+                  "titulo": "Osificación intramembranosa",
+                  "texto": "Junto al cartílago de Meckel, hacia el futuro foramen mentoniano, el ectomesénquima se condensa. Sus células se diferencian directamente en osteoblastos, sin pasar por cartílago, y depositan hueso. Ese hueso se extiende hacia atrás y hacia adelante y forma el cuerpo y la rama.",
+                  "visibles": ["cartilago_meckel", "hueso_intramembranoso"],
+                  "resaltadas": ["hueso_intramembranoso"]
+                },
+                {
+                  "id": "paso_destino_meckel",
+                  "titulo": "El destino del cartílago de Meckel",
+                  "texto": "Mientras el hueso se consolida, la porción media del cartílago de Meckel desaparece o se transforma en tejido fibroso. Su extremo posterior forma el martillo y el yunque del oído medio. El hueso membranoso ya no necesita la guía.",
+                  "visibles": [
+                    "cartilago_meckel",
+                    "hueso_intramembranoso",
+                    "extremo_posterior_meckel"
+                  ],
+                  "resaltadas": ["extremo_posterior_meckel"]
+                },
+                {
+                  "id": "paso_condilar",
+                  "titulo": "Cartílago condilar y osificación endocondral",
+                  "texto": "Entre las semanas 10 y 14 aproximadamente aparece el cartílago condilar, un cartílago secundario en el extremo superior de la rama. Se llama secundario porque no viene de Meckel y surge cuando ya hay hueso membranoso. Sus condrocitos crecen y el hueso lo reemplaza por osificación endocondral. Por eso el cóndilo es un centro de crecimiento.",
+                  "visibles": [
+                    "hueso_intramembranoso",
+                    "cartilago_condilar",
+                    "hueso_endocondral_condilo"
+                  ],
+                  "resaltadas": ["cartilago_condilar"]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_3d_origen_mandibula",
+            "tipo": "exploracion-3d",
+            "titulo": "Tu mandíbula, zona por zona",
+            "instrucciones": "Gira la mandíbula arrastrando con un dedo y acerca con un pellizco. Toca cada punto para leer cómo se formó esa zona; con teclado, Tab y Enter. Si no hay 3D verás una lista con los mismos textos. Es de refuerzo: no bloquea el avance.",
+            "obligatoria": false,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Ya ubicas dónde actuó cada mecanismo: el cuerpo se formó junto al cartílago de Meckel, el cóndilo y la apófisis coronoides tuvieron cartílago secundario, y el proceso alveolar depende del diente.",
+              "incorrecta": "Faltan puntos por visitar. Los cuatro requeridos son el cuerpo, el cóndilo, la apófisis coronoides y el proceso alveolar."
+            },
+            "concepto": "Osificación mandibular",
+            "config": {
+              "modelo": "mandibula",
+              "alt": "Modelo tridimensional de la mandíbula que se puede girar y acercar; sus zonas se tocan para leer su ficha.",
+              "nodos": [
+                {
+                  "id": "cuerpo",
+                  "etiqueta": "Cuerpo mandibular",
+                  "descripcion": "Se formó por osificación intramembranosa junto al cartílago de Meckel, que actuó como guía. Sus osteoblastos derivan del ectomesénquima de la cresta neural.",
+                  "ancla": {
+                    "x": 0.2,
+                    "y": 0.3,
+                    "z": 0.6
+                  }
+                },
+                {
+                  "id": "foramen_mentoniano",
+                  "etiqueta": "Foramen mentoniano",
+                  "descripcion": "Hacia esta región apareció el primer centro de osificación, donde el nervio alveolar inferior se divide en sus ramas mentoniana e incisiva.",
+                  "ancla": {
+                    "x": 0.28,
+                    "y": 0.35,
+                    "z": 0.8
+                  }
+                },
+                {
+                  "id": "sinfisis",
+                  "etiqueta": "Sínfisis mentoniana",
+                  "descripcion": "Las dos hemimandíbulas se unen aquí por una articulación fibrosa con pequeños cartílagos secundarios. Se osifica y las dos mitades se fusionan durante el primer año de vida.",
+                  "ancla": {
+                    "x": 0.5,
+                    "y": 0.35,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "id": "rama",
+                  "etiqueta": "Rama mandibular",
+                  "descripcion": "Se formó por osificación intramembranosa. En su extremo superior se desarrollan los cartílagos secundarios del cóndilo y de la apófisis coronoides.",
+                  "ancla": {
+                    "x": 0.06,
+                    "y": 0.55,
+                    "z": 0.15
+                  }
+                },
+                {
+                  "id": "condilo",
+                  "etiqueta": "Cóndilo mandibular",
+                  "descripcion": "Su cabeza crece a partir del cartílago condilar, un cartílago secundario que se osifica por vía endocondral. Es un centro de crecimiento de la mandíbula.",
+                  "ancla": {
+                    "x": 0.08,
+                    "y": 0.98,
+                    "z": 0.05
+                  }
+                },
+                {
+                  "id": "apofisis_coronoides",
+                  "etiqueta": "Apófisis coronoides",
+                  "descripcion": "También tuvo un cartílago secundario, más pequeño y transitorio que el condilar. Recibe la inserción del músculo temporal.",
+                  "ancla": {
+                    "x": 0.08,
+                    "y": 0.95,
+                    "z": 0.3
+                  }
+                },
+                {
+                  "id": "proceso_alveolar",
+                  "etiqueta": "Proceso alveolar",
+                  "descripcion": "Se forma junto con los dientes: las células del folículo dental originan el ligamento periodontal y contribuyen al hueso alveolar. Sin dientes, este hueso se reabsorbe.",
+                  "ancla": {
+                    "x": 0.22,
+                    "y": 0.5,
+                    "z": 0.6
+                  }
+                }
+              ],
+              "requeridos": ["cuerpo", "condilo", "apofisis_coronoides", "proceso_alveolar"]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_quiz_origen",
+            "tipo": "quiz",
+            "titulo": "¿De dónde sale la mandíbula?",
+            "instrucciones": "Responde cada pregunta y lee la explicación. Toca tu respuesta; en Ordenar pasos, toca los pasos en su orden y pulsa Comprobar. Con teclado: Tab hasta la opción o el paso y Enter.",
+            "obligatoria": true,
+            "puntaje_max": 30,
+            "retroalimentacion": {
+              "correcta": "Muy bien. Ya puedes explicar de dónde vienen las células de la mandíbula y cómo se forma su hueso.",
+              "parcial": "Vas bien, pero repasa la secuencia: cresta neural, Meckel como guía, hueso membranoso a su lado y cartílago condilar secundario.",
+              "incorrecta": "Repasa la secuencia: cresta neural, cartílago de Meckel como guía, hueso membranoso a su lado y, más tarde, cartílago condilar secundario."
+            },
+            "concepto": "Osificación mandibular",
+            "config": {
+              "preguntas": [
+                {
+                  "id": "m2_qo_1",
+                  "formato": "ordenar",
+                  "enunciado": "Ordena, de la primera a la última, las etapas de la formación de la mandíbula.",
+                  "pasos": [
+                    {
+                      "id": "m2_qo_1_p_cresta",
+                      "texto": "Células de la cresta neural craneal migran al primer arco faríngeo"
+                    },
+                    {
+                      "id": "m2_qo_1_p_meckel",
+                      "texto": "El ectomesénquima se condensa y forma el cartílago de Meckel"
+                    },
+                    {
+                      "id": "m2_qo_1_p_membranosa",
+                      "texto": "Osificación intramembranosa junto al cartílago de Meckel"
+                    },
+                    {
+                      "id": "m2_qo_1_p_condilar",
+                      "texto": "Aparece el cartílago condilar secundario"
+                    },
+                    {
+                      "id": "m2_qo_1_p_endocondral",
+                      "texto": "Osificación endocondral del cartílago condilar"
+                    }
+                  ],
+                  "explicacion": "La cresta neural aporta las células; el cartílago de Meckel actúa como guía; el hueso membranoso aparece a su lado y, más tarde, el cartílago condilar secundario se osifica por vía endocondral.",
+                  "concepto": "Osificación mandibular",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m2_qo_2",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿De qué población de células embrionarias deriva la mayor parte del hueso de la mandíbula?",
+                  "opciones": [
+                    {
+                      "id": "m2_qo_2_a",
+                      "texto": "De los somitas y el mesodermo paraxial del tronco"
+                    },
+                    {
+                      "id": "m2_qo_2_b",
+                      "texto": "De la cresta neural craneal, que forma el ectomesénquima"
+                    },
+                    {
+                      "id": "m2_qo_2_c",
+                      "texto": "Del mesodermo de la placa lateral de la región facial"
+                    },
+                    {
+                      "id": "m2_qo_2_d",
+                      "texto": "Del endodermo de la faringe y de sus bolsas faríngeas"
+                    }
+                  ],
+                  "correctas": ["m2_qo_2_b"],
+                  "explicacion": "En la cabeza, la cresta neural forma el ectomesénquima, que origina el hueso mandibular. El mesodermo forma el hueso de los miembros y del tronco.",
+                  "concepto": "Origen craneofacial",
+                  "dificultad": 1
+                },
+                {
+                  "id": "m2_qo_3",
+                  "formato": "verdadero_falso",
+                  "enunciado": "El cartílago de Meckel se osifica y se convierte en el cuerpo de la mandíbula.",
+                  "correcta": false,
+                  "explicacion": "El cuerpo mandibular se forma por osificación intramembranosa al lado del cartílago de Meckel, que solo actúa como guía. Su porción media desaparece y su extremo posterior forma el martillo y el yunque.",
+                  "concepto": "Cartílago meckel",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m2_qo_4",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Cómo se forma el hueso del cóndilo mandibular?",
+                  "opciones": [
+                    {
+                      "id": "m2_qo_4_a",
+                      "texto": "Por osificación intramembranosa directa, sin ningún molde de cartílago"
+                    },
+                    {
+                      "id": "m2_qo_4_b",
+                      "texto": "Por osificación endocondral del propio cartílago de Meckel en la rama"
+                    },
+                    {
+                      "id": "m2_qo_4_c",
+                      "texto": "Por osificación endocondral que se extiende desde el hueso temporal"
+                    },
+                    {
+                      "id": "m2_qo_4_d",
+                      "texto": "Por osificación endocondral, a partir de un cartílago secundario"
+                    }
+                  ],
+                  "correctas": ["m2_qo_4_d"],
+                  "explicacion": "El cóndilo tiene un cartílago condilar secundario que crece y es reemplazado por hueso mediante osificación endocondral. Por eso es un centro de crecimiento.",
+                  "concepto": "Cóndilo endocondral",
+                  "dificultad": 2
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m2_2_linea_osteoblastica",
+      "titulo": "De célula madre a osteoblasto",
+      "bloques": [
+        {
+          "id": "t_linea_osteoblastica",
+          "tipo": "texto",
+          "markdown": "El hueso se sigue construyendo y renovando durante toda la vida. Esa construcción parte de una célula madre y sigue un camino con etapas ordenadas, gobernadas por dos factores de transcripción."
+        },
+        {
+          "id": "tb_las_etapas_del_camino",
+          "tipo": "tabla",
+          "titulo": "Las etapas del camino",
+          "encabezado_criterio": "Etapa",
+          "columnas": ["Qué la caracteriza", "Factor que la impulsa"],
+          "filas": [
+            {
+              "criterio": "Célula madre mesenquimal",
+              "celdas": [
+                "Multipotente, se autorrenueva",
+                "Señales del nicho, por ejemplo BMP y Wnt"
+              ]
+            },
+            {
+              "criterio": "Osteoprogenitora",
+              "celdas": ["Comprometida con el linaje óseo, fusiforme, todavía se divide", "RUNX2"]
+            },
+            {
+              "criterio": "Preosteoblasto",
+              "celdas": [
+                "Tiene RUNX2 y empieza a activar genes de la matriz",
+                "RUNX2 activa a osterix"
+              ]
+            },
+            {
+              "criterio": "Osteoblasto",
+              "celdas": ["Cúbico, sintetiza el osteoide", "Osterix, junto con RUNX2"]
+            },
+            {
+              "criterio": "Osteocito, célula de revestimiento o muerte celular",
+              "celdas": ["Destinos posibles del osteoblasto", "Señales del hueso y del entorno"]
+            }
+          ]
+        },
+        {
+          "id": "t_celula_madre_mesenquimal_y",
+          "tipo": "texto",
+          "titulo": "Célula madre mesenquimal y osteoprogenitora",
+          "markdown": "Las [células madre mesenquimales](glosario:celula_madre_mesenquimal) viven en la médula ósea, el periostio y el ligamento periodontal, entre otros nichos. Se autorrenuevan y son multipotentes: según las señales que reciban, originan osteoblastos, condrocitos o adipocitos. En la mandíbula descienden del ectomesénquima de la sección anterior.\n\nLa osteoprogenitora ya eligió el linaje óseo. Es fusiforme, con núcleo alargado y poco citoplasma, y conserva la capacidad de dividirse. Se encuentra en la capa interna del periostio y en el endostio."
+        },
+        {
+          "id": "c_dato_para_llamar_celula",
+          "tipo": "callout",
+          "variante": "dato",
+          "markdown": "Para llamar «célula estromal mesenquimal multipotente» a una célula cultivada, la Sociedad Internacional de Terapia Celular (ISCT, 2006) propone criterios mínimos: adherirse al plástico; expresar CD105, CD73 y CD90 y no expresar CD45, CD34, CD14 o CD11b, CD79α o CD19 ni HLA-DR; y diferenciarse in vitro a hueso, cartílago y grasa. El término «célula madre» se reserva para las que demuestran autorrenovación y diferenciación in vivo.",
+          "nivel": "posgrado"
+        },
+        {
+          "id": "t_los_interruptores_runx2_y_osterix",
+          "tipo": "texto",
+          "titulo": "Los interruptores: RUNX2 y osterix",
+          "markdown": "Son factores de transcripción: proteínas que actúan dentro del núcleo y encienden genes.\n\n- **[RUNX2](glosario:runx2)** (también llamado Cbfa1) se activa primero y compromete a la célula con el linaje óseo. Los ratones sin RUNX2 no forman osteoblastos maduros ni hueso: su esqueleto queda cartilaginoso.\n- **[Osterix](glosario:osterix_sp7)** (Sp7) se activa después y depende de RUNX2. Junto con RUNX2 activa los genes de la matriz y lleva al preosteoblasto a completar su diferenciación en osteoblasto. Los ratones sin osterix tienen precursores con RUNX2, pero no forman hueso."
+        },
+        {
+          "id": "c_recuerda_el_orden_es_runx2_y_luego",
+          "tipo": "callout",
+          "variante": "recuerda",
+          "markdown": "El orden es RUNX2 y luego osterix. Osterix está «aguas abajo» de RUNX2."
+        },
+        {
+          "id": "c_atencion_runx2_y_osterix_no_son",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "RUNX2 y osterix no son hormonas ni ligandos de un receptor de membrana. Actúan dentro del núcleo, en una etapa determinada de la célula. Las señales que los activan, como las BMP y Wnt, sí actúan sobre receptores de membrana."
+        },
+        {
+          "id": "c_clinico_la_reduccion_de_runx2",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "La reducción de RUNX2 funcional causa la displasia cleidocraneal: clavículas hipoplásicas o ausentes, cierre tardío de las fontanelas, dientes supernumerarios y erupción dentaria retrasada."
+        },
+        {
+          "id": "t_el_osteoblasto_la_celula_que_forma_hueso",
+          "tipo": "texto",
+          "titulo": "El osteoblasto: la célula que forma hueso",
+          "markdown": "El osteoblasto activo es cúbico, forma una capa sobre la superficie que está formando y tiene el núcleo en el polo opuesto al hueso. Su citoplasma es basófilo por la abundancia de retículo endoplasmático rugoso, y tiene un aparato de Golgi bien desarrollado. Cumple tres funciones:\n\n1. **Sintetiza y secreta el [osteoide](glosario:osteoide)**, la matriz orgánica todavía sin mineralizar. Aproximadamente 90 % es colágeno tipo I. El resto son proteoglucanos y proteínas no colágenas, como la [osteocalcina](glosario:osteocalcina), la osteopontina y la sialoproteína ósea.\n2. **Regula la mineralización.** La [fosfatasa alcalina](glosario:fosfatasa_alcalina), anclada a su membrana y a las vesículas de la matriz, elimina el pirofosfato que inhibe la mineralización y aporta fosfato. La osteocalcina se une a la hidroxiapatita.\n3. **Coordina a los osteoclastos.** Produce M-CSF, RANKL y OPG."
+        },
+        {
+          "id": "tb_tabla_molecula_que_es_para_que_sirve",
+          "tipo": "tabla",
+          "titulo": "Tabla: Molécula, Qué es, Para qué sirve",
+          "encabezado_criterio": "Molécula",
+          "columnas": ["Qué es", "Para qué sirve"],
+          "filas": [
+            {
+              "criterio": "Colágeno tipo I",
+              "celdas": ["Proteína estructural", "Forma la trama del osteoide"]
+            },
+            {
+              "criterio": "Fosfatasa alcalina",
+              "celdas": ["Enzima de membrana", "Favorece la mineralización; marcador de formación"]
+            },
+            {
+              "criterio": "Osteocalcina",
+              "celdas": [
+                "Proteína no colágena",
+                "Se une a la hidroxiapatita; marcador tardío del osteoblasto"
+              ]
+            },
+            {
+              "criterio": "RANKL",
+              "celdas": [
+                "Ligando de membrana",
+                "Activa el receptor RANK del precursor del osteoclasto"
+              ]
+            },
+            {
+              "criterio": "OPG",
+              "celdas": ["Receptor señuelo soluble", "Se une a RANKL y lo bloquea"]
+            }
+          ]
+        },
+        {
+          "id": "c_clinico_la_fosfatasa_alcalina_osea",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "La fosfatasa alcalina ósea y la osteocalcina en sangre se usan como marcadores de formación ósea."
+        },
+        {
+          "id": "t_destinos_del_osteoblasto_y_celula_de",
+          "tipo": "texto",
+          "titulo": "Destinos del osteoblasto y célula de revestimiento",
+          "markdown": "Cuando el osteoblasto termina de formar hueso, tiene tres destinos:\n\n1. **Osteocito:** queda atrapado en la matriz que secretó.\n2. **[Célula de revestimiento óseo](glosario:celula_de_revestimiento_oseo):** se aplana y cubre la superficie del hueso que no se está formando ni reabsorbiendo. Tiene poco citoplasma y núcleo alargado. Está en reposo, pero puede reactivarse y volver a formar hueso.\n3. **[Apoptosis](glosario:apoptosis):** se estima que entre 50 y 70 % de los osteoblastos mueren de esta forma."
+        },
+        {
+          "id": "c_recuerda_la_celula_de_revestimiento",
+          "tipo": "callout",
+          "variante": "recuerda",
+          "markdown": "La célula de revestimiento no es una célula distinta que llegó de fuera: es un osteoblasto en reposo."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_video_linaje_osteoblastico",
+            "tipo": "video-texto",
+            "titulo": "El camino de la línea osteoblástica",
+            "instrucciones": "Toca Siguiente para avanzar por las cinco etapas y observa cómo aparece cada célula y cada factor en el árbol. Con Anterior puedes volver. Con teclado: Tab hasta Siguiente o Anterior y Enter, o usa las flechas izquierda y derecha. No hay animación automática ni información que dependa del hover.",
+            "obligatoria": true,
+            "puntaje_max": 10,
+            "retroalimentacion": {
+              "correcta": "Recorriste toda la línea osteoblástica. La secuencia es: célula madre mesenquimal, osteoprogenitora (RUNX2), preosteoblasto, osteoblasto (osterix) y sus destinos.",
+              "incorrecta": "Todavía faltan etapas por ver. Toca Siguiente hasta llegar a los destinos del osteoblasto."
+            },
+            "concepto": "Linaje osteoblástico",
+            "config": {
+              "medio": "animacion",
+              "svg": "/images/m2/m2_arbol_linajes_oseos.svg",
+              "viewBox": "0 0 1000 1540",
+              "alt": "Árbol de los dos linajes con sus etapas (mesenquimal a la izquierda, hematopoyético a la derecha), los iconos de las señales (RUNX2, osterix, M-CSF, RANKL, OPG) y las zonas de acople para la actividad de arrastre.",
+              "pasos": [
+                {
+                  "id": "paso_celula_madre",
+                  "titulo": "La célula madre mesenquimal",
+                  "texto": "En la médula ósea, el periostio y el ligamento periodontal hay células madre mesenquimales. Se autorrenuevan y pueden originar osteoblastos, condrocitos o adipocitos. En la mandíbula descienden del ectomesénquima de la cresta neural.",
+                  "visibles": ["celula_madre_mesenquimal"],
+                  "resaltadas": ["celula_madre_mesenquimal"]
+                },
+                {
+                  "id": "paso_runx2",
+                  "titulo": "RUNX2: el compromiso",
+                  "texto": "Cuando se activa RUNX2, la célula se compromete con el linaje óseo y se convierte en osteoprogenitora. Es una célula fusiforme que todavía se divide. Sin RUNX2 no se forman osteoblastos maduros.",
+                  "visibles": [
+                    "celula_madre_mesenquimal",
+                    "celula_osteoprogenitora",
+                    "senal_runx2"
+                  ],
+                  "resaltadas": ["senal_runx2"]
+                },
+                {
+                  "id": "paso_osterix",
+                  "titulo": "Osterix: la maduración",
+                  "texto": "Osterix se activa después de RUNX2 y depende de él. Junto con RUNX2 activa los genes de la matriz y lleva al preosteoblasto a completar su diferenciación en osteoblasto. Sin osterix hay precursores con RUNX2, pero no hay hueso.",
+                  "visibles": [
+                    "celula_madre_mesenquimal",
+                    "celula_osteoprogenitora",
+                    "preosteoblasto",
+                    "senal_runx2",
+                    "senal_osterix"
+                  ],
+                  "resaltadas": ["senal_osterix", "preosteoblasto"]
+                },
+                {
+                  "id": "paso_osteoblasto",
+                  "titulo": "El osteoblasto activo",
+                  "texto": "El osteoblasto es cúbico, con mucho retículo rugoso, y secreta el osteoide. Expresa fosfatasa alcalina, osteocalcina y colágeno tipo I. También expresa RANKL y OPG, con los que se comunica con el linaje del osteoclasto.",
+                  "visibles": [
+                    "celula_madre_mesenquimal",
+                    "celula_osteoprogenitora",
+                    "preosteoblasto",
+                    "osteoblasto"
+                  ],
+                  "resaltadas": ["osteoblasto"]
+                },
+                {
+                  "id": "paso_destinos",
+                  "titulo": "Tres destinos del osteoblasto",
+                  "texto": "Al terminar de formar hueso, el osteoblasto sigue uno de tres caminos. Puede quedar atrapado en la matriz y hacerse osteocito, aplanarse como célula de revestimiento o morir por apoptosis. Se estima que entre 50 y 70 % mueren.",
+                  "visibles": [
+                    "osteoblasto",
+                    "osteocito",
+                    "celula_de_revestimiento",
+                    "destino_apoptosis"
+                  ],
+                  "resaltadas": ["osteocito", "celula_de_revestimiento", "destino_apoptosis"]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_multicapa_osteoblasto",
+            "tipo": "multicapa",
+            "titulo": "Dentro de un osteoblasto activo",
+            "instrucciones": "Toca cada parte del dibujo para leer qué es y qué hace. Visita las ocho capas marcadas con un punto para completar la actividad. Con teclado: Tab pasa de una capa a otra y Enter la abre. Nada depende de pasar el mouse por encima.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Bien. El osteoblasto sintetiza el osteoide (colágeno tipo I), regula la mineralización con la fosfatasa alcalina y la osteocalcina, y controla al osteoclasto con RANKL y OPG. Su vecina de revestimiento es un osteoblasto en reposo.",
+              "incorrecta": "Faltan capas requeridas. Revisa las que no aparecen como visitadas; las clave son el osteoide, la fosfatasa alcalina, la osteocalcina, RANKL y OPG, y la célula de revestimiento vecina."
+            },
+            "concepto": "Osteoblasto funciones",
+            "config": {
+              "svg": "/images/m2/m2_osteoblasto_activo.svg",
+              "viewBox": "0 0 1000 760",
+              "alt": "Osteoblasto cúbico sobre una capa de osteoide, con sus orgánulos, y una célula de revestimiento vecina sobre una superficie en reposo.",
+              "modo": "explorar",
+              "capas": [
+                {
+                  "id": "nucleo_osteoblasto",
+                  "etiqueta": "Núcleo",
+                  "descripcion": "Grande y ubicado en el polo de la célula más alejado del hueso. Aquí actúan RUNX2 y osterix, que mantienen encendidos los genes de la matriz."
+                },
+                {
+                  "id": "reticulo_endoplasmico_rugoso",
+                  "etiqueta": "Retículo endoplasmático rugoso",
+                  "descripcion": "Muy abundante: sintetiza las cadenas de procolágeno tipo I y otras proteínas de la matriz. Por eso el citoplasma se tiñe con colorantes básicos (basofilia)."
+                },
+                {
+                  "id": "aparato_golgi",
+                  "etiqueta": "Aparato de Golgi",
+                  "descripcion": "Bien desarrollado, junto al núcleo. Modifica las proteínas de la matriz y las empaqueta en vesículas de secreción."
+                },
+                {
+                  "id": "vesiculas_secrecion",
+                  "etiqueta": "Vesículas de secreción",
+                  "descripcion": "Llevan procolágeno y otras proteínas hacia la membrana en contacto con el hueso, donde se liberan. Fuera de la célula, el procolágeno se procesa y se ensambla en fibras de colágeno tipo I."
+                },
+                {
+                  "id": "osteoide",
+                  "etiqueta": "Osteoide",
+                  "descripcion": "Matriz orgánica recién secretada, aún sin mineralizar, entre el osteoblasto y el hueso mineralizado. Aproximadamente 90 % de su parte orgánica es colágeno tipo I."
+                },
+                {
+                  "id": "fosfatasa_alcalina",
+                  "etiqueta": "Fosfatasa alcalina",
+                  "descripcion": "Enzima anclada a la membrana del osteoblasto y a las vesículas de la matriz. Elimina el pirofosfato, que inhibe la mineralización, y aporta fosfato. Su forma ósea en sangre es un marcador de formación."
+                },
+                {
+                  "id": "osteocalcina",
+                  "etiqueta": "Osteocalcina",
+                  "descripcion": "Una de las proteínas no colágenas más abundantes de la matriz. Se une a la hidroxiapatita y aparece en la etapa tardía del osteoblasto; su nivel en sangre indica actividad osteoblástica."
+                },
+                {
+                  "id": "ligandos_rankl_opg",
+                  "etiqueta": "RANKL y OPG",
+                  "descripcion": "El osteoblasto muestra RANKL en su membrana y secreta OPG. RANKL activa el receptor RANK del precursor del osteoclasto; OPG captura RANKL y lo bloquea. La proporción entre ambos regula la resorción."
+                },
+                {
+                  "id": "uniones_comunicantes",
+                  "etiqueta": "Uniones comunicantes",
+                  "descripcion": "Comunican a los osteoblastos entre sí y con las células de revestimiento y los osteocitos vecinos, y coordinan su actividad."
+                },
+                {
+                  "id": "frente_mineralizacion",
+                  "etiqueta": "Frente de mineralización",
+                  "descripcion": "Límite entre el osteoide y el hueso mineralizado. Allí se depositan los cristales de hidroxiapatita (módulo 4)."
+                },
+                {
+                  "id": "hueso_mineralizado",
+                  "etiqueta": "Hueso mineralizado",
+                  "descripcion": "Matriz ya endurecida por hidroxiapatita, que sostiene la capa de osteoide y de osteoblastos."
+                },
+                {
+                  "id": "celula_revestimiento",
+                  "etiqueta": "Célula de revestimiento óseo",
+                  "descripcion": "Célula plana y alargada, con poco citoplasma, que cubre superficies sin formación ni resorción. Es un osteoblasto en reposo que puede reactivarse."
+                }
+              ],
+              "requeridas": [
+                "nucleo_osteoblasto",
+                "reticulo_endoplasmico_rugoso",
+                "vesiculas_secrecion",
+                "osteoide",
+                "fosfatasa_alcalina",
+                "osteocalcina",
+                "ligandos_rankl_opg",
+                "celula_revestimiento"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m2_3_osteocito",
+      "titulo": "El osteocito, sensor del hueso",
+      "bloques": [
+        {
+          "id": "t_osteocito",
+          "tipo": "texto",
+          "markdown": "Los osteocitos son osteoblastos que quedaron atrapados en la matriz que ellos mismos formaron. Son las células más abundantes del hueso adulto: aproximadamente 90 a 95 %. El resto son osteoblastos, células de revestimiento y osteoclastos.\n\nNo están dormidos. Forman una red que vigila el hueso y coordina a las demás células."
+        },
+        {
+          "id": "t_como_esta_construido",
+          "tipo": "texto",
+          "titulo": "Cómo está construido",
+          "markdown": "Al quedar atrapado, el osteoblasto emite prolongaciones, toma forma estrellada y reduce su retículo y su Golgi. Vive en una cavidad de la matriz y se comunica con sus vecinos a través de conductos finos."
+        },
+        {
+          "id": "tb_tabla_estructura_que_es_funcion",
+          "tipo": "tabla",
+          "titulo": "Tabla: Estructura, Qué es, Función",
+          "encabezado_criterio": "Estructura",
+          "columnas": ["Qué es", "Función"],
+          "filas": [
+            {
+              "criterio": "Laguna",
+              "celdas": ["Cavidad de la matriz mineralizada", "Aloja el cuerpo del osteocito"]
+            },
+            {
+              "criterio": "Canalículo",
+              "celdas": [
+                "Conducto fino que atraviesa la matriz",
+                "Aloja una dendrita y un líquido; conecta lagunas"
+              ]
+            },
+            {
+              "criterio": "Dendrita",
+              "celdas": [
+                "Prolongación larga y delgada del osteocito",
+                "Contacta con otros osteocitos y con células de la superficie"
+              ]
+            },
+            {
+              "criterio": "Unión comunicante",
+              "celdas": [
+                "Canal entre células vecinas, formado sobre todo por conexina 43",
+                "Deja pasar iones y moléculas pequeñas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t_osteocito_2",
+          "tipo": "texto",
+          "markdown": "El conjunto de [lagunas](glosario:laguna), [canalículos](glosario:canaliculo) y [dendritas](glosario:dendrita) es la **red lacuno-canalicular**. Llega hasta la superficie del hueso y hasta los vasos sanguíneos."
+        },
+        {
+          "id": "c_recuerda_laguna_es_el_espacio_del",
+          "tipo": "callout",
+          "variante": "recuerda",
+          "markdown": "Laguna es el espacio del cuerpo, canalículo es el conducto y dendrita es la prolongación de la célula que viaja por el conducto."
+        },
+        {
+          "id": "t_que_hace_el_osteocito",
+          "tipo": "texto",
+          "titulo": "Qué hace el osteocito",
+          "markdown": "- **Percibe la carga mecánica.** Se propone que el flujo del líquido en los canalículos le informa cuánta fuerza recibe el hueso. En la mandíbula, la masticación y el movimiento dentario cargan al hueso alveolar y al cuerpo: allí los osteocitos traducen esa carga en señales de formación o de resorción. El módulo 3 lo desarrolla.\n- **Frena la formación con [esclerostina](glosario:esclerostina).** La esclerostina se une a LRP5 y LRP6 y bloquea la vía Wnt/β-catenina en los osteoblastos.\n- **Regula la resorción.** Produce RANKL, y en ratones adultos es una fuente importante de RANKL en el remodelado. Cuando un osteocito muere por apoptosis, se asocia con la llegada de osteoclastos.\n- **Regula el fosfato.** Produce FGF23, una hormona que controla la excreción renal de fosfato."
+        },
+        {
+          "id": "c_dato_la_carga_mecanica_reduce",
+          "tipo": "callout",
+          "variante": "dato",
+          "markdown": "La carga mecánica reduce la producción de esclerostina y esto libera la formación de hueso. Por eso el hueso responde al uso.",
+          "nivel": "posgrado"
+        },
+        {
+          "id": "c_clinico_si_la_esclerostina_falta_o",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "Si la esclerostina falta o está muy reducida, como en la esclerosteosis (mutaciones de SOST) y en la enfermedad de van Buchem (deleción de un potenciador de SOST), el hueso se forma en exceso: hay sobrecrecimiento del cráneo y de la mandíbula. Al revés, el romosozumab, un anticuerpo que bloquea la esclerostina, se usa para tratar la osteoporosis."
+        },
+        {
+          "id": "c_atencion_osteocito_no_significa",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "«Osteocito» no significa célula inactiva ni muerta. Es una célula viva, conectada y con funciones endocrinas y de señalización."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_multicapa_osteocito",
+            "tipo": "multicapa",
+            "titulo": "El osteocito en su laguna",
+            "instrucciones": "Toca cada parte del dibujo para leer qué es y qué hace. Visita las siete capas marcadas con un punto para completar la actividad. Con teclado: Tab pasa de una capa a otra y Enter la abre. Nada depende de pasar el mouse por encima.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Bien. El osteocito vive en una laguna y se comunica por dendritas dentro de canalículos, con uniones comunicantes. Desde ahí detecta la carga y secreta esclerostina.",
+              "incorrecta": "Faltan capas requeridas. Revisa la laguna, los canalículos, las dendritas, las uniones comunicantes, la esclerostina y las células de la superficie."
+            },
+            "concepto": "Osteocito red",
+            "config": {
+              "svg": "/images/m2/m2_osteocito_lagunar.svg",
+              "viewBox": "0 0 1000 1230",
+              "alt": "Osteocito estrellado dentro de su laguna, con canalículos, dendritas, uniones comunicantes, vaso sanguíneo y la superficie con células de revestimiento.",
+              "modo": "explorar",
+              "capas": [
+                {
+                  "id": "cuerpo_osteocito",
+                  "etiqueta": "Cuerpo del osteocito",
+                  "descripcion": "Célula de forma estrellada, con núcleo grande y citoplasma escaso. Viene de un osteoblasto que quedó atrapado en el osteoide que secretó. Tiene menos retículo y Golgi que el osteoblasto."
+                },
+                {
+                  "id": "nucleo_osteocito",
+                  "etiqueta": "Núcleo",
+                  "descripcion": "Ocupa gran parte del cuerpo celular. El osteocito mantiene actividad génica: por ejemplo, produce esclerostina y RANKL."
+                },
+                {
+                  "id": "laguna_osteocitica",
+                  "etiqueta": "Laguna",
+                  "descripcion": "Cavidad de la matriz mineralizada que aloja el cuerpo del osteocito. Su forma refleja la de la célula."
+                },
+                {
+                  "id": "canaliculos",
+                  "etiqueta": "Canalículos",
+                  "descripcion": "Conductos muy finos que salen de la laguna y atraviesan la matriz. Alojan las dendritas y un líquido, y conectan unas lagunas con otras."
+                },
+                {
+                  "id": "dendritas",
+                  "etiqueta": "Dendritas",
+                  "descripcion": "Prolongaciones largas y delgadas del osteocito. Contactan con otros osteocitos, células de revestimiento y osteoblastos, y forman la red lacuno-canalicular."
+                },
+                {
+                  "id": "osteocito_lagunar_uniones_comunicantes",
+                  "etiqueta": "Uniones comunicantes",
+                  "descripcion": "Canales formados sobre todo por conexina 43 en los puntos de contacto entre dendritas. Dejan pasar iones y moléculas pequeñas de una célula a otra."
+                },
+                {
+                  "id": "liquido_lacunocanalicular",
+                  "etiqueta": "Líquido lacuno-canalicular",
+                  "descripcion": "Líquido que ocupa el espacio entre la dendrita y la pared del canalículo. Se propone que la carga mecánica lo desplaza y que el osteocito detecta ese flujo (módulo 3)."
+                },
+                {
+                  "id": "matriz_mineralizada",
+                  "etiqueta": "Matriz mineralizada",
+                  "descripcion": "Hidroxiapatita y colágeno tipo I que rodean al osteocito. Los nutrientes llegan a las células profundas por la red de canalículos."
+                },
+                {
+                  "id": "esclerostina",
+                  "etiqueta": "Esclerostina",
+                  "descripcion": "Proteína que secretan los osteocitos maduros. Se une a los correceptores LRP5 y LRP6 y frena la vía Wnt/β-catenina en los osteoblastos, con lo que se reduce la formación de hueso."
+                },
+                {
+                  "id": "celulas_superficie",
+                  "etiqueta": "Osteoblastos y células de revestimiento",
+                  "descripcion": "En la superficie, los extremos de las dendritas contactan con estas células. Así el osteocito puede influir en lo que ocurre en la superficie del hueso."
+                },
+                {
+                  "id": "vaso_sanguineo",
+                  "etiqueta": "Vaso sanguíneo",
+                  "descripcion": "Los vasos aportan oxígeno y nutrientes. El osteocito recibe su suministro por difusión a través de la red de canalículos."
+                }
+              ],
+              "requeridas": [
+                "cuerpo_osteocito",
+                "laguna_osteocitica",
+                "canaliculos",
+                "dendritas",
+                "osteocito_lagunar_uniones_comunicantes",
+                "esclerostina",
+                "celulas_superficie"
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_quiz_osteocito",
+            "tipo": "quiz",
+            "titulo": "Repaso rápido del osteocito",
+            "instrucciones": "Responde tres preguntas y lee la explicación de cada una. Toca tu respuesta; con teclado, Tab hasta la opción y Enter. Esta actividad es de refuerzo: no bloquea el avance.",
+            "obligatoria": false,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Muy bien. Ya distingues las estructuras del osteocito y su papel con la esclerostina.",
+              "parcial": "Vas bien; repasa qué es cada estructura del osteocito y qué hace la esclerostina.",
+              "incorrecta": "Repasa la sección: el osteocito es la célula más abundante, vive en una laguna, extiende dendritas por canalículos y secreta esclerostina."
+            },
+            "concepto": "Osteocito red",
+            "config": {
+              "preguntas": [
+                {
+                  "id": "m2_qs_1",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué proporción aproximada de las células del hueso adulto son osteocitos?",
+                  "opciones": [
+                    {
+                      "id": "m2_qs_1_a",
+                      "texto": "Menos de 5 %"
+                    },
+                    {
+                      "id": "m2_qs_1_b",
+                      "texto": "Cerca de 50 %"
+                    },
+                    {
+                      "id": "m2_qs_1_c",
+                      "texto": "Entre 90 y 95 %"
+                    },
+                    {
+                      "id": "m2_qs_1_d",
+                      "texto": "Exactamente 100 %"
+                    }
+                  ],
+                  "correctas": ["m2_qs_1_c"],
+                  "explicacion": "Los osteocitos son la gran mayoría de las células del hueso adulto: aproximadamente 90 a 95 %. Osteoblastos, células de revestimiento y osteoclastos suman el resto.",
+                  "concepto": "Osteocito red",
+                  "dificultad": 1
+                },
+                {
+                  "id": "m2_qs_2",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Cuál es el efecto principal de la esclerostina secretada por los osteocitos?",
+                  "opciones": [
+                    {
+                      "id": "m2_qs_2_a",
+                      "texto": "Frena la vía Wnt/β-catenina en los osteoblastos y reduce la formación ósea"
+                    },
+                    {
+                      "id": "m2_qs_2_b",
+                      "texto": "Activa el receptor RANK y favorece la fusión de los precursores de osteoclastos"
+                    },
+                    {
+                      "id": "m2_qs_2_c",
+                      "texto": "Aumenta la síntesis de colágeno tipo I y la actividad de los osteoblastos"
+                    },
+                    {
+                      "id": "m2_qs_2_d",
+                      "texto": "Se une a RANKL, lo neutraliza e impide que active al receptor RANK"
+                    }
+                  ],
+                  "correctas": ["m2_qs_2_a"],
+                  "explicacion": "La esclerostina se une a LRP5 y LRP6 y bloquea Wnt/β-catenina, un freno de la formación ósea. Neutralizar RANKL es función de la OPG, no de la esclerostina.",
+                  "concepto": "Esclerostina",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m2_qs_3",
+                  "formato": "verdadero_falso",
+                  "enunciado": "El cuerpo del osteocito se aloja en un canalículo y sus dendritas se alojan en la laguna.",
+                  "correcta": false,
+                  "explicacion": "Está al revés: el cuerpo del osteocito ocupa la laguna y las dendritas viajan por los canalículos.",
+                  "concepto": "Osteocito red",
+                  "dificultad": 1
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m2_4_osteoclasto",
+      "titulo": "El osteoclasto, célula que reabsorbe",
+      "bloques": [
+        {
+          "id": "t_osteoclasto",
+          "tipo": "texto",
+          "markdown": "El osteoclasto es la célula que reabsorbe hueso. No viene del mesénquima: pertenece a la línea hematopoyética, la misma que forma las células de la sangre."
+        },
+        {
+          "id": "t_de_monocito_a_osteoclasto",
+          "tipo": "texto",
+          "titulo": "De monocito a osteoclasto",
+          "markdown": "La secuencia es: célula madre hematopoyética, progenitor mieloide, precursor monocito-macrófago, preosteoclasto y osteoclasto multinucleado. Dos señales de los osteoblastos y de otras células del estroma dirigen su formación, y una tercera la frena:\n\n- **M-CSF** se une al receptor c-Fms del precursor. Mantiene vivos a los precursores, los hace dividirse y les induce el receptor RANK.\n- **RANKL** se une al receptor RANK del preosteoclasto. Activa las vías NF-κB y NFATc1, y con ellas la diferenciación, la fusión y la activación.\n- **OPG** es un receptor señuelo soluble. Se une a RANKL y le impide llegar a RANK. La proporción RANKL/OPG decide cuánto hueso se reabsorbe."
+        },
+        {
+          "id": "c_recuerda_m_csf_permite_que_el",
+          "tipo": "callout",
+          "variante": "recuerda",
+          "markdown": "M-CSF permite que el precursor sobreviva y exprese RANK. RANKL lo convierte en osteoclasto. OPG frena a RANKL."
+        },
+        {
+          "id": "c_dato_rankl_lo_producen",
+          "tipo": "callout",
+          "variante": "dato",
+          "markdown": "RANKL lo producen osteoblastos, células del estroma, osteocitos y células del ligamento periodontal. NFATc1 se considera el regulador maestro de la osteoclastogénesis.",
+          "nivel": "posgrado"
+        },
+        {
+          "id": "t_un_gigante_multinucleado_y_polarizado",
+          "tipo": "texto",
+          "titulo": "Un gigante multinucleado y polarizado",
+          "markdown": "El osteoclasto se forma por la fusión de varios preosteoclastos, por eso tiene varios núcleos. Cuando se activa, se polariza:\n\n- La **[zona clara](glosario:zona_clara)** es un anillo de citoplasma rico en actina que se adhiere a la matriz y sella el espacio de resorción.\n- Dentro del anillo, la membrana forma pliegues profundos: el **[borde festoneado](glosario:borde_festoneado)**, por donde salen protones y enzimas.\n- En el hueso queda una depresión, la **[laguna de Howship](glosario:laguna_de_howship)**."
+        },
+        {
+          "id": "t_como_reabsorbe_primero_el_mineral",
+          "tipo": "texto",
+          "titulo": "Cómo reabsorbe: primero el mineral, después el colágeno",
+          "markdown": "1. Se adhiere a la matriz y sella con la zona clara.\n2. Acidifica el espacio sellado y disuelve la hidroxiapatita.\n3. Digiere el colágeno tipo I que queda expuesto."
+        },
+        {
+          "id": "tb_tabla_componente_donde_esta_que_hace",
+          "tipo": "tabla",
+          "titulo": "Tabla: Componente, Dónde está, Qué hace",
+          "encabezado_criterio": "Componente",
+          "columnas": ["Dónde está", "Qué hace"],
+          "filas": [
+            {
+              "criterio": "Anhidrasa carbónica II",
+              "celdas": ["Citoplasma", "Genera H+ y bicarbonato a partir de CO2 y agua"]
+            },
+            {
+              "criterio": "Bomba de protones (V-ATPasa)",
+              "celdas": [
+                "Borde festoneado",
+                "Bombea H+ al espacio sellado; el pH baja a aproximadamente 4,5"
+              ]
+            },
+            {
+              "criterio": "Canal de cloruro (ClC-7)",
+              "celdas": [
+                "Borde festoneado",
+                "Acompaña a los protones con Cl- y mantiene la neutralidad eléctrica"
+              ]
+            },
+            {
+              "criterio": "Catepsina K",
+              "celdas": ["Espacio sellado", "Corta el colágeno tipo I expuesto"]
+            },
+            {
+              "criterio": "TRAP (fosfatasa ácida resistente al tartrato)",
+              "celdas": ["Osteoclasto", "Marcador histoquímico de osteoclastos"]
+            }
+          ]
+        },
+        {
+          "id": "c_clinico_si_el_osteoclasto_falla_el",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "Si el osteoclasto falla, el hueso se vuelve denso pero frágil (osteopetrosis). La deficiencia de [anhidrasa carbónica II](glosario:anhidrasa_carbonica_ii) causa osteopetrosis con acidosis tubular renal. La deficiencia de [catepsina K](glosario:catepsina_k) causa picnodisostosis, que incluye mandíbula pequeña con ángulo obtuso. Sin osteoclastos tampoco erupcionan los dientes, porque el hueso que los cubre no se reabsorbe."
+        },
+        {
+          "id": "c_clinico_los_bisfosfonatos_y_el",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "Los bisfosfonatos y el denosumab, un anticuerpo contra RANKL, reducen la actividad de los osteoclastos. Su uso se asocia a la osteonecrosis de los maxilares, que aparece con más frecuencia en la mandíbula que en el maxilar."
+        },
+        {
+          "id": "c_atencion_reabsorber_no_es_destruir",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "Reabsorber no es «destruir». La resorción es la mitad del remodelado y libera factores del hueso que después estimulan la formación (módulo 5)."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_multicapa_osteoclasto",
+            "tipo": "multicapa",
+            "titulo": "Identifica las partes del osteoclasto",
+            "instrucciones": "Lee la pista y toca la parte del dibujo que le corresponde. Si aciertas, se revela su nombre y su explicación; cada error resta una parte del puntaje. Con teclado: Tab recorre las capas y Enter elige la enfocada. Nada depende del mouse.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Bien. El osteoclasto se sella con la zona clara, acidifica con la bomba de protones y la anhidrasa carbónica II, y digiere el colágeno con catepsina K.",
+              "parcial": "Vas bien, pero algunas partes no coinciden con su pista. Repasa la tabla: primero el ácido disuelve el mineral y después la catepsina K digiere el colágeno.",
+              "incorrecta": "Alguna parte no coincide con su pista. Repasa la tabla de la sección: primero el mineral se disuelve con ácido y después el colágeno se digiere con catepsina K."
+            },
+            "concepto": "Resorción osteoclastica",
+            "config": {
+              "svg": "/images/m2/m2_osteoclasto_resorcion.svg",
+              "viewBox": "0 0 1000 900",
+              "alt": "Osteoclasto multinucleado sobre la superficie ósea, con zona clara, borde festoneado, laguna de Howship y la maquinaria de acidificación y digestión.",
+              "modo": "identificar",
+              "capas": [
+                {
+                  "id": "nucleos_multiples",
+                  "etiqueta": "Núcleos múltiples",
+                  "descripcion": "Cada núcleo procede de un precursor mononuclear del linaje monocito-macrófago que se fusionó con otros; por eso la célula es gigante y multinucleada.",
+                  "pista": "Varios centros de información genética dentro de una misma célula gigante."
+                },
+                {
+                  "id": "zona_clara",
+                  "etiqueta": "Zona clara",
+                  "descripcion": "Anillo de citoplasma rico en filamentos de actina que se adhiere a la matriz mediante integrinas y sella el espacio de resorción. También se llama zona de sellado.",
+                  "pista": "Anillo de la célula, sin orgánulos, que se pega al hueso y aísla el espacio donde ocurre la resorción."
+                },
+                {
+                  "id": "borde_festoneado",
+                  "etiqueta": "Borde festoneado",
+                  "descripcion": "Aumentan la superficie por la que salen protones y enzimas y entran los productos de degradación. También se llama borde rugoso.",
+                  "pista": "Repliegues profundos de la membrana, dirigidos hacia el hueso, dentro del anillo de sellado."
+                },
+                {
+                  "id": "bomba_protones",
+                  "etiqueta": "Bomba de protones (V-ATPasa)",
+                  "descripcion": "Acidifica el espacio hasta un pH aproximado de 4,5 y así disuelve la hidroxiapatita. Se ubica en el borde festoneado.",
+                  "pista": "Complejo de membrana que gasta ATP para llevar H+ al espacio sellado."
+                },
+                {
+                  "id": "canal_cloruro",
+                  "etiqueta": "Canal de cloruro (ClC-7)",
+                  "descripcion": "Permite que se forme ácido clorhídrico en el espacio sellado; se ubica en el borde festoneado.",
+                  "pista": "Canal que acompaña a los protones con iones Cl- para mantener la neutralidad eléctrica."
+                },
+                {
+                  "id": "anhidrasa_carbonica_ii",
+                  "etiqueta": "Anhidrasa carbónica II",
+                  "descripcion": "El ácido carbónico se disocia en H+ y bicarbonato. Su deficiencia causa osteopetrosis con acidosis tubular renal.",
+                  "pista": "Enzima del citoplasma que convierte CO2 y agua en ácido carbónico, fuente de los protones que se bombean."
+                },
+                {
+                  "id": "catepsina_k",
+                  "etiqueta": "Catepsina K",
+                  "descripcion": "Corta el colágeno tipo I que queda expuesto cuando el mineral se disuelve. Su deficiencia causa picnodisostosis.",
+                  "pista": "Proteasa que se secreta al espacio ácido y corta la proteína principal de la matriz orgánica."
+                },
+                {
+                  "id": "trap",
+                  "etiqueta": "Fosfatasa ácida resistente al tartrato (TRAP)",
+                  "descripcion": "Permite reconocer a los osteoclastos en cortes histológicos; su isoforma 5b en sangre se usa como marcador de resorción.",
+                  "pista": "Enzima característica de estas células, detectable con una tinción histoquímica, que sobrevive a un inhibidor que apaga a las demás de su familia."
+                },
+                {
+                  "id": "laguna_howship",
+                  "etiqueta": "Laguna de Howship",
+                  "descripcion": "La célula se apoya dentro de ella. Después de la resorción, esa superficie excavada recibe a los osteoblastos que forman hueso nuevo (módulo 5).",
+                  "pista": "Depresión superficial excavada en el hueso, justo debajo de la célula que reabsorbe."
+                },
+                {
+                  "id": "osteoclasto_resorcion_matriz_mineralizada",
+                  "etiqueta": "Matriz mineralizada",
+                  "descripcion": "Cristales de hidroxiapatita sobre una trama de colágeno tipo I. El ácido disuelve los cristales y después la catepsina K digiere el colágeno.",
+                  "pista": "Hueso que va a ser reabsorbido: cristales sobre una trama de colágeno."
+                },
+                {
+                  "id": "receptores_rank_cfms",
+                  "etiqueta": "Receptores RANK y c-Fms",
+                  "descripcion": "Reciben RANKL y M-CSF; de ellas depende que el precursor se diferencie, se fusione y se active. La OPG puede bloquear la señal de RANKL antes de que llegue a RANK.",
+                  "pista": "Proteínas de la membrana que reciben las señales de las células formadoras de hueso."
+                }
+              ],
+              "requeridas": [
+                "nucleos_multiples",
+                "zona_clara",
+                "borde_festoneado",
+                "bomba_protones",
+                "anhidrasa_carbonica_ii",
+                "catepsina_k",
+                "trap",
+                "laguna_howship",
+                "receptores_rank_cfms"
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_arrastre_senales_linajes",
+            "tipo": "arrastre-molecular",
+            "titulo": "Lleva cada señal a su lugar de acción",
+            "instrucciones": "Lleva cada señal hasta la etapa o el receptor donde actúa y observa el efecto. Arrastra con el dedo, o toca la molécula y luego el lugar; con teclado, Tab y Enter para tomar y soltar. Los fallos restan puntaje y hay moléculas que no encajan en ningún lugar.",
+            "obligatoria": true,
+            "puntaje_max": 40,
+            "retroalimentacion": {
+              "correcta": "Muy bien. RUNX2 y osterix actúan dentro del núcleo, en ese orden, en la línea osteoblástica; M-CSF y RANKL actúan sobre receptores de membrana del linaje osteoclástico; y OPG intercepta a RANKL.",
+              "parcial": "Casi. Algunas señales están bien ubicadas. Recuerda: RUNX2 y osterix actúan en el núcleo del linaje osteoblástico; M-CSF se une a c-Fms, RANKL a RANK y OPG a RANKL.",
+              "incorrecta": "Alguna molécula no está en su lugar. Recuerda: los factores de transcripción (RUNX2, osterix) actúan en una etapa del osteoblasto; M-CSF se une a c-Fms; RANKL se une a RANK; OPG se une a RANKL."
+            },
+            "concepto": "Señales osteoclastogenicas",
+            "config": {
+              "escena": {
+                "viewBox": "0 0 1000 1540",
+                "fondo_svg": "/images/m2/m2_arbol_linajes_oseos.svg",
+                "alt": "Árbol de dos linajes. A la izquierda, el osteoblástico: célula madre mesenquimal, preosteoblasto con RUNX2 sin osterix y osteoblasto con un ligando expuesto. A la derecha, el osteoclástico: precursor con c-Fms y preosteoclasto con RANK. Los acoples tienen contorno punteado; abajo, siete moléculas."
+              },
+              "moleculas": [
+                {
+                  "id": "mol_runx2",
+                  "etiqueta": "RUNX2",
+                  "descripcion": "Factor de transcripción (Cbfa1) que compromete a la célula mesenquimal con el linaje osteoblástico.",
+                  "forma": "circulo"
+                },
+                {
+                  "id": "mol_osterix",
+                  "etiqueta": "Osterix (Sp7)",
+                  "descripcion": "Factor de transcripción que actúa después de RUNX2 y depende de él; necesario para formar osteoblastos funcionales.",
+                  "forma": "hexagono"
+                },
+                {
+                  "id": "mol_mcsf",
+                  "etiqueta": "M-CSF",
+                  "descripcion": "Factor estimulante de colonias de macrófagos, producido por osteoblastos y células del estroma.",
+                  "forma": "triangulo"
+                },
+                {
+                  "id": "mol_rankl",
+                  "etiqueta": "RANKL",
+                  "descripcion": "Ligando de la familia del TNF producido por osteoblastos, células del estroma y osteocitos; activa al receptor RANK.",
+                  "forma": "rombo"
+                },
+                {
+                  "id": "mol_opg",
+                  "etiqueta": "OPG (osteoprotegerina)",
+                  "descripcion": "Receptor señuelo soluble producido por osteoblastos y células del estroma.",
+                  "forma": "cuadrado"
+                },
+                {
+                  "id": "mol_catepsina_k",
+                  "etiqueta": "Catepsina K",
+                  "descripcion": "Proteasa de cisteína del osteoclasto maduro.",
+                  "forma": "circulo",
+                  "rechazo": "La catepsina K es una enzima del osteoclasto ya maduro que degrada el colágeno tipo I. Es un producto de la célula diferenciada, no una señal que induzca la diferenciación, y no se une a ninguno de estos lugares."
+                },
+                {
+                  "id": "mol_osteocalcina",
+                  "etiqueta": "Osteocalcina",
+                  "descripcion": "Proteína de la matriz que secreta el osteoblasto maduro.",
+                  "forma": "hexagono",
+                  "rechazo": "La osteocalcina es una proteína de la matriz que secreta el osteoblasto maduro. Es un marcador de la diferenciación, no un factor que la dirija, y no actúa en ninguno de estos lugares."
+                }
+              ],
+              "receptores": [
+                {
+                  "id": "rec_etapa_mesenquimal",
+                  "etiqueta": "Etapa 1: célula mesenquimal",
+                  "descripcion": "Etapa 1: célula mesenquimal sin factores osteoblásticos. Célula madre mesenquimal que todavía no expresa RUNX2 ni osterix; su núcleo está gris.",
+                  "posicion": {
+                    "x": 25.5,
+                    "y": 13.0
+                  }
+                },
+                {
+                  "id": "rec_etapa_preosteoblasto",
+                  "etiqueta": "Etapa 2: preosteoblasto con RUNX2",
+                  "descripcion": "Etapa 2: preosteoblasto con RUNX2 y sin osterix. Célula ya comprometida con el linaje óseo que expresa RUNX2 pero aún no expresa osterix.",
+                  "posicion": {
+                    "x": 25.5,
+                    "y": 47.4
+                  }
+                },
+                {
+                  "id": "rec_cfms",
+                  "etiqueta": "Receptor c-Fms",
+                  "descripcion": "Receptor c-Fms del precursor monocito-macrófago. Receptor de membrana del precursor hematopoyético, todavía sin RANK.",
+                  "posicion": {
+                    "x": 66.3,
+                    "y": 47.4
+                  }
+                },
+                {
+                  "id": "rec_rank",
+                  "etiqueta": "Receptor RANK del preosteoclasto",
+                  "descripcion": "Receptor de membrana del preosteoclasto mononuclear.",
+                  "posicion": {
+                    "x": 67.0,
+                    "y": 64.6
+                  }
+                },
+                {
+                  "id": "rec_ligando_osteoblasto",
+                  "etiqueta": "Ligando expuesto por el osteoblasto",
+                  "descripcion": "Diana de OPG. Molécula de la superficie del osteoblasto que activa al receptor RANK del preosteoclasto.",
+                  "posicion": {
+                    "x": 35.2,
+                    "y": 64.6
+                  }
+                }
+              ],
+              "pares": [
+                {
+                  "id": "par_runx2_etapa_mesenquimal",
+                  "molecula": "mol_runx2",
+                  "receptor": "rec_etapa_mesenquimal",
+                  "efecto": {
+                    "titulo": "Compromiso con el linaje óseo",
+                    "descripcion": "RUNX2 se activa y la célula madre mesenquimal se convierte en osteoprogenitora comprometida. RUNX2 enciende genes osteoblásticos y el gen de osterix. Sin RUNX2 no se forman osteoblastos maduros.",
+                    "animacion": "transformacion"
+                  }
+                },
+                {
+                  "id": "par_osterix_etapa_preosteoblasto",
+                  "molecula": "mol_osterix",
+                  "receptor": "rec_etapa_preosteoblasto",
+                  "efecto": {
+                    "titulo": "De preosteoblasto a osteoblasto",
+                    "descripcion": "Osterix, que actúa aguas abajo de RUNX2, lleva al preosteoblasto a completar su diferenciación y a expresar genes de la matriz (colágeno tipo I, osteopontina, osteocalcina). Así se convierte en osteoblasto que secreta osteoide. Sin osterix quedan precursores con RUNX2 y no se forma hueso.",
+                    "animacion": "transformacion"
+                  }
+                },
+                {
+                  "id": "par_mcsf_cfms",
+                  "molecula": "mol_mcsf",
+                  "receptor": "rec_cfms",
+                  "efecto": {
+                    "titulo": "Supervivencia y proliferación del precursor",
+                    "descripcion": "M-CSF se une a c-Fms. El precursor monocito-macrófago sobrevive, se divide y expresa el receptor RANK, con lo que queda listo para responder a RANKL.",
+                    "animacion": "crecimiento"
+                  }
+                },
+                {
+                  "id": "par_rankl_rank",
+                  "molecula": "mol_rankl",
+                  "receptor": "rec_rank",
+                  "efecto": {
+                    "titulo": "Diferenciación, fusión y activación",
+                    "descripcion": "RANKL se une a RANK y activa las vías NF-κB y NFATc1. Los preosteoclastos se diferencian, se fusionan en una célula multinucleada y se activan. Esto ocurre solo si el precursor ya tiene RANK, lo que depende de M-CSF.",
+                    "animacion": "transformacion"
+                  }
+                },
+                {
+                  "id": "par_opg_ligando_osteoblasto",
+                  "molecula": "mol_opg",
+                  "receptor": "rec_ligando_osteoblasto",
+                  "efecto": {
+                    "titulo": "Freno de la osteoclastogénesis",
+                    "descripcion": "OPG se une a RANKL y lo neutraliza. RANKL ya no llega a RANK: el preosteoclasto no se fusiona ni se activa y la resorción disminuye. La proporción RANKL/OPG regula el equilibrio de la resorción.",
+                    "animacion": "union"
+                  }
+                }
+              ],
+              "distractores": ["mol_catepsina_k", "mol_osteocalcina"]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_quiz_linajes",
+            "tipo": "quiz",
+            "titulo": "Linajes y señales de las células óseas",
+            "instrucciones": "Responde cada pregunta y lee la explicación. En Ordenar pasos, toca los pasos en su orden (vuelve a tocar uno para quitarlo) y pulsa Comprobar. En opción múltiple, toca tu respuesta. Con teclado: Tab hasta el paso o la opción y Enter.",
+            "obligatoria": true,
+            "puntaje_max": 40,
+            "retroalimentacion": {
+              "correcta": "Muy bien. Dominas los linajes: la ruta mesenquimal con RUNX2 y osterix, la ruta hematopoyética con M-CSF y RANKL, y el freno de OPG.",
+              "parcial": "Vas bien; repasa el orden de cada linaje y qué hace cada señal: RUNX2, osterix, M-CSF, RANKL y OPG.",
+              "incorrecta": "Repasa las secuencias: mesenquimal (célula madre, osteoprogenitora, preosteoblasto, osteoblasto, osteocito) y hematopoyética (célula madre, progenitor mieloide, precursor monocito-macrófago, preosteoclasto, osteoclasto)."
+            },
+            "concepto": "Linaje osteoclástico",
+            "config": {
+              "preguntas": [
+                {
+                  "id": "m2_ql_1",
+                  "formato": "ordenar",
+                  "enunciado": "Ordena las etapas del linaje osteoblástico, de la primera a la última.",
+                  "pasos": [
+                    {
+                      "id": "m2_ql_1_p_madre",
+                      "texto": "Célula madre mesenquimal"
+                    },
+                    {
+                      "id": "m2_ql_1_p_progenitora",
+                      "texto": "Célula osteoprogenitora"
+                    },
+                    {
+                      "id": "m2_ql_1_p_preosteoblasto",
+                      "texto": "Preosteoblasto"
+                    },
+                    {
+                      "id": "m2_ql_1_p_osteoblasto",
+                      "texto": "Osteoblasto"
+                    },
+                    {
+                      "id": "m2_ql_1_p_osteocito",
+                      "texto": "Osteocito"
+                    }
+                  ],
+                  "explicacion": "La célula madre mesenquimal se compromete (osteoprogenitora), se prepara (preosteoblasto), forma matriz (osteoblasto) y algunos osteoblastos quedan atrapados como osteocitos.",
+                  "concepto": "Linaje osteoblástico",
+                  "dificultad": 1
+                },
+                {
+                  "id": "m2_ql_2",
+                  "formato": "ordenar",
+                  "enunciado": "Ordena las etapas del linaje del osteoclasto, de la primera a la última.",
+                  "pasos": [
+                    {
+                      "id": "m2_ql_2_p_hematopoyetica",
+                      "texto": "Célula madre hematopoyética"
+                    },
+                    {
+                      "id": "m2_ql_2_p_mieloide",
+                      "texto": "Progenitor mieloide"
+                    },
+                    {
+                      "id": "m2_ql_2_p_monocito",
+                      "texto": "Precursor monocito-macrófago"
+                    },
+                    {
+                      "id": "m2_ql_2_p_preosteoclasto",
+                      "texto": "Preosteoclasto mononuclear con RANK"
+                    },
+                    {
+                      "id": "m2_ql_2_p_osteoclasto",
+                      "texto": "Osteoclasto multinucleado"
+                    }
+                  ],
+                  "explicacion": "El osteoclasto viene de la médula ósea: célula madre hematopoyética, progenitor mieloide, precursor monocito-macrófago y preosteoclasto. La fusión de preosteoclastos da el osteoclasto multinucleado.",
+                  "concepto": "Linaje osteoclástico",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m2_ql_3",
+                  "formato": "ordenar",
+                  "enunciado": "Ordena los eventos moleculares de la formación de hueso, del más temprano al más tardío.",
+                  "pasos": [
+                    {
+                      "id": "m2_ql_3_p_runx2",
+                      "texto": "Se activa RUNX2"
+                    },
+                    {
+                      "id": "m2_ql_3_p_osterix",
+                      "texto": "Se activa osterix"
+                    },
+                    {
+                      "id": "m2_ql_3_p_osteoide",
+                      "texto": "El osteoblasto maduro secreta osteoide"
+                    },
+                    {
+                      "id": "m2_ql_3_p_osteocalcina",
+                      "texto": "Se expresa osteocalcina durante la mineralización"
+                    }
+                  ],
+                  "explicacion": "RUNX2 se activa primero y compromete a la célula; osterix actúa después, aguas abajo de RUNX2, y completa la diferenciación del osteoblasto. El osteoblasto maduro secreta osteoide, y la osteocalcina es un marcador tardío asociado a la mineralización.",
+                  "concepto": "Factores transcripción",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m2_ql_4",
+                  "formato": "ordenar",
+                  "enunciado": "Ordena la señalización que forma un osteoclasto, de la primera a la última.",
+                  "pasos": [
+                    {
+                      "id": "m2_ql_4_p_mcsf",
+                      "texto": "M-CSF se une a c-Fms y el precursor sobrevive y expresa RANK"
+                    },
+                    {
+                      "id": "m2_ql_4_p_rankl",
+                      "texto": "RANKL se une a RANK del preosteoclasto"
+                    },
+                    {
+                      "id": "m2_ql_4_p_fusion",
+                      "texto": "Los preosteoclastos se fusionan y forman una célula multinucleada"
+                    },
+                    {
+                      "id": "m2_ql_4_p_adhesion",
+                      "texto": "El osteoclasto multinucleado se activa, se polariza y forma la zona clara"
+                    }
+                  ],
+                  "explicacion": "M-CSF va primero: mantiene vivo al precursor y le induce RANK. Luego RANKL activa la diferenciación, los preosteoclastos se fusionan y el osteoclasto se adhiere al hueso y se activa.",
+                  "concepto": "Señales osteoclastogenicas",
+                  "dificultad": 3
+                },
+                {
+                  "id": "m2_ql_5",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué efecto tiene la osteoprotegerina (OPG)?",
+                  "opciones": [
+                    {
+                      "id": "m2_ql_5_a",
+                      "texto": "Se une a c-Fms y bloquea la acción de M-CSF"
+                    },
+                    {
+                      "id": "m2_ql_5_b",
+                      "texto": "Activa RANK y promueve la fusión de los preosteoclastos"
+                    },
+                    {
+                      "id": "m2_ql_5_c",
+                      "texto": "Se une a RANKL y le impide activar el receptor RANK"
+                    },
+                    {
+                      "id": "m2_ql_5_d",
+                      "texto": "Inhibe la anhidrasa carbónica II del osteoclasto maduro"
+                    }
+                  ],
+                  "correctas": ["m2_ql_5_c"],
+                  "explicacion": "La OPG es un receptor señuelo soluble: captura RANKL y le impide unirse a RANK. Así frena la formación y la activación de osteoclastos.",
+                  "concepto": "Señales osteoclastogenicas",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m2_ql_6",
+                  "formato": "opcion_multiple",
+                  "enunciado": "Un niño tiene clavículas hipoplásicas, fontanelas que cierran tarde y dientes que erupcionan con retraso. ¿Qué factor de transcripción está alterado?",
+                  "opciones": [
+                    {
+                      "id": "m2_ql_6_a",
+                      "texto": "NFATc1, regulador maestro de la osteoclastogénesis"
+                    },
+                    {
+                      "id": "m2_ql_6_b",
+                      "texto": "RUNX2, necesario para el compromiso con el linaje óseo"
+                    },
+                    {
+                      "id": "m2_ql_6_c",
+                      "texto": "Osterix, necesario solo para la etapa final del osteoblasto"
+                    },
+                    {
+                      "id": "m2_ql_6_d",
+                      "texto": "Esclerostina, que frena la vía Wnt en los osteoblastos"
+                    }
+                  ],
+                  "correctas": ["m2_ql_6_b"],
+                  "explicacion": "Es el cuadro de la displasia cleidocraneal, por reducción de RUNX2 funcional. Sin RUNX2 suficiente, el linaje óseo no se compromete bien. La falta de esclerostina produce lo contrario: exceso de hueso.",
+                  "concepto": "Factores transcripción",
+                  "dificultad": 3
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m2_5_ligamento_periodontal",
+      "titulo": "El ligamento periodontal y el hueso alveolar",
+      "bloques": [
+        {
+          "id": "t_ligamento_periodontal",
+          "tipo": "texto",
+          "markdown": "El diente no toca el hueso. Entre la raíz y el hueso alveolar hay un tejido conectivo fibroso, el **ligamento periodontal**, de aproximadamente 0,15 a 0,4 mm de ancho. Los fibroblastos, cementoblastos y progenitores del ligamento derivan del folículo dental, es decir, del ectomesénquima de la cresta neural: la misma familia celular de la mandíbula. Los osteoclastos vienen de la médula ósea y los [restos de Malassez](glosario:restos_epiteliales_de_malassez) son epiteliales."
+        },
+        {
+          "id": "tb_quien_vive_en_el_ligamento_periodontal",
+          "tipo": "tabla",
+          "titulo": "Quién vive en el ligamento periodontal",
+          "encabezado_criterio": "Célula",
+          "columnas": ["Qué hace", "Relación con el hueso"],
+          "filas": [
+            {
+              "criterio": "Fibroblastos periodontales",
+              "celdas": [
+                "Sintetizan y renuevan el colágeno; son la población más abundante",
+                "Expresan RANKL y OPG; algunos son progenitores"
+              ]
+            },
+            {
+              "criterio": "Células progenitoras perivasculares",
+              "celdas": [
+                "Reponen fibroblastos, cementoblastos y osteoblastos",
+                "Fuente de osteoblastos para el hueso alveolar"
+              ]
+            },
+            {
+              "criterio": "Cementoblastos",
+              "celdas": [
+                "Depositan el cemento sobre la raíz",
+                "Forman el cemento donde se insertan las fibras"
+              ]
+            },
+            {
+              "criterio": "Osteoblastos",
+              "celdas": [
+                "Se alinean en la cara del hueso alveolar que mira al ligamento",
+                "Forman hueso alveolar"
+              ]
+            },
+            {
+              "criterio": "Osteoclastos",
+              "celdas": [
+                "Aparecen en la superficie del hueso cuando hay resorción",
+                "Reabsorben el hueso alveolar"
+              ]
+            },
+            {
+              "criterio": "Restos epiteliales de Malassez",
+              "celdas": [
+                "Cúmulos de células epiteliales cerca del cemento; remanentes de la vaina epitelial de Hertwig",
+                "No son células óseas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t_fibras_de_sharpey_y_hueso_alveolar",
+          "tipo": "texto",
+          "titulo": "Fibras de Sharpey y hueso alveolar propio",
+          "markdown": "Las fibras principales de colágeno del ligamento quedan incluidas, por sus extremos, en el cemento y en el hueso alveolar. Esos extremos son las [fibras de Sharpey](glosario:fibras_de_sharpey). Anclan el diente al alvéolo y transmiten al hueso las fuerzas de la masticación.\n\nEl **[hueso alveolar propio](glosario:hueso_alveolar_propio)** es la lámina delgada de hueso compacto que reviste el alvéolo. Recibe las fibras de Sharpey y por eso se llama también hueso fasciculado. En las radiografías se ve como la lámina dura."
+        },
+        {
+          "id": "c_recuerda_el_hueso_alveolar_depende",
+          "tipo": "callout",
+          "variante": "recuerda",
+          "markdown": "El hueso alveolar depende del diente. Se forma con la erupción y, si el diente se pierde, se reabsorbe de forma progresiva, más rápido en los primeros meses."
+        },
+        {
+          "id": "t_fuerza_y_remodelado_el_caso_de_la",
+          "tipo": "texto",
+          "titulo": "Fuerza y remodelado: el caso de la ortodoncia",
+          "markdown": "Cuando una fuerza empuja un diente, el ligamento se comprime en un lado y se estira en el otro:\n\n- **Lado de presión:** aumenta RANKL, se forman osteoclastos y el hueso alveolar se reabsorbe. Así se abre espacio.\n- **Lado de tensión:** se estimula a los osteoblastos y se forma hueso.\n\nEl diente se desplaza a través del hueso porque uno de los lados se reabsorbe y el otro se forma."
+        },
+        {
+          "id": "c_dato_las_celulas_del_ligamento",
+          "tipo": "callout",
+          "variante": "dato",
+          "markdown": "Las células del ligamento y los osteocitos detectan la deformación. Ese mecanismo se estudia en el módulo 3.",
+          "nivel": "posgrado"
+        },
+        {
+          "id": "c_clinico_en_la_periodontitis_la",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "En la periodontitis, la inflamación aumenta la proporción RANKL/OPG y se pierde hueso alveolar. Es el mismo eje RANKL/OPG de la ortodoncia, pero activado por la inflamación y no por una fuerza controlada."
+        },
+        {
+          "id": "tb_resumen_del_modulo",
+          "tipo": "tabla",
+          "titulo": "Resumen del módulo",
+          "encabezado_criterio": "Célula",
+          "columnas": ["Origen", "Función", "Marcador o señal principal"],
+          "filas": [
+            {
+              "criterio": "Osteoprogenitora",
+              "celdas": ["Mesenquimal", "Se divide y forma osteoblastos", "RUNX2"]
+            },
+            {
+              "criterio": "Osteoblasto",
+              "celdas": [
+                "Mesenquimal",
+                "Forma el osteoide y regula la mineralización y a los osteoclastos",
+                "Osterix; colágeno tipo I, fosfatasa alcalina, osteocalcina; RANKL y OPG"
+              ]
+            },
+            {
+              "criterio": "Célula de revestimiento",
+              "celdas": [
+                "Mesenquimal",
+                "Cubre la superficie en reposo y puede reactivarse",
+                "Célula aplanada"
+              ]
+            },
+            {
+              "criterio": "Osteocito",
+              "celdas": [
+                "Mesenquimal",
+                "Percibe la carga y regula la formación y la resorción",
+                "Esclerostina"
+              ]
+            },
+            {
+              "criterio": "Osteoclasto",
+              "celdas": [
+                "Hematopoyético",
+                "Reabsorbe hueso",
+                "M-CSF y RANKL inducen; TRAP y catepsina K lo identifican"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c_atencion_que_la_mandibula_tenga",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "Que la mandíbula tenga origen en la cresta neural no cambia a sus osteoclastos: siguen viniendo de la médula ósea. Lo que cambia es el origen de las células formadoras."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_multicapa_ligamento_periodontal",
+            "tipo": "multicapa",
+            "titulo": "Identifica las partes del ligamento periodontal",
+            "instrucciones": "Lee la pista y toca la parte del dibujo que le corresponde. Si aciertas, se revela su nombre y su explicación; cada error resta una parte del puntaje. Con teclado: Tab recorre las capas y Enter elige la enfocada. Nada depende del mouse.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Bien. Ubicaste las células del ligamento y del hueso alveolar, y entendiste qué ocurre en el lado de presión y en el lado de tensión.",
+              "parcial": "Vas bien; repasa la tabla de células del ligamento y qué ocurre en el lado de presión (resorción) y en el de tensión (formación).",
+              "incorrecta": "Alguna capa no coincide con su pista. Repasa la tabla de células del ligamento y recuerda: presión, resorción por osteoclastos; tensión, formación por osteoblastos."
+            },
+            "concepto": "Ligamento periodontal",
+            "config": {
+              "svg": "/images/m2/m2_ligamento_periodontal.svg",
+              "viewBox": "0 0 1000 900",
+              "alt": "Corte de un diente y su alvéolo: cemento, ligamento periodontal con sus células, fibras de Sharpey y hueso alveolar; con la raíz sometida a una fuerza lateral para mostrar el lado de presión y el lado de tensión.",
+              "modo": "identificar",
+              "capas": [
+                {
+                  "id": "cemento_radicular",
+                  "etiqueta": "Cemento radicular",
+                  "descripcion": "Tejido mineralizado que cubre la dentina de la raíz y recibe los extremos de las fibras que anclan el diente."
+                },
+                {
+                  "id": "ligamento_periodontal",
+                  "etiqueta": "Ligamento periodontal",
+                  "descripcion": "Tejido conectivo fibroso, muy celular y vascularizado, situado entre la raíz y el hueso. Mide aproximadamente entre 0,15 y 0,4 mm de ancho y amortigua las fuerzas de la masticación."
+                },
+                {
+                  "id": "fibras_sharpey",
+                  "etiqueta": "Fibras de Sharpey",
+                  "descripcion": "Son los extremos de las fibras principales del ligamento. Transmiten al hueso alveolar las fuerzas de la masticación.",
+                  "pista": "Extremos de los haces de colágeno que quedan incluidos en el cemento y en el hueso y anclan el diente."
+                },
+                {
+                  "id": "hueso_alveolar_propio",
+                  "etiqueta": "Hueso alveolar propio",
+                  "descripcion": "También se llama hueso fasciculado. Está perforado por conductos vasculares y en la radiografía se ve como la lámina dura.",
+                  "pista": "Lámina delgada de hueso compacto que reviste el alvéolo y recibe las fibras de anclaje."
+                },
+                {
+                  "id": "fibroblastos_periodontales",
+                  "etiqueta": "Fibroblastos periodontales",
+                  "descripcion": "Además expresan RANKL y OPG, con lo que participan en el control de los osteoclastos. Algunos son progenitores.",
+                  "pista": "Células más abundantes del tejido fibroso situado entre la raíz y el hueso; renuevan su colágeno de forma continua."
+                },
+                {
+                  "id": "celulas_progenitoras_perivasculares",
+                  "etiqueta": "Células progenitoras perivasculares",
+                  "descripcion": "Células madre mesenquimales cercanas a los vasos que reponen fibroblastos, cementoblastos y osteoblastos."
+                },
+                {
+                  "id": "cementoblastos",
+                  "etiqueta": "Cementoblastos",
+                  "descripcion": "Forman el cemento radicular. Derivan del folículo dental, es decir, del ectomesénquima.",
+                  "pista": "Células cúbicas sobre la superficie de la raíz que depositan el tejido mineralizado donde se insertan las fibras."
+                },
+                {
+                  "id": "osteoblastos_alveolares",
+                  "etiqueta": "Osteoblastos alveolares",
+                  "descripcion": "Forman hueso alveolar, sobre todo en el lado de tensión. Sus progenitores provienen de células perivasculares del ligamento.",
+                  "pista": "Células formadoras de hueso alineadas en la cara del hueso que mira al tejido fibroso entre la raíz y el hueso."
+                },
+                {
+                  "id": "osteoclastos_alveolares",
+                  "etiqueta": "Osteoclastos alveolares",
+                  "descripcion": "Predominan en el lado de presión. Vienen de la médula ósea, no del folículo dental.",
+                  "pista": "Células gigantes multinucleadas que, cuando hay resorción, se apoyan en depresiones de la superficie del hueso."
+                },
+                {
+                  "id": "restos_epiteliales_malassez",
+                  "etiqueta": "Restos epiteliales de Malassez",
+                  "descripcion": "Son remanentes de la vaina epitelial radicular de Hertwig. No son células óseas ni mesenquimales.",
+                  "pista": "Pequeños cúmulos de células cerca del cemento, vestigios de la estructura que guió la formación de la raíz."
+                },
+                {
+                  "id": "lado_presion",
+                  "etiqueta": "Lado de presión",
+                  "descripcion": "Allí aumenta RANKL y predomina la resorción ósea, lo que abre espacio para el movimiento del diente.",
+                  "pista": "Región del tejido fibroso entre la raíz y el hueso que se comprime cuando una fuerza empuja el diente."
+                },
+                {
+                  "id": "lado_tension",
+                  "etiqueta": "Lado de tensión",
+                  "descripcion": "Allí se estimula a los osteoblastos y predomina la formación de hueso.",
+                  "pista": "Región del tejido fibroso entre la raíz y el hueso que se estira cuando una fuerza empuja el diente."
+                }
+              ],
+              "requeridas": [
+                "fibras_sharpey",
+                "hueso_alveolar_propio",
+                "fibroblastos_periodontales",
+                "cementoblastos",
+                "osteoblastos_alveolares",
+                "osteoclastos_alveolares",
+                "restos_epiteliales_malassez",
+                "lado_presion",
+                "lado_tension"
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_relacion_celulas_funciones",
+            "tipo": "relacion-columnas",
+            "titulo": "Une cada célula con su función",
+            "instrucciones": "Une cada célula de la izquierda con su función de la derecha: toca una célula y luego su función (o arrástrala); toca un par unido para deshacerlo. Con teclado: Tab y Enter. Ojo: hay funciones que no corresponden a ninguna célula.",
+            "obligatoria": true,
+            "puntaje_max": 30,
+            "retroalimentacion": {
+              "correcta": "Muy bien. Relacionas cada célula ósea con su función y su marcador principal.",
+              "parcial": "Vas bien, pero repasa qué célula forma hueso, cuál lo reabsorbe y cuál vive dentro de la matriz.",
+              "incorrecta": "Hay pares equivocados. Recuerda: el osteoblasto forma osteoide, el osteocito percibe la carga y secreta esclerostina, el osteoclasto reabsorbe, y la célula de revestimiento es un osteoblasto en reposo."
+            },
+            "concepto": "Funciones células óseas",
+            "config": {
+              "columna_a": {
+                "titulo": "Concepto",
+                "elementos": [
+                  {
+                    "id": "c_mesenquimal",
+                    "texto": "Célula madre mesenquimal"
+                  },
+                  {
+                    "id": "c_osteoprogenitora",
+                    "texto": "Célula osteoprogenitora"
+                  },
+                  {
+                    "id": "c_osteoblasto",
+                    "texto": "Osteoblasto"
+                  },
+                  {
+                    "id": "c_revestimiento",
+                    "texto": "Célula de revestimiento óseo"
+                  },
+                  {
+                    "id": "c_osteocito",
+                    "texto": "Osteocito"
+                  },
+                  {
+                    "id": "c_osteoclasto",
+                    "texto": "Osteoclasto"
+                  },
+                  {
+                    "id": "c_fibroblasto_pdl",
+                    "texto": "Fibroblasto del ligamento periodontal"
+                  }
+                ]
+              },
+              "columna_b": {
+                "titulo": "Descripción",
+                "elementos": [
+                  {
+                    "id": "f_multipotente",
+                    "texto": "Multipotente: puede originar osteoblastos, condrocitos y adipocitos"
+                  },
+                  {
+                    "id": "f_comprometida",
+                    "texto": "Comprometida con el linaje óseo; fusiforme, se divide y expresa RUNX2"
+                  },
+                  {
+                    "id": "f_osteoide",
+                    "texto": "Sintetiza el osteoide y expresa fosfatasa alcalina, osteocalcina, RANKL y OPG"
+                  },
+                  {
+                    "id": "f_reposo",
+                    "texto": "Cubre superficies óseas en reposo y puede reactivarse como osteoblasto"
+                  },
+                  {
+                    "id": "f_esclerostina",
+                    "texto": "Vigila la carga mecánica desde su laguna y secreta esclerostina"
+                  },
+                  {
+                    "id": "f_resorcion",
+                    "texto": "Reabsorbe hueso con zona clara, borde festoneado, protones y catepsina K"
+                  },
+                  {
+                    "id": "f_colageno",
+                    "texto": "Renueva de forma continua el colágeno de las fibras que anclan el diente al hueso alveolar"
+                  },
+                  {
+                    "id": "f_cartilago",
+                    "texto": "Sintetiza matriz cartilaginosa rica en colágeno tipo II y agrecano"
+                  },
+                  {
+                    "id": "f_esmalte",
+                    "texto": "Forma el esmalte dental"
+                  }
+                ]
+              },
+              "pares": [
+                {
+                  "id": "par_c_mesenquimal",
+                  "a": "c_mesenquimal",
+                  "b": "f_multipotente",
+                  "explicacion": "La célula madre mesenquimal se autorrenueva y, según las señales, origina osteoblastos, condrocitos o adipocitos."
+                },
+                {
+                  "id": "par_c_osteoprogenitora",
+                  "a": "c_osteoprogenitora",
+                  "b": "f_comprometida",
+                  "explicacion": "RUNX2 compromete a la célula con el linaje óseo; la osteoprogenitora es fusiforme y todavía se divide."
+                },
+                {
+                  "id": "par_c_osteoblasto",
+                  "a": "c_osteoblasto",
+                  "b": "f_osteoide",
+                  "explicacion": "El osteoblasto secreta el osteoide y expresa fosfatasa alcalina y osteocalcina; con RANKL y OPG regula a los osteoclastos."
+                },
+                {
+                  "id": "par_c_revestimiento",
+                  "a": "c_revestimiento",
+                  "b": "f_reposo",
+                  "explicacion": "La célula de revestimiento es un osteoblasto aplanado y en reposo que puede reactivarse."
+                },
+                {
+                  "id": "par_c_osteocito",
+                  "a": "c_osteocito",
+                  "b": "f_esclerostina",
+                  "explicacion": "El osteocito vive en su laguna, percibe la carga mecánica y secreta esclerostina, que frena la formación de hueso."
+                },
+                {
+                  "id": "par_c_osteoclasto",
+                  "a": "c_osteoclasto",
+                  "b": "f_resorcion",
+                  "explicacion": "El osteoclasto se sella con la zona clara, acidifica con protones y digiere el colágeno con catepsina K."
+                },
+                {
+                  "id": "par_c_fibroblasto_pdl",
+                  "a": "c_fibroblasto_pdl",
+                  "b": "f_colageno",
+                  "explicacion": "Los fibroblastos del ligamento renuevan el colágeno de las fibras que anclan el diente al hueso alveolar."
+                }
+              ],
+              "barajar": true
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m2_evaluacion_final",
+            "tipo": "quiz",
+            "titulo": "Evaluación final del módulo 2",
+            "instrucciones": "Responde las diez preguntas; tras cada una verás la explicación. Toca tu respuesta; en Ordenar pasos, toca los pasos en su orden y pulsa Comprobar. Con teclado: Tab y Enter. Cada pregunta vale 10 puntos; para el logro se sugiere alcanzar 70.",
+            "obligatoria": true,
+            "aprobacion_min": 0.7,
+            "puntaje_max": 100,
+            "retroalimentacion": {
+              "correcta": "Excelente. Completaste el módulo 2 y obtienes el logro «Célula por célula».",
+              "parcial": "Vas por buen camino. Repasa las secciones donde fallaste; el mentor puede ayudarte con los conceptos que más te costaron.",
+              "incorrecta": "Repasa las secciones donde fallaste. El mentor puede ayudarte con los conceptos que más te costaron; después puedes repetir la evaluación."
+            },
+            "concepto": "Evaluación módulo 2",
+            "config": {
+              "preguntas": [
+                {
+                  "id": "m2_qf_1",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Cómo se forma el cuerpo de la mandíbula?",
+                  "opciones": [
+                    {
+                      "id": "m2_qf_1_a",
+                      "texto": "Por osificación endocondral del cartílago de Meckel"
+                    },
+                    {
+                      "id": "m2_qf_1_b",
+                      "texto": "Por osificación endocondral de un cartílago secundario"
+                    },
+                    {
+                      "id": "m2_qf_1_c",
+                      "texto": "Por osificación intramembranosa, junto al cartílago de Meckel"
+                    },
+                    {
+                      "id": "m2_qf_1_d",
+                      "texto": "Por calcificación del ligamento periodontal que rodea a los dientes"
+                    }
+                  ],
+                  "correctas": ["m2_qf_1_c"],
+                  "explicacion": "El cuerpo mandibular se forma por osificación intramembranosa junto al cartílago de Meckel, que solo lo guía. La osificación endocondral de un cartílago secundario corresponde al cóndilo.",
+                  "concepto": "Osificación mandibular",
+                  "dificultad": 1
+                },
+                {
+                  "id": "m2_qf_2",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué característica describe a una célula madre mesenquimal?",
+                  "opciones": [
+                    {
+                      "id": "m2_qf_2_a",
+                      "texto": "Se autorrenueva y es multipotente: origina osteoblastos, condrocitos o adipocitos"
+                    },
+                    {
+                      "id": "m2_qf_2_b",
+                      "texto": "Es multinucleada y reabsorbe hueso con un borde festoneado y una zona clara"
+                    },
+                    {
+                      "id": "m2_qf_2_c",
+                      "texto": "Expresa TRAP y catepsina K y digiere el colágeno de la matriz ósea"
+                    },
+                    {
+                      "id": "m2_qf_2_d",
+                      "texto": "Está diferenciada de forma terminal y ya no puede dividirse ni autorrenovarse"
+                    }
+                  ],
+                  "correctas": ["m2_qf_2_a"],
+                  "explicacion": "La célula madre mesenquimal se autorrenueva y es multipotente. Ser multinucleada y expresar TRAP y catepsina K son rasgos del osteoclasto, que es hematopoyético.",
+                  "concepto": "Células madre mesenquimales",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m2_qf_3",
+                  "formato": "opcion_multiple",
+                  "enunciado": "En ratones sin osterix se observan precursores que expresan RUNX2 pero no hay osteoblastos maduros. ¿Qué indica esto?",
+                  "opciones": [
+                    {
+                      "id": "m2_qf_3_a",
+                      "texto": "Osterix actúa antes de RUNX2 y es el factor que lo activa en el precursor"
+                    },
+                    {
+                      "id": "m2_qf_3_b",
+                      "texto": "RUNX2 no interviene en la diferenciación, que depende únicamente de osterix"
+                    },
+                    {
+                      "id": "m2_qf_3_c",
+                      "texto": "Osterix y RUNX2 actúan en paralelo y cada uno puede sustituir al otro"
+                    },
+                    {
+                      "id": "m2_qf_3_d",
+                      "texto": "Osterix actúa después de RUNX2 y es necesario para completar la diferenciación"
+                    }
+                  ],
+                  "correctas": ["m2_qf_3_d"],
+                  "explicacion": "RUNX2 está presente, pero sin osterix la célula no completa su diferenciación. Por eso osterix actúa aguas abajo de RUNX2, y ambos son factores de transcripción, no receptores de membrana.",
+                  "concepto": "Factores transcripción",
+                  "dificultad": 3
+                },
+                {
+                  "id": "m2_qf_4",
+                  "formato": "verdadero_falso",
+                  "enunciado": "Las células de revestimiento óseo son osteoblastos en reposo, aplanados, que pueden reactivarse y volver a formar hueso.",
+                  "correcta": true,
+                  "explicacion": "Las células de revestimiento derivan del osteoblasto, cubren superficies sin actividad y pueden reactivarse ante estímulos apropiados.",
+                  "concepto": "Células revestimiento",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m2_qf_5",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué estructuras permiten que un osteocito atrapado en la matriz se comunique con las células de la superficie ósea?",
+                  "opciones": [
+                    {
+                      "id": "m2_qf_5_a",
+                      "texto": "Fibras de Sharpey que cruzan la matriz mineralizada hasta la superficie"
+                    },
+                    {
+                      "id": "m2_qf_5_b",
+                      "texto": "Dendritas que recorren canalículos y se unen por uniones comunicantes"
+                    },
+                    {
+                      "id": "m2_qf_5_c",
+                      "texto": "Osteoclastos que perforan la matriz y conectan las lagunas entre sí"
+                    },
+                    {
+                      "id": "m2_qf_5_d",
+                      "texto": "Vesículas de la matriz que salen de la laguna hacia la superficie"
+                    }
+                  ],
+                  "correctas": ["m2_qf_5_b"],
+                  "explicacion": "Las dendritas viajan por los canalículos y contactan con otros osteocitos y con las células de la superficie mediante uniones comunicantes. Las fibras de Sharpey anclan el diente y los osteoclastos reabsorben hueso, pero no forman esa red.",
+                  "concepto": "Osteocito red",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m2_qf_6",
+                  "formato": "opcion_multiple",
+                  "enunciado": "Una paciente recibe denosumab, un anticuerpo que neutraliza RANKL. ¿Qué cambio celular se espera?",
+                  "opciones": [
+                    {
+                      "id": "m2_qf_6_a",
+                      "texto": "Menos osteoclastos y menos resorción ósea"
+                    },
+                    {
+                      "id": "m2_qf_6_b",
+                      "texto": "Más osteoclastos, porque desaparece un freno"
+                    },
+                    {
+                      "id": "m2_qf_6_c",
+                      "texto": "Menos osteoblastos, porque no pueden diferenciarse"
+                    },
+                    {
+                      "id": "m2_qf_6_d",
+                      "texto": "Más esclerostina en los osteocitos"
+                    }
+                  ],
+                  "correctas": ["m2_qf_6_a"],
+                  "explicacion": "RANKL es la señal que forma y activa a los osteoclastos. Al neutralizarlo, hay menos osteoclastos y menos resorción. Por eso este fármaco se usa en osteoporosis y se asocia a osteonecrosis de los maxilares.",
+                  "concepto": "Señales osteoclastogenicas",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m2_qf_7",
+                  "formato": "ordenar",
+                  "enunciado": "Ordena la respuesta del hueso alveolar en el lado de presión durante un movimiento ortodóncico.",
+                  "pasos": [
+                    {
+                      "id": "m2_qf_7_o_fuerza",
+                      "texto": "Una fuerza ortodóncica comprime el ligamento periodontal"
+                    },
+                    {
+                      "id": "m2_qf_7_o_senal",
+                      "texto": "Las células del ligamento y los osteocitos detectan la deformación y aumentan RANKL"
+                    },
+                    {
+                      "id": "m2_qf_7_o_osteoclastos",
+                      "texto": "Se diferencian y se activan osteoclastos en la superficie del hueso alveolar"
+                    },
+                    {
+                      "id": "m2_qf_7_o_resorcion",
+                      "texto": "El hueso alveolar se reabsorbe y el diente se desplaza"
+                    }
+                  ],
+                  "explicacion": "La fuerza comprime el ligamento; las células detectan la deformación y aumentan RANKL; RANKL forma y activa osteoclastos; y la resorción del hueso permite el desplazamiento del diente.",
+                  "concepto": "Remodelado ortodóncico",
+                  "dificultad": 3
+                },
+                {
+                  "id": "m2_qf_8",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué paso de la resorción falla en un osteoclasto sin catepsina K funcional?",
+                  "opciones": [
+                    {
+                      "id": "m2_qf_8_a",
+                      "texto": "La acidificación del espacio y la disolución del mineral"
+                    },
+                    {
+                      "id": "m2_qf_8_b",
+                      "texto": "La formación de la zona clara que sella el espacio"
+                    },
+                    {
+                      "id": "m2_qf_8_c",
+                      "texto": "La digestión del colágeno tipo I de la matriz ósea"
+                    },
+                    {
+                      "id": "m2_qf_8_d",
+                      "texto": "La fusión de los preosteoclastos en una célula grande"
+                    }
+                  ],
+                  "correctas": ["m2_qf_8_c"],
+                  "explicacion": "La catepsina K digiere el colágeno tipo I. Sin ella el mineral se disuelve, pero la matriz orgánica queda sin degradar. Esto ocurre en la picnodisostosis.",
+                  "concepto": "Resorción osteoclastica",
+                  "dificultad": 3
+                },
+                {
+                  "id": "m2_qf_9",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Por qué el hueso alveolar se reabsorbe después de perder un diente?",
+                  "opciones": [
+                    {
+                      "id": "m2_qf_9_a",
+                      "texto": "Porque sus osteoblastos derivan del mesodermo y dejan de renovarse con la edad"
+                    },
+                    {
+                      "id": "m2_qf_9_b",
+                      "texto": "Porque depende del diente y del estímulo funcional que llega por el ligamento"
+                    },
+                    {
+                      "id": "m2_qf_9_c",
+                      "texto": "Porque el cemento radicular de los dientes vecinos lo digiere poco a poco"
+                    },
+                    {
+                      "id": "m2_qf_9_d",
+                      "texto": "Porque pierde toda su irrigación sanguínea y sus células mueren de inmediato"
+                    }
+                  ],
+                  "correctas": ["m2_qf_9_b"],
+                  "explicacion": "El hueso alveolar se forma con el diente y se mantiene por el estímulo funcional que transmite el ligamento. Si el diente falta, el estímulo desaparece y el hueso se reabsorbe de forma progresiva, más rápido en los primeros meses.",
+                  "concepto": "Hueso alveolar",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m2_qf_10",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué es el osteoide?",
+                  "opciones": [
+                    {
+                      "id": "m2_qf_10_a",
+                      "texto": "Hueso maduro completamente mineralizado, rico en hidroxiapatita"
+                    },
+                    {
+                      "id": "m2_qf_10_b",
+                      "texto": "Matriz cartilaginosa del cartílago condilar, rica en colágeno tipo II"
+                    },
+                    {
+                      "id": "m2_qf_10_c",
+                      "texto": "Tejido mineralizado que cubre la dentina de la raíz del diente"
+                    },
+                    {
+                      "id": "m2_qf_10_d",
+                      "texto": "La matriz orgánica que secreta el osteoblasto, todavía sin mineralizar"
+                    }
+                  ],
+                  "correctas": ["m2_qf_10_d"],
+                  "explicacion": "El osteoide es la matriz recién secretada por el osteoblasto: colágeno tipo I y otras proteínas, todavía sin mineral. Después se mineraliza.",
+                  "concepto": "Osteoblasto funciones",
+                  "dificultad": 1
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

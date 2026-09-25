@@ -35,10 +35,17 @@ En Windows, si `uv` no está en el PATH, usar `python -m uv` o anteponer
 ## Producción con Docker
 
 ```bash
-docker compose up --build
+cp .env.example .env            # y definir SECRET_KEY (obligatoria, 32+ caracteres) y POSTGRES_PASSWORD
+docker compose up --build       # http://localhost:8080
 ```
 
 Levanta PostgreSQL 16 (con pgvector), la API y nginx sirviendo la SPA y proxificando `/api`.
+Solo se publica el puerto **8080** (nginx); la base y la API quedan dentro de la red de compose, así que
+no chocan con el PostgreSQL local del 5432. Sin `SECRET_KEY`, compose se niega a arrancar. La API aplica
+las migraciones (`alembic upgrade head`) al iniciar.
+
+> Escrito y validado en estático (`docker compose config`); todavía no se ha construido ni ejecutado.
+> Se verifica en F6-10 (ver [TODO.md](TODO.md)).
 
 ## Estado del proyecto
 

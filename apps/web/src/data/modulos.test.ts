@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { BLOQUEO_SECUENCIAL } from '@/config';
 import { catalogoDeRespaldo } from './logros';
 import { MODULOS, esNumeroModulo, moduloPorNumero } from './modulos';
@@ -52,7 +52,16 @@ describe('MODULOS (docs/briefing-pedagogico.md)', () => {
 });
 
 describe('config', () => {
-  it('el bloqueo secuencial está desactivado hasta F2-08', () => {
-    expect(BLOQUEO_SECUENCIAL).toBe(false);
+  it('el bloqueo secuencial está activo por defecto (F2-08)', () => {
+    expect(BLOQUEO_SECUENCIAL).toBe(true);
+  });
+
+  it('VITE_BLOQUEO_SECUENCIAL=false lo desactiva y cualquier otro valor lo deja activo', async () => {
+    vi.stubEnv('VITE_BLOQUEO_SECUENCIAL', 'false');
+    vi.resetModules();
+    expect((await import('@/config')).BLOQUEO_SECUENCIAL).toBe(false);
+    vi.stubEnv('VITE_BLOQUEO_SECUENCIAL', '0');
+    vi.resetModules();
+    expect((await import('@/config')).BLOQUEO_SECUENCIAL).toBe(true);
   });
 });

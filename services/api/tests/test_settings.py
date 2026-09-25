@@ -125,3 +125,29 @@ def test_ensure_schema_falla_con_base_vacia(tmp_path):
 
 def test_ensure_schema_acepta_base_migrada(engine):
     ensure_schema(engine)
+
+
+def test_certificado_valores_por_defecto_y_limites():
+    settings = Settings(_env_file=None)
+    assert settings.cert_min_porcentaje == 70
+    assert settings.public_base_url == "http://localhost:5173"
+    for invalido in (-1, 101):
+        with pytest.raises(ValidationError):
+            Settings(_env_file=None, cert_min_porcentaje=invalido)
+    assert Settings(_env_file=None, cert_min_porcentaje=0).cert_min_porcentaje == 0
+    assert Settings(_env_file=None, cert_min_porcentaje=100).cert_min_porcentaje == 100
+
+
+def test_public_base_url_se_limpia():
+    assert (
+        Settings(_env_file=None, public_base_url=" https://x.co/ ").public_base_url
+        == "https://x.co"
+    )
+
+
+def test_el_manifiesto_por_defecto_es_app_data():
+    settings = Settings(_env_file=None)
+    assert (
+        settings.activities_manifest_path == API_DIR / "app" / "data" / "actividades_manifest.json"
+    )
+    assert settings.manifest_is_explicit is False

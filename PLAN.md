@@ -26,7 +26,7 @@ Estado de avance: [TODO.md](TODO.md). Repos a reutilizar: [docs/referencias.md](
 | ORM y migraciones | **SQLModel (SQLAlchemy 2 + Pydantic) + Alembic** | Modelos tipados que sirven también como schemas de la API. |
 | Base de datos | **SQLite en desarrollo, PostgreSQL 16 en producción** | PostgreSQL trae `pgvector`, así el RAG vive en la misma base. |
 | Auth | **JWT (`PyJWT`) con `Authorization: Bearer`** | Sin contraseña al inicio: el estudiante entra con tipo y número de identificación. |
-| Certificados | **WeasyPrint** | HTML + CSS → PDF con código de verificación. |
+| Certificados | **reportlab** (+ fuentes DejaVu) | PDF en Python puro, sin dependencias de sistema (WeasyPrint exige GTK en Windows), con código de verificación y QR. |
 | LLM | **Claude Opus 5 (`claude-opus-5`) vía SDK oficial `anthropic`** | Razonamiento científico. Thinking adaptativo, streaming. |
 | Vector store RAG | **ChromaDB en desarrollo → `pgvector` en producción** | Misma interfaz de retrieval detrás. |
 | Monorepo | **pnpm workspace para `apps/web` + `services/api` con `uv`** | Un solo repo, dos apps. |

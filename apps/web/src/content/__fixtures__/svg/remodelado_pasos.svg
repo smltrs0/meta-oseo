@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <!-- Cuatro estados del remodelado óseo. Cada paso muestra o resalta estos grupos. -->
+  <g id="fondo_hueso">
+    <rect x="40" y="200" width="720" height="160" rx="12" fill="#e8d9b5" stroke="#b39b6c" stroke-width="3"/>
+  </g>
+  <g id="osteoclasto_activo">
+    <ellipse cx="300" cy="180" rx="90" ry="46" fill="#7a5c99" stroke="#4d3a66" stroke-width="3"/>
+    <circle cx="270" cy="176" r="8" fill="#e6dcf2"/>
+    <circle cx="300" cy="170" r="8" fill="#e6dcf2"/>
+    <circle cx="330" cy="176" r="8" fill="#e6dcf2"/>
+  </g>
+  <g id="cavidad_reabsorcion">
+    <path d="M240 200 Q300 262 360 200 Z" fill="#f6efe0" stroke="#b39b6c" stroke-width="3"/>
+  </g>
+  <g id="osteoblasto_activo">
+    <ellipse cx="300" cy="215" rx="34" ry="20" fill="#b23a5f" stroke="#7d2743" stroke-width="3"/>
+    <ellipse cx="380" cy="205" rx="34" ry="20" fill="#b23a5f" stroke="#7d2743" stroke-width="3"/>
+  </g>
+  <g id="matriz_nueva">
+    <path d="M250 205 Q300 246 350 205" stroke="#d99c5c" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

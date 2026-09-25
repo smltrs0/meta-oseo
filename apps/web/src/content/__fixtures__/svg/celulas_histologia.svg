@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <!-- Corte esquemático: células óseas sobre la superficie y dentro de la matriz. -->
+  <rect x="0" y="0" width="800" height="500" fill="#f6efe0"/>
+  <g id="histo_osteoblasto">
+    <ellipse cx="200" cy="140" rx="70" ry="38" fill="#b23a5f" stroke="#7d2743" stroke-width="4"/>
+    <circle cx="200" cy="140" r="12" fill="#f4dfe4"/>
+  </g>
+  <g id="histo_osteocito">
+    <ellipse cx="400" cy="330" rx="46" ry="28" fill="#d99c5c" stroke="#8f5f28" stroke-width="4"/>
+    <path d="M354 330 L320 330 M446 330 L480 330 M400 302 L400 270" stroke="#8f5f28" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g id="histo_osteoclasto">
+    <ellipse cx="620" cy="150" rx="110" ry="54" fill="#7a5c99" stroke="#4d3a66" stroke-width="4"/>
+    <circle cx="580" cy="146" r="10" fill="#e6dcf2"/>
+    <circle cx="620" cy="136" r="10" fill="#e6dcf2"/>
+    <circle cx="660" cy="146" r="10" fill="#e6dcf2"/>
+  </g>
+</svg>

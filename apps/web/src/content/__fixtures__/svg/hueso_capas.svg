@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Corte transversal esquemático de un hueso largo: capas concéntricas, de fuera hacia dentro. -->
+  <g id="capa_periostio">
+    <ellipse cx="400" cy="300" rx="340" ry="255" stroke="#8a5a44" stroke-width="16"/>
+  </g>
+  <g id="capa_hueso_compacto">
+    <ellipse cx="400" cy="300" rx="320" ry="238" fill="#e8d9b5" stroke="#b39b6c" stroke-width="4"/>
+    <ellipse cx="400" cy="300" rx="230" ry="170" fill="#f6efe0" stroke="#b39b6c" stroke-width="3"/>
+  </g>
+  <g id="capa_hueso_esponjoso">
+    <ellipse cx="400" cy="300" rx="215" ry="158" fill="#f2e6c9" stroke="#c4ad7d" stroke-width="3"/>
+    <path d="M250 300 L330 240 L400 300 L470 230 L550 300 M330 360 L400 300 L470 370" stroke="#b39b6c" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g id="capa_medula_osea">
+    <ellipse cx="400" cy="300" rx="80" ry="58" fill="#c0503a" stroke="#8e3626" stroke-width="3"/>
+  </g>
+</svg>

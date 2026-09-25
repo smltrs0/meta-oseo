@@ -1,0 +1,34 @@
+# Contexto de construcción de la imagen web = raíz del repositorio (ver apps/web/Dockerfile).
+# La imagen de la API usa su propio contexto (services/api) y su propio .dockerignore.
+# Los patrones sin "**/" solo aplican a la raíz; con "**/" aplican a cualquier profundidad.
+
+# Repositorio y CI
+.git
+.github
+
+# Secretos y entorno local (Vite leería un .env del build: nunca debe entrar)
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Dependencias y artefactos de cada paquete (se reinstalan y recompilan dentro de la imagen)
+**/node_modules
+**/dist
+**/coverage
+**/.vite
+**/.verify
+**/.venv
+**/__pycache__
+
+# Datos locales
+**/*.db
+**/*.sqlite3
+
+# El backend, sus datos (data/, corpus/) y la infraestructura no forman parte de la imagen web.
+# Se excluye `services` entero en lugar de listar data y corpus: así no se filtra nada nuevo.
+services
+docker
+docs
+docker-compose.yml
+*.md

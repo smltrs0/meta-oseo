@@ -1,0 +1,666 @@
+{
+  "id": "m1",
+  "numero": 1,
+  "slug": "conociendo_el_hueso",
+  "titulo": "Conociendo el hueso",
+  "subtitulo": "Generalidades, funciones biomecánicas y metabólicas esenciales",
+  "resumen": "El hueso es un tejido conjuntivo especializado, dinámico y muy vascularizado. En este módulo reconoces sus capas, las células que lo mantienen y las funciones que cumple en el cuerpo y en la mandíbula.",
+  "objetivos": [
+    "Describir las capas de un hueso largo, desde el periostio hasta la médula ósea.",
+    "Relacionar cada célula ósea con su función principal.",
+    "Explicar por qué el hueso es a la vez soporte mecánico y reservorio mineral."
+  ],
+  "duracion_estimada_min": 40,
+  "glosario": [
+    {
+      "id": "osteoblasto",
+      "termino": "Osteoblasto",
+      "definicion": "Célula que **forma** la matriz ósea nueva y participa en su mineralización."
+    },
+    {
+      "id": "osteoclasto",
+      "termino": "Osteoclasto",
+      "definicion": "Célula multinucleada que **reabsorbe** el hueso disolviendo su matriz."
+    },
+    {
+      "id": "matriz_osea",
+      "termino": "Matriz ósea",
+      "definicion": "Material extracelular del hueso: fibras de colágeno y sales de calcio y fósforo."
+    },
+    {
+      "id": "periostio",
+      "termino": "Periostio",
+      "definicion": "Membrana de tejido conjuntivo que cubre la superficie externa del hueso."
+    }
+  ],
+  "referencias": [
+    {
+      "id": "ref_junqueira",
+      "cita": "Junqueira LC, Carneiro J. Histología básica: texto y atlas. Editorial Médica Panamericana.",
+      "verificada": false
+    }
+  ],
+  "estado_revision": {
+    "estado": "borrador",
+    "notas": "Módulo de muestra para las pruebas del esquema; no es contenido real.",
+    "pendientes": [
+      {
+        "id": "c_calcio",
+        "nota": "Confirmar con el docente la cifra de calcio corporal almacenada en el hueso."
+      },
+      { "id": "m1_quiz_repaso", "nota": "Revisar la dificultad de las preguntas 2 y 4." }
+    ]
+  },
+  "secciones": [
+    {
+      "id": "tejido_dinamico",
+      "titulo": "El hueso, un tejido dinámico",
+      "resumen": "Qué es el hueso y cómo se organiza por capas.",
+      "bloques": [
+        {
+          "id": "t_tejido_vivo",
+          "tipo": "texto",
+          "markdown": "El hueso es un **tejido conjuntivo especializado**: una [matriz](glosario:matriz_osea) mineralizada con células vivas y muchos vasos sanguíneos. No es una pieza inerte: se renueva toda la vida.\n\n### Dos aspectos, una sola pieza\n\n- El hueso **compacto** forma la capa externa, densa y resistente.\n- El hueso **esponjoso** llena el interior con trabéculas que reparten las cargas."
+        },
+        {
+          "id": "c_calcio",
+          "tipo": "callout",
+          "variante": "dato",
+          "markdown": "El esqueleto guarda cerca del **99 %** del calcio del cuerpo y lo libera a la sangre cuando hace falta."
+        },
+        {
+          "id": "i_capas_hueso",
+          "tipo": "imagen",
+          "src": "/images/m1/hueso_capas.svg",
+          "alt": "Corte transversal de un hueso largo con el periostio, el hueso compacto, el hueso esponjoso y la médula ósea.",
+          "pie": "Las capas del hueso, del [periostio](glosario:periostio) hacia la médula.",
+          "credito": "Esquema propio del equipo del OVA.",
+          "ancho": 800,
+          "alto": 600
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_capas_hueso",
+            "tipo": "multicapa",
+            "titulo": "Explora las capas del hueso",
+            "instrucciones": "Toca cada capa del dibujo para leer qué es y qué hace. Debes ver al menos tres.",
+            "obligatoria": true,
+            "puntaje_max": 30,
+            "penalizacion": { "por_intento": 0.1, "piso": 0.5 },
+            "retroalimentacion": {
+              "correcta": "¡Muy bien! Ya conoces cómo se ordenan las capas del hueso, de afuera hacia adentro."
+            },
+            "concepto": "Estructura en capas del hueso largo",
+            "config": {
+              "svg": "/images/m1/hueso_capas.svg",
+              "viewBox": "0 0 800 600",
+              "alt": "Corte de un hueso largo con cuatro capas concéntricas: periostio, hueso compacto, hueso esponjoso y médula ósea.",
+              "modo": "explorar",
+              "capas": [
+                {
+                  "id": "capa_periostio",
+                  "etiqueta": "Periostio",
+                  "descripcion": "Membrana externa muy vascularizada e inervada; aporta células que forman hueso nuevo."
+                },
+                {
+                  "id": "capa_hueso_compacto",
+                  "etiqueta": "Hueso compacto",
+                  "descripcion": "Capa densa organizada en osteonas; da resistencia frente a la flexión y la compresión."
+                },
+                {
+                  "id": "capa_hueso_esponjoso",
+                  "etiqueta": "Hueso esponjoso",
+                  "descripcion": "Red de trabéculas que reparte las cargas y aloja la médula ósea entre sus espacios."
+                },
+                {
+                  "id": "capa_medula_osea",
+                  "etiqueta": "Médula ósea",
+                  "descripcion": "Tejido blando del interior; en ella se producen las células de la sangre."
+                }
+              ],
+              "requeridas": ["capa_periostio", "capa_hueso_compacto", "capa_medula_osea"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "funciones",
+      "titulo": "Lo que hace el hueso",
+      "resumen": "Funciones mecánicas y metabólicas, y las células responsables.",
+      "bloques": [
+        {
+          "id": "t_funciones",
+          "tipo": "texto",
+          "titulo": "Sostén, protección y reserva",
+          "markdown": "El hueso **sostiene** el cuerpo, **protege** órganos delicados y sirve de palanca para el movimiento. Además es un **reservorio mineral** y alberga la médula ósea, donde nacen las células de la sangre."
+        },
+        {
+          "id": "tb_compacto_esponjoso",
+          "tipo": "tabla",
+          "titulo": "Hueso compacto frente a hueso esponjoso",
+          "encabezado_criterio": "Criterio",
+          "columnas": ["Compacto", "Esponjoso"],
+          "filas": [
+            {
+              "criterio": "Ubicación",
+              "celdas": [
+                "Capa externa de casi todos los huesos",
+                "Interior de los extremos y de los huesos cortos"
+              ]
+            },
+            { "criterio": "Aspecto", "celdas": ["Denso y liso", "Red de trabéculas con espacios"] },
+            {
+              "criterio": "Función principal",
+              "celdas": ["Resistencia y protección", "Reparto de cargas y soporte de la médula"]
+            },
+            {
+              "criterio": "Renovación",
+              "celdas": ["Más lenta", "Más rápida por su gran superficie"]
+            }
+          ]
+        },
+        {
+          "id": "c_atencion_confusion",
+          "tipo": "callout",
+          "variante": "atencion",
+          "nivel": "posgrado",
+          "markdown": "No confundas al **osteoblasto** con el **osteoclasto**: el primero forma hueso y el segundo lo reabsorbe."
+        },
+        {
+          "id": "c_mandibula_dientes",
+          "tipo": "callout",
+          "variante": "clinico",
+          "titulo": "Un caso en la mandíbula",
+          "markdown": "Cuando se pierde un diente, el hueso alveolar deja de recibir la carga de la masticación y con el tiempo se **reabsorbe**. Por eso el hueso necesita estímulo mecánico."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_celulas_funciones",
+            "tipo": "relacion-columnas",
+            "titulo": "Une cada célula con su función",
+            "instrucciones": "Toca una célula y luego la función que le corresponde. Sobra una función.",
+            "obligatoria": true,
+            "puntaje_max": 30,
+            "retroalimentacion": {
+              "correcta": "¡Excelente! Distingues bien el trabajo de cada célula ósea.",
+              "parcial": "Vas bien, pero repasa qué célula forma hueso y cuál lo reabsorbe.",
+              "incorrecta": "Vuelve a la sección anterior y repasa las células del hueso antes de reintentar."
+            },
+            "concepto": "Células óseas y su función",
+            "config": {
+              "columna_a": {
+                "titulo": "Célula",
+                "elementos": [
+                  { "id": "ea_osteoblasto", "texto": "Osteoblasto" },
+                  { "id": "ea_osteoclasto", "texto": "Osteoclasto" },
+                  { "id": "ea_osteocito", "texto": "Osteocito" },
+                  { "id": "ea_revestimiento", "texto": "Célula de revestimiento" }
+                ]
+              },
+              "columna_b": {
+                "titulo": "Función",
+                "elementos": [
+                  { "id": "eb_forma", "texto": "Forma matriz ósea nueva" },
+                  { "id": "eb_reabsorbe", "texto": "Reabsorbe el hueso" },
+                  {
+                    "id": "eb_detecta",
+                    "texto": "Detecta las cargas mecánicas y coordina la respuesta"
+                  },
+                  { "id": "eb_cubre", "texto": "Cubre las superficies óseas en reposo" },
+                  { "id": "eb_globulos", "texto": "Produce glóbulos rojos" }
+                ]
+              },
+              "pares": [
+                {
+                  "id": "par_osteoblasto",
+                  "a": "ea_osteoblasto",
+                  "b": "eb_forma",
+                  "explicacion": "Los [osteoblastos](glosario:osteoblasto) fabrican el osteoide y lo mineralizan."
+                },
+                {
+                  "id": "par_osteoclasto",
+                  "a": "ea_osteoclasto",
+                  "b": "eb_reabsorbe",
+                  "explicacion": "El [osteoclasto](glosario:osteoclasto) disuelve el mineral y digiere la matriz."
+                },
+                {
+                  "id": "par_osteocito",
+                  "a": "ea_osteocito",
+                  "b": "eb_detecta",
+                  "explicacion": "Los osteocitos, atrapados en la matriz, son los sensores de la carga mecánica."
+                },
+                {
+                  "id": "par_revestimiento",
+                  "a": "ea_revestimiento",
+                  "b": "eb_cubre",
+                  "explicacion": "Son osteoblastos en reposo que tapizan la superficie del hueso."
+                }
+              ],
+              "barajar": true
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_animacion_remodelado",
+            "tipo": "video-texto",
+            "titulo": "El remodelado en cuatro pasos",
+            "instrucciones": "Avanza paso a paso para ver cómo el hueso se renueva sin perder su forma.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Completaste el recorrido: ya sabes cómo se renueva el hueso."
+            },
+            "concepto": "Ciclo de remodelado óseo",
+            "config": {
+              "medio": "animacion",
+              "svg": "/images/m1/remodelado_pasos.svg",
+              "viewBox": "0 0 800 400",
+              "alt": "Esquema de una superficie ósea donde un osteoclasto excava una cavidad y luego los osteoblastos la rellenan con matriz nueva.",
+              "pasos": [
+                {
+                  "id": "paso_superficie",
+                  "titulo": "Superficie en reposo",
+                  "texto": "El hueso está cubierto por células de revestimiento y no se está renovando en este punto.",
+                  "visibles": ["fondo_hueso"]
+                },
+                {
+                  "id": "paso_reabsorcion",
+                  "titulo": "Reabsorción",
+                  "texto": "Un [osteoclasto](glosario:osteoclasto) se adhiere al hueso y excava una pequeña cavidad.",
+                  "visibles": ["fondo_hueso", "osteoclasto_activo", "cavidad_reabsorcion"],
+                  "resaltadas": ["osteoclasto_activo"]
+                },
+                {
+                  "id": "paso_inversion",
+                  "titulo": "Inversión",
+                  "texto": "El osteoclasto se retira y llegan los osteoblastos, listos para reponer lo perdido.",
+                  "visibles": ["fondo_hueso", "cavidad_reabsorcion", "osteoblasto_activo"],
+                  "resaltadas": ["osteoblasto_activo"]
+                },
+                {
+                  "id": "paso_formacion",
+                  "titulo": "Formación",
+                  "texto": "Los osteoblastos rellenan la cavidad con matriz nueva que después se mineraliza.",
+                  "visibles": ["fondo_hueso", "osteoblasto_activo", "matriz_nueva"],
+                  "resaltadas": ["matriz_nueva"]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "celulas_y_senales",
+      "titulo": "Células y señales",
+      "resumen": "Cómo las hormonas y las señales locales coordinan a las células óseas.",
+      "bloques": [
+        {
+          "id": "t_senales",
+          "tipo": "texto",
+          "markdown": "Las células óseas no trabajan solas: se comunican con moléculas. El osteoblasto produce **RANKL**, que activa a los precursores del osteoclasto, y **OPG**, que lo frena. El equilibrio entre ambas decide cuánto hueso se reabsorbe."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_senales_remodelado",
+            "tipo": "arrastre-molecular",
+            "titulo": "Lleva cada molécula a su receptor",
+            "instrucciones": "Arrastra cada molécula hasta el receptor al que se une y observa qué efecto produce. Una no encaja.",
+            "obligatoria": true,
+            "puntaje_max": 50,
+            "penalizacion": { "por_intento": 0.15 },
+            "retroalimentacion": {
+              "correcta": "¡Muy bien! Entiendes cómo se activan las células que remodelan el hueso.",
+              "parcial": "Casi. Repasa qué molécula activa a cada célula.",
+              "incorrecta": "Repasa la sección de señales: RANKL activa a RANK y la PTH actúa sobre el osteoblasto."
+            },
+            "concepto": "Señalización RANK-RANKL-OPG y PTH",
+            "config": {
+              "escena": {
+                "viewBox": "0 0 800 600",
+                "fondo_svg": "/images/m1/membrana_celular.svg",
+                "alt": "Membrana de una célula con dos receptores: RANK a la izquierda y PTH1R a la derecha."
+              },
+              "moleculas": [
+                {
+                  "id": "mol_rankl",
+                  "etiqueta": "RANKL",
+                  "descripcion": "Señal que produce el osteoblasto para activar a los precursores del osteoclasto.",
+                  "forma": "hexagono"
+                },
+                {
+                  "id": "mol_pth",
+                  "etiqueta": "PTH",
+                  "descripcion": "Hormona paratiroidea: sube el calcio de la sangre actuando sobre el hueso.",
+                  "forma": "rombo"
+                },
+                {
+                  "id": "mol_opg",
+                  "etiqueta": "OPG",
+                  "descripcion": "Osteoprotegerina: un señuelo que captura al RANKL.",
+                  "forma": "triangulo",
+                  "rechazo": "La OPG no se une a esa membrana: captura al RANKL antes de que llegue a su receptor."
+                }
+              ],
+              "receptores": [
+                {
+                  "id": "rec_rank",
+                  "etiqueta": "RANK",
+                  "descripcion": "Receptor del preosteoclasto que reconoce al RANKL.",
+                  "posicion": { "x": 25, "y": 55 }
+                },
+                {
+                  "id": "rec_pth1r",
+                  "etiqueta": "PTH1R",
+                  "descripcion": "Receptor del osteoblasto para la hormona paratiroidea.",
+                  "posicion": { "x": 70, "y": 55 }
+                }
+              ],
+              "pares": [
+                {
+                  "id": "par_rankl_rank",
+                  "molecula": "mol_rankl",
+                  "receptor": "rec_rank",
+                  "efecto": {
+                    "titulo": "El preosteoclasto madura",
+                    "descripcion": "Al unirse RANKL a RANK, el precursor se diferencia en un osteoclasto activo.",
+                    "animacion": "transformacion",
+                    "indicadores": [
+                      { "etiqueta": "Formación de osteoclastos", "direccion": "aumenta" }
+                    ]
+                  }
+                },
+                {
+                  "id": "par_pth_pth1r",
+                  "molecula": "mol_pth",
+                  "receptor": "rec_pth1r",
+                  "efecto": {
+                    "titulo": "El osteoblasto libera RANKL",
+                    "descripcion": "La PTH estimula al osteoblasto a producir más RANKL, lo que favorece la reabsorción.",
+                    "animacion": "liberacion",
+                    "indicadores": [{ "etiqueta": "Señal de RANKL", "direccion": "aumenta" }]
+                  }
+                }
+              ],
+              "distractores": ["mol_opg"]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_explora_mandibula",
+            "tipo": "exploracion-3d",
+            "titulo": "Recorre la mandíbula",
+            "instrucciones": "Gira la mandíbula y toca sus partes para leer cómo trabaja el hueso en cada una.",
+            "obligatoria": true,
+            "puntaje_max": 30,
+            "retroalimentacion": {
+              "correcta": "Muy bien: ya ubicas las partes de la mandíbula donde el hueso soporta más carga."
+            },
+            "concepto": "Anatomía funcional de la mandíbula",
+            "config": {
+              "modelo": "mandibula",
+              "alt": "Modelo tridimensional de la mandíbula que se puede girar y acercar.",
+              "nodos": [
+                {
+                  "id": "condilo",
+                  "etiqueta": "Cóndilo",
+                  "descripcion": "Extremo superior de la rama; se articula con el hueso temporal y recibe carga al masticar.",
+                  "camara": { "vista": "lateral_derecha", "zoom": 1.5 }
+                },
+                {
+                  "id": "rama",
+                  "etiqueta": "Rama",
+                  "descripcion": "Porción vertical donde se insertan los músculos masticadores."
+                },
+                {
+                  "id": "angulo",
+                  "etiqueta": "Ángulo",
+                  "descripcion": "Unión de la rama con el cuerpo; concentra fuerzas de los músculos masetero y pterigoideo medial."
+                },
+                {
+                  "id": "cuerpo",
+                  "etiqueta": "Cuerpo",
+                  "descripcion": "Porción horizontal que aloja los dientes en el hueso alveolar.",
+                  "camara": { "vista": "oblicua" }
+                },
+                {
+                  "id": "linea_milohioidea",
+                  "etiqueta": "Línea milohioidea",
+                  "descripcion": "Cresta de la cara interna del cuerpo donde se inserta el músculo milohioideo.",
+                  "ancla": { "x": 0.7, "y": 0.35, "z": 0.45 },
+                  "camara": { "vista": "posterior", "zoom": 2 }
+                }
+              ],
+              "requeridos": ["condilo", "angulo", "cuerpo"]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_explora_celulas",
+            "tipo": "exploracion-3d",
+            "titulo": "Conoce las células óseas en 3D",
+            "instrucciones": "Toca cada célula para ver su forma y su función.",
+            "obligatoria": false,
+            "puntaje_max": 30,
+            "retroalimentacion": {
+              "correcta": "Ya reconoces la forma de las tres células principales del hueso."
+            },
+            "concepto": "Morfología de las células óseas",
+            "config": {
+              "modelo": "celulas",
+              "alt": "Escena tridimensional con un osteoblasto, un osteocito y un osteoclasto.",
+              "nodos": [
+                {
+                  "id": "osteoblasto",
+                  "etiqueta": "Osteoblasto",
+                  "descripcion": "Célula cúbica con mucho retículo endoplásmico, dedicada a fabricar matriz."
+                },
+                {
+                  "id": "osteocito",
+                  "etiqueta": "Osteocito",
+                  "descripcion": "Célula estrellada alojada en una laguna; conecta con otras mediante prolongaciones."
+                },
+                {
+                  "id": "osteoclasto",
+                  "etiqueta": "Osteoclasto",
+                  "descripcion": "Célula grande y multinucleada con borde en cepillo que reabsorbe hueso."
+                }
+              ],
+              "requeridos": ["osteoblasto", "osteoclasto"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "repaso",
+      "titulo": "Repaso",
+      "resumen": "Identifica células y comprueba lo aprendido.",
+      "bloques": [
+        {
+          "id": "c_recuerda",
+          "tipo": "callout",
+          "variante": "recuerda",
+          "markdown": "El hueso **forma** y **reabsorbe** a la vez. Cuando ambos procesos se equilibran, el esqueleto mantiene su forma y su calcio."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_identifica_celulas",
+            "tipo": "multicapa",
+            "titulo": "Identifica las células en el corte",
+            "instrucciones": "Lee la pista y toca la célula que corresponde en el dibujo.",
+            "obligatoria": true,
+            "puntaje_max": 30,
+            "retroalimentacion": {
+              "correcta": "¡Ojo clínico! Reconoces cada célula en el corte.",
+              "parcial": "Bien, pero confundiste alguna célula; fíjate en su tamaño y su ubicación.",
+              "incorrecta": "Repasa cómo se ve cada célula ósea y vuelve a intentarlo."
+            },
+            "concepto": "Reconocimiento de células óseas en histología",
+            "config": {
+              "svg": "/images/m1/celulas_histologia.svg",
+              "viewBox": "0 0 800 500",
+              "alt": "Corte esquemático de hueso con tres células: una cúbica sobre la superficie, una estrellada dentro de la matriz y una muy grande con varios núcleos.",
+              "modo": "identificar",
+              "capas": [
+                {
+                  "id": "histo_osteoblasto",
+                  "etiqueta": "Osteoblasto",
+                  "descripcion": "Célula cúbica sobre la superficie ósea que fabrica matriz nueva.",
+                  "pista": "La célula cúbica alineada sobre la superficie del hueso que forma matriz."
+                },
+                {
+                  "id": "histo_osteocito",
+                  "etiqueta": "Osteocito",
+                  "descripcion": "Célula atrapada en la matriz, con prolongaciones que la conectan con otras.",
+                  "pista": "La célula estrellada que quedó atrapada dentro de la matriz mineralizada."
+                },
+                {
+                  "id": "histo_osteoclasto",
+                  "etiqueta": "Osteoclasto",
+                  "descripcion": "Célula gigante con varios núcleos que reabsorbe hueso.",
+                  "pista": "La célula gigante con varios núcleos que disuelve el hueso.",
+                  "pistas_extra": [
+                    "La célula del hueso que tiene un borde en cepillo pegado a la matriz."
+                  ]
+                }
+              ],
+              "requeridas": ["histo_osteoblasto", "histo_osteocito", "histo_osteoclasto"]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_quiz_repaso",
+            "tipo": "quiz",
+            "titulo": "Quiz de repaso",
+            "instrucciones": "Responde las cinco preguntas. Verás la explicación después de cada una.",
+            "obligatoria": true,
+            "aprobacion_min": 0.6,
+            "puntaje_max": 50,
+            "retroalimentacion": {
+              "correcta": "¡Excelente repaso! Dominas las ideas centrales del módulo.",
+              "parcial": "Vas bien; revisa las explicaciones de las preguntas que fallaste.",
+              "incorrecta": "Te recomiendo repasar las secciones del módulo y volver a intentarlo."
+            },
+            "concepto": "Repaso general del módulo 1",
+            "config": {
+              "preguntas": [
+                {
+                  "id": "qr_p1",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué célula forma la matriz ósea nueva?",
+                  "opciones": [
+                    { "id": "qr_p1_a", "texto": "Osteoclasto" },
+                    { "id": "qr_p1_b", "texto": "Osteoblasto" },
+                    {
+                      "id": "qr_p1_c",
+                      "texto": "Osteocito",
+                      "explicacion": "El osteocito mantiene la matriz, pero ya no la forma."
+                    }
+                  ],
+                  "correctas": ["qr_p1_b"],
+                  "explicacion": "El [osteoblasto](glosario:osteoblasto) sintetiza el osteoide; el osteoclasto, en cambio, reabsorbe hueso."
+                },
+                {
+                  "id": "qr_p2",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Cuáles de estas son funciones del hueso? Marca todas las correctas.",
+                  "opciones": [
+                    { "id": "qr_p2_a", "texto": "Sostén y protección mecánica" },
+                    { "id": "qr_p2_b", "texto": "Reservorio de calcio y fósforo" },
+                    { "id": "qr_p2_c", "texto": "Producir bilis" },
+                    { "id": "qr_p2_d", "texto": "Fabricar insulina" }
+                  ],
+                  "correctas": ["qr_p2_a", "qr_p2_b"],
+                  "dificultad": 2,
+                  "explicacion": "El hueso sostiene, protege y guarda minerales; la bilis la produce el hígado y la insulina, el páncreas."
+                },
+                {
+                  "id": "qr_p3",
+                  "formato": "verdadero_falso",
+                  "enunciado": "Después del crecimiento, el hueso deja de renovarse.",
+                  "correcta": false,
+                  "explicacion": "Falso: el hueso se remodela toda la vida, reabsorbiendo y formando matriz de manera continua."
+                },
+                {
+                  "id": "qr_p4",
+                  "formato": "ordenar",
+                  "enunciado": "Ordena las fases del remodelado óseo, de la primera a la última.",
+                  "pasos": [
+                    { "id": "qr_p4_1", "texto": "Activación" },
+                    { "id": "qr_p4_2", "texto": "Reabsorción" },
+                    { "id": "qr_p4_3", "texto": "Inversión" },
+                    { "id": "qr_p4_4", "texto": "Formación" }
+                  ],
+                  "explicacion": "Primero se activa la superficie, el osteoclasto reabsorbe, hay una fase de inversión y por último los osteoblastos forman hueso nuevo."
+                },
+                {
+                  "id": "qr_p5",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué porcentaje aproximado del calcio del cuerpo se guarda en el hueso?",
+                  "opciones": [
+                    { "id": "qr_p5_a", "texto": "Cerca del 10 %" },
+                    { "id": "qr_p5_b", "texto": "Cerca del 50 %" },
+                    { "id": "qr_p5_c", "texto": "Cerca del 99 %" },
+                    { "id": "qr_p5_d", "texto": "Cerca del 75 %" }
+                  ],
+                  "correctas": ["qr_p5_c"],
+                  "explicacion": "Casi todo el calcio del cuerpo está en el esqueleto; por eso el hueso es el gran reservorio mineral."
+                }
+              ],
+              "barajar_preguntas": false,
+              "barajar_opciones": true,
+              "preguntas_ia": { "cantidad": 3 }
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_video_docente",
+            "tipo": "video-texto",
+            "titulo": "Video del docente: introducción al hueso",
+            "instrucciones": "Mira el video con subtítulos o lee la transcripción.",
+            "obligatoria": false,
+            "puntaje_max": 10,
+            "retroalimentacion": {
+              "correcta": "Gracias por ver el video. Aquí se resumen las ideas del módulo."
+            },
+            "concepto": "Introducción general al tejido óseo",
+            "config": {
+              "medio": "video",
+              "src": "/videos/m1/introduccion_hueso.mp4",
+              "poster": "/images/m1/hueso_capas.svg",
+              "duracion_seg": 120,
+              "subtitulos": [
+                {
+                  "idioma": "es",
+                  "etiqueta": "Español",
+                  "src": "/videos/m1/introduccion_hueso.es.vtt"
+                }
+              ],
+              "transcripcion": "El hueso es un tejido vivo. En este video el docente presenta sus capas, sus células y la manera en que se renueva durante toda la vida.",
+              "hitos": [
+                { "t_seg": 0, "titulo": "Introducción" },
+                { "t_seg": 45, "titulo": "Capas del hueso" }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

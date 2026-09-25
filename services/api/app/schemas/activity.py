@@ -58,3 +58,22 @@ class ActivityResultResponse(BaseModel):
     resultado: ActivityResultRead
     puntaje_total: int
     logros_nuevos: list[str]
+
+
+class ActivityBestResult(BaseModel):
+    """Resumen de una actividad del usuario (`GET /api/activities/results`)."""
+
+    activity_id: str
+    modulo: int
+    tipo: TipoActividad
+    # Mayor puntaje entre los intentos completados (0 si ninguno).
+    mejor_puntaje: int
+    # Mayor número de intentos reportado.
+    intentos: int
+    # `True` si algún intento se completó.
+    completada: bool
+    ultimo_intento_en: datetime
+
+
+class ActivityResultsResponse(BaseModel):
+    resultados: list[ActivityBestResult]

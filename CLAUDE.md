@@ -33,7 +33,7 @@ actividades interactivas obligatorias, mentor de IA, gamificación y certificado
 ## Stack fijo
 
 - `apps/web`: Vue 3, Vite, TypeScript, Pinia, Vue Router, Tailwind, shadcn-vue, `@tresjs/core`, `@tresjs/cientos`, GSAP, `@vueuse/motion`, `@formkit/drag-and-drop`. Chat por SSE propio con `fetch` (sin AI SDK).
-- `services/api`: Python 3.14 (el instalado en la máquina del equipo), FastAPI, SQLModel + Alembic, JWT con `PyJWT`, WeasyPrint, SDK `anthropic`, ChromaDB en dev / pgvector en prod. SQLite en dev / PostgreSQL 16 en prod. Gestión de dependencias con `uv`. Modelo `claude-opus-5`, thinking adaptativo, streaming.
+- `services/api`: Python 3.14 (el instalado en la máquina del equipo), FastAPI, SQLModel + Alembic, JWT con `PyJWT`, reportlab (certificado en PDF, Python puro y fuentes DejaVu), SDK `anthropic`, ChromaDB en dev / pgvector en prod. SQLite en dev / PostgreSQL 16 en prod. Gestión de dependencias con `uv`. Modelo `claude-opus-5`, thinking adaptativo, streaming.
 - Registro de usuario: nombre, apellido, tipo de identificación, número de identificación. Sin contraseña hasta F6-08. No añadir campos sin acordarlo.
 - No introducir Laravel, PHP ni un segundo backend. Todo lo de servidor va en `services/api`.
 

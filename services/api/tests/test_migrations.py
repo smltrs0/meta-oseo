@@ -8,7 +8,7 @@ import pytest
 from alembic import command
 from alembic.autogenerate import compare_metadata
 from alembic.migration import MigrationContext
-from sqlalchemy import func, inspect
+from sqlalchemy import func, inspect, text
 from sqlalchemy.exc import IntegrityError
 from sqlmodel import Session, SQLModel, select
 
@@ -18,6 +18,7 @@ from app.core.settings import API_DIR
 from app.models import (
     Achievement,
     ActivityResult,
+    Certificate,
     ProgressModulo,
     User,
     UserAchievement,
@@ -210,7 +211,13 @@ def test_alembic_lee_la_url_de_la_configuracion_de_la_app(tmp_path):
     result = subprocess.run(
         [sys.executable, "-m", "alembic", "upgrade", "head"],
         cwd=API_DIR,
-        env={**os.environ, "DATABASE_URL": f"sqlite:///{database.as_posix()}"},
+        # PYTHONUTF8: Alembic imprime el título de cada migración (con acentos) y en Windows
+        # la salida por defecto es cp1252, que el `encoding="utf-8"` de abajo no decodificaría.
+        env={
+            **os.environ,
+            "DATABASE_URL": f"sqlite:///{database.as_posix()}",
+            "PYTHONUTF8": "1",
+        },
         capture_output=True,
         text=True,
         encoding="utf-8",
@@ -225,3 +232,102 @@ def test_alembic_lee_la_url_de_la_configuracion_de_la_app(tmp_path):
         engine.dispose()
     ini_lines = (API_DIR / "alembic.ini").read_text(encoding="utf-8").splitlines()
     assert not [line for line in ini_lines if line.strip().startswith("sqlalchemy.url")]
+
+
+def _certificate(user_id: int, codigo: str) -> Certificate:
+    return Certificate(
+        user_id=user_id,
+        codigo=codigo,
+        nombre="Ana",
+        apellido="Pérez",
+        tipo_identificacion="CC",
+        numero_identificacion="1023456789",
+        puntaje_total=10,
+        created_at=utcnow(),
+    )
+
+
+def test_certificates_tiene_la_instantanea_y_un_indice_unico_por_usuario(engine):
+    inspector = inspect(engine)
+    columnas = {c["name"]: c for c in inspector.get_columns("certificates")}
+    assert set(columnas) == {
+        "id",
+        "user_id",
+        "codigo",
+        "nombre",
+        "apellido",
+        "tipo_identificacion",
+        "numero_identificacion",
+        "puntaje_total",
+        "puntaje_obligatorias",
+        "puntaje_maximo",
+        "created_at",
+    }
+    for nombre in ("nombre", "apellido", "tipo_identificacion", "numero_identificacion"):
+        assert columnas[nombre]["nullable"] is False
+        assert columnas[nombre]["default"] is None  # el valor por defecto de la migración se quitó
+    assert columnas["puntaje_obligatorias"]["nullable"] is True
+    assert columnas["puntaje_maximo"]["nullable"] is True
+    unicos = {
+        tuple(i["column_names"]) for i in inspector.get_indexes("certificates") if i["unique"]
+    }
+    assert unicos == {("user_id",), ("codigo",)}
+
+
+def test_un_usuario_no_puede_tener_dos_certificados(engine):
+    with Session(engine) as session:
+        user = _user()
+        session.add(user)
+        session.commit()
+        session.add(_certificate(user.id, "OVA-2222-3333"))
+        session.commit()
+        session.add(_certificate(user.id, "OVA-4444-5555"))
+        with pytest.raises(IntegrityError):
+            session.commit()
+        session.rollback()
+        otro = _user(numero="654321")
+        session.add(otro)
+        session.commit()
+        session.add(_certificate(otro.id, "OVA-2222-3333"))  # código repetido
+        with pytest.raises(IntegrityError):
+            session.commit()
+
+
+def test_migrar_conserva_las_filas_de_certificados_previas(tmp_path):
+    """De la revisión inicial a `head` con una fila ya guardada, y de vuelta sin perderla."""
+    url = f"sqlite:///{(tmp_path / 'datos.db').as_posix()}"
+    config = alembic_config(url)
+    command.upgrade(config, "044fa6bcf84f")
+    engine = build_engine(url)
+    try:
+        with engine.begin() as connection:
+            connection.execute(
+                text(
+                    "INSERT INTO users (id, nombre, apellido, tipo_identificacion, "
+                    "numero_identificacion, nivel, rol, created_at) VALUES "
+                    "(1, 'A', 'B', 'CC', '123456', 'pregrado', 'estudiante', '2026-09-23 00:00:00')"
+                )
+            )
+            connection.execute(
+                text(
+                    "INSERT INTO certificates (user_id, codigo, puntaje_total, created_at) "
+                    "VALUES (1, 'OVA-2222-3333', 50, '2026-09-23 00:00:00')"
+                )
+            )
+        command.upgrade(config, "head")
+        with engine.connect() as connection:
+            fila = connection.execute(
+                text(
+                    "SELECT codigo, nombre, apellido, puntaje_total, puntaje_maximo "
+                    "FROM certificates"
+                )
+            ).one()
+        assert tuple(fila) == ("OVA-2222-3333", "", "", 50, None)
+        command.downgrade(config, "044fa6bcf84f")
+        with engine.connect() as connection:
+            columnas = {c["name"] for c in inspect(connection).get_columns("certificates")}
+            fila = connection.execute(text("SELECT codigo, puntaje_total FROM certificates")).one()
+        assert columnas == {"id", "user_id", "codigo", "puntaje_total", "created_at"}
+        assert tuple(fila) == ("OVA-2222-3333", 50)
+    finally:
+        engine.dispose()

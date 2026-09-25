@@ -108,7 +108,9 @@ describe('guard: token guardado (recarga de la página)', () => {
 
     await router.push('/modulo/2');
 
-    expect(fetchMock).toHaveBeenCalledTimes(1);
+    // El guard de módulo también pide el progreso; aquí solo importa que /api/me se valida una vez.
+    const llamadasMe = fetchMock.mock.calls.filter(([url]) => url === '/api/me');
+    expect(llamadasMe).toHaveLength(1);
     expect(fetchMock.mock.calls[0]![0]).toBe('/api/me');
     expect(router.currentRoute.value.name).toBe('modulo');
   });

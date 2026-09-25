@@ -111,6 +111,37 @@ export const useProgresoStore = defineStore('progreso', () => {
     return promesa;
   }
 
+  /** Marca como obtenidos los logros con esos códigos (sin repetir). */
+  function agregarLogros(codigos: readonly string[]): void {
+    const nuevos = codigos.filter((c) => !logros.value.includes(c));
+    if (nuevos.length === 0) return;
+    logros.value = [...logros.value, ...nuevos];
+    catalogoLogros.value = catalogoLogros.value.map((l) =>
+      nuevos.includes(l.codigo) ? { ...l, obtenido: true } : l,
+    );
+  }
+
+  /**
+   * Refleja la respuesta de `POST /api/activities/{id}/result` (F2-08): el HUD muestra el
+   * puntaje total y los logros nuevos sin esperar a otra carga del progreso.
+   */
+  function aplicarResultado(total: number, logrosNuevos: readonly string[]): void {
+    if (Number.isFinite(total)) puntajeTotal.value = total;
+    agregarLogros(logrosNuevos);
+  }
+
+  /**
+   * Refleja la respuesta de `PUT /api/progress/{n}`. Nunca revierte `completado`: el servidor
+   * solo lo pasa de `false` a `true`, y una respuesta lenta de una petición anterior no debe
+   * volver a cerrar un módulo que ya se completó.
+   */
+  function aplicarModulo(datos: ModuloProgress, logrosNuevos: readonly string[] = []): void {
+    modulos.value = modulos.value.map((m) =>
+      m.modulo === datos.modulo ? { ...datos, completado: m.completado || datos.completado } : m,
+    );
+    agregarLogros(logrosNuevos);
+  }
+
   /** Vuelve al estado inicial (al cerrar sesión). */
   function reset(): void {
     generacion++;
@@ -135,6 +166,9 @@ export const useProgresoStore = defineStore('progreso', () => {
     modulosCompletados,
     siguienteLogro,
     estaCompletado,
+    aplicarResultado,
+    aplicarModulo,
+    agregarLogros,
     load,
     reset,
   };

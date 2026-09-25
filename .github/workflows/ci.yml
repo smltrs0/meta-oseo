@@ -1,0 +1,177 @@
+# Integración continua del OVA: calidad y pruebas de la API (SQLite y PostgreSQL) y de la SPA.
+# Los comandos son los mismos que se usan en local (ver "Comandos" en CLAUDE.md).
+#
+# Versiones de las acciones: checkout, setup-node y pnpm/action-setup publican una etiqueta de
+# versión mayor (v7, v7, v6); astral-sh/setup-uv NO (solo etiquetas exactas), por eso va con
+# su versión completa.
+
+name: CI
+
+on:
+  push:
+  pull_request:
+
+# Una ejecución nueva sobre la misma rama o PR cancela la anterior que siga en curso.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# Mínimo necesario: leer el código. Ningún trabajo publica ni escribe en el repositorio.
+permissions:
+  contents: read
+
+jobs:
+  api:
+    name: API (ruff + pytest en SQLite)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: services/api
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@v10.2.0
+        with:
+          # Misma versión de uv que services/api/Dockerfile.
+          version: "0.12.18"
+          python-version: "3.14"
+          enable-cache: true
+          cache-dependency-glob: services/api/uv.lock
+
+      # --locked: falla si uv.lock no coincide con pyproject.toml (nunca re-resuelve en CI).
+      - name: Instalar dependencias
+        run: uv sync --locked
+
+      - name: ruff check
+        run: uv run ruff check .
+
+      - name: ruff format --check
+        run: uv run ruff format --check .
+
+      # Sin TEST_DATABASE_URL: cada prueba usa un SQLite temporal (tests/conftest.py).
+      - name: pytest (SQLite)
+        run: uv run pytest
+
+  api-postgres:
+    name: API (pytest en PostgreSQL + pgvector)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: services/api
+    services:
+      postgres:
+        # La misma imagen que docker-compose.yml.
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          # tests/conftest.py solo acepta bases cuyo nombre empiece por "ova_": la suite borra y
+          # recrea sus tablas y no debe poder apuntar por error a otra base.
+          POSTGRES_DB: ova_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d ova_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      TEST_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/ova_test
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@v10.2.0
+        with:
+          version: "0.12.18"
+          python-version: "3.14"
+          enable-cache: true
+          cache-dependency-glob: services/api/uv.lock
+
+      - name: Instalar dependencias
+        run: uv sync --locked
+
+      # La misma suite, con el esquema creado por `alembic upgrade head` sobre PostgreSQL real.
+      - name: pytest (PostgreSQL)
+        run: uv run pytest
+
+  web:
+    name: Web (typecheck + lint + test + build)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      # Sin `version`: toma la exacta del campo "packageManager" del package.json raíz.
+      # Va antes de setup-node, que necesita pnpm en el PATH para su caché.
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          # La mayor de "engines" (>=22); fijarla explícita evita saltar a una mayor nueva.
+          node-version: 22
+          cache: pnpm
+
+      - name: Instalar dependencias
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm --filter @ova/web typecheck
+
+      - name: Lint
+        run: pnpm --filter @ova/web lint
+
+      - name: Pruebas
+        run: pnpm --filter @ova/web test
+
+      - name: Build de producción
+        run: pnpm --filter @ova/web build
+
+      # El modo "sin backend" (VITE_DEV_BYPASS_AUTH) solo existe en desarrollo: Vite lo elimina
+      # del bundle de producción. Si algún día aparece en dist/, alguien lo dejó pasar y la
+      # SPA publicada tendría un atajo para saltarse el login.
+      - name: El build no contiene VITE_DEV_BYPASS_AUTH
+        run: |
+          if [ ! -f apps/web/dist/index.html ]; then
+            echo "::error::No existe apps/web/dist/index.html: el build no se generó y no hay nada que comprobar."
+            exit 1
+          fi
+          if grep -rl "VITE_DEV_BYPASS_AUTH" apps/web/dist; then
+            echo "::error::El build de producción contiene VITE_DEV_BYPASS_AUTH (archivos listados arriba)."
+            exit 1
+          fi
+          echo "OK: apps/web/dist no contiene VITE_DEV_BYPASS_AUTH."
+
+      # La CSP de nginx (apps/web/nginx.conf) autoriza el <script> en línea de index.html por su
+      # hash SHA-256. Si ese script cambia y el hash no se actualiza, en producción el navegador
+      # lo bloquearía (el tema oscuro parpadearía). Esto lo detecta aquí, antes de desplegar.
+      - name: La CSP de nginx autoriza el script en línea de index.html
+        run: |
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import pathlib
+          import re
+          import sys
+
+          html = pathlib.Path("apps/web/dist/index.html").read_text(encoding="utf-8")
+          nginx = pathlib.Path("apps/web/nginx.conf").read_text(encoding="utf-8")
+          scripts = re.findall(r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>", html, re.S)
+          faltan = []
+          for cuerpo in scripts:
+              digest = "sha256-" + base64.b64encode(hashlib.sha256(cuerpo.encode("utf-8")).digest()).decode()
+              if f"'{digest}'" not in nginx:
+                  faltan.append(digest)
+          if faltan:
+              for digest in faltan:
+                  print(f"::error::Falta 'sha256-...' en script-src de apps/web/nginx.conf. Hash esperado: '{digest}'")
+              sys.exit(1)
+          print(f"OK: {len(scripts)} script(s) en línea, todos autorizados en la CSP.")
+          PY

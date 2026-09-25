@@ -99,6 +99,11 @@ export const useContextoStore = defineStore('contextoPedagogico', () => {
     );
   }
 
+  /** Vacía los eventos recientes (al cambiar de módulo: los del anterior ya no valen). */
+  function limpiarInteracciones(): void {
+    interaccionesRecientes.value = [];
+  }
+
   function setEstructura(id: string | undefined): void {
     estructuraSeleccionada.value = id ? acotar(id) : undefined;
   }
@@ -161,6 +166,7 @@ export const useContextoStore = defineStore('contextoPedagogico', () => {
     setSeccion,
     setActividad,
     registrarInteraccion,
+    limpiarInteracciones,
     setEstructura,
     setMolecula,
     setNivel,

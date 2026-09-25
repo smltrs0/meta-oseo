@@ -1,4 +1,6 @@
 import { flushPromises, mount } from '@vue/test-utils';
+import type * as ConfigModulo from '@/config';
+import type * as RegistroModulos from '@/content/registry';
 import { createPinia, setActivePinia } from 'pinia';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { createMemoryHistory } from 'vue-router';
@@ -11,6 +13,22 @@ import { crearRouter } from '@/router';
 import { useAuthStore } from '@/stores/auth';
 import { useContextoStore } from '@/stores/contextoPedagogico';
 import { progresoDePrueba, respuestaJson, usuarioDePrueba } from '@/test/utils';
+
+// Estas pruebas verifican el shell y la navegación, no el bloqueo secuencial (F2-08): se desactiva
+// para poder llegar a cualquier módulo.
+vi.mock('@/config', async (importOriginal) => ({
+  ...(await importOriginal<typeof ConfigModulo>()),
+  BLOQUEO_SECUENCIAL: false,
+}));
+
+// El contenido real de los módulos lo escriben otras tareas: esta prueba no depende de él. Con
+// "sin contenido" la página de módulo muestra igualmente el título del módulo.
+vi.mock('@/content/registry', async (importOriginal) => ({
+  ...(await importOriginal<typeof RegistroModulos>()),
+  cargarModulo: vi.fn(() =>
+    Promise.resolve({ ok: false, motivo: 'sin_contenido', mensaje: 'Sin contenido', errores: [] }),
+  ),
+}));
 
 const fetchMock = vi.fn<typeof fetch>();
 
@@ -89,16 +107,17 @@ describe('AppShell', () => {
     wrapper.unmount();
   });
 
-  it('la vista de módulo muestra "en construcción" y llama a setModulo', async () => {
+  it('la vista de módulo se monta dentro del shell y llama a setModulo', async () => {
     const { wrapper, router } = await montarApp('/modulo/3');
     const contexto = useContextoStore();
-    expect(wrapper.get('h1').text()).toBe('Construyendo hueso');
-    expect(wrapper.text()).toContain('en construcción');
+    // La página carga el contenido del módulo de forma asíncrona.
+    await vi.waitFor(() => expect(wrapper.get('h1').text()).toBe('Construyendo hueso'));
+    expect(wrapper.find('[data-testid="modulo-view"]').exists()).toBe(true);
     expect(contexto.modulo).toBe(3);
 
     await router.push('/modulo/5');
     await flushPromises();
-    expect(wrapper.get('h1').text()).toBe('Renovando el hueso');
+    await vi.waitFor(() => expect(wrapper.get('h1').text()).toBe('Renovando el hueso'));
     expect(contexto.modulo).toBe(5);
     wrapper.unmount();
   });

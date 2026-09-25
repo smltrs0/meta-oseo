@@ -19,13 +19,25 @@ export class ApiError extends Error {
   readonly code: string;
   /** Solo en 422: mensaje del servidor por campo (`numero_identificacion`, `nombre`...). */
   readonly campos: Record<string, string>;
+  /**
+   * Campos extra del `detail` propio del contrato: `faltantes` (409 `modulo_incompleto`),
+   * `motivos` (409 `certificado_no_elegible`), `puntaje_max` (422 `puntaje_invalido`)...
+   */
+  readonly detalle: Record<string, unknown>;
 
-  constructor(status: number, code: string, message: string, campos: Record<string, string> = {}) {
+  constructor(
+    status: number,
+    code: string,
+    message: string,
+    campos: Record<string, string> = {},
+    detalle: Record<string, unknown> = {},
+  ) {
     super(message);
     this.name = 'ApiError';
     this.status = status;
     this.code = code;
     this.campos = campos;
+    this.detalle = detalle;
   }
 }
 
@@ -84,7 +96,8 @@ export function interpretarError(status: number, cuerpo: unknown): ApiError {
     if (esObjeto(detail) && typeof detail.code === 'string') {
       const message =
         typeof detail.message === 'string' && detail.message ? detail.message : base.message;
-      return new ApiError(status, detail.code, message);
+      const { code: _code, message: _mensaje, ...extra } = detail;
+      return new ApiError(status, detail.code, message, {}, extra);
     }
     if (Array.isArray(detail)) {
       const campos: Record<string, string> = {};

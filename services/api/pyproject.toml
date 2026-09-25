@@ -8,9 +8,11 @@ dependencies = [
     "anthropic>=1.8.0",
     "fastapi>=0.141.1",
     "httpx>=0.28.1",
+    "httpx2>=2.13.1",
     "psycopg[binary]>=3.3.6",
     "pydantic-settings>=2.15.0",
     "pyjwt>=2.15.0",
+    "reportlab>=5.0.1",
     "sqlmodel>=0.0.47",
     "uvicorn[standard]>=0.53.0",
 ]
@@ -21,7 +23,7 @@ package = false
 
 [dependency-groups]
 dev = [
-    "httpx2>=2.13.1",
+    "pypdf>=6.19.0",
     "pytest>=9.1.1",
     "ruff>=0.16.8",
 ]

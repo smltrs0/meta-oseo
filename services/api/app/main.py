@@ -18,21 +18,28 @@ from app.core.constants import (
     AUTH_RATE_LIMIT_WINDOW_SECONDS,
     CHAT_RATE_LIMIT_REQUESTS,
     CHAT_RATE_LIMIT_WINDOW_SECONDS,
+    PDF_RATE_LIMIT_REQUESTS,
+    PDF_RATE_LIMIT_WINDOW_SECONDS,
+    VERIFY_RATE_LIMIT_ATTEMPTS,
+    VERIFY_RATE_LIMIT_WINDOW_SECONDS,
 )
 from app.core.db import build_engine, ensure_schema
 from app.core.errors import validation_error_handler
 from app.core.rate_limit import SlidingWindowLimiter
 from app.core.settings import Settings, get_settings
-from app.routers import auth, gamification, health, progress
+from app.routers import auth, certificate, gamification, health, mentor, progress, teacher
 from app.services.achievements import seed_achievements
+from app.services.manifest import load_configured_manifest
 
-# Routers de la API, en una lista explícita: sumar uno nuevo es agregar UNA línea aquí
-# (p. ej. `mentor.router` en F1-07).
+# Routers de la API, en una lista explícita: sumar uno nuevo es agregar UNA línea aquí.
 ROUTERS: list[APIRouter] = [
     health.router,
     auth.router,
     progress.router,
     gamification.router,
+    mentor.router,
+    teacher.router,
+    certificate.router,
 ]
 
 
@@ -69,12 +76,21 @@ def create_app(settings: Settings | None = None, engine: Engine | None = None) -
 
     app.state.settings = settings
     app.state.engine = engine
+    # Manifiesto de actividades: si existe, los resultados y el progreso se validan contra él.
+    app.state.manifest = load_configured_manifest(settings)
     app.state.auth_limiter = SlidingWindowLimiter(
         AUTH_RATE_LIMIT_ATTEMPTS, AUTH_RATE_LIMIT_WINDOW_SECONDS
     )
     # Cupo del mentor por usuario (lo usa el router de /api/chat, F1-07).
     app.state.chat_limiter = SlidingWindowLimiter(
         CHAT_RATE_LIMIT_REQUESTS, CHAT_RATE_LIMIT_WINDOW_SECONDS
+    )
+    # Certificado (F5-05): verificación pública por IP y descarga del PDF por usuario.
+    app.state.verify_limiter = SlidingWindowLimiter(
+        VERIFY_RATE_LIMIT_ATTEMPTS, VERIFY_RATE_LIMIT_WINDOW_SECONDS
+    )
+    app.state.pdf_limiter = SlidingWindowLimiter(
+        PDF_RATE_LIMIT_REQUESTS, PDF_RATE_LIMIT_WINDOW_SECONDS
     )
 
     # La autenticación va por cabecera Authorization (sin cookies): no hacen falta credenciales.

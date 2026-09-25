@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none" stroke-linejoin="round" stroke-linecap="round" font-family="ui-sans-serif, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<!-- m6_curva_masa_osea. Animación por pasos: cada grupo es hijo directo de la raíz. Modelo esquemático sin cifras. La lámina de fondo va dentro de eje_edad_masa, que está visible en todos los pasos. -->
+<title>Masa ósea a lo largo de la vida</title>
+<desc>Gráfico esquemático de la masa ósea frente a la edad, de 0 a 90 años. La curva de mujeres y la de hombres suben hasta un pico entre los 20 y los 30 años, siguen en meseta y bajan; en las mujeres hay una pérdida acelerada alrededor de la menopausia. Una línea punteada marca el umbral de fragilidad y una curva con pico mayor lo cruza más tarde.</desc>
+<g id="eje_edad_masa">
+<rect x="4" y="4" width="792" height="592" rx="14" fill="#f1edfa" stroke="#2b2350" stroke-width="4"/>
+<path d="M96 470H686M96 470V118" stroke="#2b2350" stroke-width="4"/>
+<path d="M700 470L676 480L676 460Z" fill="#2b2350" stroke="none"/>
+<path d="M96 104L106 128L86 128Z" fill="#2b2350" stroke="none"/>
+<path d="M96 470v10" stroke="#2b2350" stroke-width="3"/><text x="96" y="512" font-size="30" text-anchor="middle" fill="#2b2350" stroke="none">0</text>
+<path d="M158.7 470v10" stroke="#2b2350" stroke-width="3"/><text x="158.7" y="512" font-size="30" text-anchor="middle" fill="#2b2350" stroke="none">10</text>
+<path d="M221.3 470v10" stroke="#2b2350" stroke-width="3"/><text x="221.3" y="512" font-size="30" text-anchor="middle" fill="#2b2350" stroke="none">20</text>
+<path d="M284 470v10" stroke="#2b2350" stroke-width="3"/><text x="284" y="512" font-size="30" text-anchor="middle" fill="#2b2350" stroke="none">30</text>
+<path d="M346.7 470v10" stroke="#2b2350" stroke-width="3"/><text x="346.7" y="512" font-size="30" text-anchor="middle" fill="#2b2350" stroke="none">40</text>
+<path d="M409.3 470v10" stroke="#2b2350" stroke-width="3"/><text x="409.3" y="512" font-size="30" text-anchor="middle" fill="#2b2350" stroke="none">50</text>
+<path d="M472 470v10" stroke="#2b2350" stroke-width="3"/><text x="472" y="512" font-size="30" text-anchor="middle" fill="#2b2350" stroke="none">60</text>
+<path d="M534.7 470v10" stroke="#2b2350" stroke-width="3"/><text x="534.7" y="512" font-size="30" text-anchor="middle" fill="#2b2350" stroke="none">70</text>
+<path d="M597.3 470v10" stroke="#2b2350" stroke-width="3"/><text x="597.3" y="512" font-size="30" text-anchor="middle" fill="#2b2350" stroke="none">80</text>
+<path d="M660 470v10" stroke="#2b2350" stroke-width="3"/><text x="660" y="512" font-size="30" text-anchor="middle" fill="#2b2350" stroke="none">90</text>
+<text x="378" y="568" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Edad (años)</text>
+<text x="40" y="296" font-size="30" text-anchor="middle" font-weight="600" transform="rotate(-90 40 296)" fill="#2b2350" stroke="none">Masa ósea</text>
+</g>
+<g id="fase_crecimiento">
+<rect x="96" y="122" width="125.3" height="348" fill="#6f93e2" fill-opacity="0.3" stroke="#2b2350" stroke-opacity=".6" stroke-width="2" stroke-dasharray="8 8"/>
+<text x="128" y="330" font-size="30" font-weight="600" transform="rotate(-90 128 330)" fill="#2b2350" stroke="none">Construcción</text>
+</g>
+<g id="fase_meseta">
+<rect x="221.3" y="122" width="188" height="348" fill="#7bbf9a" fill-opacity="0.32" stroke="#2b2350" stroke-opacity=".6" stroke-width="2" stroke-dasharray="8 8"/>
+<text x="315.3" y="236" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Meseta</text>
+</g>
+<g id="fase_perdida_acelerada">
+<rect x="409.3" y="122" width="18.8" height="348" fill="#e2a12e" fill-opacity="0.7" stroke="#2b2350" stroke-opacity=".6" stroke-width="2"/>
+<text x="372" y="40" font-size="30" text-anchor="start" font-weight="600" fill="#2b2350" stroke="none">Pérdida acelerada</text>
+<path d="M418.7 52V122" stroke="#2b2350" stroke-width="3"/>
+</g>
+<g id="fase_perdida_lenta">
+<rect x="428.1" y="122" width="231.9" height="348" fill="#c9a0dc" fill-opacity="0.36" stroke="#2b2350" stroke-opacity=".6" stroke-width="2" stroke-dasharray="8 8"/>
+<text x="548" y="110" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Pérdida lenta</text>
+</g>
+<g id="umbral_fragilidad">
+<path d="M96 272H660" stroke="#b8302f" stroke-width="5" stroke-dasharray="18 10"/>
+<path d="M577.2 272V470" stroke="#c2417c" stroke-width="3" stroke-dasharray="4 8"/>
+<circle cx="577.2" cy="272" r="11" fill="#c2417c" stroke="#2b2350" stroke-width="3"/>
+<text x="405" y="312" font-size="30" text-anchor="end" font-weight="600" fill="#2b2350" stroke="none">Umbral de</text>
+<text x="405" y="346" font-size="30" text-anchor="end" font-weight="600" fill="#2b2350" stroke="none">fragilidad</text>
+<text x="405" y="380" font-size="30" text-anchor="end" fill="#2b2350" stroke="none">(esquemático)</text>
+</g>
+<g id="curva_pico_mayor">
+<path d="M96 436.4C104.4 425.2 112.7 415.1 121.1 402.8C129.4 390.5 137.8 378.9 146.1 362.5C152.4 350.2 158.7 337 164.9 318.8C169.1 306.7 173.3 290.2 177.5 275.1C181.6 260 185.8 242.6 190 228.1C194.2 213.5 198.4 198.2 202.5 187.8C208.8 172.1 215.1 161.7 221.3 154.2C229.7 144.2 238 142.4 246.4 139C254.8 135.7 263.1 134 271.5 134C281.9 134 292.4 135 302.8 135.7C317.4 136.6 332 137.5 346.7 139C359.2 140.4 371.7 142.9 384.3 144.1C392.6 144.9 401 144.1 409.3 149.1C412.5 151 415.6 160.9 418.7 167.6C421.9 174.3 425 186.4 428.1 189.4C436.5 197.7 444.8 196.2 453.2 197.8C469.9 201.2 486.6 201.8 503.3 207.9C524.2 215.6 545.1 229.2 566 241.5C586.9 253.8 607.8 267.3 628.7 281.8C639.1 289.1 649.6 297.5 660 305.4" stroke="#c2417c" stroke-width="6" stroke-dasharray="1 13"/>
+<path d="M614.3 272V470" stroke="#c2417c" stroke-width="3" stroke-dasharray="4 8"/>
+<circle cx="614.3" cy="272" r="11" fill="#f1edfa" stroke="#c2417c" stroke-width="5"/>
+<path d="M452 68H500" stroke="#c2417c" stroke-width="6" stroke-dasharray="1 13"/>
+<text x="512" y="78" font-size="30" text-anchor="start" font-weight="600" fill="#2b2350" stroke="none">Con pico mayor</text>
+</g>
+<g id="curva_hombre">
+<path d="M96 440C104.4 429 112.7 419 121.1 407C129.4 395 137.8 383.8 146.1 368C152.4 356.1 158.7 342.8 164.9 326C169.1 314.8 173.3 300.5 177.5 287C181.6 273.5 185.8 258 190 245C194.2 232 198.4 218.7 202.5 209C208.8 194.5 215.1 184.1 221.3 176C229.7 165.2 238 159.5 246.4 155C254.8 150.5 263.1 149 271.5 149C281.9 149 292.4 149 302.8 149C317.4 149 332 151.5 346.7 153.5C367.6 156.3 388.4 159.5 409.3 164C430.2 168.5 451.1 174.5 472 180.5C492.9 186.5 513.8 193.3 534.7 200C555.6 206.8 576.4 213.5 597.3 221C618.2 228.5 639.1 237 660 245" stroke="#3b6fb0" stroke-width="7"/>
+<text x="672" y="255" font-size="30" text-anchor="start" fill="#2b2350" stroke="none">Hombres</text>
+</g>
+<g id="curva_mujer">
+<path d="M96 440C104.4 430 112.7 421 121.1 410C129.4 399 137.8 388.7 146.1 374C152.4 363 158.7 351.3 164.9 335C169.1 324.2 173.3 309.5 177.5 296C181.6 282.5 185.8 267 190 254C194.2 241 198.4 227.3 202.5 218C208.8 204 215.1 194.7 221.3 188C229.7 179.1 238 177.5 246.4 174.5C254.8 171.5 263.1 170 271.5 170C281.9 170 292.4 170.9 302.8 171.5C317.4 172.4 332 173.1 346.7 174.5C359.2 175.7 371.7 178 384.3 179C392.6 179.7 401 179.1 409.3 183.5C412.5 185.2 415.6 194 418.7 200C421.9 206 425 216.7 428.1 219.5C436.5 226.9 444.8 225.5 453.2 227C469.9 230 486.6 230.5 503.3 236C524.2 242.9 545.1 255 566 266C586.9 277 607.8 289 628.7 302C639.1 308.5 649.6 316 660 323" stroke="#c2417c" stroke-width="7"/>
+<text x="672" y="333" font-size="30" text-anchor="start" fill="#2b2350" stroke="none">Mujeres</text>
+</g>
+<g id="zona_pico_masa_osea">
+<ellipse cx="271.5" cy="159.5" rx="38" ry="36" fill="#e2a12e" fill-opacity=".22" stroke="#2b2350" stroke-width="5"/>
+<path d="M271.5 88V122" stroke="#2b2350" stroke-width="3"/>
+<text x="380" y="78" font-size="30" text-anchor="end" font-weight="600" fill="#2b2350" stroke="none">Pico de masa ósea</text>
+</g>
+<g id="marca_menopausia">
+<path d="M415.6 470V122" stroke="#2b2350" stroke-width="4" stroke-dasharray="14 8"/>
+<path d="M415.6 175.5l14 14l-14 14l-14 -14z" fill="#e2a12e" stroke="#2b2350" stroke-width="3"/>
+<text x="405" y="440" font-size="30" text-anchor="end" font-weight="600" fill="#2b2350" stroke="none">Menopausia</text>
+</g>
+</svg>

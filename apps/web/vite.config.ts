@@ -51,5 +51,9 @@ export default defineConfig({
     restoreMocks: true,
     unstubEnvs: true,
     unstubGlobals: true,
+    // La primera prueba de un archivo que importa three o zod paga la transformación del módulo:
+    // con la máquina cargada (CI, otros procesos) supera los 5 s por defecto sin que haya un fallo real.
+    testTimeout: 20_000,
+    hookTimeout: 20_000,
   },
 });

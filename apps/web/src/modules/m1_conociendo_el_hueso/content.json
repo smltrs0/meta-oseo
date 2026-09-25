@@ -1,0 +1,2885 @@
+{
+  "id": "m1",
+  "numero": 1,
+  "slug": "conociendo_el_hueso",
+  "titulo": "Conociendo el hueso",
+  "subtitulo": "Generalidades, funciones biomecánicas y metabólicas esenciales del hueso",
+  "resumen": "Generalidades, funciones biomecánicas y metabólicas esenciales del hueso. La mandíbula es el hilo conductor del módulo.",
+  "objetivos": [
+    "**Describir** el hueso como un tejido conjuntivo especializado, dinámico y altamente vascularizado, y **distinguir** entre hueso (órgano) y tejido óseo.",
+    "**Relacionar** cada función del hueso (sostén, protección mecánica, palanca para la locomoción, reservorio de calcio y fósforo, nicho hematopoyético y función endocrina) con la estructura o el mecanismo que la cumple.",
+    "**Identificar** los componentes de la matriz ósea (fase mineral, colágeno tipo I y proteínas no colágenas) y **explicar** qué propiedad aporta cada uno.",
+    "**Diferenciar** hueso cortical de trabecular y hueso laminar de entretejido según su estructura, ubicación y función.",
+    "**Localizar** en un corte de hueso el periostio, el endostio, la osteona y los conductos de Havers y de Volkmann.",
+    "**Reconocer** las estructuras de la mandíbula, incluido el hueso alveolar propio, y **aplicar** la ley de Wolff para predecir cómo responde el hueso mandibular a cambios en la carga masticatoria."
+  ],
+  "duracion_estimada_min": 50,
+  "glosario": [
+    {
+      "id": "hueso",
+      "termino": "Hueso",
+      "definicion": "Órgano formado por tejido óseo, médula ósea, periostio, endostio, vasos, nervios y, en las articulaciones, cartílago articular."
+    },
+    {
+      "id": "tejido_oseo",
+      "termino": "Tejido óseo",
+      "definicion": "Tejido conjuntivo especializado formado por células y una matriz extracelular mineralizada."
+    },
+    {
+      "id": "matriz_extracelular",
+      "termino": "Matriz extracelular",
+      "definicion": "Material que rodea a las células de un tejido conjuntivo; en el hueso es rígida por su mineral."
+    },
+    {
+      "id": "osteoide",
+      "termino": "Osteoide",
+      "definicion": "Matriz orgánica recién secretada por los osteoblastos, todavía sin mineralizar."
+    },
+    {
+      "id": "hidroxiapatita",
+      "termino": "Hidroxiapatita",
+      "definicion": "Fosfato de calcio cristalino, Ca10(PO4)6(OH)2, que forma la fase mineral del hueso y le da dureza."
+    },
+    {
+      "id": "colageno_tipo_i",
+      "termino": "Colágeno tipo I",
+      "definicion": "Proteína fibrilar que forma la mayor parte de la matriz orgánica del hueso y le da flexibilidad y resistencia a la tracción."
+    },
+    {
+      "id": "proteinas_no_colagenas",
+      "termino": "Proteínas no colágenas",
+      "definicion": "Proteínas de la matriz, como la osteocalcina, la osteopontina y la osteonectina, que regulan la mineralización y la adhesión celular."
+    },
+    {
+      "id": "osteocalcina",
+      "termino": "Osteocalcina",
+      "definicion": "Proteína no colágena más abundante del hueso, sintetizada por los osteoblastos; su forma subcarboxilada se ha propuesto como hormona, una hipótesis con resultados discordantes en ratones."
+    },
+    {
+      "id": "fgf23",
+      "termino": "FGF23",
+      "definicion": "Factor de crecimiento de fibroblastos 23, hormona producida por los osteocitos que aumenta la pérdida de fosfato por la orina y reduce el calcitriol."
+    },
+    {
+      "id": "hueso_cortical_compacto",
+      "termino": "Hueso cortical (compacto)",
+      "definicion": "Hueso denso y de baja porosidad que forma la capa externa de los huesos y la diáfisis."
+    },
+    {
+      "id": "hueso_trabecular_esponjoso",
+      "termino": "Hueso trabecular (esponjoso)",
+      "definicion": "Hueso formado por una red de trabéculas con espacios ocupados por médula."
+    },
+    {
+      "id": "hueso_laminar",
+      "termino": "Hueso laminar",
+      "definicion": "Hueso cuyas fibras de colágeno se ordenan en laminillas paralelas; es el hueso maduro del adulto."
+    },
+    {
+      "id": "hueso_entretejido",
+      "termino": "Hueso entretejido",
+      "definicion": "Hueso de fibras de colágeno entrecruzadas al azar, que se forma rápido en el desarrollo y en la reparación."
+    },
+    {
+      "id": "periostio",
+      "termino": "Periostio",
+      "definicion": "Membrana de tejido conjuntivo que cubre la superficie externa del hueso, con una capa fibrosa y una capa celular osteogénica."
+    },
+    {
+      "id": "endostio",
+      "termino": "Endostio",
+      "definicion": "Capa celular delgada que tapiza las superficies internas del hueso."
+    },
+    {
+      "id": "fibras_de_sharpey",
+      "termino": "Fibras de Sharpey",
+      "definicion": "Fibras de colágeno que penetran en el hueso desde el periostio o el ligamento periodontal y lo anclan."
+    },
+    {
+      "id": "osteona_sistema_de_havers",
+      "termino": "Osteona (sistema de Havers)",
+      "definicion": "Unidad estructural del hueso cortical: un conducto de Havers rodeado de laminillas concéntricas."
+    },
+    {
+      "id": "conducto_de_havers",
+      "termino": "Conducto de Havers",
+      "definicion": "Canal longitudinal central de la osteona, con capilares y nervios."
+    },
+    {
+      "id": "conducto_de_volkmann",
+      "termino": "Conducto de Volkmann",
+      "definicion": "Canal transversal u oblicuo que comunica conductos de Havers entre sí y con el periostio y la médula."
+    },
+    {
+      "id": "linea_cementante",
+      "termino": "Línea cementante",
+      "definicion": "Contorno de una osteona, que marca el límite de la resorción previa a su formación."
+    },
+    {
+      "id": "laguna_y_canaliculo",
+      "termino": "Laguna y canalículo",
+      "definicion": "Cavidad donde vive un osteocito y canales por los que pasan sus prolongaciones."
+    },
+    {
+      "id": "medula_osea",
+      "termino": "Médula ósea",
+      "definicion": "Tejido blando de la cavidad medular y los espacios trabeculares; puede ser roja (hematopoyética) o amarilla (adiposa)."
+    },
+    {
+      "id": "nicho_hematopoyetico",
+      "termino": "Nicho hematopoyético",
+      "definicion": "Microambiente de la médula ósea que mantiene y regula a las células madre hematopoyéticas."
+    },
+    {
+      "id": "epifisis_metafisis_y_diafisis",
+      "termino": "Epífisis, metáfisis y diáfisis",
+      "definicion": "Extremos, zona de transición y cuerpo de un hueso largo."
+    },
+    {
+      "id": "remodelado_oseo",
+      "termino": "Remodelado óseo",
+      "definicion": "Renovación continua del hueso: los osteoclastos reabsorben hueso viejo y los osteoblastos forman hueso nuevo."
+    },
+    {
+      "id": "apofisis_alveolar",
+      "termino": "Apófisis alveolar",
+      "definicion": "Parte de la mandíbula (o del maxilar) que aloja las raíces de los dientes en los alvéolos."
+    },
+    {
+      "id": "hueso_alveolar_propio_lamina_cribiforme",
+      "termino": "Hueso alveolar propio (lámina cribiforme)",
+      "definicion": "Lámina delgada que reviste el alvéolo y recibe las fibras de Sharpey del ligamento periodontal; en la radiografía se ve como lámina dura."
+    },
+    {
+      "id": "conducto_mandibular",
+      "termino": "Conducto mandibular",
+      "definicion": "Conducto que recorre la rama y el cuerpo de la mandíbula con el nervio alveolar inferior y sus vasos."
+    },
+    {
+      "id": "ley_de_wolff",
+      "termino": "Ley de Wolff",
+      "definicion": "Principio según el cual el hueso adapta su arquitectura y su forma a las cargas que soporta."
+    }
+  ],
+  "referencias": [
+    {
+      "id": "ref_1",
+      "cita": "Ross MH, Pawlina W. Ross. Histología: Texto y Atlas. Wolters Kluwer.",
+      "verificada": false
+    },
+    {
+      "id": "ref_2",
+      "cita": "Mescher AL. Junqueira. Histología básica: texto y atlas. McGraw-Hill.",
+      "verificada": false
+    },
+    {
+      "id": "ref_3",
+      "cita": "Gartner LP, Hiatt JL. Texto atlas de histología. McGraw-Hill.",
+      "verificada": false
+    },
+    {
+      "id": "ref_4",
+      "cita": "Kierszenbaum AL, Tres LL. Histología y biología celular: introducción a la anatomía patológica. Elsevier.",
+      "verificada": false
+    },
+    {
+      "id": "ref_5",
+      "cita": "Nanci A. Ten Cate. Histología oral: desarrollo, estructura y función. Elsevier.",
+      "verificada": false
+    },
+    {
+      "id": "ref_6",
+      "cita": "Hall JE, Hall ME. Guyton y Hall. Tratado de fisiología médica. Elsevier.",
+      "verificada": false
+    },
+    {
+      "id": "ref_7",
+      "cita": "Barrett KE, Barman SM, Brooks HL, Yuan JXJ. Ganong. Fisiología médica. McGraw-Hill.",
+      "verificada": false
+    },
+    {
+      "id": "ref_8",
+      "cita": "Standring S (ed.). Gray's Anatomy: The Anatomical Basis of Clinical Practice. 41.ª ed. Elsevier.",
+      "verificada": false
+    },
+    {
+      "id": "ref_9",
+      "cita": "Moore KL, Dalley AF, Agur AMR. Anatomía con orientación clínica. Wolters Kluwer.",
+      "verificada": false
+    },
+    {
+      "id": "ref_10",
+      "cita": "Bilezikian JP, Martin TJ, Clemens TL, Rosen CJ (eds.). Principles of Bone Biology. Academic Press.",
+      "verificada": false
+    },
+    {
+      "id": "ref_11",
+      "cita": "Rosen CJ (ed.). Primer on the Metabolic Bone Diseases and Disorders of Mineral Metabolism.",
+      "verificada": false
+    },
+    {
+      "id": "ref_12",
+      "cita": "Lindhe J, Lang NP (eds.). Clinical Periodontology and Implant Dentistry. Wiley-Blackwell.",
+      "verificada": false
+    },
+    {
+      "id": "ref_13",
+      "cita": "Wolff J. Das Gesetz der Transformation der Knochen. Berlin: A. Hirschwald, 1892.",
+      "verificada": false
+    }
+  ],
+  "estado_revision": {
+    "estado": "borrador",
+    "notas": "Borrador generado desde m1_conociendo_el_hueso.md, pendiente de validación del docente. Las 35 cifras dudosas del guion están en «pendientes» (detalle en la sección 12 del guion). No se transcribieron el banco de preguntas ni los ganchos del mentor. Ajustes a mano tras convertir: 29 enlaces al glosario (primera aparición de cada término), figuras de 1.4 y 1.5 con su variante rotulada y ancho y alto de las cinco figuras; regenerar desde el guion los borra.",
+    "pendientes": [
+      {
+        "id": "m1",
+        "nota": "Confirmar: «El cálculo suma unas 3 950 palabras de lectura (unos 22 minutos) y unas 85 interacciones de 20 a 30 segundos»"
+      },
+      {
+        "id": "t_un_tejido_dinamico",
+        "nota": "Confirmar: «En el adulto se renueva del orden del 10 % del esqueleto cada año»"
+      },
+      {
+        "id": "t_reservorio_de_calcio_y_fosforo",
+        "nota": "Confirmar: «Aproximadamente el 99 % del calcio del organismo está en el hueso, y aproximadamente el 85 % del fósforo»"
+      },
+      {
+        "id": "t_nicho_hematopoyetico_y_medula_osea",
+        "nota": "Confirmar: «En el adulto se concentra en el esqueleto axial (cráneo, vértebras, costillas, esternón, pelvis) y en los extremos proximales del fémur y el húmero»"
+      },
+      {
+        "id": "t_nicho_hematopoyetico_y_medula_osea",
+        "nota": "Confirmar: «Pueden persistir focos de médula hematopoyética, que a veces se ven en las radiografías como áreas de menor densidad»"
+      },
+      {
+        "id": "t_nicho_hematopoyetico_y_medula_osea",
+        "nota": "Confirmar: «Hoy se considera que gran parte de estos nichos es perivascular, aunque el peso de cada tipo de nicho se sigue discutiendo»"
+      },
+      {
+        "id": "t_funciones_2",
+        "nota": "Confirmar: «…en ratones más secreción de insulina y más testosterona; en 2020 dos estudios con nuevos ratones sin osteocalcina no encontraron alteraciones del metabolismo de la glucosa, y el debate sigue abierto»"
+      },
+      {
+        "id": "t_funciones_2",
+        "nota": "Confirmar: «En ratones, un estudio la vinculó con menos apetito por la vía del receptor MC4R; falta confirmación independiente y en humanos»"
+      },
+      {
+        "id": "m1_2_hormonas_oseas",
+        "nota": "Confirmar: «Se ha propuesto que sería GPRC6A, un receptor acoplado a proteína G»"
+      },
+      {
+        "id": "mol_osteocalcina",
+        "nota": "Confirmar: «En 2020, dos estudios con nuevos ratones sin osteocalcina no hallaron alteraciones del metabolismo de la glucosa: el debate sigue abierto, y en humanos la evidencia es menos concluyente»"
+      },
+      {
+        "id": "mol_lipocalina_2",
+        "nota": "Confirmar: «Falta confirmación independiente y su papel en humanos se está investigando»"
+      },
+      {
+        "id": "tb_tabla_componente_que_es_proporcion",
+        "nota": "Confirmar: «| Fase mineral | Cristales muy pequeños de hidroxiapatita, Ca10(PO4)6(OH)2, con sustituciones (por ejemplo, carbonato) | Entre aproximadamente el 50 % y el 70 % del peso seco, según la fuente»"
+      },
+      {
+        "id": "tb_tabla_componente_que_es_proporcion",
+        "nota": "Confirmar: «| Agua | Unida a la matriz y presente en canalículos y conductos | Del orden del 10 % al 20 % del peso total»"
+      },
+      {
+        "id": "t_colageno_tipo_i",
+        "nota": "Confirmar: «Es la proteína que forma la mayor parte de la matriz orgánica, aproximadamente el 90 %»"
+      },
+      {
+        "id": "tb_tabla_rasgo_hueso_entretejido_primario",
+        "nota": "Confirmar: «| Fibras de colágeno | Gruesas, entrecruzadas al azar | En laminillas paralelas, de unos 3 a 7 µm»"
+      },
+      {
+        "id": "tb_tabla_rasgo_hueso_entretejido_primario",
+        "nota": "Confirmar: «…e aparece | Esqueleto embrionario y fetal, callo de fractura, algunos tumores y enfermedades; en el adulto, en lugares puntuales como los alvéolos dentarios, las suturas y las inserciones de tendones»"
+      },
+      {
+        "id": "m1_3_q1",
+        "nota": "Confirmar: «El colágeno tipo I es aproximadamente el 90 %»"
+      },
+      {
+        "id": "tb_tabla_rasgo_hueso_cortical_hueso",
+        "nota": "Confirmar: «| Proporción de la masa esquelética | Aproximadamente el 80 %»"
+      },
+      {
+        "id": "tb_tabla_rasgo_hueso_cortical_hueso",
+        "nota": "Confirmar: «| Proporción de la masa esquelética | Aproximadamente el 80 % | Aproximadamente el 20 %»"
+      },
+      {
+        "id": "tb_tabla_rasgo_hueso_cortical_hueso",
+        "nota": "Confirmar: «| Porosidad | Baja, aproximadamente menos del 10 %»"
+      },
+      {
+        "id": "tb_tabla_rasgo_hueso_cortical_hueso",
+        "nota": "Confirmar: «| Porosidad | Baja, aproximadamente menos del 10 % | Alta, aproximadamente del 50 % al 90 %»"
+      },
+      {
+        "id": "t_la_osteona_la_unidad_de_la_cortical",
+        "nota": "Confirmar: «- Un conducto de Havers central, de unas 50 µm»"
+      },
+      {
+        "id": "t_la_osteona_la_unidad_de_la_cortical",
+        "nota": "Confirmar: «- Entre 5 y 20 aproximadamente»"
+      },
+      {
+        "id": "conducto_de_havers",
+        "nota": "Confirmar: «Contiene capilares, fibras nerviosas y tejido conjuntivo laxo, y mide unas 50 µm»"
+      },
+      {
+        "id": "laminillas_concentricas",
+        "nota": "Confirmar: «Entre unas 5 y 20 por osteona»"
+      },
+      {
+        "id": "t_mandibula",
+        "nota": "Confirmar: «Al nacer es una unión fibrosa, y se osifica durante el primer año de vida»"
+      },
+      {
+        "id": "t_mandibula",
+        "nota": "Confirmar: «- Foramen mentoniano: abertura en la cara externa del cuerpo, por lo general bajo el segundo premolar o entre los premolares»"
+      },
+      {
+        "id": "c_clinico_el_nervio_alveolar",
+        "nota": "Confirmar: «Además, el ángulo y el cuello del cóndilo se cuentan entre los sitios más frecuentes de fractura mandibular»"
+      },
+      {
+        "id": "t_la_mandibula_como_palanca_y_su_carga",
+        "nota": "Confirmar: «En términos generales se describe como una palanca de tercera clase, con la fuerza aplicada entre el apoyo y la resistencia»"
+      },
+      {
+        "id": "t_la_mandibula_como_palanca_y_su_carga",
+        "nota": "Confirmar: «La fuerza máxima de mordida en los molares es del orden de varios cientos de newtons, aproximadamente entre 300 y 700 N según la población y el método de medición»"
+      },
+      {
+        "id": "t_mandibula_2",
+        "nota": "Confirmar: «En algunos estudios el ancho llega a disminuir cerca de la mitad en el primer año»"
+      },
+      {
+        "id": "m1_5_mandibula_3d",
+        "nota": "Confirmar: «Es un sitio frecuente de fractura»"
+      },
+      {
+        "id": "m1_5_mandibula_3d",
+        "nota": "Confirmar: «Al nacer es una unión fibrosa que se osifica durante el primer año de vida»"
+      },
+      {
+        "id": "m1_5_mandibula_3d",
+        "nota": "Confirmar: «Abertura en la cara externa del cuerpo, por lo general bajo el segundo premolar o entre los premolares»"
+      },
+      {
+        "id": "m1_e_q13",
+        "nota": "Confirmar: «En los primeros meses se reabsorbe sobre todo el hueso alveolar propio, con el remodelado de cicatrización»"
+      }
+    ]
+  },
+  "secciones": [
+    {
+      "id": "m1_1_tejido_vivo",
+      "titulo": "Un tejido vivo y dinámico",
+      "bloques": [
+        {
+          "id": "t_tejido_vivo",
+          "tipo": "texto",
+          "markdown": "Cuando ves un esqueleto en un museo, el [hueso](glosario:hueso) parece una pieza seca, rígida e inmóvil. En el cuerpo vivo es lo contrario: es un tejido activo, irrigado por sangre, con nervios, con células que trabajan día y noche y con capacidad de cambiar durante toda la vida. En este módulo aprenderás qué es el hueso, para qué sirve, de qué está hecho y cómo se organiza. La mandíbula será tu ejemplo permanente."
+        },
+        {
+          "id": "t_hueso_y_tejido_oseo_no_son_lo_mismo",
+          "tipo": "texto",
+          "titulo": "Hueso y tejido óseo no son lo mismo",
+          "markdown": "- El **hueso** es un órgano: reúne [tejido óseo](glosario:tejido_oseo), [médula ósea](glosario:medula_osea), [periostio](glosario:periostio) y [endostio](glosario:endostio), vasos sanguíneos, nervios y, en las articulaciones, cartílago articular.\n- El **tejido óseo** es el tejido que forma la mayor parte de ese órgano. Es el protagonista de este módulo."
+        },
+        {
+          "id": "t_un_tejido_conjuntivo_especializado",
+          "tipo": "texto",
+          "titulo": "Un tejido conjuntivo especializado",
+          "markdown": "Como todo tejido conjuntivo, el óseo tiene **células** y una **[matriz extracelular](glosario:matriz_extracelular)**. Lo que lo especializa es su matriz: es rígida porque el [colágeno tipo I](glosario:colageno_tipo_i) está impregnado de mineral ([hidroxiapatita](glosario:hidroxiapatita)). Esa rigidez tiene consecuencias."
+        },
+        {
+          "id": "tb_tabla_rasgo_tejido_conjuntivo_laxo",
+          "tipo": "tabla",
+          "titulo": "Tabla: Rasgo, Tejido conjuntivo laxo, Tejido óseo",
+          "encabezado_criterio": "Rasgo",
+          "columnas": ["Tejido conjuntivo laxo", "Tejido óseo"],
+          "filas": [
+            {
+              "criterio": "Matriz",
+              "celdas": [
+                "Blanda, con fibras y sustancia fundamental hidratada",
+                "Rígida: colágeno tipo I mineralizado"
+              ]
+            },
+            {
+              "criterio": "Células principales",
+              "celdas": [
+                "Fibroblastos",
+                "Osteoblastos, osteocitos, osteoclastos y células de revestimiento óseo"
+              ]
+            },
+            {
+              "criterio": "Nutrición",
+              "celdas": [
+                "Los nutrientes difunden por la matriz blanda",
+                "Los nutrientes no difunden por la matriz mineralizada: las células viven cerca de un vaso y se comunican por canalículos"
+              ]
+            },
+            {
+              "criterio": "Crecimiento",
+              "celdas": [
+                "Las células pueden dividirse dentro del tejido",
+                "Solo por aposición: se añade hueso nuevo sobre una superficie; los osteocitos atrapados en la matriz no se dividen"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t_un_tejido_dinamico",
+          "tipo": "texto",
+          "titulo": "Un tejido dinámico",
+          "markdown": "El hueso adulto no es una estructura terminada. Se **remodela** toda la vida: los osteoclastos retiran hueso viejo y los osteoblastos forman hueso nuevo en el mismo lugar. En el adulto se renueva del orden del 10 % del esqueleto cada año. Este ciclo repara microdaños, adapta el hueso a la carga y permite intercambiar calcio con la sangre. Lo estudiarás a fondo en el módulo 5; la formación y la mineralización del hueso nuevo, en los módulos 3 y 4."
+        },
+        {
+          "id": "t_un_tejido_muy_vascularizado_e_inervado",
+          "tipo": "texto",
+          "titulo": "Un tejido muy vascularizado e inervado",
+          "markdown": "El hueso no es un puntal inerte: tiene una red densa de vasos. Una arteria nutricia entra por la [diáfisis](glosario:epifisis_metafisis_y_diafisis) y se ramifica en la médula; otros vasos llegan por las epífisis, las metáfisis y el periostio; y dentro de la [cortical](glosario:hueso_cortical_compacto), pequeños conductos llevan capilares hasta cada zona (los verás en la sección 1.4). Los nervios acompañan a los vasos y el periostio es especialmente sensible: por eso duele tanto una fractura."
+        },
+        {
+          "id": "c_clinico_cuando_un_hueso_se",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "Cuando un hueso se fractura, sangra y forma un hematoma que es el primer paso de la reparación. Si la irrigación falla (por un traumatismo grave, radioterapia o corticoides), el hueso puede morir: se llama osteonecrosis. Algunos fármacos antirresortivos también se asocian a necrosis de los maxilares, pero con un mecanismo distinto que se trata más adelante. En la mandíbula, la irrigación es especialmente importante para cicatrizar tras una extracción."
+        },
+        {
+          "id": "t_organizacion_macroscopica_de_un_hueso",
+          "tipo": "texto",
+          "titulo": "Organización macroscópica de un hueso largo",
+          "markdown": "Para estudiar un hueso, conviene empezar por verlo entero. En un hueso largo distinguimos:\n\n- **Epífisis:** los extremos ensanchados. Están hechos sobre todo de [hueso trabecular](glosario:hueso_trabecular_esponjoso) y forman la articulación con el hueso vecino.\n- **Metáfisis:** la zona de transición entre epífisis y diáfisis. En un niño, junto a ella está la placa de crecimiento; en el adulto queda la **línea epifisaria**.\n- **Diáfisis:** el cuerpo del hueso, un tubo de cortical gruesa que rodea la **cavidad medular**.\n- **Cartílago articular:** una capa de cartílago hialino que cubre la epífisis donde hay articulación.\n- **Cavidad medular:** el espacio central de la diáfisis, ocupado por la médula ósea."
+        },
+        {
+          "id": "i_hueso_largo_macro",
+          "tipo": "imagen",
+          "src": "/images/m1/m1_hueso_largo_macro.svg",
+          "alt": "Corte longitudinal de un hueso largo con sus regiones y la arteria nutricia",
+          "pie": "Corte longitudinal de un hueso largo con sus regiones y la arteria nutricia.",
+          "ancho": 800,
+          "alto": 600
+        },
+        {
+          "id": "c_dato_el_hueso_no_crece",
+          "tipo": "callout",
+          "variante": "dato",
+          "markdown": "El hueso no crece hinchándose desde dentro, como un globo. Crece en longitud gracias a la placa de crecimiento y en grosor por aposición bajo el periostio. Un osteocito ya rodeado de matriz no se divide."
+        },
+        {
+          "id": "t_tejido_vivo_2",
+          "tipo": "texto",
+          "markdown": "Ahora explora tú mismo el hueso largo y comprueba después lo aprendido."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_1_hueso_largo",
+            "tipo": "multicapa",
+            "titulo": "Recorre un hueso largo",
+            "instrucciones": "Toca cada región del hueso largo para leer qué es y qué hace (con teclado, usa Tab para pasar de una región a otra y Enter para abrir su descripción; también puedes usar la lista de regiones bajo la imagen). Visita al menos las cinco regiones marcadas como requeridas.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Muy bien. Ya conoces las regiones de un hueso largo y sabes que no es una pieza maciza: tiene una cavidad medular y una arteria que lo nutre.",
+              "incorrecta": "Todavía te faltan regiones por visitar. Revisa las regiones que no tienen la marca de visitada: cada una explica una parte distinta de la estructura del hueso."
+            },
+            "concepto": "Organización macroscópica del hueso largo",
+            "config": {
+              "svg": "/images/m1/m1_hueso_largo_macro.svg",
+              "viewBox": "0 0 800 600",
+              "alt": "Corte longitudinal de un hueso largo (por ejemplo, fémur) con sus regiones y su irrigación principal.",
+              "modo": "explorar",
+              "capas": [
+                {
+                  "id": "cartilago_articular",
+                  "etiqueta": "Cartílago articular",
+                  "descripcion": "Capa de cartílago hialino que recubre la superficie articular de la epífisis. Amortigua las cargas y reduce la fricción. No lleva periostio ni tiene vasos propios: se nutre del líquido sinovial."
+                },
+                {
+                  "id": "epifisis",
+                  "etiqueta": "Epífisis",
+                  "descripcion": "Extremo ensanchado del hueso. Es sobre todo hueso trabecular con una cortical delgada. Forma la articulación y reparte la carga sobre una superficie amplia."
+                },
+                {
+                  "id": "linea_epifisaria",
+                  "etiqueta": "Línea epifisaria",
+                  "descripcion": "Vestigio de la placa de crecimiento. Durante la infancia y la adolescencia, el cartílago de la placa es el responsable del crecimiento en longitud. En el adulto queda como una línea de hueso más denso."
+                },
+                {
+                  "id": "metafisis",
+                  "etiqueta": "Metáfisis",
+                  "descripcion": "Zona de transición entre la epífisis y la diáfisis. En el hueso en crecimiento está junto a la placa de crecimiento y se remodela con intensidad."
+                },
+                {
+                  "id": "diafisis",
+                  "etiqueta": "Diáfisis",
+                  "descripcion": "Cuerpo del hueso: un tubo de cortical gruesa alrededor de la cavidad medular. Resiste bien la flexión y sirve de palanca."
+                },
+                {
+                  "id": "cavidad_medular",
+                  "etiqueta": "Cavidad medular",
+                  "descripcion": "Espacio central de la diáfisis. Contiene médula ósea (en el adulto es sobre todo médula amarilla, rica en grasa) y está tapizada por el endostio."
+                },
+                {
+                  "id": "arteria_nutricia",
+                  "etiqueta": "Arteria nutricia",
+                  "descripcion": "Vaso principal del hueso. Entra por un foramen de la diáfisis y se ramifica en la médula. Irriga la médula y la parte interna de la cortical; los vasos del periostio irrigan la parte externa."
+                }
+              ],
+              "requeridas": [
+                "epifisis",
+                "metafisis",
+                "diafisis",
+                "cavidad_medular",
+                "arteria_nutricia"
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_1_quiz_conceptos",
+            "tipo": "quiz",
+            "titulo": "Comprueba la idea general",
+            "instrucciones": "Responde cada pregunta. Al elegir tu respuesta verás enseguida si es correcta y por qué. Puedes responder tocando la opción o moviéndote con Tab y pulsando Enter.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Correcto. El hueso es un tejido conjuntivo especializado por su matriz mineralizada, y es dinámico y muy vascularizado.",
+              "incorrecta": "Revisa la sección: la matriz mineralizada, la remodelación continua y la necesidad de vasos cercanos son las tres ideas centrales."
+            },
+            "concepto": "El hueso como tejido conjuntivo especializado, dinámico y vascularizado",
+            "config": {
+              "preguntas": [
+                {
+                  "id": "m1_1_q1",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué hace del hueso un tejido conjuntivo especializado?",
+                  "opciones": [
+                    {
+                      "id": "m1_1_q1_a",
+                      "texto": "Su matriz extracelular está mineralizada con hidroxiapatita."
+                    },
+                    {
+                      "id": "m1_1_q1_b",
+                      "texto": "No tiene células propias: es solo matriz mineral."
+                    },
+                    {
+                      "id": "m1_1_q1_c",
+                      "texto": "Se nutre por difusión desde el líquido que baña toda su matriz."
+                    },
+                    {
+                      "id": "m1_1_q1_d",
+                      "texto": "Crece porque sus osteocitos se dividen dentro de la matriz."
+                    }
+                  ],
+                  "correctas": ["m1_1_q1_a"],
+                  "explicacion": "Como todo tejido conjuntivo, tiene células y matriz; lo especial es que la matriz es rígida por el mineral. El hueso tiene células (osteoblastos, osteocitos, osteoclastos), se nutre por vasos y crece por aposición, no por división de osteocitos.",
+                  "concepto": "Hueso como tejido conjuntivo especializado",
+                  "dificultad": 1
+                },
+                {
+                  "id": "m1_1_q2",
+                  "formato": "verdadero_falso",
+                  "enunciado": "Una vez formado, el tejido óseo del adulto es estático: no cambia hasta la vejez.",
+                  "correcta": false,
+                  "explicacion": "Es falso. El hueso se remodela toda la vida: los osteoclastos reabsorben hueso viejo y los osteoblastos forman hueso nuevo, lo que lo hace un tejido dinámico.",
+                  "concepto": "Hueso dinámico y remodelación",
+                  "dificultad": 1
+                },
+                {
+                  "id": "m1_1_q3",
+                  "formato": "opcion_multiple",
+                  "enunciado": "En un hueso largo, ¿qué región es un tubo de cortical gruesa alrededor de la cavidad medular?",
+                  "opciones": [
+                    {
+                      "id": "m1_1_q3_a",
+                      "texto": "La epífisis"
+                    },
+                    {
+                      "id": "m1_1_q3_b",
+                      "texto": "La metáfisis"
+                    },
+                    {
+                      "id": "m1_1_q3_c",
+                      "texto": "La diáfisis"
+                    },
+                    {
+                      "id": "m1_1_q3_d",
+                      "texto": "El cartílago articular"
+                    }
+                  ],
+                  "correctas": ["m1_1_q3_c"],
+                  "explicacion": "La diáfisis es el cuerpo del hueso: cortical gruesa alrededor de la cavidad medular. Las epífisis son los extremos, de hueso sobre todo trabecular.",
+                  "concepto": "Organización macroscópica del hueso largo",
+                  "dificultad": 1
+                },
+                {
+                  "id": "m1_1_q4",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Por qué el hueso necesita una red vascular densa si su matriz es tan dura?",
+                  "opciones": [
+                    {
+                      "id": "m1_1_q4_a",
+                      "texto": "Porque la sangre es un componente principal de la matriz ósea, junto con el colágeno y el mineral."
+                    },
+                    {
+                      "id": "m1_1_q4_b",
+                      "texto": "Porque el hueso no tiene células propias y la sangre cumple sus funciones metabólicas."
+                    },
+                    {
+                      "id": "m1_1_q4_c",
+                      "texto": "Porque los vasos depositan el colágeno tipo I directamente en la matriz ya mineralizada."
+                    },
+                    {
+                      "id": "m1_1_q4_d",
+                      "texto": "Porque la matriz mineralizada no deja difundir los nutrientes; las células viven junto a un vaso."
+                    }
+                  ],
+                  "correctas": ["m1_1_q4_d"],
+                  "explicacion": "La matriz mineralizada no deja pasar los nutrientes por difusión a distancia. Por eso los osteocitos quedan cerca de capilares y se comunican por canalículos.",
+                  "concepto": "Hueso altamente vascularizado",
+                  "dificultad": 2
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m1_2_funciones",
+      "titulo": "Para qué sirve el hueso",
+      "bloques": [
+        {
+          "id": "t_funciones",
+          "tipo": "texto",
+          "markdown": "El esqueleto hace mucho más que sostenernos. Sus funciones se agrupan en cuatro familias: **mecánicas**, **metabólicas**, **hematopoyéticas** y **endocrinas**. Las tres primeras se conocen desde hace mucho; la última se ha descubierto en las últimas décadas, y en parte sigue en discusión."
+        },
+        {
+          "id": "tb_tabla_familia_funcion_que_hace",
+          "tipo": "tabla",
+          "titulo": "Tabla: Familia, Función, Qué hace",
+          "encabezado_criterio": "Familia",
+          "columnas": ["Función", "Qué hace"],
+          "filas": [
+            {
+              "criterio": "Mecánica",
+              "celdas": [
+                "Sostén",
+                "Forma el armazón que soporta el peso del cuerpo y mantiene su forma"
+              ]
+            },
+            {
+              "criterio": "Mecánica",
+              "celdas": [
+                "Protección",
+                "El cráneo, la caja torácica, la columna y la pelvis rodean órganos delicados"
+              ]
+            },
+            {
+              "criterio": "Mecánica",
+              "celdas": [
+                "Palanca",
+                "Sobre el hueso se insertan los músculos por tendones; al contraerse, el hueso gira sobre la articulación y hay movimiento"
+              ]
+            },
+            {
+              "criterio": "Metabólica",
+              "celdas": [
+                "Reservorio mineral",
+                "Almacena calcio y fósforo y los cede a la sangre cuando hacen falta"
+              ]
+            },
+            {
+              "criterio": "Hematopoyética",
+              "celdas": [
+                "Nicho de la médula ósea",
+                "Alberga las células madre que producen las células de la sangre"
+              ]
+            },
+            {
+              "criterio": "Endocrina",
+              "celdas": [
+                "Secreción de hormonas",
+                "Osteocitos y osteoblastos liberan señales que actúan sobre otros órganos"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t_funciones_mecanicas",
+          "tipo": "texto",
+          "titulo": "Funciones mecánicas",
+          "markdown": "El hueso combina rigidez y algo de flexibilidad. Eso le permite **sostener** el peso, **proteger** los órganos internos y **servir de palanca**. En la mandíbula, las tres se ven juntas: sostiene y aloja los dientes, protege el paquete vasculonervioso alveolar inferior dentro de su conducto y, con la articulación temporomandibular como punto de apoyo, es la palanca que mueve la masticación."
+        },
+        {
+          "id": "t_reservorio_de_calcio_y_fosforo",
+          "tipo": "texto",
+          "titulo": "Reservorio de calcio y fósforo",
+          "markdown": "Aproximadamente el **99 %** del calcio del organismo está en el hueso, y aproximadamente el **85 %** del fósforo. El calcio restante, en la sangre y los tejidos blandos, es el que hace posible la contracción muscular, la transmisión nerviosa y la coagulación. Por eso el cuerpo mantiene la calcemia dentro de un rango estrecho, y para lograrlo usa el hueso como banco: si el calcio en sangre baja, se libera desde el hueso; si sobra, se deposita."
+        },
+        {
+          "id": "c_atencion_que_el_99_del_calcio_este",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "Que el 99 % del calcio esté en el hueso no significa que sea un depósito inerte. La regulación es continua y minuciosa: la parathormona (PTH) y la vitamina D activa (calcitriol) ajustan el intercambio, y en menor medida la calcitonina. Si dependiera solo de la dieta del día, la calcemia oscilaría peligrosamente."
+        },
+        {
+          "id": "t_nicho_hematopoyetico_y_medula_osea",
+          "tipo": "texto",
+          "titulo": "Nicho hematopoyético y médula ósea",
+          "markdown": "La médula ósea es el tejido blando que llena la cavidad medular y los espacios entre las trabéculas. Hay dos tipos:\n\n- **Médula roja:** produce células sanguíneas (glóbulos rojos, glóbulos blancos y plaquetas) a partir de células madre hematopoyéticas. En el adulto se concentra en el esqueleto axial (cráneo, vértebras, costillas, esternón, pelvis) y en los extremos proximales del fémur y el húmero.\n- **Médula amarilla:** rica en adipocitos. Ocupa sobre todo la cavidad medular de la diáfisis de los huesos largos del adulto. Puede volver a ser roja si aumenta la demanda de células sanguíneas, por ejemplo en una anemia crónica grave.\n\nEn la mandíbula del adulto, la médula es sobre todo grasa. Pueden persistir focos de médula hematopoyética, que a veces se ven en las radiografías como áreas de menor densidad.\n\nLas células madre viven en **[nichos](glosario:nicho_hematopoyetico)**: microambientes donde células del estroma y del endotelio, junto con células del linaje osteoblástico, les dan señales (como la quimiocina CXCL12) que las mantienen. Hoy se considera que gran parte de estos nichos es perivascular, aunque el peso de cada tipo de nicho se sigue discutiendo."
+        },
+        {
+          "id": "t_el_hueso_como_organo_endocrino",
+          "tipo": "texto",
+          "titulo": "El hueso como órgano endocrino",
+          "markdown": "Durante décadas se pensó que el hueso solo recibía órdenes hormonales (PTH, vitamina D, estrógenos). Hoy sabemos que también **emite** señales que llegan a otros órganos. La evidencia no es igual de firme para todas:"
+        },
+        {
+          "id": "t_funciones_2",
+          "tipo": "texto",
+          "markdown": "**Mensajero: [FGF23](glosario:fgf23)**\n\n- **Quién lo produce:** Osteocitos\n- **Sobre qué actúa:** Túbulo proximal del riñón\n- **Efecto:** Aumenta la pérdida de fosfato por la orina y reduce la síntesis de calcitriol: baja la fosfatemia\n\n**Mensajero: [Osteocalcina](glosario:osteocalcina) (forma subcarboxilada)**\n\n- **Quién lo produce:** Osteoblastos\n- **Sobre qué actúa:** Célula beta del páncreas y otros tejidos\n- **Efecto:** Hipótesis en estudio. Un grupo de investigación describió en ratones más secreción de insulina y más testosterona; en 2020 dos estudios con nuevos ratones sin osteocalcina no encontraron alteraciones del metabolismo de la glucosa, y el debate sigue abierto\n\n**Mensajero: Lipocalina 2**\n\n- **Quién lo produce:** Osteoblastos\n- **Sobre qué actúa:** Neuronas del hipotálamo\n- **Efecto:** Hipótesis en estudio. En ratones, un estudio la vinculó con menos apetito por la vía del receptor MC4R; falta confirmación independiente y en humanos"
+        },
+        {
+          "id": "c_atencion_fgf23_es_el_mensajero_oseo",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "FGF23 es el mensajero óseo mejor establecido, porque hay enfermedades humanas por exceso o defecto de FGF23 (como el raquitismo hipofosfatémico). La osteocalcina y la lipocalina 2 se presentan aquí como hipótesis en estudio: sirven para ver cómo se investiga una función nueva del hueso, no como hechos cerrados."
+        },
+        {
+          "id": "c_atencion_la_esclerostina_tambien_la",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "La esclerostina también la producen los osteocitos, pero actúa sobre todo de forma local: frena la formación de hueso en los osteoblastos vecinos. No es una hormona clásica dirigida a otros órganos. La verás en el módulo 3."
+        },
+        {
+          "id": "c_clinico_en_el_raquitismo",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "En el raquitismo hipofosfatémico ligado al cromosoma X, mutaciones en el gen PHEX elevan el FGF23. El riñón pierde fosfato en exceso y el hueso se mineraliza mal. Es un ejemplo de cómo una hormona ósea, si falla, altera el propio hueso."
+        },
+        {
+          "id": "t_funciones_3",
+          "tipo": "texto",
+          "markdown": "Practica lo que acabas de leer con dos actividades obligatorias: relaciona cada función con su descripción y arrastra los mensajeros óseos a su receptor. Después hay un repaso opcional, con una pregunta para ordenar la respuesta del cuerpo cuando baja el calcio."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_2_relacion_funciones",
+            "tipo": "relacion-columnas",
+            "titulo": "Une cada función con su descripción",
+            "instrucciones": "Toca una función de la columna izquierda y luego la descripción que le corresponde en la derecha (también puedes arrastrar la función sobre su descripción; con teclado, elige con Enter y desplázate con las flechas). Hay una descripción de más que no corresponde a ninguna función.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Correcto. Sostén, protección y palanca son las funciones mecánicas; el reservorio mineral y el nicho hematopoyético son las metabólicas y hematopoyéticas; y la secreción de señales como FGF23 es la función endocrina.",
+              "incorrecta": "Alguna unión no es correcta. Recuerda: el hueso almacena calcio y fósforo, pero no sintetiza vitamina D; esa síntesis empieza en la piel, a partir del 7-deshidrocolesterol."
+            },
+            "concepto": "Funciones del hueso",
+            "config": {
+              "columna_a": {
+                "titulo": "Concepto",
+                "elementos": [
+                  {
+                    "id": "f_sosten",
+                    "texto": "Sostén"
+                  },
+                  {
+                    "id": "f_proteccion",
+                    "texto": "Protección mecánica"
+                  },
+                  {
+                    "id": "f_palanca",
+                    "texto": "Palanca para el movimiento"
+                  },
+                  {
+                    "id": "f_reservorio",
+                    "texto": "Reservorio mineral"
+                  },
+                  {
+                    "id": "f_hematopoyesis",
+                    "texto": "Nicho hematopoyético"
+                  },
+                  {
+                    "id": "f_endocrina",
+                    "texto": "Función endocrina"
+                  }
+                ]
+              },
+              "columna_b": {
+                "titulo": "Descripción",
+                "elementos": [
+                  {
+                    "id": "d_sosten",
+                    "texto": "Forma el armazón que soporta el peso corporal y mantiene la forma del cuerpo."
+                  },
+                  {
+                    "id": "d_proteccion",
+                    "texto": "El cráneo, la caja torácica y la columna rodean y resguardan el encéfalo, el corazón y la médula espinal."
+                  },
+                  {
+                    "id": "d_palanca",
+                    "texto": "Sobre él se insertan los músculos por tendones; al contraerse, gira sobre la articulación y se produce el movimiento."
+                  },
+                  {
+                    "id": "d_reservorio",
+                    "texto": "Almacena aproximadamente el 99 % del calcio del organismo y la mayor parte del fósforo, y los libera cuando la sangre los necesita."
+                  },
+                  {
+                    "id": "d_hematopoyesis",
+                    "texto": "La médula ósea aloja las células madre que producen glóbulos rojos, glóbulos blancos y plaquetas."
+                  },
+                  {
+                    "id": "d_endocrina",
+                    "texto": "Osteocitos y osteoblastos secretan señales, como FGF23 (y, según estudios en ratones, osteocalcina), que actúan sobre otros órganos."
+                  },
+                  {
+                    "id": "d_distractor_vitd",
+                    "texto": "Sintetiza vitamina D a partir del 7-deshidrocolesterol de la piel."
+                  }
+                ]
+              },
+              "pares": [
+                {
+                  "id": "par_f_sosten",
+                  "a": "f_sosten",
+                  "b": "d_sosten",
+                  "explicacion": "Forma el armazón que soporta el peso corporal y mantiene la forma del cuerpo."
+                },
+                {
+                  "id": "par_f_proteccion",
+                  "a": "f_proteccion",
+                  "b": "d_proteccion",
+                  "explicacion": "El cráneo, la caja torácica y la columna rodean y resguardan el encéfalo, el corazón y la médula espinal."
+                },
+                {
+                  "id": "par_f_palanca",
+                  "a": "f_palanca",
+                  "b": "d_palanca",
+                  "explicacion": "Sobre él se insertan los músculos por tendones; al contraerse, gira sobre la articulación y se produce el movimiento."
+                },
+                {
+                  "id": "par_f_reservorio",
+                  "a": "f_reservorio",
+                  "b": "d_reservorio",
+                  "explicacion": "Almacena aproximadamente el 99 % del calcio del organismo y la mayor parte del fósforo, y los libera cuando la sangre los necesita."
+                },
+                {
+                  "id": "par_f_hematopoyesis",
+                  "a": "f_hematopoyesis",
+                  "b": "d_hematopoyesis",
+                  "explicacion": "La médula ósea aloja las células madre que producen glóbulos rojos, glóbulos blancos y plaquetas."
+                },
+                {
+                  "id": "par_f_endocrina",
+                  "a": "f_endocrina",
+                  "b": "d_endocrina",
+                  "explicacion": "Osteocitos y osteoblastos secretan señales, como FGF23 (y, según estudios en ratones, osteocalcina), que actúan sobre otros órganos."
+                }
+              ],
+              "barajar": true
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_2_hormonas_oseas",
+            "tipo": "arrastre-molecular",
+            "titulo": "Del hueso al órgano diana",
+            "instrucciones": "Arrastra cada mensajero hasta el receptor que lo reconoce y observa el efecto en el órgano (en pantalla táctil, mantén el dedo sobre la molécula; con teclado, Enter para elegirla, Tab para moverte entre receptores y Enter para confirmar). Algunas moléculas no encajan en ningún receptor.",
+            "obligatoria": true,
+            "puntaje_max": 30,
+            "retroalimentacion": {
+              "correcta": "Muy bien. Cada mensajero solo activa el receptor que reconoce, como una llave en su cerradura. FGF23 es el caso mejor establecido; los efectos de la osteocalcina y de la lipocalina 2 se describieron en ratones y siguen en estudio.",
+              "incorrecta": "Ese mensajero no reconoce ese receptor. Fíjate en de qué célula sale cada molécula y en qué órgano actúa; cada intento fallido resta puntos."
+            },
+            "concepto": "Función endocrina del hueso",
+            "config": {
+              "escena": {
+                "viewBox": "0 0 800 600",
+                "fondo_svg": "/images/m1/m1_hormonas_oseas_escena.svg",
+                "alt": "A la izquierda, un hueso con un osteocito y un osteoblasto. Un vaso sanguíneo lo conecta con tres órganos a la derecha: el riñón (túbulo proximal), el páncreas (una célula beta) y el hipotálamo (neuronas). Cada órgano muestra en su superficie un receptor con una forma distinta."
+              },
+              "moleculas": [
+                {
+                  "id": "mol_fgf23",
+                  "etiqueta": "FGF23",
+                  "descripcion": "Factor de crecimiento de fibroblastos 23. Lo producen los osteocitos y circula por la sangre hacia el riñón.",
+                  "forma": "circulo",
+                  "rechazo": "FGF23 no actúa sobre este receptor: su órgano diana es el túbulo proximal del riñón, donde regula el fosfato."
+                },
+                {
+                  "id": "mol_osteocalcina",
+                  "etiqueta": "Osteocalcina subcarboxilada",
+                  "descripcion": "Proteína de los osteoblastos; su forma subcarboxilada circula en la sangre. Hipótesis en estudio: actuaría sobre las células beta del páncreas y otros tejidos.",
+                  "forma": "hexagono",
+                  "rechazo": "Ese receptor no es el que se propone para la osteocalcina: en la hipótesis en estudio actúa sobre la célula beta del páncreas y otros tejidos."
+                },
+                {
+                  "id": "mol_lipocalina_2",
+                  "etiqueta": "Lipocalina 2 (LCN2)",
+                  "descripcion": "Proteína secretada por los osteoblastos. Hipótesis en estudio: actuaría sobre neuronas del hipotálamo que controlan el apetito.",
+                  "forma": "triangulo",
+                  "rechazo": "Ese receptor no es el que se propone para la lipocalina 2: en la hipótesis en estudio actúa sobre neuronas del hipotálamo."
+                },
+                {
+                  "id": "mol_esclerostina",
+                  "etiqueta": "Esclerostina",
+                  "descripcion": "Proteína producida por los osteocitos.",
+                  "forma": "rombo",
+                  "rechazo": "La producen los osteocitos, pero actúa de forma local: se une a los receptores LRP5 y LRP6 de los osteoblastos vecinos e inhibe la vía Wnt, con lo que frena la formación de hueso. No tiene un receptor diana en el riñón, el páncreas ni el hipotálamo de este esquema."
+                },
+                {
+                  "id": "mol_pth",
+                  "etiqueta": "Parathormona (PTH)",
+                  "descripcion": "Hormona que regula el calcio en la sangre.",
+                  "forma": "cuadrado",
+                  "rechazo": "No la produce el hueso, sino las glándulas paratiroides. Es una hormona que actúa sobre el hueso y el riñón: el sentido de la comunicación es el contrario al de esta actividad."
+                }
+              ],
+              "receptores": [
+                {
+                  "id": "rec_receptor_fgfr_klotho",
+                  "etiqueta": "Receptor del túbulo proximal renal",
+                  "descripcion": "Receptor de la superficie de las células del túbulo proximal del riñón (complejo FGFR–α-Klotho).",
+                  "posicion": {
+                    "x": 82,
+                    "y": 18
+                  }
+                },
+                {
+                  "id": "rec_receptor_celula_beta",
+                  "etiqueta": "Receptor de la célula beta",
+                  "descripcion": "Receptor de las células que secretan insulina en el páncreas. Se ha propuesto que sería GPRC6A, un receptor acoplado a proteína G.",
+                  "posicion": {
+                    "x": 82,
+                    "y": 50
+                  }
+                },
+                {
+                  "id": "rec_receptor_mc4r",
+                  "etiqueta": "Receptor de neuronas del hipotálamo",
+                  "descripcion": "Receptor de melanocortina 4 (MC4R), implicado en el control del apetito.",
+                  "posicion": {
+                    "x": 82,
+                    "y": 82
+                  }
+                }
+              ],
+              "pares": [
+                {
+                  "id": "par_fgf23_receptor_fgfr_klotho",
+                  "molecula": "mol_fgf23",
+                  "receptor": "rec_receptor_fgfr_klotho",
+                  "efecto": {
+                    "titulo": "El riñón elimina fosfato",
+                    "descripcion": "FGF23 se une al complejo FGFR–α-Klotho del túbulo proximal. Disminuye la reabsorción de fosfato, que se pierde por la orina, y reduce la síntesis de calcitriol (vitamina D activa). Resultado: baja la fosfatemia. Es un mecanismo bien establecido en humanos.",
+                    "animacion": "cascada",
+                    "indicadores": [
+                      {
+                        "etiqueta": "Fosfato en sangre",
+                        "direccion": "disminuye"
+                      },
+                      {
+                        "etiqueta": "Calcitriol",
+                        "direccion": "disminuye"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "par_osteocalcina_receptor_celula_beta",
+                  "molecula": "mol_osteocalcina",
+                  "receptor": "rec_receptor_celula_beta",
+                  "efecto": {
+                    "titulo": "Hipótesis en ratones: la célula beta libera más insulina",
+                    "descripcion": "Un grupo de investigación describió que, en ratones, la osteocalcina subcarboxilada favorece la secreción de insulina y mejora la sensibilidad a la insulina. En 2020, dos estudios con nuevos ratones sin osteocalcina no hallaron alteraciones del metabolismo de la glucosa: el debate sigue abierto, y en humanos la evidencia es menos concluyente.",
+                    "animacion": "liberacion",
+                    "indicadores": [
+                      {
+                        "etiqueta": "Insulina",
+                        "direccion": "aumenta"
+                      },
+                      {
+                        "etiqueta": "Glucosa en sangre",
+                        "direccion": "disminuye"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "par_lipocalina_2_receptor_mc4r",
+                  "molecula": "mol_lipocalina_2",
+                  "receptor": "rec_receptor_mc4r",
+                  "efecto": {
+                    "titulo": "Hipótesis en ratones: baja el apetito",
+                    "descripcion": "Un estudio en ratones propuso que la lipocalina 2 de origen óseo llega al cerebro y activa el receptor MC4R de neuronas del hipotálamo, con lo que disminuye la ingesta de alimento. Falta confirmación independiente y su papel en humanos se está investigando.",
+                    "animacion": "activacion",
+                    "indicadores": [
+                      {
+                        "etiqueta": "Apetito",
+                        "direccion": "disminuye"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "distractores": ["mol_esclerostina", "mol_pth"]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_2_quiz_calcio",
+            "tipo": "quiz",
+            "titulo": "Calcio, médula y hormonas óseas",
+            "instrucciones": "Responde las preguntas. Tras cada respuesta verás la explicación. En la pregunta de ordenar, toca los pasos en el orden correcto (o muévelos con el teclado: Enter para tomar un paso, flechas para subirlo o bajarlo, Enter para soltarlo).",
+            "obligatoria": false,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Excelente. Tienes claro que el hueso es el gran almacén de calcio y cómo el cuerpo lo usa para mantener estable la calcemia.",
+              "incorrecta": "Repasa la sección: el calcio del hueso es casi todo el calcio corporal, y la PTH lo moviliza cuando la calcemia baja."
+            },
+            "concepto": "Reservorio de calcio, médula ósea y homeostasis del calcio",
+            "config": {
+              "preguntas": [
+                {
+                  "id": "m1_2_q1",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué porcentaje aproximado del calcio del organismo se almacena en el hueso?",
+                  "opciones": [
+                    {
+                      "id": "m1_2_q1_a",
+                      "texto": "Aproximadamente el 10 %"
+                    },
+                    {
+                      "id": "m1_2_q1_b",
+                      "texto": "Aproximadamente el 50 %"
+                    },
+                    {
+                      "id": "m1_2_q1_c",
+                      "texto": "Aproximadamente el 75 %"
+                    },
+                    {
+                      "id": "m1_2_q1_d",
+                      "texto": "Aproximadamente el 99 %"
+                    }
+                  ],
+                  "correctas": ["m1_2_q1_d"],
+                  "explicacion": "El hueso contiene aproximadamente el 99 % del calcio corporal. El 1 % restante, en sangre y tejidos blandos, es el que interviene en la contracción muscular, la transmisión nerviosa y la coagulación.",
+                  "concepto": "Reservorio de calcio",
+                  "dificultad": 1
+                },
+                {
+                  "id": "m1_2_q2",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué tipo de médula ósea predomina en la cavidad medular de la diáfisis de los huesos largos de un adulto?",
+                  "opciones": [
+                    {
+                      "id": "m1_2_q2_a",
+                      "texto": "Médula roja, con intensa producción de células sanguíneas"
+                    },
+                    {
+                      "id": "m1_2_q2_b",
+                      "texto": "Médula amarilla, rica en adipocitos"
+                    },
+                    {
+                      "id": "m1_2_q2_c",
+                      "texto": "Hueso trabecular sin médula, con espacios vacíos"
+                    },
+                    {
+                      "id": "m1_2_q2_d",
+                      "texto": "Cartílago hialino residual de la placa de crecimiento"
+                    }
+                  ],
+                  "correctas": ["m1_2_q2_b"],
+                  "explicacion": "En el adulto, la diáfisis de los huesos largos tiene sobre todo médula amarilla, rica en grasa. La médula roja se concentra en el esqueleto axial y en los extremos proximales del fémur y el húmero.",
+                  "concepto": "Nicho hematopoyético y médula ósea",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_2_q3",
+                  "formato": "ordenar",
+                  "enunciado": "Ordena la respuesta del cuerpo cuando desciende el calcio de la sangre.",
+                  "pasos": [
+                    {
+                      "id": "m1_2_q3_p1",
+                      "texto": "Desciende la concentración de calcio ionizado en la sangre."
+                    },
+                    {
+                      "id": "m1_2_q3_p2",
+                      "texto": "Las glándulas paratiroides detectan el descenso y secretan PTH."
+                    },
+                    {
+                      "id": "m1_2_q3_p3",
+                      "texto": "La PTH aumenta la resorción ósea y la reabsorción renal de calcio."
+                    },
+                    {
+                      "id": "m1_2_q3_p4",
+                      "texto": "Pasa calcio del hueso a la sangre, la calcemia se normaliza y la secreción de PTH disminuye."
+                    }
+                  ],
+                  "explicacion": "Es un circuito de retroalimentación negativa: la caída del calcio activa la PTH, la PTH moviliza calcio del hueso y aumenta su reabsorción en el riñón y, al normalizarse la calcemia, la señal se apaga.",
+                  "concepto": "Homeostasis del calcio",
+                  "dificultad": 3
+                },
+                {
+                  "id": "m1_2_q4",
+                  "formato": "verdadero_falso",
+                  "enunciado": "El hueso solo recibe señales hormonales, como la PTH y la vitamina D; no emite señales a otros órganos.",
+                  "correcta": false,
+                  "explicacion": "Es falso. El hueso también emite señales: los osteocitos producen FGF23, un mensajero bien establecido que actúa sobre el riñón. Otras moléculas, como la osteocalcina, se investigan como posibles hormonas óseas.",
+                  "concepto": "Función endocrina del hueso",
+                  "dificultad": 2
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m1_3_matriz",
+      "titulo": "De qué está hecho: la matriz ósea",
+      "bloques": [
+        {
+          "id": "t_matriz",
+          "tipo": "texto",
+          "markdown": "A simple vista, un hueso parece un material homogéneo. Al microscopio es un **material compuesto**: una fase orgánica flexible y una fase mineral rígida que trabajan juntas. Es la misma idea del hormigón armado: las varillas de acero resisten al estirarse y el cemento resiste al comprimirse. En el hueso, el colágeno hace de varilla y la hidroxiapatita hace de cemento."
+        },
+        {
+          "id": "tb_tabla_componente_que_es_proporcion",
+          "tipo": "tabla",
+          "titulo": "Tabla: Componente, Qué es, Proporción aproximada, Qué aporta",
+          "encabezado_criterio": "Componente",
+          "columnas": ["Qué es", "Proporción aproximada", "Qué aporta"],
+          "filas": [
+            {
+              "criterio": "Fase mineral",
+              "celdas": [
+                "Cristales muy pequeños de hidroxiapatita, Ca10(PO4)6(OH)2, con sustituciones (por ejemplo, carbonato)",
+                "Entre aproximadamente el 50 % y el 70 % del peso seco, según la fuente",
+                "Dureza, rigidez y resistencia a la compresión; reserva de calcio y fósforo"
+              ]
+            },
+            {
+              "criterio": "Matriz orgánica",
+              "celdas": [
+                "Colágeno tipo I y proteínas no colágenas. Antes de mineralizarse se llama **osteoide**",
+                "El resto del peso seco",
+                "Flexibilidad, resistencia a la tracción y señales para las células"
+              ]
+            },
+            {
+              "criterio": "Agua",
+              "celdas": [
+                "Unida a la matriz y presente en canalículos y conductos",
+                "Del orden del 10 % al 20 % del peso total",
+                "Transporte de sustancias y comportamiento mecánico"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t_colageno_tipo_i",
+          "tipo": "texto",
+          "titulo": "Colágeno tipo I",
+          "markdown": "Es la proteína que forma la mayor parte de la matriz orgánica, aproximadamente el 90 %. Los osteoblastos secretan moléculas de colágeno que se ensamblan en fibrillas y fibras. Esas fibras dan al hueso **flexibilidad** y **resistencia a la tracción**.\n\n#### Proteínas no colágenas\n\nSon una fracción pequeña de la matriz orgánica, pero regulan la mineralización y la comunicación con las células.\n\n**Molécula** y **Qué hace**:\n\n- **Osteocalcina:** La sintetizan los osteoblastos. Se une al calcio y a la hidroxiapatita. Es la [proteína no colágena](glosario:proteinas_no_colagenas) más abundante del hueso. Su forma subcarboxilada actúa como hormona (sección 1.2)\n- **Osteopontina:** Proteína de adhesión: ancla al osteoclasto a la matriz y regula la mineralización\n- **Osteonectina (SPARC):** Une colágeno y calcio; participa en la organización de la matriz y en la mineralización\n- **Sialoproteína ósea:** Favorece la formación de los primeros cristales de hidroxiapatita y la adhesión celular\n- **Proteoglucanos (decorina, biglicano):** Regulan el ensamblaje de las fibrillas de colágeno y la mineralización, y retienen factores de crecimiento\n- **Factores de crecimiento (TGF-β, IGF, BMP):** Quedan almacenados en la matriz; al reabsorberse el hueso se liberan y estimulan la formación de hueso nuevo\n\n#### Fase mineral\n\nLa hidroxiapatita es un fosfato de calcio. Los cristales se depositan en los espacios ordenados que quedan entre las moléculas de colágeno y a lo largo de las fibrillas. Ese mineral da **dureza** y **resistencia a la compresión**, y funciona como reservorio de calcio y fósforo. El proceso de mineralización se estudia en detalle en el módulo 4."
+        },
+        {
+          "id": "c_dato_puedes_comprobar_el_papel",
+          "tipo": "callout",
+          "variante": "dato",
+          "markdown": "Puedes comprobar el papel de cada fase con dos experimentos clásicos. Si sumerges un hueso en ácido diluido (por ejemplo, vinagre) durante varios días, se disuelve el mineral y el hueso se vuelve flexible, casi como goma. Si lo calcinas, se pierde la parte orgánica y el hueso, aunque conserva su forma, se vuelve frágil y se desmorona."
+        },
+        {
+          "id": "c_clinico_cuando_falla_una_de_las",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "Cuando falla una de las dos fases, el hueso enferma de formas distintas. En la osteogénesis imperfecta, mutaciones en los genes del colágeno tipo I (COL1A1 y COL1A2) producen un hueso frágil, con fracturas frecuentes. En el raquitismo y la osteomalacia, el defecto es de mineralización: el hueso tiene [osteoide](glosario:osteoide), pero queda blando."
+        },
+        {
+          "id": "t_como_se_ordenan_las_fibras_hueso",
+          "tipo": "texto",
+          "titulo": "Cómo se ordenan las fibras: hueso entretejido y hueso laminar",
+          "markdown": "Además de qué contiene, importa **cómo se ordena** el colágeno. Según esa disposición hay dos tipos de tejido óseo."
+        },
+        {
+          "id": "tb_tabla_rasgo_hueso_entretejido_primario",
+          "tipo": "tabla",
+          "titulo": "Tabla: Rasgo, Hueso entretejido (primario), Hueso laminar (secundario)",
+          "encabezado_criterio": "Rasgo",
+          "columnas": ["Hueso entretejido (primario)", "Hueso laminar (secundario)"],
+          "filas": [
+            {
+              "criterio": "Fibras de colágeno",
+              "celdas": [
+                "Gruesas, entrecruzadas al azar",
+                "En laminillas paralelas, de unos 3 a 7 µm; la dirección de las fibras cambia de una laminilla a la siguiente"
+              ]
+            },
+            {
+              "criterio": "Mineralización",
+              "celdas": ["Irregular y menor", "Uniforme y mayor"]
+            },
+            {
+              "criterio": "Osteocitos",
+              "celdas": [
+                "Más numerosos, más grandes, sin orden",
+                "Menos numerosos, alineados entre laminillas"
+              ]
+            },
+            {
+              "criterio": "Formación",
+              "celdas": [
+                "Rápida, no necesita una superficie previa",
+                "Lenta, se deposita sobre una superficie ya existente"
+              ]
+            },
+            {
+              "criterio": "Dónde aparece",
+              "celdas": [
+                "Esqueleto embrionario y fetal, callo de fractura, algunos tumores y enfermedades; en el adulto, en lugares puntuales como los alvéolos dentarios, las suturas y las inserciones de tendones",
+                "Casi todo el hueso del adulto, cortical y trabecular"
+              ]
+            },
+            {
+              "criterio": "Resistencia",
+              "celdas": ["Menor", "Mayor, sobre todo en la dirección de la carga"]
+            },
+            {
+              "criterio": "Destino",
+              "celdas": [
+                "Temporal: se reemplaza por hueso laminar durante el remodelado",
+                "Permanente, aunque se renueva por remodelado"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "i_entretejido_laminar",
+          "tipo": "imagen",
+          "src": "/images/m1/m1_entretejido_laminar.svg",
+          "alt": "Comparación entre hueso entretejido y hueso laminar",
+          "pie": "Comparación entre hueso entretejido y hueso laminar.",
+          "ancho": 800,
+          "alto": 600
+        },
+        {
+          "id": "c_atencion_no_confundas_estas_dos",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "No confundas estas dos parejas de términos. **Cortical y trabecular** describen la arquitectura del hueso (compacto o esponjoso; lo verás en la sección 1.4). **Entretejido y laminar** describen cómo se ordenan las fibras de colágeno. El hueso cortical y el trabecular del adulto son laminares."
+        },
+        {
+          "id": "c_clinico_el_hueso_entretejido_no_es",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "El [hueso entretejido](glosario:hueso_entretejido) no es un hueso \"malo\": es un hueso de urgencia. Se forma rápido para estabilizar una fractura o rellenar un alvéolo tras una extracción, y luego se sustituye por [hueso laminar](glosario:hueso_laminar) más resistente."
+        },
+        {
+          "id": "t_matriz_3",
+          "tipo": "texto",
+          "markdown": "Ahora verás la composición de la matriz en una explicación animada, y después la practicarás con dos actividades."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_3_video_matriz",
+            "tipo": "video-texto",
+            "titulo": "Dentro de la matriz ósea",
+            "instrucciones": "Avanza paso a paso con el botón Siguiente (o con la flecha derecha del teclado). En cada paso, lee el texto y observa qué cambia en la imagen. Para completar la actividad debes llegar al último paso.",
+            "obligatoria": true,
+            "puntaje_max": 10,
+            "retroalimentacion": {
+              "correcta": "Bien. Ya sabes que la matriz ósea es un compuesto: colágeno tipo I flexible, hidroxiapatita rígida y proteínas no colágenas que regulan el conjunto.",
+              "incorrecta": "Te faltan pasos por ver. Llega hasta el último para completar la actividad."
+            },
+            "concepto": "Composición de la matriz ósea",
+            "config": {
+              "medio": "animacion",
+              "svg": "/images/m1/m1_matriz_composicion.svg",
+              "viewBox": "0 0 800 600",
+              "alt": "Vista a escala nanométrica de una fibrilla de colágeno tipo I con cristales de hidroxiapatita y proteínas no colágenas.",
+              "pasos": [
+                {
+                  "id": "paso_1",
+                  "titulo": "El hueso, un material compuesto",
+                  "texto": "Si amplías un fragmento de hueso, verás que no es una masa uniforme. Está formado por dos fases que trabajan juntas: una orgánica, flexible, y otra mineral, rígida. Vamos a separarlas para entender qué hace cada una.",
+                  "visibles": ["fragmento_hueso"],
+                  "resaltadas": []
+                },
+                {
+                  "id": "paso_2",
+                  "titulo": "La fase orgánica: colágeno tipo I",
+                  "texto": "Los osteoblastos secretan moléculas de colágeno tipo I. Se alinean y se ensamblan en fibrillas con un bandeo regular. El colágeno da al hueso flexibilidad y resistencia cuando lo estiran.",
+                  "visibles": ["fibrilla_colageno"],
+                  "resaltadas": []
+                },
+                {
+                  "id": "paso_3",
+                  "titulo": "Los huecos: donde empieza el mineral",
+                  "texto": "Dentro de la fibrilla, las moléculas de colágeno dejan espacios ordenados, los huecos. En ellos y a lo largo de la fibrilla empieza a depositarse el mineral.",
+                  "visibles": ["fibrilla_colageno", "zonas_hueco"],
+                  "resaltadas": []
+                },
+                {
+                  "id": "paso_4",
+                  "titulo": "La fase mineral: hidroxiapatita",
+                  "texto": "Cristales diminutos de hidroxiapatita, un fosfato de calcio de fórmula Ca10(PO4)6(OH)2, crecen en los huecos y a lo largo de la fibrilla. El mineral da dureza y resistencia cuando el hueso se comprime. Además, almacena calcio y fósforo.",
+                  "visibles": ["fibrilla_colageno", "zonas_hueco", "cristales_hidroxiapatita"],
+                  "resaltadas": []
+                },
+                {
+                  "id": "paso_5",
+                  "titulo": "Las proteínas no colágenas, reguladoras",
+                  "texto": "Entre fibrillas y cristales hay proteínas no colágenas, como la osteocalcina, la osteopontina y la osteonectina. Se unen al calcio y al colágeno, regulan la mineralización, ayudan a las células a adherirse a la matriz y guardan factores de crecimiento.",
+                  "visibles": [
+                    "fibrilla_colageno",
+                    "zonas_hueco",
+                    "cristales_hidroxiapatita",
+                    "proteinas_no_colagenas"
+                  ],
+                  "resaltadas": []
+                },
+                {
+                  "id": "paso_6",
+                  "titulo": "Dos materiales, una propiedad nueva",
+                  "texto": "Cuando el hueso se estira, trabaja sobre todo el colágeno; cuando se comprime, trabaja sobre todo el mineral. Sin mineral, el hueso se dobla; sin colágeno, se rompe con facilidad. Juntos forman un material a la vez resistente y algo flexible.",
+                  "visibles": [
+                    "fibrilla_colageno",
+                    "cristales_hidroxiapatita",
+                    "fuerza_traccion",
+                    "fuerza_compresion"
+                  ],
+                  "resaltadas": []
+                }
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_3_relacion_matriz",
+            "tipo": "relacion-columnas",
+            "titulo": "Componentes de la matriz y su papel",
+            "instrucciones": "Une cada componente de la matriz con lo que aporta o hace. Toca uno de cada columna (o arrastra; con teclado, Enter para elegir y flechas para moverte). Una descripción de la derecha no corresponde a ningún componente.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Correcto. La hidroxiapatita aporta dureza, el colágeno tipo I flexibilidad y las proteínas no colágenas regulan la mineralización y la comunicación con las células.",
+              "incorrecta": "Alguna unión falla. Recuerda: el mineral resiste la compresión, el colágeno resiste la tracción, y el hueso no tiene fibras elásticas como una arteria."
+            },
+            "concepto": "Composición de la matriz ósea",
+            "config": {
+              "columna_a": {
+                "titulo": "Concepto",
+                "elementos": [
+                  {
+                    "id": "c_hidroxiapatita",
+                    "texto": "Hidroxiapatita"
+                  },
+                  {
+                    "id": "c_colageno",
+                    "texto": "Colágeno tipo I"
+                  },
+                  {
+                    "id": "c_osteocalcina",
+                    "texto": "Osteocalcina"
+                  },
+                  {
+                    "id": "c_osteopontina",
+                    "texto": "Osteopontina"
+                  },
+                  {
+                    "id": "c_factores",
+                    "texto": "Factores de crecimiento almacenados (TGF-β, IGF, BMP)"
+                  }
+                ]
+              },
+              "columna_b": {
+                "titulo": "Descripción",
+                "elementos": [
+                  {
+                    "id": "r_hidroxiapatita",
+                    "texto": "Cristales de fosfato de calcio que dan dureza y resistencia a la compresión."
+                  },
+                  {
+                    "id": "r_colageno",
+                    "texto": "Proteína fibrilar que forma la mayor parte de la matriz orgánica y da flexibilidad y resistencia a la tracción."
+                  },
+                  {
+                    "id": "r_osteocalcina",
+                    "texto": "Proteína no colágena más abundante, sintetizada por los osteoblastos, que se une al calcio."
+                  },
+                  {
+                    "id": "r_osteopontina",
+                    "texto": "Proteína de adhesión que ancla al osteoclasto a la matriz y regula la mineralización."
+                  },
+                  {
+                    "id": "r_factores",
+                    "texto": "Señales guardadas en la matriz que se liberan cuando el hueso se reabsorbe y estimulan la formación de hueso nuevo."
+                  },
+                  {
+                    "id": "r_distractor_elastina",
+                    "texto": "Fibras elásticas que permiten al hueso estirarse mucho y recuperar su forma."
+                  }
+                ]
+              },
+              "pares": [
+                {
+                  "id": "par_c_hidroxiapatita",
+                  "a": "c_hidroxiapatita",
+                  "b": "r_hidroxiapatita",
+                  "explicacion": "Cristales de fosfato de calcio que dan dureza y resistencia a la compresión."
+                },
+                {
+                  "id": "par_c_colageno",
+                  "a": "c_colageno",
+                  "b": "r_colageno",
+                  "explicacion": "Proteína fibrilar que forma la mayor parte de la matriz orgánica y da flexibilidad y resistencia a la tracción."
+                },
+                {
+                  "id": "par_c_osteocalcina",
+                  "a": "c_osteocalcina",
+                  "b": "r_osteocalcina",
+                  "explicacion": "Proteína no colágena más abundante, sintetizada por los osteoblastos, que se une al calcio."
+                },
+                {
+                  "id": "par_c_osteopontina",
+                  "a": "c_osteopontina",
+                  "b": "r_osteopontina",
+                  "explicacion": "Proteína de adhesión que ancla al osteoclasto a la matriz y regula la mineralización."
+                },
+                {
+                  "id": "par_c_factores",
+                  "a": "c_factores",
+                  "b": "r_factores",
+                  "explicacion": "Señales guardadas en la matriz que se liberan cuando el hueso se reabsorbe y estimulan la formación de hueso nuevo."
+                }
+              ],
+              "barajar": true
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_3_entretejido_laminar",
+            "tipo": "multicapa",
+            "titulo": "Entretejido frente a laminar",
+            "instrucciones": "Toca cada zona de la imagen para ver qué la distingue (con teclado, Tab para moverte entre zonas y Enter para abrir su descripción; hay una lista de zonas bajo la imagen). Visita las cuatro zonas.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Muy bien. Ya distingues el hueso entretejido, de fibras al azar y formación rápida, del laminar, de laminillas paralelas y más resistente.",
+              "incorrecta": "Faltan zonas por visitar. Compara los dos paneles: fíjate en la dirección de las fibras y en la cantidad y la posición de los osteocitos."
+            },
+            "concepto": "Hueso laminar y entretejido",
+            "config": {
+              "svg": "/images/m1/m1_entretejido_laminar.svg",
+              "viewBox": "0 0 800 600",
+              "alt": "Dos paneles a la misma escala: hueso entretejido (izquierda) y hueso laminar (derecha).",
+              "modo": "explorar",
+              "capas": [
+                {
+                  "id": "fibras_entretejidas",
+                  "etiqueta": "Fibras entrecruzadas al azar",
+                  "descripcion": "En el hueso entretejido, los haces de colágeno son gruesos y se entrecruzan sin un orden. Se forma rápido y sin necesitar una superficie previa, por eso aparece en el feto, en el callo de fractura y en la reparación de un alvéolo."
+                },
+                {
+                  "id": "osteocitos_entretejido",
+                  "etiqueta": "Osteocitos del hueso entretejido",
+                  "descripcion": "Son más numerosos y más grandes que en el hueso laminar, y se distribuyen sin orden. La mineralización es irregular y menor."
+                },
+                {
+                  "id": "laminillas_paralelas",
+                  "etiqueta": "Laminillas paralelas",
+                  "descripcion": "En el hueso laminar, el colágeno se ordena en capas paralelas de unos pocos micrómetros; la dirección de las fibras cambia de una capa a la siguiente. Esta disposición lo hace más resistente."
+                },
+                {
+                  "id": "osteocitos_laminares",
+                  "etiqueta": "Osteocitos del hueso laminar",
+                  "descripcion": "Son menos numerosos y se alinean entre las laminillas, con canalículos que los conectan. La mineralización es más uniforme y mayor."
+                }
+              ],
+              "requeridas": [
+                "fibras_entretejidas",
+                "osteocitos_entretejido",
+                "laminillas_paralelas",
+                "osteocitos_laminares"
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_3_quiz_matriz",
+            "tipo": "quiz",
+            "titulo": "Repaso de la matriz ósea",
+            "instrucciones": "Responde las preguntas de repaso. Tras cada una verás la explicación. Esta actividad es opcional, pero te ayuda a fijar los conceptos antes de seguir.",
+            "obligatoria": false,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Muy bien. Tienes claros los componentes de la matriz y sus propiedades.",
+              "incorrecta": "Vuelve a la tabla de componentes: colágeno tipo I para la tracción, hidroxiapatita para la compresión, proteínas no colágenas para regular."
+            },
+            "concepto": "Composición de la matriz ósea",
+            "config": {
+              "preguntas": [
+                {
+                  "id": "m1_3_q1",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué proteína forma la mayor parte de la matriz orgánica del hueso?",
+                  "opciones": [
+                    {
+                      "id": "m1_3_q1_a",
+                      "texto": "Elastina"
+                    },
+                    {
+                      "id": "m1_3_q1_b",
+                      "texto": "Colágeno tipo II"
+                    },
+                    {
+                      "id": "m1_3_q1_c",
+                      "texto": "Colágeno tipo I"
+                    },
+                    {
+                      "id": "m1_3_q1_d",
+                      "texto": "Queratina"
+                    }
+                  ],
+                  "correctas": ["m1_3_q1_c"],
+                  "explicacion": "El colágeno tipo I es aproximadamente el 90 % de la matriz orgánica. El colágeno tipo II es el del cartílago hialino; la elastina y la queratina no son componentes mayores del hueso.",
+                  "concepto": "Colágeno tipo I",
+                  "dificultad": 1
+                },
+                {
+                  "id": "m1_3_q2",
+                  "formato": "opcion_multiple",
+                  "enunciado": "Un hueso se sumerge en ácido diluido durante varios días y se vuelve flexible. ¿Qué componente se disolvió?",
+                  "opciones": [
+                    {
+                      "id": "m1_3_q2_a",
+                      "texto": "El colágeno tipo I"
+                    },
+                    {
+                      "id": "m1_3_q2_b",
+                      "texto": "El mineral (hidroxiapatita)"
+                    },
+                    {
+                      "id": "m1_3_q2_c",
+                      "texto": "El agua unida a la matriz"
+                    },
+                    {
+                      "id": "m1_3_q2_d",
+                      "texto": "Las proteínas no colágenas"
+                    }
+                  ],
+                  "correctas": ["m1_3_q2_b"],
+                  "explicacion": "El ácido disuelve el mineral y queda la matriz orgánica de colágeno, que es flexible. Sin la hidroxiapatita, el hueso pierde rigidez y resistencia a la compresión.",
+                  "concepto": "Fase mineral: hidroxiapatita",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_3_q3",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué rasgo distingue al hueso laminar del entretejido?",
+                  "opciones": [
+                    {
+                      "id": "m1_3_q3_a",
+                      "texto": "Sus fibras de colágeno se entrecruzan al azar y se forma más rápido."
+                    },
+                    {
+                      "id": "m1_3_q3_b",
+                      "texto": "Sus osteocitos son más numerosos y de mayor tamaño."
+                    },
+                    {
+                      "id": "m1_3_q3_c",
+                      "texto": "Solo aparece en el feto y se reemplaza después del nacimiento."
+                    },
+                    {
+                      "id": "m1_3_q3_d",
+                      "texto": "Sus fibras forman laminillas paralelas y se mineraliza de forma más uniforme."
+                    }
+                  ],
+                  "correctas": ["m1_3_q3_d"],
+                  "explicacion": "En el hueso laminar el colágeno se ordena en laminillas y la mineralización es uniforme; por eso es más resistente. Las fibras al azar y los osteocitos más numerosos son rasgos del entretejido, y el laminar es el hueso del adulto.",
+                  "concepto": "Hueso laminar y entretejido",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_3_q4",
+                  "formato": "verdadero_falso",
+                  "enunciado": "Las proteínas no colágenas son una fracción pequeña de la matriz orgánica del hueso, pero regulan la mineralización y las señales celulares.",
+                  "correcta": true,
+                  "explicacion": "Es verdadero. La mayor parte de la matriz orgánica es colágeno tipo I; las proteínas no colágenas son minoritarias, pero regulan la mineralización, la adhesión celular y el almacén de factores de crecimiento.",
+                  "concepto": "Proteínas no colágenas",
+                  "dificultad": 2
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m1_4_organizacion",
+      "titulo": "Cómo se organiza: del corte a la osteona",
+      "bloques": [
+        {
+          "id": "t_organizacion",
+          "tipo": "texto",
+          "markdown": "Ya sabes de qué está hecho el hueso y cómo se ordenan sus fibras. Ahora sube de escala: ¿cómo se organiza el tejido dentro de un hueso? Vamos a recorrer un corte de la superficie hacia el interior."
+        },
+        {
+          "id": "t_hueso_cortical_y_hueso_trabecular",
+          "tipo": "texto",
+          "titulo": "Hueso cortical y hueso trabecular",
+          "markdown": "Un mismo hueso tiene dos arquitecturas. El **cortical** (o compacto) es la masa densa de la superficie. El **trabecular** (o esponjoso) es una red tridimensional de láminas y barras, las trabéculas, con espacios llenos de médula."
+        },
+        {
+          "id": "tb_tabla_rasgo_hueso_cortical_hueso",
+          "tipo": "tabla",
+          "titulo": "Tabla: Rasgo, Hueso cortical, Hueso trabecular",
+          "encabezado_criterio": "Rasgo",
+          "columnas": ["Hueso cortical", "Hueso trabecular"],
+          "filas": [
+            {
+              "criterio": "Aspecto",
+              "celdas": ["Masa densa y continua", "Red de trabéculas con espacios medulares"]
+            },
+            {
+              "criterio": "Proporción de la masa esquelética",
+              "celdas": ["Aproximadamente el 80 %", "Aproximadamente el 20 %"]
+            },
+            {
+              "criterio": "Porosidad",
+              "celdas": [
+                "Baja, aproximadamente menos del 10 %",
+                "Alta, aproximadamente del 50 % al 90 %"
+              ]
+            },
+            {
+              "criterio": "Dónde predomina",
+              "celdas": [
+                "Diáfisis y capa externa de todos los huesos",
+                "Epífisis, metáfisis y el interior de vértebras y huesos cortos y planos"
+              ]
+            },
+            {
+              "criterio": "Unidad estructural",
+              "celdas": [
+                "Osteona (sistema de Havers)",
+                "Trabécula de hueso laminar, sin conductos de Havers: se nutre desde la médula"
+              ]
+            },
+            {
+              "criterio": "Función principal",
+              "celdas": [
+                "Resistir flexión y torsión, proteger, servir de palanca",
+                "Repartir y absorber cargas de compresión; ofrecer gran superficie de contacto con la médula"
+              ]
+            },
+            {
+              "criterio": "Ritmo de renovación",
+              "celdas": ["Más lento", "Más rápido, por su mayor superficie"]
+            }
+          ]
+        },
+        {
+          "id": "c_clinico_como_el_hueso_trabecular",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "Como el hueso trabecular se renueva más rápido, es el primero en mostrar la pérdida ósea en la osteoporosis. Por eso las vértebras, ricas en trabéculas, son un sitio frecuente de fractura por fragilidad."
+        },
+        {
+          "id": "c_atencion_recuerda_que_cortical_y",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "Recuerda que cortical y trabecular no son lo mismo que laminar y entretejido. El hueso trabecular sano de un adulto es laminar."
+        },
+        {
+          "id": "t_periostio_y_endostio_las_dos_membranas",
+          "tipo": "texto",
+          "titulo": "Periostio y endostio: las dos membranas del hueso",
+          "markdown": "- **Periostio.** Membrana de tejido conjuntivo que cubre la superficie externa del hueso, salvo las superficies articulares, que llevan cartílago. Tiene dos capas: una **externa fibrosa**, con vasos, nervios y colágeno, y una **interna celular** (osteogénica o cambium), con células osteoprogenitoras y osteoblastos. Sus [fibras de Sharpey](glosario:fibras_de_sharpey) penetran en el hueso y lo anclan; a él se unen tendones y ligamentos. Permite que el hueso crezca en grosor y se repare.\n- **Endostio.** Capa muy delgada de células (osteoprogenitoras y de revestimiento óseo) que tapiza las superficies internas: la cara interna de la cortical, la cavidad medular, cada trabécula y los [conductos de Havers](glosario:conducto_de_havers) y de Volkmann. Es la superficie donde ocurre buena parte del [remodelado](glosario:remodelado_oseo) interno y del intercambio de minerales."
+        },
+        {
+          "id": "c_clinico_si_en_una_cirugia_se",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "Si en una cirugía se despega el periostio en una zona amplia, la parte externa de la cortical pierde parte de su irrigación. Por eso se procura conservarlo, sobre todo en la mandíbula, cuyo periostio aporta una parte importante de la irrigación del hueso."
+        },
+        {
+          "id": "i_corte_hueso_capas",
+          "tipo": "imagen",
+          "src": "/images/m1/m1_corte_hueso_capas_rotulado.svg",
+          "alt": "Corte longitudinal de un hueso largo, de la superficie al interior",
+          "pie": "Corte longitudinal de un hueso largo, de la superficie al interior.",
+          "ancho": 800,
+          "alto": 600
+        },
+        {
+          "id": "t_la_osteona_la_unidad_de_la_cortical",
+          "tipo": "texto",
+          "titulo": "La osteona: la unidad de la cortical",
+          "markdown": "La cortical de un adulto está formada por miles de cilindros llamados **[osteonas](glosario:osteona_sistema_de_havers)** o sistemas de Havers, orientados a lo largo del hueso. Cada osteona tiene:\n\n- Un **conducto de Havers** central, de unas 50 µm, que contiene capilares, fibras nerviosas y tejido conjuntivo laxo.\n- Entre 5 y 20 aproximadamente **laminillas concéntricas** de hueso alrededor del conducto.\n- **Osteocitos** en pequeñas cavidades, las **[lagunas](glosario:laguna_y_canaliculo)**, situadas entre las laminillas. Cada osteocito extiende prolongaciones por **canalículos** hasta el conducto central y hasta sus vecinos: es la red que lleva nutrientes y transmite señales.\n- Una **[línea cementante](glosario:linea_cementante)** que rodea la osteona y marca hasta dónde llegó la resorción antes de formarse.\n\nEntre las osteonas hay dos elementos más:\n\n- **Laminillas intersticiales:** restos de osteonas antiguas que quedaron entre las nuevas.\n- **[Conductos de Volkmann](glosario:conducto_de_volkmann):** canales transversales u oblicuos que comunican los conductos de Havers entre sí y con el periostio y la cavidad medular. Llevan vasos y, a diferencia de los de Havers, no están rodeados de laminillas concéntricas propias.\n\nBajo el periostio y alrededor de la cavidad medular hay además laminillas que rodean todo el hueso: las laminillas circunferenciales externas e internas."
+        },
+        {
+          "id": "c_atencion_no_confundas_los_conductos",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "No confundas los conductos. **Havers:** longitudinales y rodeados de laminillas concéntricas. **Volkmann:** transversales u oblicuos y sin laminillas concéntricas propias; conectan."
+        },
+        {
+          "id": "t_organizacion_2",
+          "tipo": "texto",
+          "markdown": "Ahora trabajarás sobre las imágenes: primero el corte completo y después la osteona."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_4_corte_capas",
+            "tipo": "multicapa",
+            "titulo": "Del periostio a la médula",
+            "instrucciones": "La aplicación te pedirá tocar, una por una, cada estructura del corte, desde la superficie hacia el interior (con teclado, Tab para moverte y Enter para confirmar; también puedes elegir en la lista de estructuras bajo la imagen). Si te equivocas, verás una pista y podrás intentarlo de nuevo.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Correcto. Recorriste el corte de fuera hacia dentro: el periostio, la cortical densa, el endostio que tapiza sus caras internas, el hueso trabecular esponjoso y la médula ósea que ocupa sus espacios.",
+              "incorrecta": "Esa no es la estructura pedida. Lee la pista: el endostio es una línea muy fina que tapiza por dentro la cortical y las trabéculas, y la médula ocupa los espacios entre ellas."
+            },
+            "concepto": "Hueso cortical y trabecular, periostio y endostio",
+            "config": {
+              "svg": "/images/m1/m1_corte_hueso_capas.svg",
+              "viewBox": "0 0 800 600",
+              "alt": "Corte longitudinal de la extremidad de un hueso largo, de la superficie al interior.",
+              "modo": "identificar",
+              "capas": [
+                {
+                  "id": "periostio",
+                  "etiqueta": "Periostio",
+                  "descripcion": "Membrana de tejido conjuntivo que cubre por fuera el hueso. Tiene una capa externa fibrosa (vasos, nervios, fibras de Sharpey) y una capa interna celular con células osteoprogenitoras. Permite crecer en grosor y reparar el hueso.",
+                  "pista": "Busca la membrana más externa, la que cubre el hueso por fuera."
+                },
+                {
+                  "id": "hueso_cortical",
+                  "etiqueta": "Hueso cortical",
+                  "descripcion": "Hueso compacto y denso, formado por osteonas y laminillas circunferenciales. Es más grueso en la diáfisis. Resiste la flexión y la torsión.",
+                  "pista": "Busca la capa densa y continua que está justo debajo del periostio."
+                },
+                {
+                  "id": "endostio",
+                  "etiqueta": "Endostio",
+                  "descripcion": "Capa muy delgada de células osteoprogenitoras y de revestimiento. Tapiza la cara interna de la cortical, la cavidad medular, cada trabécula y los conductos de Havers.",
+                  "pista": "Busca la línea muy fina que tapiza por dentro la cortical y las trabéculas."
+                },
+                {
+                  "id": "hueso_trabecular",
+                  "etiqueta": "Hueso trabecular",
+                  "descripcion": "Red de trabéculas con espacios llenos de médula. Predomina en las epífisis y metáfisis. Reparte las cargas y ofrece una gran superficie para el intercambio metabólico.",
+                  "pista": "Busca la red esponjosa de barras y láminas con espacios, hacia el extremo del hueso."
+                },
+                {
+                  "id": "medula_osea",
+                  "etiqueta": "Médula ósea",
+                  "descripcion": "Tejido blando que llena la cavidad medular y los espacios entre trabéculas. Puede ser roja (hematopoyética) o amarilla (adiposa) según la zona y la edad.",
+                  "pista": "Busca el tejido blando que llena la cavidad central y los espacios entre trabéculas."
+                }
+              ],
+              "requeridas": [
+                "periostio",
+                "hueso_cortical",
+                "endostio",
+                "hueso_trabecular",
+                "medula_osea"
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_4_osteona",
+            "tipo": "multicapa",
+            "titulo": "Localiza las partes de la osteona",
+            "instrucciones": "La aplicación te pedirá tocar, una por una, cada estructura de la osteona por su nombre. Si te equivocas, verás una pista y podrás intentarlo de nuevo (con teclado, Tab y Enter; también puedes elegir en la lista de estructuras bajo la imagen).",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Excelente. Localizaste las estructuras de la osteona y distingues los conductos de Havers, longitudinales, de los de Volkmann, transversales.",
+              "incorrecta": "Esa no es la estructura pedida. Lee la pista: el conducto de Havers está en el centro de las laminillas concéntricas; el de Volkmann las cruza y conecta."
+            },
+            "concepto": "Osteona y conductos de Havers y de Volkmann",
+            "config": {
+              "svg": "/images/m1/m1_osteona_detalle.svg",
+              "viewBox": "0 0 800 600",
+              "alt": "Bloque de hueso cortical (esquema clásico) con una osteona en primer plano.",
+              "modo": "identificar",
+              "capas": [
+                {
+                  "id": "conducto_de_havers",
+                  "etiqueta": "Conducto de Havers",
+                  "descripcion": "Canal longitudinal en el centro de la osteona. Contiene capilares, fibras nerviosas y tejido conjuntivo laxo, y mide unas 50 µm.",
+                  "pista": "Busca el canal longitudinal que ocupa el centro de las laminillas concéntricas."
+                },
+                {
+                  "id": "laminillas_concentricas",
+                  "etiqueta": "Laminillas concéntricas",
+                  "descripcion": "Capas cilíndricas de hueso laminar dispuestas alrededor del conducto de Havers. Entre unas 5 y 20 por osteona.",
+                  "pista": "Busca los anillos de hueso que rodean el conducto central."
+                },
+                {
+                  "id": "osteocito_en_laguna",
+                  "etiqueta": "Osteocito en su laguna",
+                  "descripcion": "Osteocito alojado en una cavidad entre laminillas. Es la célula más abundante del hueso adulto y participa en la percepción de la carga.",
+                  "pista": "Busca una célula pequeña alojada en una cavidad entre dos laminillas."
+                },
+                {
+                  "id": "canaliculos",
+                  "etiqueta": "Canalículos",
+                  "descripcion": "Pequeños canales que salen de cada laguna. Por ellos pasan las prolongaciones de los osteocitos, que se conectan entre sí y con el conducto de Havers."
+                },
+                {
+                  "id": "linea_cementante",
+                  "etiqueta": "Línea cementante",
+                  "descripcion": "Contorno que rodea la osteona. Marca el límite hasta donde llegó la resorción antes de que se formara la osteona.",
+                  "pista": "Busca el contorno festoneado que rodea toda la osteona."
+                },
+                {
+                  "id": "conducto_de_volkmann",
+                  "etiqueta": "Conducto de Volkmann",
+                  "descripcion": "Canal transversal u oblicuo que comunica conductos de Havers entre sí y con el periostio y la cavidad medular. Lleva vasos y no tiene laminillas concéntricas propias.",
+                  "pista": "Busca el canal que cruza en sentido transversal u oblicuo y no tiene anillos propios."
+                },
+                {
+                  "id": "laminillas_intersticiales",
+                  "etiqueta": "Laminillas intersticiales",
+                  "descripcion": "Fragmentos de osteonas antiguas que quedaron entre osteonas más recientes tras el remodelado.",
+                  "pista": "Busca los fragmentos angulosos de hueso que quedan entre las osteonas."
+                }
+              ],
+              "requeridas": [
+                "conducto_de_havers",
+                "laminillas_concentricas",
+                "osteocito_en_laguna",
+                "linea_cementante",
+                "conducto_de_volkmann",
+                "laminillas_intersticiales"
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_4_relacion_estructuras",
+            "tipo": "relacion-columnas",
+            "titulo": "Estructuras y definiciones",
+            "instrucciones": "Une cada estructura con su definición. Toca una de cada columna (o arrastra; con teclado, Enter para elegir y flechas para moverte). Una definición de la derecha no corresponde a ninguna estructura.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Correcto. Distingues las membranas del hueso, los conductos y los tipos de arquitectura.",
+              "incorrecta": "Repasa las diferencias: el periostio cubre por fuera y el endostio por dentro; los conductos de Havers son longitudinales y los de Volkmann, transversales."
+            },
+            "concepto": "Organización microscópica del hueso",
+            "config": {
+              "columna_a": {
+                "titulo": "Concepto",
+                "elementos": [
+                  {
+                    "id": "e_periostio",
+                    "texto": "Periostio"
+                  },
+                  {
+                    "id": "e_endostio",
+                    "texto": "Endostio"
+                  },
+                  {
+                    "id": "e_havers",
+                    "texto": "Conducto de Havers"
+                  },
+                  {
+                    "id": "e_volkmann",
+                    "texto": "Conducto de Volkmann"
+                  },
+                  {
+                    "id": "e_intersticiales",
+                    "texto": "Laminillas intersticiales"
+                  },
+                  {
+                    "id": "e_trabecular",
+                    "texto": "Hueso trabecular"
+                  }
+                ]
+              },
+              "columna_b": {
+                "titulo": "Descripción",
+                "elementos": [
+                  {
+                    "id": "s_periostio",
+                    "texto": "Membrana externa con una capa fibrosa y otra celular; sus fibras de Sharpey anclan el hueso y a ella se unen tendones y ligamentos."
+                  },
+                  {
+                    "id": "s_endostio",
+                    "texto": "Capa celular muy delgada que tapiza la cavidad medular y las superficies de las trabéculas."
+                  },
+                  {
+                    "id": "s_havers",
+                    "texto": "Canal longitudinal central de la osteona que contiene capilares y nervios."
+                  },
+                  {
+                    "id": "s_volkmann",
+                    "texto": "Canal transversal u oblicuo que comunica conductos de Havers entre sí y con el periostio y la médula."
+                  },
+                  {
+                    "id": "s_intersticiales",
+                    "texto": "Restos de osteonas antiguas que quedaron entre osteonas más recientes."
+                  },
+                  {
+                    "id": "s_trabecular",
+                    "texto": "Red esponjosa de alta porosidad, predominante en las epífisis y de renovación más rápida."
+                  },
+                  {
+                    "id": "s_distractor_placa",
+                    "texto": "Cartílago que hace crecer el hueso en longitud durante la infancia."
+                  }
+                ]
+              },
+              "pares": [
+                {
+                  "id": "par_e_periostio",
+                  "a": "e_periostio",
+                  "b": "s_periostio",
+                  "explicacion": "Membrana externa con una capa fibrosa y otra celular; sus fibras de Sharpey anclan el hueso y a ella se unen tendones y ligamentos."
+                },
+                {
+                  "id": "par_e_endostio",
+                  "a": "e_endostio",
+                  "b": "s_endostio",
+                  "explicacion": "Capa celular muy delgada que tapiza la cavidad medular y las superficies de las trabéculas."
+                },
+                {
+                  "id": "par_e_havers",
+                  "a": "e_havers",
+                  "b": "s_havers",
+                  "explicacion": "Canal longitudinal central de la osteona que contiene capilares y nervios."
+                },
+                {
+                  "id": "par_e_volkmann",
+                  "a": "e_volkmann",
+                  "b": "s_volkmann",
+                  "explicacion": "Canal transversal u oblicuo que comunica conductos de Havers entre sí y con el periostio y la médula."
+                },
+                {
+                  "id": "par_e_intersticiales",
+                  "a": "e_intersticiales",
+                  "b": "s_intersticiales",
+                  "explicacion": "Restos de osteonas antiguas que quedaron entre osteonas más recientes."
+                },
+                {
+                  "id": "par_e_trabecular",
+                  "a": "e_trabecular",
+                  "b": "s_trabecular",
+                  "explicacion": "Red esponjosa de alta porosidad, predominante en las epífisis y de renovación más rápida."
+                }
+              ],
+              "barajar": true
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_4_quiz_organizacion",
+            "tipo": "quiz",
+            "titulo": "Repaso de la organización del hueso",
+            "instrucciones": "Responde las preguntas de repaso. Tras cada una verás la explicación. Esta actividad es opcional.",
+            "obligatoria": false,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Muy bien. Manejas la organización del hueso desde la superficie hasta la osteona.",
+              "incorrecta": "Vuelve al corte: periostio, cortical, trabecular, endostio y médula; y a la osteona con sus conductos."
+            },
+            "concepto": "Organización microscópica del hueso",
+            "config": {
+              "preguntas": [
+                {
+                  "id": "m1_4_q1",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué contiene el conducto de Havers?",
+                  "opciones": [
+                    {
+                      "id": "m1_4_q1_a",
+                      "texto": "Médula ósea roja y células madre hematopoyéticas"
+                    },
+                    {
+                      "id": "m1_4_q1_b",
+                      "texto": "Solo cristales de hidroxiapatita, sin células ni vasos"
+                    },
+                    {
+                      "id": "m1_4_q1_c",
+                      "texto": "Capilares y nervios rodeados de tejido conjuntivo laxo"
+                    },
+                    {
+                      "id": "m1_4_q1_d",
+                      "texto": "Osteocitos dentro de sus lagunas, sin vasos"
+                    }
+                  ],
+                  "correctas": ["m1_4_q1_c"],
+                  "explicacion": "El conducto de Havers lleva la irrigación y la inervación de la osteona: capilares, fibras nerviosas y tejido conjuntivo laxo. Los osteocitos viven en lagunas de las laminillas, no en el conducto.",
+                  "concepto": "Osteona y conductos de Havers y de Volkmann",
+                  "dificultad": 1
+                },
+                {
+                  "id": "m1_4_q2",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué tipo de hueso predomina en la epífisis de un hueso largo y se renueva más rápido por su gran superficie?",
+                  "opciones": [
+                    {
+                      "id": "m1_4_q2_a",
+                      "texto": "Cortical, con osteonas gruesas"
+                    },
+                    {
+                      "id": "m1_4_q2_b",
+                      "texto": "Trabecular, de estructura esponjosa"
+                    },
+                    {
+                      "id": "m1_4_q2_c",
+                      "texto": "Cortical, con laminillas circunferenciales"
+                    },
+                    {
+                      "id": "m1_4_q2_d",
+                      "texto": "Entretejido, que forma la epífisis del adulto"
+                    }
+                  ],
+                  "correctas": ["m1_4_q2_b"],
+                  "explicacion": "La epífisis es sobre todo hueso trabecular. Su mayor superficie en contacto con la médula favorece un recambio más rápido que el de la cortical.",
+                  "concepto": "Hueso cortical y trabecular",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_4_q3",
+                  "formato": "verdadero_falso",
+                  "enunciado": "El periostio es la capa de células que tapiza la cavidad medular y la superficie de las trabéculas.",
+                  "correcta": false,
+                  "explicacion": "Es falso. Esa es la descripción del endostio. El periostio cubre la superficie externa del hueso.",
+                  "concepto": "Periostio y endostio",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_4_q4",
+                  "formato": "opcion_multiple",
+                  "enunciado": "En un corte de la diáfisis se ve un canal que atraviesa la cortical de forma oblicua, sin laminillas concéntricas propias, y que lleva un vaso sanguíneo. ¿Qué estructura es?",
+                  "opciones": [
+                    {
+                      "id": "m1_4_q4_a",
+                      "texto": "Un conducto de Volkmann"
+                    },
+                    {
+                      "id": "m1_4_q4_b",
+                      "texto": "Un conducto de Havers"
+                    },
+                    {
+                      "id": "m1_4_q4_c",
+                      "texto": "Un canalículo"
+                    },
+                    {
+                      "id": "m1_4_q4_d",
+                      "texto": "Una laguna osteocitaria"
+                    }
+                  ],
+                  "correctas": ["m1_4_q4_a"],
+                  "explicacion": "Los conductos de Volkmann cruzan de forma transversal u oblicua, comunican los conductos de Havers y no están rodeados de laminillas concéntricas. Los de Havers son longitudinales; los canalículos son mucho más pequeños.",
+                  "concepto": "Osteona y conductos de Havers y de Volkmann",
+                  "dificultad": 3
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m1_5_mandibula",
+      "titulo": "La mandíbula, un hueso bajo carga",
+      "bloques": [
+        {
+          "id": "t_mandibula",
+          "tipo": "texto",
+          "markdown": "Es hora de aplicar todo lo anterior a un hueso concreto: la mandíbula. Es un hueso móvil, porque se articula con el cráneo y se mueve para masticar, hablar y abrir la boca. Aloja los dientes y soporta las cargas de la masticación una y otra vez a lo largo del día.\n\n#### Anatomía de la mandíbula\n\n- **Cuerpo:** la porción horizontal, en forma de arco de herradura. Su borde superior lleva los dientes; su borde inferior es la base.\n- **Rama:** la porción vertical a cada lado, que sube desde el cuerpo.\n- **Ángulo:** la esquina donde se unen el borde inferior del cuerpo y el borde posterior de la rama. Ahí se insertan el masetero (por fuera) y el pterigoideo medial (por dentro).\n- **Cóndilo (proceso condilar):** en el extremo posterior de la rama. Su cabeza se articula con el hueso temporal en la articulación temporomandibular; su cuello es estrecho y recibe al pterigoideo lateral.\n- **Apófisis coronoides:** la proyección triangular anterior de la rama; en ella se inserta el músculo temporal.\n- **Escotadura mandibular:** la concavidad entre la coronoides y el cóndilo.\n- **Sínfisis mentoniana:** la línea media donde se unen las dos mitades. Al nacer es una unión fibrosa, y se osifica durante el primer año de vida.\n- **Foramen mentoniano:** abertura en la cara externa del cuerpo, por lo general bajo el segundo premolar o entre los premolares. Por él sale el nervio mentoniano con sus vasos.\n- **Foramen y [conducto mandibular](glosario:conducto_mandibular):** el foramen mandibular está en la cara medial de la rama, protegido por una pequeña lengüeta ósea, la língula. Da entrada al **conducto mandibular**, que recorre por dentro la rama y el cuerpo con el nervio alveolar inferior y sus vasos. A la altura de los premolares emite una rama que sale por el foramen mentoniano; el resto continúa hacia delante como conducto incisivo.\n- **[Apófisis alveolar](glosario:apofisis_alveolar):** el borde superior del cuerpo, con los alvéolos donde se alojan las raíces de los dientes."
+        },
+        {
+          "id": "c_clinico_el_nervio_alveolar",
+          "tipo": "callout",
+          "variante": "clinico",
+          "markdown": "El nervio alveolar inferior se anestesia cerca del foramen mandibular. Al planificar un implante o extraer un tercer molar hay que ubicar con precisión el conducto mandibular y el foramen mentoniano para no lesionar el nervio. Además, el ángulo y el cuello del cóndilo se cuentan entre los sitios más frecuentes de fractura mandibular."
+        },
+        {
+          "id": "t_estructura_interna",
+          "tipo": "texto",
+          "titulo": "Estructura interna",
+          "markdown": "Como en cualquier hueso, la mandíbula tiene hueso cortical y trabecular. Su cuerpo es una cortical gruesa, sobre todo hacia el borde inferior, que rodea un núcleo de hueso trabecular con médula. Esa combinación resiste bien la flexión y la torsión que provoca la masticación.\n\n#### La apófisis alveolar y el hueso alveolar propio\n\nLa apófisis alveolar es la parte de la mandíbula que existe gracias a los dientes. Tiene dos componentes:\n\n- **[Hueso alveolar propio](glosario:hueso_alveolar_propio_lamina_cribiforme):** una lámina delgada que reviste cada alvéolo. Está perforada por pequeños orificios por donde pasan vasos y nervios hacia el ligamento periodontal, por eso también se llama **lámina cribiforme**. Recibe las fibras de Sharpey del ligamento periodontal, que anclan el diente al hueso. En una radiografía se ve como una línea densa: la **lámina dura**.\n- **Hueso alveolar de soporte:** las tablas corticales vestibular y lingual, más el hueso trabecular que hay entre ellas y el hueso alveolar propio."
+        },
+        {
+          "id": "i_proceso_alveolar_corte",
+          "tipo": "imagen",
+          "src": "/images/m1/m1_proceso_alveolar_corte_rotulado.svg",
+          "alt": "Corte transversal del cuerpo mandibular a la altura de una raíz dentaria",
+          "pie": "Corte transversal del cuerpo mandibular a la altura de una raíz dentaria.",
+          "ancho": 800,
+          "alto": 600
+        },
+        {
+          "id": "c_atencion_el_hueso_alveolar_propio",
+          "tipo": "callout",
+          "variante": "atencion",
+          "markdown": "El hueso alveolar propio no es toda la apófisis alveolar. Es solo la delgada lámina que reviste el alvéolo y recibe las fibras del ligamento periodontal."
+        },
+        {
+          "id": "t_la_mandibula_como_palanca_y_su_carga",
+          "tipo": "texto",
+          "titulo": "La mandíbula como palanca y su carga masticatoria",
+          "markdown": "Al morder, la mandíbula funciona como una palanca. El punto de apoyo es la articulación temporomandibular. La fuerza la generan los músculos elevadores (masetero, temporal y pterigoideo medial). La resistencia es el alimento entre los dientes. En términos generales se describe como una palanca de tercera clase, con la fuerza aplicada entre el apoyo y la resistencia.\n\nEsa fuerza somete al hueso a **flexión, torsión, compresión y cizallamiento**. La sínfisis, donde se unen las dos mitades, es una zona donde se concentran esfuerzos de flexión y torsión. La fuerza máxima de mordida en los molares es del orden de varios cientos de newtons, aproximadamente entre 300 y 700 N según la población y el método de medición. Al masticar se usa solo una fracción de esa fuerza, pero esas cargas más pequeñas se repiten miles de veces al día.\n\nEl diente transmite la carga al hueso a través del ligamento periodontal: la fuerza que empuja al diente hacia el alvéolo se convierte en tensión sobre las fibras del ligamento, que tiran del hueso alveolar propio. Esa tensión es una señal mecánica para las células del hueso.\n\n#### La ley de Wolff\n\nEn 1892, el anatomista y cirujano alemán Julius Wolff propuso que el hueso adapta su arquitectura interna y su forma externa a las cargas que soporta. Se refuerza donde la carga aumenta y se debilita donde disminuye. La imagen clásica es el fémur proximal: sus trabéculas se alinean con las líneas de máxima compresión y de tracción."
+        },
+        {
+          "id": "i_wolff_femur",
+          "tipo": "imagen",
+          "src": "/images/m1/m1_wolff_femur.svg",
+          "alt": "Corte frontal del fémur proximal con la orientación de las trabéculas",
+          "pie": "Corte frontal del fémur proximal con la orientación de las trabéculas.",
+          "ancho": 800,
+          "alto": 600
+        },
+        {
+          "id": "t_mandibula_2",
+          "tipo": "texto",
+          "markdown": "La ciencia actual habla de **adaptación funcional**. El hueso detecta cuánto se deforma; si la deformación supera cierto umbral, forma hueso, y si es muy baja, lo pierde. Responde más a cargas dinámicas y repetidas que a cargas estáticas. La [ley de Wolff](glosario:ley_de_wolff) no es una ecuación exacta, sino un principio general bien respaldado. Describe la adaptación a cargas fisiológicas sostenidas; la fuerza ortodóncica, en cambio, es un caso de remodelado dirigido, como verás en los ejemplos. Cómo detectan la carga las células (la mecanotransducción) lo verás en el módulo 3.\n\nAlgunos ejemplos generales: el brazo dominante de un tenista tiene más masa ósea que el otro; un astronauta pierde masa ósea en los huesos que soportan peso tras meses de microgravedad.\n\n#### Ejemplos en la mandíbula\n\n- **Pérdida de un diente.** Sin diente, el hueso alveolar deja de recibir la carga que le transmitía el ligamento periodontal y se reabsorbe. Tras una extracción, la pérdida ocurre en dos fases. En los primeros meses se reabsorbe con rapidez el hueso alveolar propio, que depende del diente, junto con el remodelado de cicatrización: ahí se pierde la mayor parte del ancho del reborde. A largo plazo, la falta de carga mantiene la pérdida. En algunos estudios el ancho llega a disminuir cerca de la mitad en el primer año.\n- **Ortodoncia.** Una fuerza controlada sobre un diente comprime el ligamento periodontal de un lado y lo estira del otro. El estímulo llega al hueso a través del ligamento: se reabsorbe hueso alveolar en el lado comprimido y se forma hueso nuevo en el lado traccionado, y el diente se mueve a través del hueso. Es un remodelado dirigido, no una simple aplicación de \"más carga, más hueso\".\n- **Implantes.** Un implante osteointegrado transmite las cargas masticatorias al hueso, que vuelve a recibir estímulo mecánico y puede ayudar a conservar su masa. Una carga excesiva, en cambio, puede dañar el hueso de alrededor."
+        },
+        {
+          "id": "c_recuerda_el_hueso_es_un_tejido_vivo",
+          "tipo": "callout",
+          "variante": "recuerda",
+          "markdown": "El hueso es un tejido vivo que se adapta a la carga. Lo que se usa se conserva; lo que deja de usarse tiende a perderse."
+        },
+        {
+          "id": "t_mandibula_3",
+          "tipo": "texto",
+          "markdown": "Cierra el módulo explorando la mandíbula en 3D, viendo el hueso alveolar por dentro, aplicando la ley de Wolff a casos reales y, al final, con la evaluación final."
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_5_mandibula_3d",
+            "tipo": "exploracion-3d",
+            "titulo": "Explora la mandíbula en 3D",
+            "instrucciones": "Gira la mandíbula con un dedo y acércala con dos (en escritorio, arrastra con el ratón y usa la rueda). Toca cada punto luminoso para leer qué estructura es. Con teclado, Tab y Enter, o elige en la lista bajo el modelo (sirve también sin 3D). Visita los nueve puntos requeridos.",
+            "obligatoria": true,
+            "puntaje_max": 30,
+            "retroalimentacion": {
+              "correcta": "Excelente. Reconoces las estructuras principales de la mandíbula, desde el cóndilo hasta el hueso alveolar.",
+              "incorrecta": "Todavía quedan puntos por visitar. Gira el modelo: algunas estructuras, como el foramen mandibular, están en la cara interna y otras, como el foramen mentoniano, en la externa."
+            },
+            "concepto": "Anatomía de la mandíbula",
+            "config": {
+              "modelo": "mandibula",
+              "alt": "Modelo tridimensional de la mandíbula que se puede girar y acercar; sus zonas se tocan para leer su ficha.",
+              "nodos": [
+                {
+                  "id": "cuerpo",
+                  "etiqueta": "Cuerpo",
+                  "descripcion": "Porción horizontal, en forma de arco de herradura. En su borde superior está la apófisis alveolar y en su cara externa se abre el foramen mentoniano. Tiene una cortical gruesa, sobre todo hacia el borde inferior, que rodea un núcleo de hueso trabecular.",
+                  "ancla": {
+                    "x": 0.2,
+                    "y": 0.3,
+                    "z": 0.6
+                  }
+                },
+                {
+                  "id": "rama",
+                  "etiqueta": "Rama",
+                  "descripcion": "Porción vertical a cada lado. Da inserción al masetero en su cara lateral y al pterigoideo medial en su cara medial, y sostiene la apófisis coronoides y el cóndilo. En su cara medial está el foramen mandibular.",
+                  "ancla": {
+                    "x": 0.06,
+                    "y": 0.55,
+                    "z": 0.15
+                  }
+                },
+                {
+                  "id": "angulo",
+                  "etiqueta": "Ángulo",
+                  "descripcion": "Unión del borde inferior del cuerpo con el borde posterior de la rama. Ahí se insertan el masetero por fuera y el pterigoideo medial por dentro. Es un sitio frecuente de fractura.",
+                  "ancla": {
+                    "x": 0.06,
+                    "y": 0.1,
+                    "z": 0.03
+                  }
+                },
+                {
+                  "id": "condilo",
+                  "etiqueta": "Cóndilo (proceso condilar)",
+                  "descripcion": "Tiene una cabeza convexa que se articula con la fosa mandibular del hueso temporal, formando la articulación temporomandibular, y un cuello estrecho donde se inserta el pterigoideo lateral. Es el punto de apoyo de la palanca mandibular.",
+                  "ancla": {
+                    "x": 0.08,
+                    "y": 0.98,
+                    "z": 0.05
+                  }
+                },
+                {
+                  "id": "apofisis_coronoides",
+                  "etiqueta": "Apófisis coronoides",
+                  "descripcion": "Proyección triangular anterior de la rama. Recibe la inserción del músculo temporal, un potente elevador de la mandíbula.",
+                  "ancla": {
+                    "x": 0.08,
+                    "y": 0.95,
+                    "z": 0.3
+                  }
+                },
+                {
+                  "id": "escotadura_mandibular",
+                  "etiqueta": "Escotadura mandibular",
+                  "descripcion": "Concavidad entre la apófisis coronoides y el cóndilo. Por ella pasan los vasos y el nervio del masetero hacia el músculo.",
+                  "ancla": {
+                    "x": 0.07,
+                    "y": 0.82,
+                    "z": 0.17
+                  }
+                },
+                {
+                  "id": "sinfisis",
+                  "etiqueta": "Sínfisis mentoniana",
+                  "descripcion": "Línea media anterior donde se unen las dos mitades de la mandíbula. Al nacer es una unión fibrosa que se osifica durante el primer año de vida. Concentra esfuerzos de flexión y torsión al morder. En su cara externa se forma la protuberancia mentoniana.",
+                  "ancla": {
+                    "x": 0.5,
+                    "y": 0.35,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "id": "foramen_mentoniano",
+                  "etiqueta": "Foramen mentoniano",
+                  "descripcion": "Abertura en la cara externa del cuerpo, por lo general bajo el segundo premolar o entre los premolares. Por aquí sale el nervio mentoniano con sus vasos, que dan sensibilidad al labio inferior y al mentón.",
+                  "ancla": {
+                    "x": 0.28,
+                    "y": 0.35,
+                    "z": 0.8
+                  }
+                },
+                {
+                  "id": "foramen_mandibular",
+                  "etiqueta": "Foramen mandibular",
+                  "descripcion": "El foramen mandibular está en la cara medial de la rama, protegido por la língula. Da entrada al conducto mandibular, que recorre por dentro la rama y el cuerpo y contiene el nervio alveolar inferior con sus vasos. A la altura de los premolares emite una rama que sale por el foramen mentoniano. El marcador está en el foramen; el trayecto del conducto es interno.",
+                  "ancla": {
+                    "x": 0.14,
+                    "y": 0.6,
+                    "z": 0.17
+                  }
+                },
+                {
+                  "id": "proceso_alveolar",
+                  "etiqueta": "Proceso alveolar (apófisis alveolar)",
+                  "descripcion": "Borde superior del cuerpo, con los alvéolos donde se alojan las raíces dentarias. Está formada por hueso alveolar propio (la lámina cribiforme que reviste el alvéolo y recibe las fibras del ligamento periodontal) y por hueso alveolar de soporte (tablas corticales y hueso trabecular). Depende de los dientes: se forma con ellos y se reabsorbe si se pierden.",
+                  "ancla": {
+                    "x": 0.22,
+                    "y": 0.5,
+                    "z": 0.6
+                  }
+                }
+              ],
+              "requeridos": [
+                "cuerpo",
+                "rama",
+                "angulo",
+                "condilo",
+                "apofisis_coronoides",
+                "sinfisis",
+                "foramen_mentoniano",
+                "foramen_mandibular",
+                "proceso_alveolar"
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_5_proceso_alveolar",
+            "tipo": "multicapa",
+            "titulo": "El hueso alveolar por dentro",
+            "instrucciones": "La aplicación te pedirá tocar, una por una, cuatro estructuras del corte (con teclado, Tab y Enter; también puedes elegir en la lista de estructuras bajo la imagen). Si te equivocas, verás una pista y podrás intentarlo de nuevo.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Muy bien. Distingues el hueso alveolar propio, que reviste el alvéolo y recibe las fibras del ligamento, del hueso de soporte formado por las tablas corticales y el hueso trabecular.",
+              "incorrecta": "Esa no es la estructura pedida. Lee la pista y recuerda que el hueso alveolar propio es solo la lámina que toca al ligamento periodontal, no toda la apófisis alveolar."
+            },
+            "concepto": "Hueso alveolar propio",
+            "config": {
+              "svg": "/images/m1/m1_proceso_alveolar_corte.svg",
+              "viewBox": "0 0 800 600",
+              "alt": "Corte transversal (vestibulolingual) del cuerpo mandibular a la altura de una raíz dentaria.",
+              "modo": "identificar",
+              "capas": [
+                {
+                  "id": "hueso_alveolar_propio",
+                  "etiqueta": "Hueso alveolar propio (lámina cribiforme)",
+                  "descripcion": "Lámina delgada que reviste el alvéolo, perforada por orificios por donde pasan vasos y nervios hacia el ligamento periodontal. Recibe las fibras de Sharpey del ligamento. En las radiografías se ve como una línea densa, la lámina dura.",
+                  "pista": "Busca la lámina delgada y densa que reviste el alvéolo, pegada al ligamento."
+                },
+                {
+                  "id": "tablas_corticales",
+                  "etiqueta": "Tablas corticales vestibular y lingual",
+                  "descripcion": "Láminas de hueso cortical en las caras vestibular y lingual de la apófisis alveolar. Forman el contorno exterior y dan resistencia.",
+                  "pista": "Busca las capas densas del contorno exterior, por el lado de la mejilla y por el de la lengua."
+                },
+                {
+                  "id": "hueso_trabecular_alveolar",
+                  "etiqueta": "Hueso trabecular de soporte",
+                  "descripcion": "Hueso esponjoso entre el hueso alveolar propio y las tablas corticales. Sus trabéculas se orientan según las fuerzas que transmite el diente. Contiene médula ósea.",
+                  "pista": "Busca la red esponjosa que hay entre el alvéolo y las tablas corticales."
+                },
+                {
+                  "id": "ligamento_periodontal",
+                  "etiqueta": "Ligamento periodontal",
+                  "descripcion": "Tejido conjuntivo fibroso, muy delgado, situado entre la raíz y el hueso alveolar propio. Sus fibras unen el diente al hueso y transmiten la carga de la masticación.",
+                  "pista": "Busca la banda fibrosa muy delgada entre la raíz y la pared del alvéolo."
+                },
+                {
+                  "id": "raiz_dentaria",
+                  "etiqueta": "Raíz del diente",
+                  "descripcion": "Parte del diente alojada en el alvéolo: dentina cubierta por cemento. Transmite la fuerza masticatoria al hueso a través del ligamento periodontal."
+                },
+                {
+                  "id": "conducto_mandibular",
+                  "etiqueta": "Conducto mandibular",
+                  "descripcion": "Conducto situado bajo las raíces, cerca del borde inferior del cuerpo, con el nervio alveolar inferior y sus vasos. Su posición condiciona la cirugía y los implantes."
+                }
+              ],
+              "requeridas": [
+                "hueso_alveolar_propio",
+                "tablas_corticales",
+                "hueso_trabecular_alveolar",
+                "ligamento_periodontal"
+              ]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_5_wolff_casos",
+            "tipo": "relacion-columnas",
+            "titulo": "Aplica la ley de Wolff",
+            "instrucciones": "Une cada situación con la respuesta esperada del hueso. Toca una de cada columna (o arrastra; con teclado, Enter para elegir y flechas para moverte). Una respuesta de la derecha es incorrecta para todas las situaciones.",
+            "obligatoria": true,
+            "puntaje_max": 20,
+            "retroalimentacion": {
+              "correcta": "Correcto. El hueso remodela según cómo cambia la carga. Si aumenta de forma fisiológica, se refuerza (tenista, implante). Si falta, se pierde (astronauta, extracción). Si cambia de dirección, se reorganiza: en ortodoncia se reabsorbe en el lado comprimido del ligamento y se forma hueso en el lado traccionado.",
+              "incorrecta": "Alguna unión no es correcta. Pregúntate si en cada situación la carga sobre el hueso aumenta, disminuye o cambia de dirección."
+            },
+            "concepto": "Ley de Wolff",
+            "config": {
+              "columna_a": {
+                "titulo": "Concepto",
+                "elementos": [
+                  {
+                    "id": "w_astronauta",
+                    "texto": "Un astronauta pasa meses en microgravedad"
+                  },
+                  {
+                    "id": "w_tenista",
+                    "texto": "El brazo dominante de un tenista profesional"
+                  },
+                  {
+                    "id": "w_extraccion",
+                    "texto": "Se pierde un molar inferior y no se reemplaza"
+                  },
+                  {
+                    "id": "w_ortodoncia",
+                    "texto": "Se aplica una fuerza ortodóncica controlada sobre un diente"
+                  },
+                  {
+                    "id": "w_implante",
+                    "texto": "Un implante osteointegrado recibe carga masticatoria adecuada"
+                  }
+                ]
+              },
+              "columna_b": {
+                "titulo": "Descripción",
+                "elementos": [
+                  {
+                    "id": "v_astronauta",
+                    "texto": "Pérdida de masa ósea en los huesos que soportan peso, por disminución de la carga."
+                  },
+                  {
+                    "id": "v_tenista",
+                    "texto": "Mayor grosor cortical y mayor densidad ósea que en el brazo no dominante."
+                  },
+                  {
+                    "id": "v_extraccion",
+                    "texto": "Reabsorción del hueso alveolar del reborde, porque depende del diente y de la carga que este le transmitía."
+                  },
+                  {
+                    "id": "v_ortodoncia",
+                    "texto": "Remodelado dirigido a través del ligamento: hueso que se reabsorbe donde comprime y se forma donde tracciona."
+                  },
+                  {
+                    "id": "v_implante",
+                    "texto": "El hueso de alrededor vuelve a recibir estímulo mecánico, lo que puede ayudar a conservar su masa."
+                  },
+                  {
+                    "id": "v_distractor_inerte",
+                    "texto": "No hay cambio: el hueso adulto es inerte y no responde a la carga."
+                  }
+                ]
+              },
+              "pares": [
+                {
+                  "id": "par_w_astronauta",
+                  "a": "w_astronauta",
+                  "b": "v_astronauta",
+                  "explicacion": "Pérdida de masa ósea en los huesos que soportan peso, por disminución de la carga."
+                },
+                {
+                  "id": "par_w_tenista",
+                  "a": "w_tenista",
+                  "b": "v_tenista",
+                  "explicacion": "Mayor grosor cortical y mayor densidad ósea que en el brazo no dominante."
+                },
+                {
+                  "id": "par_w_extraccion",
+                  "a": "w_extraccion",
+                  "b": "v_extraccion",
+                  "explicacion": "Reabsorción del hueso alveolar del reborde, porque depende del diente y de la carga que este le transmitía."
+                },
+                {
+                  "id": "par_w_ortodoncia",
+                  "a": "w_ortodoncia",
+                  "b": "v_ortodoncia",
+                  "explicacion": "Remodelado dirigido a través del ligamento: hueso que se reabsorbe donde comprime y se forma donde tracciona."
+                },
+                {
+                  "id": "par_w_implante",
+                  "a": "w_implante",
+                  "b": "v_implante",
+                  "explicacion": "El hueso de alrededor vuelve a recibir estímulo mecánico, lo que puede ayudar a conservar su masa."
+                }
+              ],
+              "barajar": true
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_5_wolff_femur",
+            "tipo": "multicapa",
+            "titulo": "Las trabéculas siguen la carga",
+            "instrucciones": "Toca cada zona del fémur para ver cómo se orienta el hueso según la carga (con teclado, Tab para pasar de una zona a otra y Enter para abrir su descripción). Esta actividad es opcional.",
+            "obligatoria": false,
+            "puntaje_max": 10,
+            "retroalimentacion": {
+              "correcta": "Bien. Las trabéculas no están al azar: siguen las líneas de compresión y de tracción, tal como propuso Wolff.",
+              "incorrecta": "Faltan zonas por visitar. Observa cómo se cruzan los dos sistemas de trabéculas."
+            },
+            "concepto": "Ley de Wolff",
+            "config": {
+              "svg": "/images/m1/m1_wolff_femur.svg",
+              "viewBox": "0 0 800 600",
+              "alt": "Corte frontal de la extremidad proximal del fémur con la orientación de las trabéculas.",
+              "modo": "explorar",
+              "capas": [
+                {
+                  "id": "trayectorias_compresion",
+                  "etiqueta": "Trabéculas de compresión",
+                  "descripcion": "Siguen las líneas de compresión: van desde la cortical medial del cuello del fémur hacia la parte superior de la cabeza."
+                },
+                {
+                  "id": "trayectorias_traccion",
+                  "etiqueta": "Trabéculas de tracción",
+                  "descripcion": "Siguen las líneas de tracción: parten de la cortical lateral y se arquean hacia la parte inferior de la cabeza. Se cruzan con las de compresión casi en ángulo recto."
+                },
+                {
+                  "id": "corteza_femoral",
+                  "etiqueta": "Cortical del fémur",
+                  "descripcion": "La cortical es más gruesa donde la carga es mayor, como en el lado medial del cuello y en la diáfisis. Es un modelo simplificado."
+                }
+              ],
+              "requeridas": ["trayectorias_compresion", "trayectorias_traccion", "corteza_femoral"]
+            }
+          }
+        },
+        {
+          "tipo": "actividad",
+          "actividad": {
+            "id": "m1_5_evaluacion_final",
+            "tipo": "quiz",
+            "titulo": "Evaluación final del módulo 1",
+            "instrucciones": "Responde las 13 preguntas; tras cada una verás si acertaste y por qué. En la de ordenar, toca los pasos en orden (o muévelos con el teclado). Al terminar se calcula tu puntaje. Para el logro Primer hueso necesitas completar todas las actividades obligatorias y al menos el 60 % de esta evaluación.",
+            "obligatoria": true,
+            "aprobacion_min": 0.6,
+            "puntaje_max": 100,
+            "retroalimentacion": {
+              "correcta": "Felicitaciones. Dominas las ideas centrales del hueso: su naturaleza, sus funciones, su matriz, su organización y su adaptación a la carga en la mandíbula.",
+              "incorrecta": "Repasa los conceptos donde fallaste: el mentor puede ayudarte a reforzarlos con ejemplos y nuevas preguntas."
+            },
+            "concepto": "Evaluación integradora del módulo 1",
+            "config": {
+              "preguntas": [
+                {
+                  "id": "m1_e_q1",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué diferencia hay entre 'hueso' y 'tejido óseo'?",
+                  "opciones": [
+                    {
+                      "id": "m1_e_q1_a",
+                      "texto": "Son sinónimos: ambos términos designan la matriz mineralizada."
+                    },
+                    {
+                      "id": "m1_e_q1_b",
+                      "texto": "El hueso es solo la matriz; el tejido óseo incluye células y vasos."
+                    },
+                    {
+                      "id": "m1_e_q1_c",
+                      "texto": "El hueso es un órgano; el tejido óseo es su tejido principal."
+                    },
+                    {
+                      "id": "m1_e_q1_d",
+                      "texto": "El hueso es el tejido del adulto; el tejido óseo, el del niño."
+                    }
+                  ],
+                  "correctas": ["m1_e_q1_c"],
+                  "explicacion": "El hueso es un órgano: reúne tejido óseo, médula ósea, periostio, endostio, vasos, nervios y cartílago articular. El tejido óseo es el tejido conjuntivo especializado que forma la mayor parte de él.",
+                  "concepto": "Hueso y tejido óseo",
+                  "dificultad": 1
+                },
+                {
+                  "id": "m1_e_q2",
+                  "formato": "opcion_multiple",
+                  "enunciado": "Baja el calcio en la sangre. ¿Qué respuesta del cuerpo es la correcta?",
+                  "opciones": [
+                    {
+                      "id": "m1_e_q2_a",
+                      "texto": "Las paratiroides secretan más PTH, que libera calcio del hueso y lo retiene en el riñón."
+                    },
+                    {
+                      "id": "m1_e_q2_b",
+                      "texto": "Las paratiroides secretan menos PTH y el hueso deposita más calcio en su matriz."
+                    },
+                    {
+                      "id": "m1_e_q2_c",
+                      "texto": "El hueso deja de reabsorberse y el riñón elimina más calcio por la orina para compensar."
+                    },
+                    {
+                      "id": "m1_e_q2_d",
+                      "texto": "El hueso sintetiza vitamina D activa y así aumenta la absorción intestinal de calcio."
+                    }
+                  ],
+                  "correctas": ["m1_e_q2_a"],
+                  "explicacion": "Ante una calcemia baja, las paratiroides secretan PTH: aumenta la resorción ósea, aumenta la reabsorción renal de calcio y estimula la síntesis renal de calcitriol. La vitamina D activa se forma en el riñón, no en el hueso.",
+                  "concepto": "Homeostasis del calcio",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_e_q3",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué hace el FGF23 que producen los osteocitos?",
+                  "opciones": [
+                    {
+                      "id": "m1_e_q3_a",
+                      "texto": "Estimula a los osteoblastos vecinos para que formen más hueso."
+                    },
+                    {
+                      "id": "m1_e_q3_b",
+                      "texto": "Aumenta la pérdida de fosfato por la orina y reduce el calcitriol."
+                    },
+                    {
+                      "id": "m1_e_q3_c",
+                      "texto": "Libera calcio del hueso cuando baja la calcemia."
+                    },
+                    {
+                      "id": "m1_e_q3_d",
+                      "texto": "Aumenta la reabsorción de fosfato en el túbulo proximal."
+                    }
+                  ],
+                  "correctas": ["m1_e_q3_b"],
+                  "explicacion": "FGF23 lo producen los osteocitos y actúa en el túbulo proximal del riñón: aumenta la pérdida de fosfato por la orina y reduce el calcitriol. Frenar la formación de hueso es la función local de la esclerostina, y movilizar calcio es la de la PTH.",
+                  "concepto": "Función endocrina del hueso",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_e_q4",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué propiedad aporta principalmente la hidroxiapatita al hueso?",
+                  "opciones": [
+                    {
+                      "id": "m1_e_q4_a",
+                      "texto": "Flexibilidad y resistencia cuando el hueso se estira."
+                    },
+                    {
+                      "id": "m1_e_q4_b",
+                      "texto": "Regulación de la mineralización y de la adhesión celular."
+                    },
+                    {
+                      "id": "m1_e_q4_c",
+                      "texto": "Elasticidad, con recuperación de forma tras estirarse."
+                    },
+                    {
+                      "id": "m1_e_q4_d",
+                      "texto": "Dureza y resistencia a la compresión, y reserva de calcio."
+                    }
+                  ],
+                  "correctas": ["m1_e_q4_d"],
+                  "explicacion": "La hidroxiapatita es el mineral de la matriz: da dureza y resistencia a la compresión. La flexibilidad y la resistencia a la tracción las aporta el colágeno tipo I, y las proteínas no colágenas regulan la mineralización.",
+                  "concepto": "Fase mineral: hidroxiapatita",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_e_q5",
+                  "formato": "verdadero_falso",
+                  "enunciado": "La osteogénesis imperfecta se debe, en la mayoría de los casos, a mutaciones en los genes del colágeno tipo I.",
+                  "correcta": true,
+                  "explicacion": "Es verdadero. Se debe a mutaciones en COL1A1 o COL1A2, que alteran la fase orgánica y producen un hueso frágil. Los defectos de mineralización producen, en cambio, raquitismo y osteomalacia.",
+                  "concepto": "Colágeno tipo I",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_e_q6",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿En qué se diferencia el hueso trabecular del cortical?",
+                  "opciones": [
+                    {
+                      "id": "m1_e_q6_a",
+                      "texto": "En el adulto sano es hueso inmaduro (entretejido)."
+                    },
+                    {
+                      "id": "m1_e_q6_b",
+                      "texto": "Su unidad estructural es la osteona, con conducto de Havers."
+                    },
+                    {
+                      "id": "m1_e_q6_c",
+                      "texto": "Tiene mayor porosidad y superficie, y se renueva más rápido."
+                    },
+                    {
+                      "id": "m1_e_q6_d",
+                      "texto": "Predomina en la diáfisis de los huesos largos y forma su pared."
+                    }
+                  ],
+                  "correctas": ["m1_e_q6_c"],
+                  "explicacion": "El hueso trabecular es una red de trabéculas con alta porosidad y gran superficie en contacto con la médula, lo que favorece un recambio más rápido. Tiene osteocitos, es laminar en el adulto y no depende de conductos de Havers; la pared de la diáfisis es cortical.",
+                  "concepto": "Hueso cortical y trabecular",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_e_q7",
+                  "formato": "opcion_multiple",
+                  "enunciado": "Una célula osteoprogenitora se encuentra en la capa interna de una membrana que cubre por fuera la diáfisis de un hueso. ¿Qué estructura es?",
+                  "opciones": [
+                    {
+                      "id": "m1_e_q7_a",
+                      "texto": "El periostio"
+                    },
+                    {
+                      "id": "m1_e_q7_b",
+                      "texto": "El endostio"
+                    },
+                    {
+                      "id": "m1_e_q7_c",
+                      "texto": "El pericondrio"
+                    },
+                    {
+                      "id": "m1_e_q7_d",
+                      "texto": "La membrana sinovial"
+                    }
+                  ],
+                  "correctas": ["m1_e_q7_a"],
+                  "explicacion": "El periostio cubre por fuera el hueso y tiene una capa interna celular (osteogénica) con células osteoprogenitoras. El endostio tapiza las superficies internas; el pericondrio rodea el cartílago; la membrana sinovial reviste la cápsula articular.",
+                  "concepto": "Periostio y endostio",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_e_q8",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Cuál de estas afirmaciones distingue correctamente los conductos de Havers y de Volkmann?",
+                  "opciones": [
+                    {
+                      "id": "m1_e_q8_a",
+                      "texto": "Ambos son longitudinales y están rodeados de laminillas concéntricas propias."
+                    },
+                    {
+                      "id": "m1_e_q8_b",
+                      "texto": "Havers: transversales y sin laminillas; Volkmann: longitudinales, con ellas."
+                    },
+                    {
+                      "id": "m1_e_q8_c",
+                      "texto": "Los de Volkmann corren dentro de cada osteona, alrededor de un capilar."
+                    },
+                    {
+                      "id": "m1_e_q8_d",
+                      "texto": "Havers: longitudinales, con laminillas; Volkmann: oblicuos, sin laminillas propias."
+                    }
+                  ],
+                  "correctas": ["m1_e_q8_d"],
+                  "explicacion": "Los conductos de Havers son longitudinales y están en el centro de una osteona, rodeados de laminillas concéntricas. Los de Volkmann cruzan de forma transversal u oblicua, conectan conductos de Havers entre sí y con el periostio y la médula, y no tienen laminillas concéntricas propias.",
+                  "concepto": "Osteona y conductos de Havers y de Volkmann",
+                  "dificultad": 3
+                },
+                {
+                  "id": "m1_e_q9",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿En cuál de estas situaciones es más probable encontrar hueso entretejido?",
+                  "opciones": [
+                    {
+                      "id": "m1_e_q9_a",
+                      "texto": "En la cortical de la diáfisis de un adulto sano."
+                    },
+                    {
+                      "id": "m1_e_q9_b",
+                      "texto": "En el callo de una fractura en reparación."
+                    },
+                    {
+                      "id": "m1_e_q9_c",
+                      "texto": "En una osteona madura de la cortical."
+                    },
+                    {
+                      "id": "m1_e_q9_d",
+                      "texto": "En el hueso trabecular de una vértebra sana."
+                    }
+                  ],
+                  "correctas": ["m1_e_q9_b"],
+                  "explicacion": "El hueso entretejido se forma rápido, sin una superficie previa, por eso aparece en el callo de fractura. La cortical madura, las osteonas y el hueso trabecular sano del adulto son laminares.",
+                  "concepto": "Hueso laminar y entretejido",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_e_q10",
+                  "formato": "ordenar",
+                  "enunciado": "Ordena, desde la superficie hacia el interior, las capas de un corte transversal de la diáfisis.",
+                  "pasos": [
+                    {
+                      "id": "m1_e_q10_p1",
+                      "texto": "Periostio"
+                    },
+                    {
+                      "id": "m1_e_q10_p2",
+                      "texto": "Hueso cortical"
+                    },
+                    {
+                      "id": "m1_e_q10_p3",
+                      "texto": "Endostio"
+                    },
+                    {
+                      "id": "m1_e_q10_p4",
+                      "texto": "Médula ósea"
+                    }
+                  ],
+                  "explicacion": "De fuera hacia dentro: el periostio cubre la superficie, sigue la cortical, el endostio tapiza la cavidad medular y en el centro está la médula ósea.",
+                  "concepto": "Periostio y endostio",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_e_q11",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué estructura de la mandíbula contiene el nervio alveolar inferior durante su trayecto por la rama y el cuerpo?",
+                  "opciones": [
+                    {
+                      "id": "m1_e_q11_a",
+                      "texto": "El conducto mandibular"
+                    },
+                    {
+                      "id": "m1_e_q11_b",
+                      "texto": "El conducto de Volkmann"
+                    },
+                    {
+                      "id": "m1_e_q11_c",
+                      "texto": "El foramen mentoniano"
+                    },
+                    {
+                      "id": "m1_e_q11_d",
+                      "texto": "La escotadura mandibular"
+                    }
+                  ],
+                  "correctas": ["m1_e_q11_a"],
+                  "explicacion": "El nervio alveolar inferior entra por el foramen mandibular y viaja dentro del conducto mandibular. El foramen mentoniano es su salida como nervio mentoniano; la escotadura es una concavidad de la rama; los conductos de Volkmann son de la cortical.",
+                  "concepto": "Anatomía de la mandíbula",
+                  "dificultad": 2
+                },
+                {
+                  "id": "m1_e_q12",
+                  "formato": "opcion_multiple",
+                  "enunciado": "¿Qué parte de la apófisis alveolar reviste el alvéolo y recibe las fibras de Sharpey del ligamento periodontal?",
+                  "opciones": [
+                    {
+                      "id": "m1_e_q12_a",
+                      "texto": "La tabla cortical vestibular de la apófisis"
+                    },
+                    {
+                      "id": "m1_e_q12_b",
+                      "texto": "El hueso alveolar propio (lámina cribiforme)"
+                    },
+                    {
+                      "id": "m1_e_q12_c",
+                      "texto": "El hueso trabecular de soporte del alvéolo"
+                    },
+                    {
+                      "id": "m1_e_q12_d",
+                      "texto": "La cortical gruesa del borde basal del cuerpo"
+                    }
+                  ],
+                  "correctas": ["m1_e_q12_b"],
+                  "explicacion": "El hueso alveolar propio es la lámina delgada que reviste el alvéolo y ancla las fibras del ligamento periodontal. Las tablas corticales y el hueso trabecular forman el hueso de soporte.",
+                  "concepto": "Hueso alveolar propio",
+                  "dificultad": 3
+                },
+                {
+                  "id": "m1_e_q13",
+                  "formato": "opcion_multiple",
+                  "enunciado": "Tras perder un molar inferior sin reemplazarlo, el reborde alveolar se reabsorbe con los años. ¿Qué principio lo explica mejor?",
+                  "opciones": [
+                    {
+                      "id": "m1_e_q13_a",
+                      "texto": "El hueso alveolar propio es entretejido y se reabsorbe por ser inmaduro."
+                    },
+                    {
+                      "id": "m1_e_q13_b",
+                      "texto": "Una osteonecrosis por pérdida del periostio del reborde."
+                    },
+                    {
+                      "id": "m1_e_q13_c",
+                      "texto": "La ley de Wolff: sin la carga del diente, el hueso se pierde."
+                    },
+                    {
+                      "id": "m1_e_q13_d",
+                      "texto": "Un aumento de la actividad de los osteoblastos por falta de estímulo."
+                    }
+                  ],
+                  "correctas": ["m1_e_q13_c"],
+                  "explicacion": "El hueso alveolar depende del diente y de la carga que le transmite el ligamento periodontal. En los primeros meses se reabsorbe sobre todo el hueso alveolar propio, con el remodelado de cicatrización; a largo plazo, la falta de carga mantiene la pérdida, como predice la ley de Wolff.",
+                  "concepto": "Ley de Wolff",
+                  "dificultad": 3
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

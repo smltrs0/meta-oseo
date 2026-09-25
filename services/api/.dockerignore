@@ -1,0 +1,29 @@
+# Contexto de construcción de la API = services/api. Solo entra lo que la imagen necesita:
+# pyproject.toml, uv.lock, .python-version, alembic.ini, alembic/, app/ y docker-entrypoint.sh.
+
+# Secretos y entorno local
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Entornos y cachés de Python
+.venv
+**/__pycache__
+**/*.pyc
+.pytest_cache
+.ruff_cache
+.mypy_cache
+
+# Datos locales (SQLite de desarrollo, corpus del RAG y su índice)
+data
+corpus
+*.db
+*.sqlite3
+
+# Pruebas y archivos de repositorio
+tests
+.git
+.gitignore
+Dockerfile
+.dockerignore

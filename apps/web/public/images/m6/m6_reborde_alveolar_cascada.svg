@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none" stroke-linejoin="round" stroke-linecap="round" font-family="ui-sans-serif, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<!-- m6_reborde_alveolar_cascada. Figura (se muestra como imagen) con seis cortes vestibulolinguales (vestibular a la izquierda, lingual a la derecha) de la región posterior del cuerpo mandibular, a la misma escala. Etapas 1 a 6 = clases I a VI de Cawood y Howell. El borde inferior y el conducto mandibular no cambian de posición; la línea discontinua marca la altura de la cresta en la etapa 1. Cada panel usa las mismas coordenadas locales (0 a 252 por 0 a 282) desplazadas con translate. -->
+<title>Cascada de reabsorción del reborde alveolar</title>
+<desc>Seis cortes transversales de la región posterior de la mandíbula, a la misma escala. Etapa 1: molar en su alvéolo, con ligamento periodontal, hueso alveolar propio, tablas corticales, flechas de carga y conducto mandibular bajo la raíz. Etapa 2: alvéolo vacío tras la extracción, con el hueso alveolar propio todavía visible y sin flechas de carga. Etapa 3: alvéolo relleno de hueso y reborde redondeado. Etapa 4: reborde en filo de cuchillo. Etapa 5: reborde plano. Etapa 6: solo hueso basal delgado, con el conducto casi en la superficie. El borde inferior y el conducto no cambian de sitio: lo que baja es la cresta.</desc>
+<g id="fondo_lamina"><rect x="4" y="4" width="792" height="592" rx="14" fill="#f1edfa" stroke="#2b2350" stroke-width="4"/></g>
+<g id="etapa_1_diente_presente">
+<g transform="translate(14 12)">
+<rect x="0" y="0" width="252" height="282" rx="12" fill="#fbfaff" stroke="#2b2350" stroke-width="2.5"/>
+<text x="126" y="32" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Etapa 1 (I)</text>
+<path d="M70 118H92L94 130L96 160Q104 196 126 206Q148 196 156 160L158 130L160 118H182L184 150L190 190L198 222V252Q198 270 180 270H72Q54 270 54 252V222L62 190L68 150Z" fill="#ecb8c8"/>
+<path d="M78 122L76 150L70 190L62 222V250Q62 262 72 262H180Q190 262 190 250V222L184 190L178 150L176 122" stroke="#d98aa2" stroke-width="14"/>
+<path d="M84 170Q90 190 98 204M168 170Q162 190 154 204M84 248Q106 254 118 252M134 252Q150 254 170 248" stroke="#c87a97" stroke-width="3"/>
+<path d="M70 118H92L94 130L96 160Q104 196 126 206Q148 196 156 160L158 130L160 118H182L184 150L190 190L198 222V252Q198 270 180 270H72Q54 270 54 252V222L62 190L68 150Z" stroke="#2b2350" stroke-width="4"/>
+<path d="M94 118L96 84Q100 66 112 66Q120 74 126 70Q132 74 140 66Q152 66 156 84L158 118Z" fill="#f2e5b6" stroke="#2b2350" stroke-width="4"/>
+<path d="M96 84Q100 66 112 66Q120 74 126 70Q132 74 140 66Q152 66 156 84Q126 94 96 84Z" fill="#fbfaff" stroke="#2b2350" stroke-width="3"/>
+<path d="M98 118L100 150Q106 190 126 200Q146 190 152 150L154 118Z" fill="#f2e5b6" stroke="#2b2350" stroke-width="4"/>
+<path d="M118 100Q126 94 134 100V150Q132 178 126 188Q120 178 118 150Z" fill="#f6c6d6" stroke="#2b2350" stroke-width="2.5"/>
+</g>
+</g>
+<g id="etapa_2_alveolo_postextraccion">
+<g transform="translate(274 12)">
+<rect x="0" y="0" width="252" height="282" rx="12" fill="#fbfaff" stroke="#2b2350" stroke-width="2.5"/>
+<text x="126" y="32" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Etapa 2 (II)</text>
+<path d="M70 118H92L94 130L96 160Q104 196 126 206Q148 196 156 160L158 130L160 118H182L184 150L190 190L198 222V252Q198 270 180 270H72Q54 270 54 252V222L62 190L68 150Z" fill="#ecb8c8"/>
+<path d="M78 122L76 150L70 190L62 222V250Q62 262 72 262H180Q190 262 190 250V222L184 190L178 150L176 122" stroke="#d98aa2" stroke-width="14"/>
+<path d="M84 170Q90 190 98 204M168 170Q162 190 154 204M84 248Q106 254 118 252M134 252Q150 254 170 248" stroke="#c87a97" stroke-width="3"/>
+<path d="M92 118L94 130L96 160Q104 196 126 206Q148 196 156 160L158 130L160 118Z" fill="#f8e3ea"/>
+<path d="M70 118H92L94 130L96 160Q104 196 126 206Q148 196 156 160L158 130L160 118H182L184 150L190 190L198 222V252Q198 270 180 270H72Q54 270 54 252V222L62 190L68 150Z" stroke="#2b2350" stroke-width="4"/>
+</g>
+</g>
+<g id="etapa_3_reborde_redondeado">
+<g transform="translate(534 12)">
+<rect x="0" y="0" width="252" height="282" rx="12" fill="#fbfaff" stroke="#2b2350" stroke-width="2.5"/>
+<text x="126" y="32" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Etapa 3 (III)</text>
+<path d="M30 118H222" stroke="#2b2350" stroke-width="2.5" stroke-dasharray="8 7" opacity="0.5"/>
+<path d="M70 140Q70 126 90 122Q126 114 162 122Q182 126 182 140L184 156L190 190L198 222V252Q198 270 180 270H72Q54 270 54 252V222L62 190L68 156Z" fill="#ecb8c8"/>
+<path d="M80 140Q84 132 100 129Q126 124 152 129Q168 132 174 140L176 150L180 156L184 190L190 222V250Q190 262 180 262H72Q62 262 62 250V222L70 190L74 156L78 150Z" stroke="#d98aa2" stroke-width="14"/>
+<path d="M96 162Q104 190 116 210M156 162Q148 190 136 210M84 248Q106 254 118 252M134 252Q150 254 170 248" stroke="#c87a97" stroke-width="3"/>
+<path d="M70 140Q70 126 90 122Q126 114 162 122Q182 126 182 140L184 156L190 190L198 222V252Q198 270 180 270H72Q54 270 54 252V222L62 190L68 156Z" stroke="#2b2350" stroke-width="4"/>
+</g>
+</g>
+<g id="etapa_4_reborde_filo_cuchillo">
+<g transform="translate(14 306)">
+<rect x="0" y="0" width="252" height="282" rx="12" fill="#fbfaff" stroke="#2b2350" stroke-width="2.5"/>
+<text x="126" y="32" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Etapa 4 (IV)</text>
+<path d="M30 118H222" stroke="#2b2350" stroke-width="2.5" stroke-dasharray="8 7" opacity="0.5"/>
+<path d="M126 142Q131 142 134 150L160 170L186 192L198 222V252Q198 270 180 270H72Q54 270 54 252V222L66 192L92 170L118 150Q121 142 126 142Z" fill="#ecb8c8"/>
+<path d="M126 152L100 174L76 196L62 222V250Q62 262 72 262H180Q190 262 190 250V222L176 196L152 174Z" stroke="#d98aa2" stroke-width="14"/>
+<path d="M104 200Q114 214 120 222M148 200Q138 214 132 222M84 248Q106 254 118 252M134 252Q150 254 170 248" stroke="#c87a97" stroke-width="3"/>
+<path d="M126 142Q131 142 134 150L160 170L186 192L198 222V252Q198 270 180 270H72Q54 270 54 252V222L66 192L92 170L118 150Q121 142 126 142Z" stroke="#2b2350" stroke-width="4"/>
+</g>
+</g>
+<g id="etapa_5_reborde_plano">
+<g transform="translate(274 306)">
+<rect x="0" y="0" width="252" height="282" rx="12" fill="#fbfaff" stroke="#2b2350" stroke-width="2.5"/>
+<text x="126" y="32" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Etapa 5 (V)</text>
+<path d="M30 118H222" stroke="#2b2350" stroke-width="2.5" stroke-dasharray="8 7" opacity="0.5"/>
+<path d="M62 188Q70 180 84 180H168Q182 180 190 188L196 204L198 222V252Q198 270 180 270H72Q54 270 54 252V222L56 204Z" fill="#ecb8c8"/>
+<path d="M76 190Q80 188 90 188H162Q172 188 176 190L186 204L190 222V250Q190 262 180 262H72Q62 262 62 250V222L66 204Z" stroke="#d98aa2" stroke-width="14"/>
+<path d="M88 204Q100 212 112 208M140 208Q154 212 166 204M84 248Q106 254 118 252M134 252Q150 254 170 248" stroke="#c87a97" stroke-width="3"/>
+<path d="M62 188Q70 180 84 180H168Q182 180 190 188L196 204L198 222V252Q198 270 180 270H72Q54 270 54 252V222L56 204Z" stroke="#2b2350" stroke-width="4"/>
+</g>
+</g>
+<g id="etapa_6_reborde_deprimido">
+<g transform="translate(534 306)">
+<rect x="0" y="0" width="252" height="282" rx="12" fill="#fbfaff" stroke="#2b2350" stroke-width="2.5"/>
+<text x="126" y="32" font-size="30" text-anchor="middle" font-weight="600" fill="#2b2350" stroke="none">Etapa 6 (VI)</text>
+<path d="M30 118H222" stroke="#2b2350" stroke-width="2.5" stroke-dasharray="8 7" opacity="0.5"/>
+<path d="M54 240L58 220Q62 208 76 205Q100 209 126 207Q152 209 176 205Q190 208 194 220L198 240V252Q198 270 180 270H72Q54 270 54 252Z" fill="#ecb8c8"/>
+<path d="M70 216Q100 217 126 215Q152 217 182 216M66 226L62 240V250Q62 262 72 262H180Q190 262 190 250V240L186 226" stroke="#d98aa2" stroke-width="10"/>
+<path d="M84 250Q106 256 118 254M134 254Q150 256 170 250" stroke="#c87a97" stroke-width="3"/>
+<path d="M54 240L58 220Q62 208 76 205Q100 209 126 207Q152 209 176 205Q190 208 194 220L198 240V252Q198 270 180 270H72Q54 270 54 252Z" stroke="#2b2350" stroke-width="4"/>
+</g>
+</g>
+<g id="hueso_alveolar_propio">
+<g transform="translate(14 12)">
+<path d="M88 118L90 130L91 160Q99 200 126 212Q153 200 161 160L162 130L164 118" stroke="#a8506f" stroke-width="6"/>
+</g>
+<g transform="translate(274 12)">
+<path d="M88 118L90 130L91 160Q99 200 126 212Q153 200 161 160L162 130L164 118" stroke="#a8506f" stroke-width="6"/>
+</g>
+</g>
+<g id="ligamento_periodontal">
+<g transform="translate(14 12)">
+<path d="M95 122L97 160Q105 198 126 207Q147 198 155 160L157 122" stroke="#b9cf8f" stroke-width="9"/>
+<path d="M95 122L97 160Q105 198 126 207Q147 198 155 160L157 122" stroke="#6f8a3a" stroke-width="2.5" stroke-dasharray="3 5"/>
+</g>
+</g>
+<g id="carga_funcional">
+<g transform="translate(14 12)">
+<path d="M108 42V58M144 42V58" stroke="#2b2350" stroke-width="10"/>
+<path d="M108 42V58M144 42V58" stroke="#e58c3c" stroke-width="5"/>
+<path d="M108 68L96 54H120ZM144 68L132 54H156Z" fill="#e58c3c" stroke="#2b2350" stroke-width="3.5"/>
+<path d="M98 150L80 156M154 150L172 156" stroke="#2b2350" stroke-width="10"/>
+<path d="M98 150L80 156M154 150L172 156" stroke="#e58c3c" stroke-width="5"/>
+<path d="M72 158L84 146L88 164ZM180 158L168 146L164 164Z" fill="#e58c3c" stroke="#2b2350" stroke-width="3.5"/>
+</g>
+</g>
+<g id="conducto_mandibular">
+<g transform="translate(14 12)">
+<circle cx="126" cy="232" r="13" fill="#f1edfa" stroke="#2b2350" stroke-width="4"/>
+<circle cx="126" cy="232" r="6.5" fill="#f0d36b" stroke="#2b2350" stroke-width="2"/>
+<circle cx="119" cy="238" r="3" fill="#d9574a"/>
+<circle cx="134" cy="238" r="3" fill="#d9574a"/>
+</g>
+<g transform="translate(274 12)">
+<circle cx="126" cy="232" r="13" fill="#f1edfa" stroke="#2b2350" stroke-width="4"/>
+<circle cx="126" cy="232" r="6.5" fill="#f0d36b" stroke="#2b2350" stroke-width="2"/>
+<circle cx="119" cy="238" r="3" fill="#d9574a"/>
+<circle cx="134" cy="238" r="3" fill="#d9574a"/>
+</g>
+<g transform="translate(534 12)">
+<circle cx="126" cy="232" r="13" fill="#f1edfa" stroke="#2b2350" stroke-width="4"/>
+<circle cx="126" cy="232" r="6.5" fill="#f0d36b" stroke="#2b2350" stroke-width="2"/>
+<circle cx="119" cy="238" r="3" fill="#d9574a"/>
+<circle cx="134" cy="238" r="3" fill="#d9574a"/>
+</g>
+<g transform="translate(14 306)">
+<circle cx="126" cy="232" r="13" fill="#f1edfa" stroke="#2b2350" stroke-width="4"/>
+<circle cx="126" cy="232" r="6.5" fill="#f0d36b" stroke="#2b2350" stroke-width="2"/>
+<circle cx="119" cy="238" r="3" fill="#d9574a"/>
+<circle cx="134" cy="238" r="3" fill="#d9574a"/>
+</g>
+<g transform="translate(274 306)">
+<circle cx="126" cy="232" r="13" fill="#f1edfa" stroke="#2b2350" stroke-width="4"/>
+<circle cx="126" cy="232" r="6.5" fill="#f0d36b" stroke="#2b2350" stroke-width="2"/>
+<circle cx="119" cy="238" r="3" fill="#d9574a"/>
+<circle cx="134" cy="238" r="3" fill="#d9574a"/>
+</g>
+<g transform="translate(534 306)">
+<circle cx="126" cy="232" r="13" fill="#f1edfa" stroke="#2b2350" stroke-width="4"/>
+<circle cx="126" cy="232" r="6.5" fill="#f0d36b" stroke="#2b2350" stroke-width="2"/>
+<circle cx="119" cy="238" r="3" fill="#d9574a"/>
+<circle cx="134" cy="238" r="3" fill="#d9574a"/>
+</g>
+</g>
+</svg>

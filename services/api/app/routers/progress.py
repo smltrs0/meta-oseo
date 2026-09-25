@@ -2,15 +2,21 @@
 
 from typing import Annotated
 
-from fastapi import APIRouter, Path
+from fastapi import APIRouter, Path, Query
 
 from app.core.constants import ACTIVITY_ID_PATTERN, MODULE_COUNT
 from app.core.db import SessionDep
 from app.core.errors import ErrorResponse
 from app.core.security import CurrentUser
-from app.schemas.activity import ActivityResultCreate, ActivityResultRead, ActivityResultResponse
+from app.schemas.activity import (
+    ActivityResultCreate,
+    ActivityResultRead,
+    ActivityResultResponse,
+    ActivityResultsResponse,
+)
 from app.schemas.progress import ProgressRead, ProgressUpdate, ProgressUpdateResponse
 from app.services import progress as progress_service
+from app.services.manifest import ManifestDep
 
 router = APIRouter(prefix="/api", tags=["progreso"])
 
@@ -44,20 +50,56 @@ def read_progress(user: CurrentUser, session: SessionDep) -> ProgressRead:
 @router.put(
     "/progress/{modulo}",
     response_model=ProgressUpdateResponse,
-    responses=_UNAUTHORIZED,
+    responses={
+        **_UNAUTHORIZED,
+        409: {
+            "model": ErrorResponse,
+            "description": "`modulo_incompleto`: faltan actividades obligatorias (con manifiesto).",
+        },
+    },
     summary="Actualizar el progreso de un módulo",
 )
 def update_progress(
-    modulo: ModuloPath, body: ProgressUpdate, user: CurrentUser, session: SessionDep
+    modulo: ModuloPath,
+    body: ProgressUpdate,
+    user: CurrentUser,
+    session: SessionDep,
+    manifest: ManifestDep,
 ) -> ProgressUpdateResponse:
     assert user.id is not None
-    return progress_service.update_module_progress(session, user.id, modulo, body)
+    return progress_service.update_module_progress(session, user.id, modulo, body, manifest)
+
+
+@router.get(
+    "/activities/results",
+    response_model=ActivityResultsResponse,
+    responses=_UNAUTHORIZED,
+    summary="Resultados por actividad del usuario (mejor puntaje, intentos, completada)",
+)
+def read_activity_results(
+    user: CurrentUser,
+    session: SessionDep,
+    modulo: Annotated[
+        int | None,
+        Query(ge=1, le=MODULE_COUNT, description="Filtra por número de módulo."),
+    ] = None,
+) -> ActivityResultsResponse:
+    assert user.id is not None
+    return ActivityResultsResponse(
+        resultados=progress_service.list_activity_results(session, user.id, modulo)
+    )
 
 
 @router.post(
     "/activities/{activity_id}/result",
     response_model=ActivityResultResponse,
-    responses=_UNAUTHORIZED,
+    responses={
+        **_UNAUTHORIZED,
+        422: {
+            "model": ErrorResponse,
+            "description": "`actividad_desconocida` o `puntaje_invalido` (con manifiesto).",
+        },
+    },
     summary="Registrar el resultado de un intento de actividad",
 )
 def post_activity_result(
@@ -65,10 +107,11 @@ def post_activity_result(
     body: ActivityResultCreate,
     user: CurrentUser,
     session: SessionDep,
+    manifest: ManifestDep,
 ) -> ActivityResultResponse:
     assert user.id is not None
     row, total, new_achievements = progress_service.record_activity_result(
-        session, user.id, activity_id, body
+        session, user.id, activity_id, body, manifest
     )
     return ActivityResultResponse(
         resultado=ActivityResultRead.model_validate(row),

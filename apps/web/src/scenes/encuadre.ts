@@ -13,7 +13,7 @@ export const RADIO_NORMALIZADO = 1;
 export const FOV_VERTICAL_GRADOS = 40;
 
 /** Aire alrededor del modelo al encuadrarlo (1 = pegado a los bordes). */
-export const MARGEN_ENCUADRE = 1.2;
+export const MARGEN_ENCUADRE = 1.1;
 
 /** Elevación de la cámara inicial sobre el plano horizontal, en grados (vista ligeramente picada). */
 export const ELEVACION_INICIAL_GRADOS = 12;
@@ -67,10 +67,7 @@ export type LimitesDistancia = { minima: number; maxima: number };
  * Límites del zoom (pinch/rueda). La mínima impide meter la cámara dentro del hueso y la
  * máxima evita perderlo de vista.
  */
-export function limitesDistancia(
-  radio: number,
-  distanciaEncuadre: number,
-): LimitesDistancia {
+export function limitesDistancia(radio: number, distanciaEncuadre: number): LimitesDistancia {
   const minima = radio * 1.4;
   return { minima, maxima: Math.max(minima * 2, distanciaEncuadre * 2.2) };
 }

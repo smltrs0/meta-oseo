@@ -10,6 +10,7 @@ import type { Router, RouteRecordRaw } from 'vue-router';
 import { createRouter, createWebHistory } from 'vue-router';
 import { useAuthStore } from '@/stores/auth';
 import { guardarSesion } from './guard';
+import { guardarModulo } from './guardModulo';
 
 declare module 'vue-router' {
   interface RouteMeta {
@@ -68,9 +69,13 @@ export function crearRouter(history = createWebHistory()): Router {
   const router = createRouter({
     history,
     routes: rutas,
-    scrollBehavior: (_to, _from, guardada) => guardada ?? { top: 0 },
+    // Un cambio solo de query en la misma ruta (la sección de un módulo, `?s=`) lo maneja la página:
+    // mueve el foco y el desplazamiento al título de la sección.
+    scrollBehavior: (to, from, guardada) =>
+      guardada ?? (to.path === from.path ? false : { top: 0 }),
   });
   router.beforeEach(guardarSesion);
+  router.beforeEach(guardarModulo);
   router.afterEach((to) => {
     const titulo = to.meta.titulo;
     document.title = titulo ? `${titulo} · ${NOMBRE_APP}` : NOMBRE_APP;

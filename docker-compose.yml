@@ -1,0 +1,103 @@
+# Perfil de producción del OVA: PostgreSQL (con pgvector) + API (FastAPI) + nginx (SPA y proxy).
+#
+#   cp .env.example .env     # y completar SECRET_KEY (obligatoria) y, si se quiere el mentor,
+#                            # ANTHROPIC_API_KEY. Sin SECRET_KEY, compose se niega a arrancar.
+#   docker compose up --build
+#   -> http://localhost:8080
+#
+# Compose lee el .env de la raíz solo para interpolar las variables de este archivo, y a los
+# contenedores les pasa únicamente lo que se lista en `environment`: el ENV=dev y el DATABASE_URL
+# de SQLite que trae .env.example para desarrollo local no llegan a la API.
+#
+# En desarrollo diario NO se usa Docker: SQLite + `uv run uvicorn` + `pnpm dev:web` (ver README).
+
+name: ova
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-ova}
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?Define POSTGRES_PASSWORD en el .env (ver .env.example)}"
+      POSTGRES_DB: ${POSTGRES_DB:-ova}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Crea la extensión pgvector al inicializar el volumen (solo la primera vez).
+      - ./docker/initdb/01-extensiones.sql:/docker-entrypoint-initdb.d/01-extensiones.sql:ro
+    # SIN `ports`: la base solo es visible para los demás servicios de esta red. Publicarla
+    # chocaría además con el PostgreSQL de Laragon, que ya ocupa el 5432 del anfitrión.
+    healthcheck:
+      # -h 127.0.0.1 (TCP): mientras se ejecutan los scripts de initdb la imagen levanta un
+      # servidor temporal que solo escucha por socket Unix, y sin -h pg_isready diría "listo"
+      # antes de que la API pueda conectarse.
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+
+  api:
+    build:
+      context: ./services/api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # ENV=prod exige una SECRET_KEY propia (>= 32 caracteres, distinta de los valores de
+      # ejemplo); si no, la API termina al arrancar con un mensaje claro. Generar una con:
+      #   python -c "import secrets; print(secrets.token_urlsafe(48))"
+      ENV: prod
+      SECRET_KEY: "${SECRET_KEY:?Define SECRET_KEY en el .env (32+ caracteres, ver .env.example)}"
+      # La contraseña va dentro de una URL: si lleva caracteres especiales (@ : / ? # %) hay que
+      # escribirla codificada en POSTGRES_PASSWORD, o usar una alfanumérica.
+      DATABASE_URL: "postgresql+psycopg://${POSTGRES_USER:-ova}:${POSTGRES_PASSWORD:?Define POSTGRES_PASSWORD en el .env}@db:5432/${POSTGRES_DB:-ova}"
+      # El navegador llega por nginx (mismo origen), así que CORS casi no interviene.
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:8080}
+      # Seguro solo porque nginx SOBRESCRIBE X-Forwarded-For (apps/web/nginx.conf). La API no
+      # se publica al anfitrión: nadie puede llegar a ella sin pasar por ese nginx.
+      TRUST_PROXY: "true"
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-opus-5}
+      MENTOR_EFFORT: ${MENTOR_EFFORT:-medium}
+      MENTOR_MAX_TOKENS: ${MENTOR_MAX_TOKENS:-16000}
+      MENTOR_SERVER_FALLBACK: ${MENTOR_SERVER_FALLBACK:-true}
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES:-10080}
+      # Certificado (F5-05). El manifiesto de actividades viaja en la imagen (app/data) y se
+      # carga solo si existe; no hace falta configurar su ruta.
+      CERT_MIN_PORCENTAJE: ${CERT_MIN_PORCENTAJE:-70}
+      # URL con la que el navegador llega al sitio (nginx): va impresa en el PDF del certificado.
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-http://localhost:8080}
+    # SIN `ports`: solo `web` (nginx) la alcanza, por el nombre `api` dentro de la red.
+    expose:
+      - "8000"
+    healthcheck:
+      # La imagen no trae curl: se consulta /api/health con el propio Python. urlopen lanza
+      # excepción ante cualquier estado >= 400 y el proceso sale con código distinto de 0.
+      test:
+        - CMD
+        - python
+        - -c
+        - "import sys, urllib.request; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=3).status == 200 else 1)"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      # El arranque incluye `alembic upgrade head`.
+      start_period: 30s
+
+  web:
+    build:
+      # Contexto = raíz del repo: el pnpm-lock.yaml y el workspace están allí.
+      # Qué se envía lo decide el .dockerignore de la raíz.
+      context: .
+      dockerfile: apps/web/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:

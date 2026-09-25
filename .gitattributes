@@ -1,0 +1,3 @@
+# Los scripts de shell deben conservar saltos de línea LF: con CRLF (Git en Windows con
+# autocrlf) el docker-entrypoint.sh falla dentro del contenedor Linux.
+*.sh text eol=lf

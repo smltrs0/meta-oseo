@@ -29,6 +29,9 @@ for _name in (
     "ANTHROPIC_MODEL",
     "MENTOR_EFFORT",
     "MENTOR_MAX_TOKENS",
+    "ACTIVITIES_MANIFEST_PATH",
+    "CERT_MIN_PORCENTAJE",
+    "PUBLIC_BASE_URL",
 ):
     os.environ.pop(_name, None)
 os.environ["ENV"] = "dev"
@@ -140,6 +143,9 @@ def settings(database_url: str) -> Settings:
         secret_key=TEST_SECRET_KEY,
         database_url=database_url,
         allowed_origins=["http://localhost:5173"],
+        # Sin manifiesto por defecto: la validación contra el contenido se prueba con
+        # `make_app(activities_manifest_path=...)`, no depende de lo que haya en app/data.
+        activities_manifest_path=None,
     )
 
 
