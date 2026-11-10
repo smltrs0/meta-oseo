@@ -707,13 +707,6 @@
           "alto": 1024
         },
         {
-          "id": "c_dato_en_el_hueso_alveolar_los",
-          "tipo": "callout",
-          "variante": "dato",
-          "titulo": "¿Dónde se encuentran?",
-          "markdown": "En el hueso alveolar, los osteoblastos se localizan sobre las superficies donde ocurre formación y remodelado, incluida la superficie del hueso alveolar propiamente dicho que está en relación con el ligamento periodontal; en esta región participan en la adaptación del hueso a las demandas mecánicas y en el mantenimiento del soporte dentario"
-        },
-        {
           "id": "img_m2_2_i07",
           "tipo": "imagen",
           "src": "/images/m2/m2_2_imagen_07.webp",
@@ -721,6 +714,13 @@
           "pie": "¿Dónde se encuentran los osteoblastos?",
           "ancho": 1536,
           "alto": 1024
+        },
+        {
+          "id": "c_dato_en_el_hueso_alveolar_los",
+          "tipo": "callout",
+          "variante": "dato",
+          "titulo": "En el hueso alveolar",
+          "markdown": "En el hueso alveolar, los osteoblastos se localizan sobre las superficies donde ocurre formación y remodelado, incluida la superficie del hueso alveolar propiamente dicho que está en relación con el ligamento periodontal; en esta región participan en la adaptación del hueso a las demandas mecánicas y en el mantenimiento del soporte dentario."
         },
         {
           "id": "t_regulacion_de_la_diferenciacion_y",
