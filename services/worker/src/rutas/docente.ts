@@ -120,7 +120,7 @@ const ConfigMentorEntrada = z
   .superRefine((v, ctx) => {
     if (v.proveedor === 'openai_compatible') {
       if (!v.base_url) {
-        ctx.addIssue({ code: 'custom', path: ['base_url'], message: 'Indica la URL base del proveedor compatible (termina en /v1).' });
+        ctx.addIssue({ code: 'custom', path: ['base_url'], message: 'Indica la URL base del proveedor compatible (la que da su documentación).' });
       } else if (!v.base_url.startsWith('https://')) {
         ctx.addIssue({ code: 'custom', path: ['base_url'], message: 'La URL base debe empezar por https://.' });
       }

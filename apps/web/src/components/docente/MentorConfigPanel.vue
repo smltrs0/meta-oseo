@@ -46,7 +46,7 @@ const PROVEEDORES: readonly OpcionProveedor[] = [
     etiqueta: 'Otro proveedor compatible con OpenAI',
     modeloEjemplo: 'llama-3.3-70b-versatile',
     ayuda:
-      'Groq, DeepSeek, Mistral, OpenRouter, Gemini (endpoint compatible) y similares: indica la URL base que termina en /v1.',
+      'Groq, DeepSeek, Mistral, OpenRouter, Gemini (endpoint compatible) y similares: indica la URL base que da el proveedor (Gemini: …/v1beta/openai; los demás suelen terminar en /v1).',
   },
 ];
 
