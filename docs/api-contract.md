@@ -21,6 +21,7 @@ backend, frontend y este documento a la vez. Ver también PLAN.md §3 (`Contexto
 |---|---|---|
 | 401 | `token_invalido` | Falta el token, expiró o no verifica |
 | 404 | `usuario_no_encontrado` | `login` con una identificación que no existe |
+| 401 | `contrasena_requerida` / `contrasena_incorrecta` | `login` de una cuenta con contraseña (la del docente) sin `password` o con una incorrecta |
 | 409 | `usuario_existente` | `register` con una identificación ya registrada |
 | 404 | `certificado_no_emitido` | `GET /api/certificate/pdf` sin haber emitido el certificado |
 | 404 | `certificado_no_encontrado` | `GET /api/verify/{codigo}` con un código inexistente o mal formado (público, sin más datos) |
@@ -94,6 +95,11 @@ El rol `docente` no se puede autoasignar; se promueve por script de línea de co
 ```
 → `200 TokenResponse`. `404 usuario_no_encontrado` si no existe. La SPA responde a ese 404 pidiendo
 nombre y apellido y llamando a `register` (pantalla única, F1-14).
+
+Contraseña opcional (desde el 2026-11-11): si la cuenta tiene `password_hash` (hoy solo la del docente,
+asignada a mano en la base), el login exige además `"password"`. Sin ella → `401 contrasena_requerida`
+(la SPA muestra entonces el campo de contraseña); incorrecta → `401 contrasena_incorrecta`. Las cuentas
+sin contraseña ignoran el campo. Hash PBKDF2-SHA256 (`services/worker/src/core/contrasena.ts`).
 
 `TokenResponse`:
 ```json

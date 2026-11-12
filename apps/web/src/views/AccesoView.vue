@@ -6,6 +6,8 @@
  * se piden nombre y apellido y el botón pasa a "Registrarme" (mismos datos + nombre y
  * apellido en POST /api/auth/register). Se prueba siempre el login primero: así una errata
  * en el número nunca crea una cuenta nueva sin que el estudiante lo vea.
+ * Si la cuenta tiene contraseña (la del docente), el servidor responde 401 `contrasena_requerida`
+ * y aparece el campo de contraseña; el siguiente "Continuar" la envía.
  */
 import { computed, nextTick, onMounted, reactive, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
@@ -33,10 +35,13 @@ const router = useRouter();
 const route = useRoute();
 
 type Paso = 'identificar' | 'registrar';
-type Campo = 'numero' | 'nombre' | 'apellido';
+type Campo = 'numero' | 'nombre' | 'apellido' | 'clave';
 
 const tipo = ref<TipoIdentificacion>(TIPO_POR_DEFECTO);
 const numero = ref('');
+const clave = ref('');
+/** La cuenta exige contraseña (lo dijo el servidor). */
+const pideClave = ref(false);
 const nombre = ref('');
 const apellido = ref('');
 const paso = ref<Paso>('identificar');
@@ -50,12 +55,14 @@ const errores = reactive<Record<Campo, string | null>>({
   numero: null,
   nombre: null,
   apellido: null,
+  clave: null,
 });
 
 const IDS: Record<Campo, string> = {
   numero: 'numero-identificacion',
   nombre: 'nombre',
   apellido: 'apellido',
+  clave: 'contrasena',
 };
 
 const registrando = computed(() => paso.value === 'registrar');
@@ -68,7 +75,7 @@ const inputmode = computed(() => (esSoloNumerico(tipo.value) ? 'numeric' : 'text
 function limpiarMensajes(): void {
   errorGeneral.value = null;
   aviso.value = null;
-  errores.numero = errores.nombre = errores.apellido = null;
+  errores.numero = errores.nombre = errores.apellido = errores.clave = null;
 }
 
 async function enfocar(campo: Campo): Promise<void> {
@@ -83,6 +90,8 @@ onMounted(() => {
 // Si cambian el tipo o el número después de pedir nombre y apellido, es otra identificación:
 // se vuelve a comprobar con un login (los nombres escritos se conservan).
 watch([tipo, numero], () => {
+  pideClave.value = false;
+  clave.value = '';
   if (paso.value === 'registrar') {
     paso.value = 'identificar';
     aviso.value = null;
@@ -105,7 +114,10 @@ function validar() {
     errores.nombre = nom.ok ? null : nom.error;
     errores.apellido = ape.ok ? null : ape.error;
   }
-  const primerError = (['numero', 'nombre', 'apellido'] as const).find((c) => errores[c]);
+  if (pideClave.value && !registrando.value) {
+    errores.clave = clave.value ? null : 'Escribe tu contraseña.';
+  }
+  const primerError = (['numero', 'nombre', 'apellido', 'clave'] as const).find((c) => errores[c]);
   if (primerError) {
     void enfocar(primerError);
     return null;
@@ -127,6 +139,18 @@ function manejarError(e: unknown): void {
     aviso.value =
       'No encontramos esa identificación. Escribe tu nombre y apellido para registrarte.';
     void enfocar('nombre');
+    return;
+  }
+  if (e.status === 401 && e.code === 'contrasena_requerida') {
+    pideClave.value = true;
+    aviso.value = 'Esta cuenta tiene contraseña. Escríbela para ingresar.';
+    void enfocar('clave');
+    return;
+  }
+  if (e.status === 401 && e.code === 'contrasena_incorrecta') {
+    errores.clave = 'La contraseña no es correcta.';
+    clave.value = '';
+    void enfocar('clave');
     return;
   }
   if (e.status === 409) {
@@ -185,7 +209,7 @@ async function enviar(): Promise<void> {
         numero: datos.numero,
       });
     } else {
-      await auth.login(tipo.value, datos.numero);
+      await auth.login(tipo.value, datos.numero, pideClave.value ? clave.value : undefined);
     }
     await router.replace(destinoSeguro(route.query.redirect) ?? '/');
   } catch (e) {
@@ -263,6 +287,23 @@ async function enviar(): Promise<void> {
         >
           {{ aviso }}
         </p>
+
+        <div v-if="pideClave && !registrando" class="space-y-2">
+          <Label :for="IDS.clave">Contraseña</Label>
+          <Input
+            :id="IDS.clave"
+            v-model="clave"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            enterkeyhint="go"
+            :aria-invalid="errores.clave ? 'true' : undefined"
+            :aria-describedby="describedBy('clave')"
+          />
+          <p v-if="errores.clave" :id="`${IDS.clave}-error`" class="text-destructive text-sm">
+            {{ errores.clave }}
+          </p>
+        </div>
 
         <template v-if="registrando">
           <div class="space-y-2">

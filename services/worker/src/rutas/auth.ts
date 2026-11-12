@@ -5,7 +5,8 @@ import { type App, requiereUsuario, type Usuario, usuarioDeFila } from '../core/
 import { NIVELES, TIPOS_IDENTIFICACION } from '../core/constantes';
 import { esViolacionUnica, primera } from '../core/db';
 import type { Configuracion } from '../core/entorno';
-import { usuarioExistente, usuarioNoEncontrado } from '../core/errores';
+import { verificarContrasena } from '../core/contrasena';
+import { ApiError, usuarioExistente, usuarioNoEncontrado } from '../core/errores';
 import { crearToken } from '../core/jwt';
 import { ipCliente, limitar } from '../core/limites';
 import { normalizarNombre, normalizarNumeroIdentificacion } from '../core/texto';
@@ -34,6 +35,8 @@ const LoginRequest = z.object({
   tipo_identificacion: z.enum(TIPOS_IDENTIFICACION),
   numero_identificacion: numeroIdentificacion,
 });
+/** Solo las cuentas con `password_hash` (la del docente) la exigen; las demás la ignoran. */
+const LoginConClave = LoginRequest.extend({ password: z.string().max(200).optional() });
 const RegisterRequest = LoginRequest.extend({ nombre: nombrePersona, apellido: nombrePersona });
 const UserUpdate = z.object({ nivel: z.enum(NIVELES).nullable().optional() });
 
@@ -86,14 +89,20 @@ rutasAuth.post('/auth/register', async (c) => {
 
 rutasAuth.post('/auth/login', async (c) => {
   await limitar(c.env.LIMITE_ACCESO, ipCliente(c.req.raw));
-  const body = validar(LoginRequest, await cuerpoJson(c.req.raw));
-  const fila = await primera<Parameters<typeof usuarioDeFila>[0]>(
+  const body = validar(LoginConClave, await cuerpoJson(c.req.raw));
+  const fila = await primera<Parameters<typeof usuarioDeFila>[0] & { password_hash: string | null }>(
     c.env.DB,
     'SELECT * FROM users WHERE tipo_identificacion = ? AND numero_identificacion = ?',
     body.tipo_identificacion,
     body.numero_identificacion,
   );
   if (!fila) throw usuarioNoEncontrado();
+  if (fila.password_hash) {
+    if (!body.password) throw new ApiError(401, 'contrasena_requerida', 'Esta cuenta exige contraseña.');
+    if (!(await verificarContrasena(body.password, fila.password_hash))) {
+      throw new ApiError(401, 'contrasena_incorrecta', 'La contraseña no es correcta.');
+    }
+  }
   return c.json(await respuestaToken(usuarioDeFila(fila), c.get('config')));
 });
 

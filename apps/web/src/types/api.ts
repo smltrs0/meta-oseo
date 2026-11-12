@@ -31,6 +31,8 @@ export interface TokenResponse {
 export interface LoginPayload {
   tipo_identificacion: TipoIdentificacion;
   numero_identificacion: string;
+  /** Solo para cuentas con contraseña (la del docente); el servidor responde 401 `contrasena_requerida`. */
+  password?: string;
 }
 
 export interface RegistroPayload extends LoginPayload {

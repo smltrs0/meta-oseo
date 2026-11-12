@@ -50,11 +50,16 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   /** Entra con una identificación existente. Lanza `ApiError` (404 `usuario_no_encontrado`...). */
-  async function login(tipo: TipoIdentificacion, numero: string): Promise<Usuario> {
+  async function login(
+    tipo: TipoIdentificacion,
+    numero: string,
+    password?: string,
+  ): Promise<Usuario> {
     const cuerpo: LoginPayload = {
       tipo_identificacion: tipo,
       numero_identificacion: normalizarNumero(numero),
     };
+    if (password) cuerpo.password = password;
     const respuesta = await apiFetch<TokenResponse>('/auth/login', {
       method: 'POST',
       body: cuerpo,
